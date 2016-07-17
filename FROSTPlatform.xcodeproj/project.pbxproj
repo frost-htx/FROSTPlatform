@@ -15,6 +15,9 @@
 		27CE94631D3B484A003791FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27CE94611D3B484A003791FC /* LaunchScreen.storyboard */; };
 		27CE946E1D3B484A003791FC /* FROSTPlatformTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CE946D1D3B484A003791FC /* FROSTPlatformTests.m */; };
 		27CE94791D3B484A003791FC /* FROSTPlatformUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CE94781D3B484A003791FC /* FROSTPlatformUITests.m */; };
+		27CE949D1D3BDF47003791FC /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CE949C1D3BDF47003791FC /* RootViewController.m */; };
+		27CE94A01D3BDFA1003791FC /* EditMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CE949F1D3BDFA1003791FC /* EditMainViewController.m */; };
+		581684A8DEDFBE4E6F08C683 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D6098F2B2EE1545375D99E /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,15 @@
 		27CE94741D3B484A003791FC /* FROSTPlatformUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FROSTPlatformUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27CE94781D3B484A003791FC /* FROSTPlatformUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FROSTPlatformUITests.m; sourceTree = "<group>"; };
 		27CE947A1D3B484A003791FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27CE94941D3BC872003791FC /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		27CE949A1D3BDB91003791FC /* macroDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macroDefinition.h; sourceTree = "<group>"; };
+		27CE949B1D3BDF47003791FC /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		27CE949C1D3BDF47003791FC /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		27CE949E1D3BDFA1003791FC /* EditMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditMainViewController.h; sourceTree = "<group>"; };
+		27CE949F1D3BDFA1003791FC /* EditMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditMainViewController.m; sourceTree = "<group>"; };
+		62F80EDBB6BEF70042FEB3BE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		8963280A529425C4EB45E670 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		A1D6098F2B2EE1545375D99E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				581684A8DEDFBE4E6F08C683 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +98,8 @@
 				27CE946C1D3B484A003791FC /* FROSTPlatformTests */,
 				27CE94771D3B484A003791FC /* FROSTPlatformUITests */,
 				27CE94511D3B484A003791FC /* Products */,
+				5A2E8729DE9048636089624A /* Pods */,
+				D7363DE09C9B427C05815CB5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +116,9 @@
 		27CE94521D3B484A003791FC /* FROSTPlatform */ = {
 			isa = PBXGroup;
 			children = (
+				27CE94951D3BD354003791FC /* Editor */,
+				27CE948A1D3BC719003791FC /* Main */,
+				27CE94861D3BC555003791FC /* PlatformRoot */,
 				27CE94561D3B484A003791FC /* AppDelegate.h */,
 				27CE94571D3B484A003791FC /* AppDelegate.m */,
 				27CE94591D3B484A003791FC /* ViewController.h */,
@@ -118,6 +136,8 @@
 			isa = PBXGroup;
 			children = (
 				27CE94541D3B484A003791FC /* main.m */,
+				27CE94941D3BC872003791FC /* PrefixHeader.pch */,
+				27CE949A1D3BDB91003791FC /* macroDefinition.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -140,6 +160,152 @@
 			path = FROSTPlatformUITests;
 			sourceTree = "<group>";
 		};
+		27CE94861D3BC555003791FC /* PlatformRoot */ = {
+			isa = PBXGroup;
+			children = (
+				27CE948F1D3BC726003791FC /* Model */,
+				27CE94901D3BC726003791FC /* Servers */,
+				27CE94911D3BC726003791FC /* View */,
+				27CE94921D3BC726003791FC /* ViewController */,
+				27CE94931D3BC726003791FC /* ViewModel */,
+			);
+			path = PlatformRoot;
+			sourceTree = "<group>";
+		};
+		27CE948A1D3BC719003791FC /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				27CE948B1D3BC719003791FC /* Model */,
+				27CE948C1D3BC719003791FC /* View */,
+				27CE948D1D3BC719003791FC /* ViewController */,
+				27CE948E1D3BC719003791FC /* ViewModel */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		27CE948B1D3BC719003791FC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		27CE948C1D3BC719003791FC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		27CE948D1D3BC719003791FC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				27CE949B1D3BDF47003791FC /* RootViewController.h */,
+				27CE949C1D3BDF47003791FC /* RootViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		27CE948E1D3BC719003791FC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		27CE948F1D3BC726003791FC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		27CE94901D3BC726003791FC /* Servers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Servers;
+			sourceTree = "<group>";
+		};
+		27CE94911D3BC726003791FC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		27CE94921D3BC726003791FC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		27CE94931D3BC726003791FC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		27CE94951D3BD354003791FC /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				27CE94961D3BD354003791FC /* Model */,
+				27CE94971D3BD354003791FC /* View */,
+				27CE94981D3BD354003791FC /* ViewController */,
+				27CE94991D3BD354003791FC /* ViewModel */,
+			);
+			path = Editor;
+			sourceTree = "<group>";
+		};
+		27CE94961D3BD354003791FC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		27CE94971D3BD354003791FC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		27CE94981D3BD354003791FC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				27CE949E1D3BDFA1003791FC /* EditMainViewController.h */,
+				27CE949F1D3BDFA1003791FC /* EditMainViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		27CE94991D3BD354003791FC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5A2E8729DE9048636089624A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				62F80EDBB6BEF70042FEB3BE /* Pods.debug.xcconfig */,
+				8963280A529425C4EB45E670 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D7363DE09C9B427C05815CB5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1D6098F2B2EE1545375D99E /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +313,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27CE947D1D3B484A003791FC /* Build configuration list for PBXNativeTarget "FROSTPlatform" */;
 			buildPhases = (
+				DDFCDE5F8D303269430F213B /* Check Pods Manifest.lock */,
 				27CE944C1D3B484A003791FC /* Sources */,
 				27CE944D1D3B484A003791FC /* Frameworks */,
 				27CE944E1D3B484A003791FC /* Resources */,
+				8528BC2C2424E1BBF235AF1E /* Embed Pods Frameworks */,
+				5019AECEC2E2DD28278EF4CD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,13 +434,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5019AECEC2E2DD28278EF4CD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8528BC2C2424E1BBF235AF1E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDFCDE5F8D303269430F213B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		27CE944C1D3B484A003791FC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				27CE945B1D3B484A003791FC /* ViewController.m in Sources */,
+				27CE94A01D3BDFA1003791FC /* EditMainViewController.m in Sources */,
 				27CE94581D3B484A003791FC /* AppDelegate.m in Sources */,
+				27CE949D1D3BDF47003791FC /* RootViewController.m in Sources */,
 				27CE94551D3B484A003791FC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,8 +630,11 @@
 		};
 		27CE947E1D3B484A003791FC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62F80EDBB6BEF70042FEB3BE /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/FROSTPlatform/PrefixHeader.pch";
 				INFOPLIST_FILE = FROSTPlatform/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = frost.FROSTPlatform;
@@ -422,8 +644,11 @@
 		};
 		27CE947F1D3B484A003791FC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8963280A529425C4EB45E670 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/FROSTPlatform/PrefixHeader.pch";
 				INFOPLIST_FILE = FROSTPlatform/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = frost.FROSTPlatform;
@@ -498,6 +723,7 @@
 				27CE947F1D3B484A003791FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27CE94801D3B484A003791FC /* Build configuration list for PBXNativeTarget "FROSTPlatformTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +732,7 @@
 				27CE94821D3B484A003791FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27CE94831D3B484A003791FC /* Build configuration list for PBXNativeTarget "FROSTPlatformUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +741,7 @@
 				27CE94851D3B484A003791FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

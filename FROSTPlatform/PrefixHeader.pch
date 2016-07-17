@@ -1,0 +1,21 @@
+//
+//  PrefixHeader.pch
+//  FROSTPlatform
+//
+//  Created by frost on 16/7/17.
+//  Copyright © 2016年 frost. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "AppDelegate.h"
+#import "macroDefinition.h"
+#import <Masonry/Masonry.h>
+#import <SDWebImage/SDWebImage-umbrella.h>
+#import <ReactiveCocoa/ReactiveCocoa-umbrella.h>
+#import <SVProgressHUD/SVProgressHUD-umbrella.h>
+#import <IQKeyboardManager/IQKeyboardManager-umbrella.h>
+#import <YYKit/YYKit-umbrella.h>
+
+#endif /* PrefixHeader_pch */
