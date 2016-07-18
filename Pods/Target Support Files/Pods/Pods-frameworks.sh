@@ -95,6 +95,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/SDWebImage.framework"
   install_framework "Pods/SVProgressHUD.framework"
   install_framework "Pods/YYKit.framework"
+  install_framework "Pods/iCarousel.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/AFNetworking.framework"
@@ -108,4 +109,5 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/SDWebImage.framework"
   install_framework "Pods/SVProgressHUD.framework"
   install_framework "Pods/YYKit.framework"
+  install_framework "Pods/iCarousel.framework"
 fi

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'E119494EBAFE42FD7E5F3E61'
-               BlueprintName = 'ReactiveCocoa'
+               BlueprintIdentifier = '52491D889095EBB154887395'
+               BlueprintName = 'iCarousel'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'ReactiveCocoa.framework'>
+               BuildableName = 'iCarousel.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

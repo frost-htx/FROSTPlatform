@@ -15,8 +15,15 @@
 		27CE94631D3B484A003791FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27CE94611D3B484A003791FC /* LaunchScreen.storyboard */; };
 		27CE946E1D3B484A003791FC /* FROSTPlatformTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CE946D1D3B484A003791FC /* FROSTPlatformTests.m */; };
 		27CE94791D3B484A003791FC /* FROSTPlatformUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CE94781D3B484A003791FC /* FROSTPlatformUITests.m */; };
-		27CE949D1D3BDF47003791FC /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CE949C1D3BDF47003791FC /* RootViewController.m */; };
 		27CE94A01D3BDFA1003791FC /* EditMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CE949F1D3BDFA1003791FC /* EditMainViewController.m */; };
+		27DF39D31D3C7A70001C5C33 /* RootViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DF39D21D3C7A70001C5C33 /* RootViewModel.m */; };
+		27DF39D61D3C7A9B001C5C33 /* RootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DF39D51D3C7A9B001C5C33 /* RootModel.m */; };
+		27DF39D91D3C7AED001C5C33 /* EditViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DF39D81D3C7AED001C5C33 /* EditViewModel.m */; };
+		27DF39DC1D3CA504001C5C33 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DF39DB1D3CA504001C5C33 /* RootViewController.m */; };
+		27DF39DF1D3CA55F001C5C33 /* MainViewControler.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DF39DE1D3CA55F001C5C33 /* MainViewControler.m */; };
+		27DF39E21D3CB225001C5C33 /* EditMainCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DF39E11D3CB225001C5C33 /* EditMainCollectionCell.m */; };
+		27DF39E51D3CC7F7001C5C33 /* RootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DF39E41D3CC7F7001C5C33 /* RootView.m */; };
+		27DF39E81D3CC893001C5C33 /* EditCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DF39E71D3CC893001C5C33 /* EditCollectionView.m */; };
 		581684A8DEDFBE4E6F08C683 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D6098F2B2EE1545375D99E /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,10 +63,24 @@
 		27CE947A1D3B484A003791FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27CE94941D3BC872003791FC /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		27CE949A1D3BDB91003791FC /* macroDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macroDefinition.h; sourceTree = "<group>"; };
-		27CE949B1D3BDF47003791FC /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		27CE949C1D3BDF47003791FC /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		27CE949E1D3BDFA1003791FC /* EditMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditMainViewController.h; sourceTree = "<group>"; };
 		27CE949F1D3BDFA1003791FC /* EditMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditMainViewController.m; sourceTree = "<group>"; };
+		27DF39D11D3C7A70001C5C33 /* RootViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewModel.h; sourceTree = "<group>"; };
+		27DF39D21D3C7A70001C5C33 /* RootViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewModel.m; sourceTree = "<group>"; };
+		27DF39D41D3C7A9B001C5C33 /* RootModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootModel.h; sourceTree = "<group>"; };
+		27DF39D51D3C7A9B001C5C33 /* RootModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootModel.m; sourceTree = "<group>"; };
+		27DF39D71D3C7AED001C5C33 /* EditViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewModel.h; sourceTree = "<group>"; };
+		27DF39D81D3C7AED001C5C33 /* EditViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewModel.m; sourceTree = "<group>"; };
+		27DF39DA1D3CA504001C5C33 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		27DF39DB1D3CA504001C5C33 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		27DF39DD1D3CA55F001C5C33 /* MainViewControler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewControler.h; sourceTree = "<group>"; };
+		27DF39DE1D3CA55F001C5C33 /* MainViewControler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewControler.m; sourceTree = "<group>"; };
+		27DF39E01D3CB225001C5C33 /* EditMainCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditMainCollectionCell.h; path = FROSTPlatform/Editor/EditMainCollectionCell.h; sourceTree = SOURCE_ROOT; };
+		27DF39E11D3CB225001C5C33 /* EditMainCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditMainCollectionCell.m; path = FROSTPlatform/Editor/EditMainCollectionCell.m; sourceTree = SOURCE_ROOT; };
+		27DF39E31D3CC7F7001C5C33 /* RootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootView.h; sourceTree = "<group>"; };
+		27DF39E41D3CC7F7001C5C33 /* RootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootView.m; sourceTree = "<group>"; };
+		27DF39E61D3CC893001C5C33 /* EditCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditCollectionView.h; sourceTree = "<group>"; };
+		27DF39E71D3CC893001C5C33 /* EditCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditCollectionView.m; sourceTree = "<group>"; };
 		62F80EDBB6BEF70042FEB3BE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8963280A529425C4EB45E670 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A1D6098F2B2EE1545375D99E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,8 +221,8 @@
 		27CE948D1D3BC719003791FC /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				27CE949B1D3BDF47003791FC /* RootViewController.h */,
-				27CE949C1D3BDF47003791FC /* RootViewController.m */,
+				27DF39DD1D3CA55F001C5C33 /* MainViewControler.h */,
+				27DF39DE1D3CA55F001C5C33 /* MainViewControler.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -216,6 +237,8 @@
 		27CE948F1D3BC726003791FC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				27DF39D41D3C7A9B001C5C33 /* RootModel.h */,
+				27DF39D51D3C7A9B001C5C33 /* RootModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -230,6 +253,8 @@
 		27CE94911D3BC726003791FC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				27DF39E31D3CC7F7001C5C33 /* RootView.h */,
+				27DF39E41D3CC7F7001C5C33 /* RootView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -237,6 +262,8 @@
 		27CE94921D3BC726003791FC /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				27DF39DA1D3CA504001C5C33 /* RootViewController.h */,
+				27DF39DB1D3CA504001C5C33 /* RootViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -244,6 +271,8 @@
 		27CE94931D3BC726003791FC /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				27DF39D11D3C7A70001C5C33 /* RootViewModel.h */,
+				27DF39D21D3C7A70001C5C33 /* RootViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -269,6 +298,10 @@
 		27CE94971D3BD354003791FC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				27DF39E01D3CB225001C5C33 /* EditMainCollectionCell.h */,
+				27DF39E11D3CB225001C5C33 /* EditMainCollectionCell.m */,
+				27DF39E61D3CC893001C5C33 /* EditCollectionView.h */,
+				27DF39E71D3CC893001C5C33 /* EditCollectionView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -285,6 +318,8 @@
 		27CE94991D3BD354003791FC /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				27DF39D71D3C7AED001C5C33 /* EditViewModel.h */,
+				27DF39D81D3C7AED001C5C33 /* EditViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -487,10 +522,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27DF39E81D3CC893001C5C33 /* EditCollectionView.m in Sources */,
+				27DF39E21D3CB225001C5C33 /* EditMainCollectionCell.m in Sources */,
+				27DF39D31D3C7A70001C5C33 /* RootViewModel.m in Sources */,
+				27DF39DF1D3CA55F001C5C33 /* MainViewControler.m in Sources */,
 				27CE945B1D3B484A003791FC /* ViewController.m in Sources */,
+				27DF39DC1D3CA504001C5C33 /* RootViewController.m in Sources */,
+				27DF39D61D3C7A9B001C5C33 /* RootModel.m in Sources */,
 				27CE94A01D3BDFA1003791FC /* EditMainViewController.m in Sources */,
+				27DF39E51D3CC7F7001C5C33 /* RootView.m in Sources */,
+				27DF39D91D3C7AED001C5C33 /* EditViewModel.m in Sources */,
 				27CE94581D3B484A003791FC /* AppDelegate.m in Sources */,
-				27CE949D1D3BDF47003791FC /* RootViewController.m in Sources */,
 				27CE94551D3B484A003791FC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

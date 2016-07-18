@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "EditMainViewController.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -59,7 +60,11 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    NSString *titleName = [_dataArray objectAtIndex:indexPath.row ];
+    if ([titleName isEqualToString:@"编辑器"]) {
+        EditMainViewController *editMainViewController = [[EditMainViewController alloc] init];
+        [self.navigationController pushViewController:editMainViewController animated:YES];
+    }
 }
 
 #pragma mark getters and setters
