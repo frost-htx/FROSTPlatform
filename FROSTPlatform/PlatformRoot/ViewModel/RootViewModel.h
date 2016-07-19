@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JsonUtil.h"
 
 @interface RootViewModel : NSObject
 
+
+-(NSDictionary *)readLocalJson:(NSString *)fileName fileType:(NSString *)fileType;
 @end

@@ -17,5 +17,6 @@
 #import <SVProgressHUD/SVProgressHUD-umbrella.h>
 #import <IQKeyboardManager/IQKeyboardManager-umbrella.h>
 #import <YYKit/YYKit-umbrella.h>
+#import <YYKit/UIImageView+YYWebImage.h>
 
 #endif /* PrefixHeader_pch */

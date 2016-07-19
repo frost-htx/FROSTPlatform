@@ -21,9 +21,15 @@
 		27DF39D91D3C7AED001C5C33 /* EditViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DF39D81D3C7AED001C5C33 /* EditViewModel.m */; };
 		27DF39DC1D3CA504001C5C33 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DF39DB1D3CA504001C5C33 /* RootViewController.m */; };
 		27DF39DF1D3CA55F001C5C33 /* MainViewControler.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DF39DE1D3CA55F001C5C33 /* MainViewControler.m */; };
-		27DF39E21D3CB225001C5C33 /* EditMainCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DF39E11D3CB225001C5C33 /* EditMainCollectionCell.m */; };
 		27DF39E51D3CC7F7001C5C33 /* RootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DF39E41D3CC7F7001C5C33 /* RootView.m */; };
 		27DF39E81D3CC893001C5C33 /* EditCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DF39E71D3CC893001C5C33 /* EditCollectionView.m */; };
+		27DF39EB1D3CF4F7001C5C33 /* EditModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DF39EA1D3CF4F7001C5C33 /* EditModel.m */; };
+		27DF39EE1D3DBD3D001C5C33 /* EditRootItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DF39ED1D3DBD3D001C5C33 /* EditRootItemView.m */; };
+		27DF39F11D3DBD66001C5C33 /* EditMainCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DF39F01D3DBD66001C5C33 /* EditMainCollectionCell.m */; };
+		27DF39F41D3DBE05001C5C33 /* EditItemImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DF39F31D3DBE05001C5C33 /* EditItemImageView.m */; };
+		27DF39F71D3DBE23001C5C33 /* EditItemLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DF39F61D3DBE23001C5C33 /* EditItemLabelView.m */; };
+		27DF39FF1D3E08D5001C5C33 /* JsonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DF39FE1D3E08D5001C5C33 /* JsonUtil.m */; };
+		27DF44901D3E0BB2001C5C33 /* Template.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 27DF448F1D3E0BB2001C5C33 /* Template.geojson */; };
 		581684A8DEDFBE4E6F08C683 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D6098F2B2EE1545375D99E /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,12 +81,23 @@
 		27DF39DB1D3CA504001C5C33 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		27DF39DD1D3CA55F001C5C33 /* MainViewControler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewControler.h; sourceTree = "<group>"; };
 		27DF39DE1D3CA55F001C5C33 /* MainViewControler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewControler.m; sourceTree = "<group>"; };
-		27DF39E01D3CB225001C5C33 /* EditMainCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditMainCollectionCell.h; path = FROSTPlatform/Editor/EditMainCollectionCell.h; sourceTree = SOURCE_ROOT; };
-		27DF39E11D3CB225001C5C33 /* EditMainCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditMainCollectionCell.m; path = FROSTPlatform/Editor/EditMainCollectionCell.m; sourceTree = SOURCE_ROOT; };
 		27DF39E31D3CC7F7001C5C33 /* RootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootView.h; sourceTree = "<group>"; };
 		27DF39E41D3CC7F7001C5C33 /* RootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootView.m; sourceTree = "<group>"; };
 		27DF39E61D3CC893001C5C33 /* EditCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditCollectionView.h; sourceTree = "<group>"; };
 		27DF39E71D3CC893001C5C33 /* EditCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditCollectionView.m; sourceTree = "<group>"; };
+		27DF39E91D3CF4F7001C5C33 /* EditModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditModel.h; sourceTree = "<group>"; };
+		27DF39EA1D3CF4F7001C5C33 /* EditModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditModel.m; sourceTree = "<group>"; };
+		27DF39EC1D3DBD3D001C5C33 /* EditRootItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditRootItemView.h; sourceTree = "<group>"; };
+		27DF39ED1D3DBD3D001C5C33 /* EditRootItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditRootItemView.m; sourceTree = "<group>"; };
+		27DF39EF1D3DBD66001C5C33 /* EditMainCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditMainCollectionCell.h; sourceTree = "<group>"; };
+		27DF39F01D3DBD66001C5C33 /* EditMainCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditMainCollectionCell.m; sourceTree = "<group>"; };
+		27DF39F21D3DBE05001C5C33 /* EditItemImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditItemImageView.h; sourceTree = "<group>"; };
+		27DF39F31D3DBE05001C5C33 /* EditItemImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditItemImageView.m; sourceTree = "<group>"; };
+		27DF39F51D3DBE23001C5C33 /* EditItemLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditItemLabelView.h; sourceTree = "<group>"; };
+		27DF39F61D3DBE23001C5C33 /* EditItemLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditItemLabelView.m; sourceTree = "<group>"; };
+		27DF39FD1D3E08D5001C5C33 /* JsonUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonUtil.h; sourceTree = "<group>"; };
+		27DF39FE1D3E08D5001C5C33 /* JsonUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonUtil.m; sourceTree = "<group>"; };
+		27DF448F1D3E0BB2001C5C33 /* Template.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Template.geojson; sourceTree = "<group>"; };
 		62F80EDBB6BEF70042FEB3BE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8963280A529425C4EB45E670 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A1D6098F2B2EE1545375D99E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +154,7 @@
 		27CE94521D3B484A003791FC /* FROSTPlatform */ = {
 			isa = PBXGroup;
 			children = (
+				27DF39FC1D3E08C1001C5C33 /* PlatformTools */,
 				27CE94951D3BD354003791FC /* Editor */,
 				27CE948A1D3BC719003791FC /* Main */,
 				27CE94861D3BC555003791FC /* PlatformRoot */,
@@ -159,6 +177,7 @@
 				27CE94541D3B484A003791FC /* main.m */,
 				27CE94941D3BC872003791FC /* PrefixHeader.pch */,
 				27CE949A1D3BDB91003791FC /* macroDefinition.h */,
+				27DF448F1D3E0BB2001C5C33 /* Template.geojson */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -291,6 +310,8 @@
 		27CE94961D3BD354003791FC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				27DF39E91D3CF4F7001C5C33 /* EditModel.h */,
+				27DF39EA1D3CF4F7001C5C33 /* EditModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -298,10 +319,16 @@
 		27CE94971D3BD354003791FC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				27DF39E01D3CB225001C5C33 /* EditMainCollectionCell.h */,
-				27DF39E11D3CB225001C5C33 /* EditMainCollectionCell.m */,
+				27DF39EF1D3DBD66001C5C33 /* EditMainCollectionCell.h */,
+				27DF39F01D3DBD66001C5C33 /* EditMainCollectionCell.m */,
 				27DF39E61D3CC893001C5C33 /* EditCollectionView.h */,
 				27DF39E71D3CC893001C5C33 /* EditCollectionView.m */,
+				27DF39EC1D3DBD3D001C5C33 /* EditRootItemView.h */,
+				27DF39ED1D3DBD3D001C5C33 /* EditRootItemView.m */,
+				27DF39F21D3DBE05001C5C33 /* EditItemImageView.h */,
+				27DF39F31D3DBE05001C5C33 /* EditItemImageView.m */,
+				27DF39F51D3DBE23001C5C33 /* EditItemLabelView.h */,
+				27DF39F61D3DBE23001C5C33 /* EditItemLabelView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -322,6 +349,15 @@
 				27DF39D81D3C7AED001C5C33 /* EditViewModel.m */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		27DF39FC1D3E08C1001C5C33 /* PlatformTools */ = {
+			isa = PBXGroup;
+			children = (
+				27DF39FD1D3E08D5001C5C33 /* JsonUtil.h */,
+				27DF39FE1D3E08D5001C5C33 /* JsonUtil.m */,
+			);
+			path = PlatformTools;
 			sourceTree = "<group>";
 		};
 		5A2E8729DE9048636089624A /* Pods */ = {
@@ -448,6 +484,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27CE94631D3B484A003791FC /* LaunchScreen.storyboard in Resources */,
+				27DF44901D3E0BB2001C5C33 /* Template.geojson in Resources */,
 				27CE94601D3B484A003791FC /* Assets.xcassets in Resources */,
 				27CE945E1D3B484A003791FC /* Main.storyboard in Resources */,
 			);
@@ -522,17 +559,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27DF39F11D3DBD66001C5C33 /* EditMainCollectionCell.m in Sources */,
 				27DF39E81D3CC893001C5C33 /* EditCollectionView.m in Sources */,
-				27DF39E21D3CB225001C5C33 /* EditMainCollectionCell.m in Sources */,
 				27DF39D31D3C7A70001C5C33 /* RootViewModel.m in Sources */,
+				27DF39F41D3DBE05001C5C33 /* EditItemImageView.m in Sources */,
+				27DF39FF1D3E08D5001C5C33 /* JsonUtil.m in Sources */,
 				27DF39DF1D3CA55F001C5C33 /* MainViewControler.m in Sources */,
 				27CE945B1D3B484A003791FC /* ViewController.m in Sources */,
 				27DF39DC1D3CA504001C5C33 /* RootViewController.m in Sources */,
 				27DF39D61D3C7A9B001C5C33 /* RootModel.m in Sources */,
+				27DF39EE1D3DBD3D001C5C33 /* EditRootItemView.m in Sources */,
 				27CE94A01D3BDFA1003791FC /* EditMainViewController.m in Sources */,
 				27DF39E51D3CC7F7001C5C33 /* RootView.m in Sources */,
 				27DF39D91D3C7AED001C5C33 /* EditViewModel.m in Sources */,
+				27DF39EB1D3CF4F7001C5C33 /* EditModel.m in Sources */,
 				27CE94581D3B484A003791FC /* AppDelegate.m in Sources */,
+				27DF39F71D3DBE23001C5C33 /* EditItemLabelView.m in Sources */,
 				27CE94551D3B484A003791FC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

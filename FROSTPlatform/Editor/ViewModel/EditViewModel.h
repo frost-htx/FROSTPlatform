@@ -7,7 +7,13 @@
 //
 
 #import "RootViewModel.h"
+#import "EditModel.h"
 
 @interface EditViewModel : RootViewModel
+
+@property (nonatomic, strong) NSMutableArray *editArray;
+@property (nonatomic, strong) EditModel *editModel;
+
+- (void)requestTemplateData:(void(^)())readCacheBlock withSuccessful:(void(^)())successful withFailed:(void (^)(void))failed;
 
 @end

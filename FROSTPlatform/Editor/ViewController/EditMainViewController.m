@@ -9,6 +9,7 @@
 #import "EditMainViewController.h"
 #import "EditMainCollectionCell.h"
 #import "EditCollectionView.h"
+#import "EditViewModel.h"
 
 NSString * const KEditMainCollectionCellID = @"KEditMainCollectionCellID";
 static CGFloat CellMargin = 60;
@@ -16,10 +17,11 @@ static CGFloat CellSpaing = 10;
 
 @interface EditMainViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
-@property (nonatomic,strong) EditCollectionView  *editCollectionView;
+@property (nonatomic, strong) EditCollectionView  *editCollectionView;
 
-@property (nonatomic,assign) NSInteger currentIndex;
+@property (nonatomic, assign) NSInteger currentIndex;
 
+@property (nonatomic, strong) EditViewModel *editViewModel;
 @end
 
 @implementation EditMainViewController
@@ -29,6 +31,7 @@ static CGFloat CellSpaing = 10;
 -(void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.editCollectionView];
+    [self requsetTemplateDate];
 }
 
 #pragma mark UIScrollViewDelegate
@@ -92,6 +95,18 @@ static CGFloat CellSpaing = 10;
 
 }
 
+#pragma mark private methods
+
+-(void)requsetTemplateDate {
+    [self.editViewModel requestTemplateData:^{
+        
+    } withSuccessful:^{
+        
+    } withFailed:^{
+        
+    }];
+}
+
 #pragma mark getters and setters 
 
 -(UICollectionView *)editCollectionView {
@@ -113,5 +128,12 @@ static CGFloat CellSpaing = 10;
         [_editCollectionView addGestureRecognizer:rightSwipeGestureRecognizer];
     }
     return _editCollectionView;
+}
+
+-(EditViewModel *)editViewModel {
+    if (!_editViewModel) {
+        _editViewModel = [[EditViewModel alloc] init];
+    }
+    return _editViewModel;
 }
 @end

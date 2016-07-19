@@ -1,0 +1,38 @@
+{
+    "json": [
+             {
+             "bgpictop": "0",
+             "bgpicleft": "0",
+             "bgpicheight": "auto",
+             "bgpicwidth": "640",
+             "bgpic":"http://7sbsoj.com2.z0.glb.qiniucdn.com/maka/app/gfile/public/pic%3fget=id/B0G3NX3J6VFFMS89QAOO/thumb/100",
+             "bgcolor":"",
+             "content": [
+                         {
+                         "top": 20.679245283019,
+                         "left": 15.094339622642,
+                         "w": 615.84905660377,
+                         "h": 384.90566037736,
+                         "rotate": "0",
+                         "opacity": 1,
+                         "type": "pic",
+                         "con": "http://img.maka.mobi/maka/app/gfile/public/pic?get=id/XCVO5BH75RS072ORVAZ6LR/thumb/100",
+                         "show": "fadeInNormal",
+                         "speed": 1200,
+                         "delay": 0,
+                         "borderradius": 0,
+                         "shape": 0,
+                         "inw": 615.84905660377,
+                         "inh": 384.90566037736,
+                         "intop": 0,
+                         "inleft": 0,
+                         "picid": "KZADKY2RH53K4WUAB084",
+                         "stylecolor": "rgba(0,0,0,0)",
+                         "styleopacity": 0,
+                         "height": 256,
+                         "key": 0
+                         }
+                         ]
+             }
+             ]
+}
