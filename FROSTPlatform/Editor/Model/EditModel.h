@@ -11,7 +11,7 @@
 @protocol PageModel @end
 @interface EditModel : RootModel
 
-@property (nonatomic,strong)NSMutableArray<PageModel> *json;
+@property (nonatomic,strong) NSMutableArray<PageModel> *json;
 @end
 
 @protocol ContentModel @end
@@ -29,5 +29,12 @@
 @property (nonatomic, strong) NSString *w;
 @property (nonatomic, strong) NSString *h;
 @property (nonatomic, strong) NSString *type;
+/*********************image******************/
 @property (nonatomic, strong) NSString *picid;
+/*********************label******************/
+@property (nonatomic, strong) NSString *textalign;
+@property (nonatomic, strong) NSString *ftsize;
+@property (nonatomic, strong) NSString *ftcolor;
+@property (nonatomic, strong) NSString *con;
+
 @end

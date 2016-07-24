@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BindViewWithModelProtocol.h"
+#import "EditModel.h"
 
-@interface EditRootItemView : UIView
+@interface EditRootItemView : UIView<BindViewWithModelProtocol>
+
+@property (nonatomic, assign) CGFloat   zoomSize;
+
+-(CGRect)transformCoordinate:(CGRect)frame;
 
 @end

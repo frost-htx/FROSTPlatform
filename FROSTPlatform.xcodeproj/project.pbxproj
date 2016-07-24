@@ -51,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27B9E7431D4318FB00E7345B /* BindViewWithModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BindViewWithModelProtocol.h; sourceTree = "<group>"; };
 		27CE94501D3B484A003791FC /* FROSTPlatform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FROSTPlatform.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27CE94541D3B484A003791FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		27CE94561D3B484A003791FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -129,6 +130,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27B9E7421D43189600E7345B /* HeaderFile */ = {
+			isa = PBXGroup;
+			children = (
+				27B9E7431D4318FB00E7345B /* BindViewWithModelProtocol.h */,
+			);
+			path = HeaderFile;
+			sourceTree = "<group>";
+		};
 		27CE94471D3B484A003791FC = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +163,7 @@
 		27CE94521D3B484A003791FC /* FROSTPlatform */ = {
 			isa = PBXGroup;
 			children = (
+				27B9E7421D43189600E7345B /* HeaderFile */,
 				27DF39FC1D3E08C1001C5C33 /* PlatformTools */,
 				27CE94951D3BD354003791FC /* Editor */,
 				27CE948A1D3BC719003791FC /* Main */,

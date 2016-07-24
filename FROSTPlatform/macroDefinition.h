@@ -9,6 +9,11 @@
 #ifndef macroDefinition_h
 #define macroDefinition_h
 
+/************************************* ServerPath *******************************************/
+
+
+#define ImageServerPath(string) [@"http://img1.maka.im/" stringByAppendingString:string]
+
 /************************************* Size *******************************************/
 
 #define kSCREEN_WIDTH   [UIScreen mainScreen].bounds.size.width

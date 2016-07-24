@@ -16,6 +16,7 @@
     
     NSError __autoreleasing *error;
     self.editModel = [[EditModel alloc] initWithDictionary:dic error:&error];
+    readCacheBlock();
 }
 
 @end

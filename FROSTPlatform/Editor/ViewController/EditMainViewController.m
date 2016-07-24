@@ -11,6 +11,10 @@
 #import "EditCollectionView.h"
 #import "EditViewModel.h"
 
+#define kShowItemWidth 256
+#define kShowItemHeihgt 403.2
+
+
 NSString * const KEditMainCollectionCellID = @"KEditMainCollectionCellID";
 static CGFloat CellMargin = 60;
 static CGFloat CellSpaing = 10;
@@ -22,6 +26,9 @@ static CGFloat CellSpaing = 10;
 @property (nonatomic, assign) NSInteger currentIndex;
 
 @property (nonatomic, strong) EditViewModel *editViewModel;
+
+@property (nonatomic, strong) EditMainCollectionCell *editCell;
+
 @end
 
 @implementation EditMainViewController
@@ -36,7 +43,7 @@ static CGFloat CellSpaing = 10;
 
 #pragma mark UIScrollViewDelegate
 
--(void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView{
+-(void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
     
 }
 
@@ -55,17 +62,18 @@ static CGFloat CellSpaing = 10;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake((kSCREEN_WIDTH - CellMargin*2), kSCREEN_HEIGHT_NO_NAV);
+    return CGSizeMake(kShowItemWidth, kShowItemHeihgt);
 }
 
 #pragma mark  UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 10;
+    return self.editViewModel.editModel.json.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     EditMainCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:KEditMainCollectionCellID forIndexPath:indexPath];
+    [cell bindViewModel:[self.editViewModel.editModel.json objectAtIndex:indexPath.row]];
     return cell;
 }
 
@@ -74,8 +82,8 @@ static CGFloat CellSpaing = 10;
 - (void)handleSwipes:(UISwipeGestureRecognizer *)gesture {
     if (gesture.direction == UISwipeGestureRecognizerDirectionLeft) {
         
-        if (_editCollectionView.contentOffset.x >= (kSCREEN_WIDTH-(CellMargin*2-CellSpaing)) *9) {
-            [_editCollectionView setContentOffset:CGPointMake((kSCREEN_WIDTH-((CellMargin)*2-CellSpaing))*9,0) animated:YES];
+        if (_editCollectionView.contentOffset.x >= (kSCREEN_WIDTH-(CellMargin*2-CellSpaing)) * (self.editViewModel.editModel.json.count - 1)) {
+            [_editCollectionView setContentOffset:CGPointMake((kSCREEN_WIDTH-((CellMargin)*2-CellSpaing))*(self.editViewModel.editModel.json.count - 1),0) animated:YES];
 
         } else {
             self.currentIndex++;
@@ -98,13 +106,18 @@ static CGFloat CellSpaing = 10;
 #pragma mark private methods
 
 -(void)requsetTemplateDate {
+    WS(weakSelf, self);
     [self.editViewModel requestTemplateData:^{
-        
+        [weakSelf.editCollectionView reloadData];
     } withSuccessful:^{
         
     } withFailed:^{
         
     }];
+}
+
+-(void)bindViews:(UICollectionViewCell *)editCell indexPath:(NSIndexPath *)indexPath {
+    
 }
 
 #pragma mark getters and setters 
@@ -113,8 +126,8 @@ static CGFloat CellSpaing = 10;
     if (!_editCollectionView) {
         UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
         flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-        _editCollectionView = [[EditCollectionView alloc] initWithFrame:CGRectMake(0, 0, kSCREEN_WIDTH, kSCREEN_HEIGHT_NO_NAV) collectionViewLayout:flowLayout];
-        _editCollectionView.backgroundColor = KCOLOR_BACKGROUNG;
+        _editCollectionView = [[EditCollectionView alloc] initWithFrame:CGRectMake(0, 0, kSCREEN_WIDTH, kSCREEN_HEIGHT_NO_NAV-80) collectionViewLayout:flowLayout];
+        _editCollectionView.backgroundColor = [UIColor redColor];
         _editCollectionView.delegate = self;
         _editCollectionView.dataSource = self;
         _editCollectionView.scrollEnabled = NO;

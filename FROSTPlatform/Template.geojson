@@ -9,8 +9,8 @@
              "bgcolor":"",
              "content": [
                          {
-                         "top": 20.679245283019,
-                         "left": 15.094339622642,
+                         "top": 15.094339622642,
+                         "left": 20.679245283019,
                          "w": 615.84905660377,
                          "h": 384.90566037736,
                          "rotate": "0",
@@ -31,6 +31,132 @@
                          "styleopacity": 0,
                          "height": 256,
                          "key": 0
+                         },
+                         {
+                         "top": 62.716981132075,
+                         "left": 167.50943396226,
+                         "w": 300,
+                         "h": 300,
+                         "rotate": "0",
+                         "opacity": 1,
+                         "type": "pic",
+                         "con": "http:\/\/img.maka.mobi\/maka\/app\/gfile\/public\/pic?get=id\/XCVO5BH75RS072ORVAZ6LR\/thumb\/100",
+                         "show": "fadeInNormal",
+                         "speed": 1200,
+                         "delay": 0,
+                         "borderradius": 0,
+                         "shape": 0,
+                         "inw": 300,
+                         "inh": 300,
+                         "intop": 0,
+                         "inleft": 0,
+                         "picid": "C8GO53ER7LLUTVM32LT3",
+                         "stylecolor": "rgba(0,0,0,0)",
+                         "styleopacity": 0,
+                         "height": 256,
+                         "key": 1,
+                         "elementAnimations": {
+                         "animation_in": {
+                         "show": "fadeInNormal",
+                         "speed": 1,
+                         "delay": 0.6
+                         },
+                         "animation_on": {
+                         "iteration_count": 3
+                         },
+                         "animation_out": [
+                         
+                         ]
+                         },
+                         "selectedAnimationShow": "fadeInNormal",
+                         "selectedAnimationSpeed": 1
+                         },
+                         {
+                         "top": 397.60377358491,
+                         "left": 13,
+                         "w": 629.43396226415,
+                         "h": 393.39622641509,
+                         "rotate": "0",
+                         "opacity": 1,
+                         "type": "pic",
+                         "con": "http:\/\/img.maka.mobi\/maka\/app\/gfile\/public\/pic?get=id\/XCVO5BH75RS072ORVAZ6LR\/thumb\/100",
+                         "show": "zoomIn",
+                         "speed": 1200,
+                         "delay": 1300,
+                         "borderradius": 0,
+                         "shape": 0,
+                         "inw": 629.43396226415,
+                         "inh": 400,
+                         "intop": 0,
+                         "inleft": 0,
+                         "picid": "VJ372BB3XQRQYVBQNF6J",
+                         "stylecolor": "rgba(0,0,0,0)",
+                         "styleopacity": 0,
+                         "height": 256,
+                         "key": 2,
+                         "elementAnimations": {
+                         "animation_in": {
+                         "show": "fadeInNormal",
+                         "speed": 1,
+                         "delay": 0.6
+                         },
+                         "animation_on": {
+                         "iteration_count": 3
+                         },
+                         "animation_out": [
+                         
+                         ]
+                         },
+                         "selectedAnimationShow": "fadeInNormal",
+                         "selectedAnimationSpeed": 1
+                         },{
+                         "top": 194.22641509434,
+                         "left": -86.056603773585,
+                         "w": "400",
+                         "h": "100",
+                         "rotate": "0",
+                         "bgcolor": "rgba(25,25,25,0)",
+                         "opacity": 1,
+                         "type": "ptext",
+                         "version": 21,
+                         "con": "<p>\u5927 \u96c4<\/p>",
+                         "show": "pullDown",
+                         "speed": 1200,
+                         "delay": 600,
+                         "borderradius": 0,
+                         "boxshadow": 0,
+                         "border-style": "none",
+                         "border-color": "black",
+                         "border-width": "0px",
+                         "lineheight": 1.5,
+                         "textalign": "center",
+                         "textvalign": "middle",
+                         "prepara": "0",
+                         "afterpara": "0",
+                         "ftcolor": "rgb(0,0,0)",
+                         "ftsize": 40,
+                         "tl": 60,
+                         "fontbold": true,
+                         "fontitalic": false,
+                         "udl": false,
+                         "height": 64,
+                         "key": 3,
+                         "elementAnimations": {
+                         "animation_in": {
+                         "show": "fadeIn",
+                         "speed": 1,
+                         "delay": 0.6
+                         },
+                         "animation_on": {
+                         "iteration_count": 3
+                         },
+                         "animation_out": [
+                         
+                         ]
+                         },
+                         "marginTop": 0,
+                         "selectedAnimationShow": "fadeIn",
+                         "selectedAnimationSpeed": 1
                          }
                          ]
              }

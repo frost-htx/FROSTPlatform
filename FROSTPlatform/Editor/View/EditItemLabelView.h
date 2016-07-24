@@ -8,6 +8,7 @@
 
 #import "EditRootItemView.h"
 
+
 @interface EditItemLabelView : EditRootItemView
 
 @property (nonatomic,strong) YYLabel *editLabel;
