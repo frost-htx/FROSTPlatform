@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		278F61CD1D48F0DF00EF5CDC /* EditViewControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 278F61CC1D48F0DF00EF5CDC /* EditViewControllerManager.m */; };
 		27CE94551D3B484A003791FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CE94541D3B484A003791FC /* main.m */; };
 		27CE94581D3B484A003791FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CE94571D3B484A003791FC /* AppDelegate.m */; };
 		27CE945B1D3B484A003791FC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CE945A1D3B484A003791FC /* ViewController.m */; };
@@ -51,6 +52,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		278F60BD1D47C39A00EF5CDC /* EditItemRecognizerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditItemRecognizerProtocol.h; sourceTree = "<group>"; };
+		278F61CB1D48F0DF00EF5CDC /* EditViewControllerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewControllerManager.h; sourceTree = "<group>"; };
+		278F61CC1D48F0DF00EF5CDC /* EditViewControllerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewControllerManager.m; sourceTree = "<group>"; };
 		27B9E7431D4318FB00E7345B /* BindViewWithModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BindViewWithModelProtocol.h; sourceTree = "<group>"; };
 		27CE94501D3B484A003791FC /* FROSTPlatform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FROSTPlatform.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27CE94541D3B484A003791FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -130,10 +134,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		278F61CA1D48F0DF00EF5CDC /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				278F61CB1D48F0DF00EF5CDC /* EditViewControllerManager.h */,
+				278F61CC1D48F0DF00EF5CDC /* EditViewControllerManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		27B9E7421D43189600E7345B /* HeaderFile */ = {
 			isa = PBXGroup;
 			children = (
 				27B9E7431D4318FB00E7345B /* BindViewWithModelProtocol.h */,
+				278F60BD1D47C39A00EF5CDC /* EditItemRecognizerProtocol.h */,
 			);
 			path = HeaderFile;
 			sourceTree = "<group>";
@@ -309,6 +323,7 @@
 		27CE94951D3BD354003791FC /* Editor */ = {
 			isa = PBXGroup;
 			children = (
+				278F61CA1D48F0DF00EF5CDC /* Manager */,
 				27CE94961D3BD354003791FC /* Model */,
 				27CE94971D3BD354003791FC /* View */,
 				27CE94981D3BD354003791FC /* ViewController */,
@@ -575,6 +590,7 @@
 				27DF39F41D3DBE05001C5C33 /* EditItemImageView.m in Sources */,
 				27DF39FF1D3E08D5001C5C33 /* JsonUtil.m in Sources */,
 				27DF39DF1D3CA55F001C5C33 /* MainViewControler.m in Sources */,
+				278F61CD1D48F0DF00EF5CDC /* EditViewControllerManager.m in Sources */,
 				27CE945B1D3B484A003791FC /* ViewController.m in Sources */,
 				27DF39DC1D3CA504001C5C33 /* RootViewController.m in Sources */,
 				27DF39D61D3C7A9B001C5C33 /* RootModel.m in Sources */,

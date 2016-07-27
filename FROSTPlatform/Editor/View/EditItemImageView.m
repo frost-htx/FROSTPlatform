@@ -35,6 +35,13 @@
     }];
 }
 
+#pragma mark EditItemRecognizerProtocol
+
+-(void)tapRecognizerAction {
+    self.isSelect = YES;
+    [super tapRecognizerAction];
+}
+
 #pragma mark gettes and setters
 
 -(UIImageView *)editImageView {

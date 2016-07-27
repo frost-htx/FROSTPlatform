@@ -45,6 +45,12 @@
 
 }
 
+#pragma mark EditItemRecognizerProtocol
+
+-(void)tapRecognizerAction {
+    [super tapRecognizerAction];
+}
+
 #pragma mark Private Methods
 
 -(NSTextAlignment)transformStrToAlignment:(NSString *)string {

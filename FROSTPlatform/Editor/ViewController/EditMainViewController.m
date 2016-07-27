@@ -10,6 +10,7 @@
 #import "EditMainCollectionCell.h"
 #import "EditCollectionView.h"
 #import "EditViewModel.h"
+#import "EditViewControllerManager.h"
 
 #define kShowItemWidth 256
 #define kShowItemHeihgt 403.2
@@ -34,6 +35,14 @@ static CGFloat CellSpaing = 10;
 @implementation EditMainViewController
 
 #pragma mark life cycle
+
+-(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        [EditViewControllerManager shareManager];
+    }
+    return self;
+}
 
 -(void)viewDidLoad {
     [super viewDidLoad];

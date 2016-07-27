@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "BindViewWithModelProtocol.h"
 #import "EditModel.h"
+#import "EditItemRecognizerProtocol.h"
 
-@interface EditRootItemView : UIView<BindViewWithModelProtocol>
+@interface EditRootItemView : UIView<BindViewWithModelProtocol,EditItemRecognizerProtocol>
 
 @property (nonatomic, assign) CGFloat   zoomSize;
 

@@ -119,7 +119,7 @@
                          "opacity": 1,
                          "type": "ptext",
                          "version": 21,
-                         "con": "<p>\u5927 \u96c4<\/p>",
+                         "con": "\u5927 \u96c4",
                          "show": "pullDown",
                          "speed": 1200,
                          "delay": 600,
@@ -156,6 +156,139 @@
                          },
                          "marginTop": 0,
                          "selectedAnimationShow": "fadeIn",
+                         "selectedAnimationSpeed": 1
+                         },
+                         {
+                         "top": 188.71698113208,
+                         "left": 332.98113207547,
+                         "w": "400",
+                         "h": "100",
+                         "rotate": "0",
+                         "bgcolor": "rgba(25,25,25,0)",
+                         "opacity": 1,
+                         "type": "ptext",
+                         "version": 21,
+                         "con": "静 香",
+                         "show": "pullDown",
+                         "speed": 1200,
+                         "delay": 600,
+                         "borderradius": 0,
+                         "boxshadow": 0,
+                         "border-style": "none",
+                         "border-color": "rgba(0,0,0,0)",
+                         "border-width": "0px",
+                         "lineheight": 1.5,
+                         "textalign": "center",
+                         "textvalign": "middle",
+                         "prepara": "0",
+                         "afterpara": "0",
+                         "ftcolor": "rgb(0,0,0)",
+                         "ftsize": 40,
+                         "tl": 60,
+                         "fontbold": true,
+                         "fontitalic": false,
+                         "udl": false,
+                         "height": 64,
+                         "key": 4,
+                         "elementAnimations": {
+                         "animation_in": {
+                         "show": "fadeIn",
+                         "speed": 1,
+                         "delay": 0.6
+                         },
+                         "animation_on": {
+                         "iteration_count": 3
+                         },
+                         "animation_out": []
+                         },
+                         "marginTop": 0,
+                         "selectedAnimationShow": "fadeIn",
+                         "selectedAnimationSpeed": 1
+                         },
+                         {
+                         "top": 626.54716981132,
+                         "left": 120.45283018868,
+                         "w": "400",
+                         "h": "100",
+                         "rotate": "0",
+                         "bgcolor": "rgba(25,25,25,0)",
+                         "opacity": 1,
+                         "type": "ptext",
+                         "version": 21,
+                         "con": "2015 • 08 • 10",
+                         "show": "zoomIn",
+                         "speed": 1200,
+                         "delay": 1300,
+                         "borderradius": 0,
+                         "boxshadow": 0,
+                         "border-style": "none",
+                         "border-color": "black",
+                         "border-width": "0px",
+                         "lineheight": 1.5,
+                         "textalign": "center",
+                         "textvalign": "middle",
+                         "prepara": "0",
+                         "afterpara": "0",
+                         "ftcolor": "rgb(135,135,135)",
+                         "ftsize": 48,
+                         "tl": 60,
+                         "fontbold": false,
+                         "fontitalic": false,
+                         "udl": false,
+                         "height": 76,
+                         "key": 5,
+                         "elementAnimations": {
+                         "animation_in": {
+                         "show": "fadeIn",
+                         "speed": 1,
+                         "delay": 0.6
+                         },
+                         "animation_on": {
+                         "iteration_count": 3
+                         },
+                         "animation_out": []
+                         },
+                         "marginTop": 0,
+                         "selectedAnimationShow": "fadeIn",
+                         "selectedAnimationSpeed": 1
+                         },
+                         {
+                         "top": 743.05660377358,
+                         "left": 125.24528301887,
+                         "w": 640,
+                         "h": 300,
+                         "rotate": "0",
+                         "opacity": 1,
+                         "type": "pic",
+                         "con": "http://img.maka.mobi/maka/app/gfile/public/pic?get=id/XCVO5BH75RS072ORVAZ6LR/thumb/100",
+                         "show": "fadeInLeft",
+                         "speed": 1500,
+                         "delay": 0,
+                         "borderradius": 0,
+                         "shape": 0,
+                         "inw": 640,
+                         "inh": 300,
+                         "intop": 0,
+                         "inleft": 0,
+                         "picid": "BGXD2DCBQU9WYQHI9225",
+                         "stylecolor": "rgba(0,0,0,0)",
+                         "styleopacity": 0,
+                         "height": 256,
+                         "key": 6,
+                         "elementAnimations": {
+                         "animation_in": {
+                         "show": "fadeInNormal",
+                         "speed": 1,
+                         "delay": 0.6
+                         },
+                         "animation_on": {
+                         "iteration_count": 3
+                         },
+                         "animation_out": [
+                         
+                         ]
+                         },
+                         "selectedAnimationShow": "fadeInNormal",
                          "selectedAnimationSpeed": 1
                          }
                          ]
