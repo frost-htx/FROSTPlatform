@@ -14,4 +14,5 @@
 @interface EditMainCollectionCell : UICollectionViewCell<BindViewWithModelProtocol>
 
 @property (nonatomic, strong) UIImageView  *backGroungView;
+
 @end

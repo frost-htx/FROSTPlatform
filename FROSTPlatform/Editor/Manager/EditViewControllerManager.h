@@ -26,11 +26,4 @@
  */
 -(void)setCurrentEditModel:(EditModel *)editModel;
 
-/**
- *  设置当前点击的editview
- *
- *  @param editItemView
- */
--(void)setLatestEditItemView:(EditRootItemView *)editItemView;
-
 @end

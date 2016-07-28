@@ -52,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		271D8ABF1D4A614A00B0F336 /* EditNSNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditNSNotificationCenter.h; sourceTree = "<group>"; };
 		278F60BD1D47C39A00EF5CDC /* EditItemRecognizerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditItemRecognizerProtocol.h; sourceTree = "<group>"; };
 		278F61CB1D48F0DF00EF5CDC /* EditViewControllerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewControllerManager.h; sourceTree = "<group>"; };
 		278F61CC1D48F0DF00EF5CDC /* EditViewControllerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewControllerManager.m; sourceTree = "<group>"; };
@@ -148,6 +149,7 @@
 			children = (
 				27B9E7431D4318FB00E7345B /* BindViewWithModelProtocol.h */,
 				278F60BD1D47C39A00EF5CDC /* EditItemRecognizerProtocol.h */,
+				271D8ABF1D4A614A00B0F336 /* EditNSNotificationCenter.h */,
 			);
 			path = HeaderFile;
 			sourceTree = "<group>";

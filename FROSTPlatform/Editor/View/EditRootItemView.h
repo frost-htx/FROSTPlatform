@@ -13,8 +13,18 @@
 
 @interface EditRootItemView : UIView<BindViewWithModelProtocol,EditItemRecognizerProtocol>
 
+/**
+ *  缩放比例
+ */
 @property (nonatomic, assign) CGFloat   zoomSize;
 
+/**
+ *  坐标转换
+ *
+ *  @param frame 转换前的坐标
+ *
+ *  @return 转换后的坐标
+ */
 -(CGRect)transformCoordinate:(CGRect)frame;
 
 @end

@@ -33,6 +33,7 @@
 
 -(void)tapRecognizerAction {
     [self drawBorderEdge];
+    [[NSNotificationCenter defaultCenter] postNotificationName:Edit_ClickOnTheEditItemNotification object:self];
 }
 
 #pragma mark Private methods
@@ -48,6 +49,22 @@
 -(void)drawBorderEdge {
     self.layer.borderColor = [UIColor yellowColor].CGColor;
     self.layer.borderWidth = 1;
+}
+
+-(void)deleteBorderEdge {
+    self.layer.borderColor = nil;
+    self.layer.borderWidth = 0;
+}
+
+#pragma mark getters and setters
+
+-(void)setIsSelect:(BOOL)isSelect {
+    _isSelect = isSelect;
+    if (_isSelect) {
+        [self drawBorderEdge];
+    } else {
+        [self deleteBorderEdge];
+    }
 }
 
 @end
