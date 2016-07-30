@@ -36,6 +36,7 @@ PODS:
     - SDWebImage/Core (= 3.7.5)
   - SDWebImage/Core (3.7.5)
   - SVProgressHUD (2.0-beta8)
+  - TZImagePickerController (1.1.0)
   - YYKit (0.9.11):
     - YYKit/no-arc (= 0.9.11)
   - YYKit/no-arc (0.9.11)
@@ -51,6 +52,7 @@ DEPENDENCIES:
   - ReactiveCocoa (~> 4.0.0)
   - SDWebImage (~> 3.7.5)
   - SVProgressHUD (~> 2.0-beta8)
+  - TZImagePickerController (~> 1.1.0)
   - YYKit (~> 0.9.11)
 
 SPEC CHECKSUMS:
@@ -65,6 +67,9 @@ SPEC CHECKSUMS:
   Result: dd3dd71af3fa2e262f1a999e14fba2c25ec14f16
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
   SVProgressHUD: 6e48a1dda09ce3b58adc41d013baed3a8e8980ff
+  TZImagePickerController: 6113439851cdf6e8db242e16217e5f46851d12ad
   YYKit: 76c3f2cee1a72d3c5b1d7fd8d170ee507fe5df68
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 68d08ebe6a025fe009ddad1cb9bc9bd5dd7a8aeb
+
+COCOAPODS: 1.0.1

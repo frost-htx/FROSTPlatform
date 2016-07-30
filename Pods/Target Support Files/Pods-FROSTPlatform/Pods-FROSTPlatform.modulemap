@@ -1,0 +1,6 @@
+framework module Pods_FROSTPlatform {
+  umbrella header "Pods-FROSTPlatform-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -31,7 +31,7 @@
 		27DF39F71D3DBE23001C5C33 /* EditItemLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DF39F61D3DBE23001C5C33 /* EditItemLabelView.m */; };
 		27DF39FF1D3E08D5001C5C33 /* JsonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DF39FE1D3E08D5001C5C33 /* JsonUtil.m */; };
 		27DF44901D3E0BB2001C5C33 /* Template.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 27DF448F1D3E0BB2001C5C33 /* Template.geojson */; };
-		581684A8DEDFBE4E6F08C683 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D6098F2B2EE1545375D99E /* Pods.framework */; };
+		286E63B1137A4979A98CF17D /* Pods_FROSTPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB6F7A8B1931D6E0FE5AB1F /* Pods_FROSTPlatform.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,9 +104,10 @@
 		27DF39FD1D3E08D5001C5C33 /* JsonUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonUtil.h; sourceTree = "<group>"; };
 		27DF39FE1D3E08D5001C5C33 /* JsonUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonUtil.m; sourceTree = "<group>"; };
 		27DF448F1D3E0BB2001C5C33 /* Template.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Template.geojson; sourceTree = "<group>"; };
-		62F80EDBB6BEF70042FEB3BE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		8963280A529425C4EB45E670 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		52B4438758A0ED35874F2CD5 /* Pods-FROSTPlatform.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FROSTPlatform.release.xcconfig"; path = "Pods/Target Support Files/Pods-FROSTPlatform/Pods-FROSTPlatform.release.xcconfig"; sourceTree = "<group>"; };
 		A1D6098F2B2EE1545375D99E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFB6F7A8B1931D6E0FE5AB1F /* Pods_FROSTPlatform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FROSTPlatform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB86FCA52A348ACF2224FB81 /* Pods-FROSTPlatform.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FROSTPlatform.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FROSTPlatform/Pods-FROSTPlatform.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				581684A8DEDFBE4E6F08C683 /* Pods.framework in Frameworks */,
+				286E63B1137A4979A98CF17D /* Pods_FROSTPlatform.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +136,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17FA91B60BE2BEA62868436E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FB86FCA52A348ACF2224FB81 /* Pods-FROSTPlatform.debug.xcconfig */,
+				52B4438758A0ED35874F2CD5 /* Pods-FROSTPlatform.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		278F61CA1D48F0DF00EF5CDC /* Manager */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,8 +171,8 @@
 				27CE946C1D3B484A003791FC /* FROSTPlatformTests */,
 				27CE94771D3B484A003791FC /* FROSTPlatformUITests */,
 				27CE94511D3B484A003791FC /* Products */,
-				5A2E8729DE9048636089624A /* Pods */,
 				D7363DE09C9B427C05815CB5 /* Frameworks */,
+				17FA91B60BE2BEA62868436E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -387,19 +397,11 @@
 			path = PlatformTools;
 			sourceTree = "<group>";
 		};
-		5A2E8729DE9048636089624A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				62F80EDBB6BEF70042FEB3BE /* Pods.debug.xcconfig */,
-				8963280A529425C4EB45E670 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		D7363DE09C9B427C05815CB5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				A1D6098F2B2EE1545375D99E /* Pods.framework */,
+				AFB6F7A8B1931D6E0FE5AB1F /* Pods_FROSTPlatform.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -411,12 +413,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27CE947D1D3B484A003791FC /* Build configuration list for PBXNativeTarget "FROSTPlatform" */;
 			buildPhases = (
-				DDFCDE5F8D303269430F213B /* Check Pods Manifest.lock */,
+				F32E806D2833E6C5E71DAA2B /* [CP] Check Pods Manifest.lock */,
 				27CE944C1D3B484A003791FC /* Sources */,
 				27CE944D1D3B484A003791FC /* Frameworks */,
 				27CE944E1D3B484A003791FC /* Resources */,
-				8528BC2C2424E1BBF235AF1E /* Embed Pods Frameworks */,
-				5019AECEC2E2DD28278EF4CD /* Copy Pods Resources */,
+				229EF5B1F911BD278D3F1833 /* [CP] Embed Pods Frameworks */,
+				50DA638AD7934FBF2B0320D4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -534,44 +536,44 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5019AECEC2E2DD28278EF4CD /* Copy Pods Resources */ = {
+		229EF5B1F911BD278D3F1833 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FROSTPlatform/Pods-FROSTPlatform-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8528BC2C2424E1BBF235AF1E /* Embed Pods Frameworks */ = {
+		50DA638AD7934FBF2B0320D4 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FROSTPlatform/Pods-FROSTPlatform-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DDFCDE5F8D303269430F213B /* Check Pods Manifest.lock */ = {
+		F32E806D2833E6C5E71DAA2B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -742,7 +744,7 @@
 		};
 		27CE947E1D3B484A003791FC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 62F80EDBB6BEF70042FEB3BE /* Pods.debug.xcconfig */;
+			baseConfigurationReference = FB86FCA52A348ACF2224FB81 /* Pods-FROSTPlatform.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -756,7 +758,7 @@
 		};
 		27CE947F1D3B484A003791FC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8963280A529425C4EB45E670 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 52B4438758A0ED35874F2CD5 /* Pods-FROSTPlatform.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
