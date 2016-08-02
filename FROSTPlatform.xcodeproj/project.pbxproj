@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		278F61CD1D48F0DF00EF5CDC /* EditViewControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 278F61CC1D48F0DF00EF5CDC /* EditViewControllerManager.m */; };
+		27C893231D4E169100FE4A32 /* TZAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C893111D4E169100FE4A32 /* TZAssetCell.m */; };
+		27C893241D4E169100FE4A32 /* TZAssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C893131D4E169100FE4A32 /* TZAssetModel.m */; };
+		27C893251D4E169100FE4A32 /* TZImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C893151D4E169100FE4A32 /* TZImageManager.m */; };
+		27C893261D4E169100FE4A32 /* TZImagePickerController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 27C893161D4E169100FE4A32 /* TZImagePickerController.bundle */; };
+		27C893271D4E169100FE4A32 /* TZImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C893181D4E169100FE4A32 /* TZImagePickerController.m */; };
+		27C893281D4E169100FE4A32 /* TZPhotoPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C8931A1D4E169100FE4A32 /* TZPhotoPickerController.m */; };
+		27C893291D4E169100FE4A32 /* TZPhotoPreviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C8931C1D4E169100FE4A32 /* TZPhotoPreviewCell.m */; };
+		27C8932A1D4E169100FE4A32 /* TZPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C8931E1D4E169100FE4A32 /* TZPhotoPreviewController.m */; };
+		27C8932B1D4E169100FE4A32 /* TZVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C893201D4E169100FE4A32 /* TZVideoPlayerController.m */; };
+		27C8932C1D4E169100FE4A32 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C893221D4E169100FE4A32 /* UIView+Layout.m */; };
+		27C893361D504A0500FE4A32 /* PhotoCuttingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C893351D504A0500FE4A32 /* PhotoCuttingViewController.m */; };
 		27CE94551D3B484A003791FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CE94541D3B484A003791FC /* main.m */; };
 		27CE94581D3B484A003791FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CE94571D3B484A003791FC /* AppDelegate.m */; };
 		27CE945B1D3B484A003791FC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CE945A1D3B484A003791FC /* ViewController.m */; };
@@ -57,6 +68,27 @@
 		278F61CB1D48F0DF00EF5CDC /* EditViewControllerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewControllerManager.h; sourceTree = "<group>"; };
 		278F61CC1D48F0DF00EF5CDC /* EditViewControllerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewControllerManager.m; sourceTree = "<group>"; };
 		27B9E7431D4318FB00E7345B /* BindViewWithModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BindViewWithModelProtocol.h; sourceTree = "<group>"; };
+		27C893101D4E169100FE4A32 /* TZAssetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZAssetCell.h; sourceTree = "<group>"; };
+		27C893111D4E169100FE4A32 /* TZAssetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZAssetCell.m; sourceTree = "<group>"; };
+		27C893121D4E169100FE4A32 /* TZAssetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZAssetModel.h; sourceTree = "<group>"; };
+		27C893131D4E169100FE4A32 /* TZAssetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZAssetModel.m; sourceTree = "<group>"; };
+		27C893141D4E169100FE4A32 /* TZImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZImageManager.h; sourceTree = "<group>"; };
+		27C893151D4E169100FE4A32 /* TZImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZImageManager.m; sourceTree = "<group>"; };
+		27C893161D4E169100FE4A32 /* TZImagePickerController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TZImagePickerController.bundle; sourceTree = "<group>"; };
+		27C893171D4E169100FE4A32 /* TZImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZImagePickerController.h; sourceTree = "<group>"; };
+		27C893181D4E169100FE4A32 /* TZImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZImagePickerController.m; sourceTree = "<group>"; };
+		27C893191D4E169100FE4A32 /* TZPhotoPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZPhotoPickerController.h; sourceTree = "<group>"; };
+		27C8931A1D4E169100FE4A32 /* TZPhotoPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZPhotoPickerController.m; sourceTree = "<group>"; };
+		27C8931B1D4E169100FE4A32 /* TZPhotoPreviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZPhotoPreviewCell.h; sourceTree = "<group>"; };
+		27C8931C1D4E169100FE4A32 /* TZPhotoPreviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZPhotoPreviewCell.m; sourceTree = "<group>"; };
+		27C8931D1D4E169100FE4A32 /* TZPhotoPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZPhotoPreviewController.h; sourceTree = "<group>"; };
+		27C8931E1D4E169100FE4A32 /* TZPhotoPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZPhotoPreviewController.m; sourceTree = "<group>"; };
+		27C8931F1D4E169100FE4A32 /* TZVideoPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZVideoPlayerController.h; sourceTree = "<group>"; };
+		27C893201D4E169100FE4A32 /* TZVideoPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZVideoPlayerController.m; sourceTree = "<group>"; };
+		27C893211D4E169100FE4A32 /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
+		27C893221D4E169100FE4A32 /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
+		27C893341D504A0500FE4A32 /* PhotoCuttingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCuttingViewController.h; sourceTree = "<group>"; };
+		27C893351D504A0500FE4A32 /* PhotoCuttingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCuttingViewController.m; sourceTree = "<group>"; };
 		27CE94501D3B484A003791FC /* FROSTPlatform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FROSTPlatform.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27CE94541D3B484A003791FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		27CE94561D3B484A003791FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -164,6 +196,40 @@
 			path = HeaderFile;
 			sourceTree = "<group>";
 		};
+		27C8930E1D4E169100FE4A32 /* Third-partyLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				27C8930F1D4E169100FE4A32 /* TZImagePickerController */,
+			);
+			path = "Third-partyLibraries";
+			sourceTree = "<group>";
+		};
+		27C8930F1D4E169100FE4A32 /* TZImagePickerController */ = {
+			isa = PBXGroup;
+			children = (
+				27C893101D4E169100FE4A32 /* TZAssetCell.h */,
+				27C893111D4E169100FE4A32 /* TZAssetCell.m */,
+				27C893121D4E169100FE4A32 /* TZAssetModel.h */,
+				27C893131D4E169100FE4A32 /* TZAssetModel.m */,
+				27C893141D4E169100FE4A32 /* TZImageManager.h */,
+				27C893151D4E169100FE4A32 /* TZImageManager.m */,
+				27C893161D4E169100FE4A32 /* TZImagePickerController.bundle */,
+				27C893171D4E169100FE4A32 /* TZImagePickerController.h */,
+				27C893181D4E169100FE4A32 /* TZImagePickerController.m */,
+				27C893191D4E169100FE4A32 /* TZPhotoPickerController.h */,
+				27C8931A1D4E169100FE4A32 /* TZPhotoPickerController.m */,
+				27C8931B1D4E169100FE4A32 /* TZPhotoPreviewCell.h */,
+				27C8931C1D4E169100FE4A32 /* TZPhotoPreviewCell.m */,
+				27C8931D1D4E169100FE4A32 /* TZPhotoPreviewController.h */,
+				27C8931E1D4E169100FE4A32 /* TZPhotoPreviewController.m */,
+				27C8931F1D4E169100FE4A32 /* TZVideoPlayerController.h */,
+				27C893201D4E169100FE4A32 /* TZVideoPlayerController.m */,
+				27C893211D4E169100FE4A32 /* UIView+Layout.h */,
+				27C893221D4E169100FE4A32 /* UIView+Layout.m */,
+			);
+			path = TZImagePickerController;
+			sourceTree = "<group>";
+		};
 		27CE94471D3B484A003791FC = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +255,7 @@
 		27CE94521D3B484A003791FC /* FROSTPlatform */ = {
 			isa = PBXGroup;
 			children = (
+				27C8930E1D4E169100FE4A32 /* Third-partyLibraries */,
 				27B9E7421D43189600E7345B /* HeaderFile */,
 				27DF39FC1D3E08C1001C5C33 /* PlatformTools */,
 				27CE94951D3BD354003791FC /* Editor */,
@@ -375,6 +442,8 @@
 			children = (
 				27CE949E1D3BDFA1003791FC /* EditMainViewController.h */,
 				27CE949F1D3BDFA1003791FC /* EditMainViewController.m */,
+				27C893341D504A0500FE4A32 /* PhotoCuttingViewController.h */,
+				27C893351D504A0500FE4A32 /* PhotoCuttingViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -514,6 +583,7 @@
 			files = (
 				27CE94631D3B484A003791FC /* LaunchScreen.storyboard in Resources */,
 				27DF44901D3E0BB2001C5C33 /* Template.geojson in Resources */,
+				27C893261D4E169100FE4A32 /* TZImagePickerController.bundle in Resources */,
 				27CE94601D3B484A003791FC /* Assets.xcassets in Resources */,
 				27CE945E1D3B484A003791FC /* Main.storyboard in Resources */,
 			);
@@ -589,22 +659,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				27DF39F11D3DBD66001C5C33 /* EditMainCollectionCell.m in Sources */,
+				27C893251D4E169100FE4A32 /* TZImageManager.m in Sources */,
 				27DF39E81D3CC893001C5C33 /* EditCollectionView.m in Sources */,
+				27C893281D4E169100FE4A32 /* TZPhotoPickerController.m in Sources */,
+				27C8932B1D4E169100FE4A32 /* TZVideoPlayerController.m in Sources */,
 				27DF39D31D3C7A70001C5C33 /* RootViewModel.m in Sources */,
 				27DF39F41D3DBE05001C5C33 /* EditItemImageView.m in Sources */,
+				27C893271D4E169100FE4A32 /* TZImagePickerController.m in Sources */,
 				27DF39FF1D3E08D5001C5C33 /* JsonUtil.m in Sources */,
+				27C8932A1D4E169100FE4A32 /* TZPhotoPreviewController.m in Sources */,
 				27DF39DF1D3CA55F001C5C33 /* MainViewControler.m in Sources */,
+				27C893291D4E169100FE4A32 /* TZPhotoPreviewCell.m in Sources */,
 				278F61CD1D48F0DF00EF5CDC /* EditViewControllerManager.m in Sources */,
 				27CE945B1D3B484A003791FC /* ViewController.m in Sources */,
+				27C8932C1D4E169100FE4A32 /* UIView+Layout.m in Sources */,
 				27DF39DC1D3CA504001C5C33 /* RootViewController.m in Sources */,
 				27DF39D61D3C7A9B001C5C33 /* RootModel.m in Sources */,
+				27C893231D4E169100FE4A32 /* TZAssetCell.m in Sources */,
 				27DF39EE1D3DBD3D001C5C33 /* EditRootItemView.m in Sources */,
+				27C893241D4E169100FE4A32 /* TZAssetModel.m in Sources */,
 				27CE94A01D3BDFA1003791FC /* EditMainViewController.m in Sources */,
 				27DF39E51D3CC7F7001C5C33 /* RootView.m in Sources */,
 				27DF39D91D3C7AED001C5C33 /* EditViewModel.m in Sources */,
 				27DF39EB1D3CF4F7001C5C33 /* EditModel.m in Sources */,
 				27CE94581D3B484A003791FC /* AppDelegate.m in Sources */,
 				27DF39F71D3DBE23001C5C33 /* EditItemLabelView.m in Sources */,
+				27C893361D504A0500FE4A32 /* PhotoCuttingViewController.m in Sources */,
 				27CE94551D3B484A003791FC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

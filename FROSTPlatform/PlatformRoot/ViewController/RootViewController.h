@@ -6,8 +6,8 @@
 //  Copyright © 2016年 frost. All rights reserved.
 //
 
-#import "ViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface RootViewController : ViewController
+@interface RootViewController : UIViewController
 
 @end

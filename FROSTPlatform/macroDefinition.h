@@ -28,7 +28,7 @@
 /************************************* Other *******************************************/
 
 #define WS(weakobj,obj)  __weak __typeof(&*obj)weakobj = obj
-#define TheAppDelegate [[UIApplication sharedApplication] delegate]
+#define TheAppDelegate  (AppDelegate *)[[UIApplication sharedApplication] delegate]
 
 
 #endif /* macroDefinition_h */

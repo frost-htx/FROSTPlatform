@@ -16,6 +16,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    self.currentNavigation = (UINavigationController *)self.window.rootViewController;
     // Override point for customization after application launch.
     return YES;
 }
