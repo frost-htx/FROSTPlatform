@@ -47,7 +47,7 @@
 -(UIImageView *)editImageView {
     if (!_editImageView) {
         _editImageView = [[UIImageView alloc] init];
-        _editImageView.contentMode = UIViewContentModeScaleAspectFit;
+        _editImageView.contentMode = UIViewContentModeScaleAspectFill;
         _editImageView.clipsToBounds = YES;
         _editImageView.userInteractionEnabled = YES;
     }

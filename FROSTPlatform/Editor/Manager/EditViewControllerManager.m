@@ -109,7 +109,9 @@
 }
 
 - (void)imageCropViewController:(RSKImageCropViewController *)controller didCropImage:(UIImage *)croppedImage usingCropRect:(CGRect)cropRect rotationAngle:(CGFloat)rotationAngle {
-
+    EditItemImageView *itemImageView = (EditItemImageView *)self.latestEditItemView;
+    itemImageView.editImageView.image = croppedImage;
+    [[TheAppDelegate currentNavigation] popViewControllerAnimated:YES];
 }
 
 #pragma mark Private Methods
