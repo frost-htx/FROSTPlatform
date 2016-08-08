@@ -14,4 +14,5 @@ target :FROSTPlatform do
     pod 'SVProgressHUD','~> 2.0-beta8'
     pod 'iCarousel','~>1.8.2'
     pod 'RSKImageCropper','~> 1.5.1'
+    pod 'LFLiveKit', '~> 2.0'
 end
