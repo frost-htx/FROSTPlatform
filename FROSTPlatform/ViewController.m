@@ -28,9 +28,8 @@
 }
 
 -(void)layoutSubViews {
-    WS(weakSelf, self);
     [_mainTableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(weakSelf.view).with.insets(UIEdgeInsetsMake(0, 0, 0, 0));
+        make.edges.equalTo(self.view).with.insets(UIEdgeInsetsMake(0, 0, 0, 0));
     }];
 }
 
@@ -70,6 +69,9 @@
     }
     if ([titleName isEqualToString:@"Demo"]) {
         DemoViewController *demoViewController1 = [[DemoViewController alloc] init];
+        [demoViewController1 loadData:^(BOOL success) {
+            LoggerModel(1,@"this DemoViewController model :%@",self);
+        }];
         self.demoViewController = demoViewController1;
         [self.navigationController pushViewController:demoViewController1 animated:YES];
     }

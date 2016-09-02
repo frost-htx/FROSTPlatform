@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		271227AC1D791845001F0EAE /* FRTBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 271227AB1D791845001F0EAE /* FRTBaseRequest.m */; };
+		271227AF1D791864001F0EAE /* FRTRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 271227AE1D791864001F0EAE /* FRTRequest.m */; };
+		271227B21D791A37001F0EAE /* FRTRequestError.m in Sources */ = {isa = PBXBuildFile; fileRef = 271227B11D791A37001F0EAE /* FRTRequestError.m */; };
+		271227B51D791EB0001F0EAE /* FRTRequestCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 271227B41D791EB0001F0EAE /* FRTRequestCache.m */; };
+		271227B81D791EC8001F0EAE /* FRTNetWorkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 271227B71D791EC8001F0EAE /* FRTNetWorkConfig.m */; };
+		271227BB1D791ED9001F0EAE /* FRTConfigTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 271227BA1D791ED9001F0EAE /* FRTConfigTools.m */; };
+		271227BE1D791EE6001F0EAE /* FRTNetWorkAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 271227BD1D791EE6001F0EAE /* FRTNetWorkAgent.m */; };
 		27128A911D6EED8F0034E706 /* DemoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27128A8E1D6EED8F0034E706 /* DemoModel.m */; };
 		27128A921D6EED8F0034E706 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27128A901D6EED8F0034E706 /* DemoViewController.m */; };
 		27776A6E1D571F8A008178B7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27776A6D1D571F8A008178B7 /* AudioToolbox.framework */; };
@@ -78,6 +85,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		271227AA1D791845001F0EAE /* FRTBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRTBaseRequest.h; sourceTree = "<group>"; };
+		271227AB1D791845001F0EAE /* FRTBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRTBaseRequest.m; sourceTree = "<group>"; };
+		271227AD1D791864001F0EAE /* FRTRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRTRequest.h; sourceTree = "<group>"; };
+		271227AE1D791864001F0EAE /* FRTRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRTRequest.m; sourceTree = "<group>"; };
+		271227B01D791A37001F0EAE /* FRTRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRTRequestError.h; sourceTree = "<group>"; };
+		271227B11D791A37001F0EAE /* FRTRequestError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRTRequestError.m; sourceTree = "<group>"; };
+		271227B31D791EB0001F0EAE /* FRTRequestCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRTRequestCache.h; sourceTree = "<group>"; };
+		271227B41D791EB0001F0EAE /* FRTRequestCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRTRequestCache.m; sourceTree = "<group>"; };
+		271227B61D791EC8001F0EAE /* FRTNetWorkConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRTNetWorkConfig.h; sourceTree = "<group>"; };
+		271227B71D791EC8001F0EAE /* FRTNetWorkConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRTNetWorkConfig.m; sourceTree = "<group>"; };
+		271227B91D791ED9001F0EAE /* FRTConfigTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRTConfigTools.h; sourceTree = "<group>"; };
+		271227BA1D791ED9001F0EAE /* FRTConfigTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRTConfigTools.m; sourceTree = "<group>"; };
+		271227BC1D791EE6001F0EAE /* FRTNetWorkAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRTNetWorkAgent.h; sourceTree = "<group>"; };
+		271227BD1D791EE6001F0EAE /* FRTNetWorkAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRTNetWorkAgent.m; sourceTree = "<group>"; };
 		27128A8D1D6EED8F0034E706 /* DemoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoModel.h; sourceTree = "<group>"; };
 		27128A8E1D6EED8F0034E706 /* DemoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoModel.m; sourceTree = "<group>"; };
 		27128A8F1D6EED8F0034E706 /* DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
@@ -425,6 +446,20 @@
 		27CE94901D3BC726003791FC /* Servers */ = {
 			isa = PBXGroup;
 			children = (
+				271227AA1D791845001F0EAE /* FRTBaseRequest.h */,
+				271227AB1D791845001F0EAE /* FRTBaseRequest.m */,
+				271227AD1D791864001F0EAE /* FRTRequest.h */,
+				271227AE1D791864001F0EAE /* FRTRequest.m */,
+				271227BC1D791EE6001F0EAE /* FRTNetWorkAgent.h */,
+				271227BD1D791EE6001F0EAE /* FRTNetWorkAgent.m */,
+				271227B01D791A37001F0EAE /* FRTRequestError.h */,
+				271227B11D791A37001F0EAE /* FRTRequestError.m */,
+				271227B31D791EB0001F0EAE /* FRTRequestCache.h */,
+				271227B41D791EB0001F0EAE /* FRTRequestCache.m */,
+				271227B61D791EC8001F0EAE /* FRTNetWorkConfig.h */,
+				271227B71D791EC8001F0EAE /* FRTNetWorkConfig.m */,
+				271227B91D791ED9001F0EAE /* FRTConfigTools.h */,
+				271227BA1D791ED9001F0EAE /* FRTConfigTools.m */,
 			);
 			path = Servers;
 			sourceTree = "<group>";
@@ -731,11 +766,16 @@
 				27DF39F11D3DBD66001C5C33 /* EditMainCollectionCell.m in Sources */,
 				27C893251D4E169100FE4A32 /* TZImageManager.m in Sources */,
 				27DF39E81D3CC893001C5C33 /* EditCollectionView.m in Sources */,
+				271227B51D791EB0001F0EAE /* FRTRequestCache.m in Sources */,
+				271227AC1D791845001F0EAE /* FRTBaseRequest.m in Sources */,
 				27128A921D6EED8F0034E706 /* DemoViewController.m in Sources */,
 				27C893281D4E169100FE4A32 /* TZPhotoPickerController.m in Sources */,
+				271227BE1D791EE6001F0EAE /* FRTNetWorkAgent.m in Sources */,
 				27C8932B1D4E169100FE4A32 /* TZVideoPlayerController.m in Sources */,
+				271227B81D791EC8001F0EAE /* FRTNetWorkConfig.m in Sources */,
 				27DF39D31D3C7A70001C5C33 /* RootViewModel.m in Sources */,
 				27DF39F41D3DBE05001C5C33 /* EditItemImageView.m in Sources */,
+				271227B21D791A37001F0EAE /* FRTRequestError.m in Sources */,
 				27C893271D4E169100FE4A32 /* TZImagePickerController.m in Sources */,
 				27DF39FF1D3E08D5001C5C33 /* JsonUtil.m in Sources */,
 				27C8932A1D4E169100FE4A32 /* TZPhotoPreviewController.m in Sources */,
@@ -755,8 +795,10 @@
 				27DF39D91D3C7AED001C5C33 /* EditViewModel.m in Sources */,
 				27DF39EB1D3CF4F7001C5C33 /* EditModel.m in Sources */,
 				27CE94581D3B484A003791FC /* AppDelegate.m in Sources */,
+				271227AF1D791864001F0EAE /* FRTRequest.m in Sources */,
 				27DF39F71D3DBE23001C5C33 /* EditItemLabelView.m in Sources */,
 				27C893361D504A0500FE4A32 /* PhotoCuttingViewController.m in Sources */,
+				271227BB1D791ED9001F0EAE /* FRTConfigTools.m in Sources */,
 				27CE94551D3B484A003791FC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,7 +19,6 @@
 @property (nonatomic,strong) UITableView *tableView;
 
 
-- (void)loadData:(void (^)(BOOL success))finished;
 @end
 
 @implementation DemoViewController
@@ -32,13 +31,8 @@
 
 -(void)viewDidLoad {
     
-    self.demoModel = [[DemoModel alloc] init];
-//    LoggerView(1,@"DemoViewController 自带的view :%@,%d,%s",self.view,__LINE__,__FUNCTION__);
-//    LogImageData(<#NSString *domain#>, 1, <#int width#>, <#int height#>, <#NSData *data#>)
-//    LogMessageF_va(__FILE__, __LINE__, __FUNCTION__, @"???", 1, @"123",nil);
-    
     [self loadData:^(BOOL success) {
-//        LoggerModel(1,@"this DemoViewController model :%@",self.demoModel);
+        LoggerModel(1,@"this DemoViewController model :%@",self.demoModel);
     }];
 }
 

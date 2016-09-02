@@ -24,4 +24,6 @@ typedef void (^BlockA)(BOOL success);
 
 @property (nonatomic,copy) BlockA blocka;
 
+- (void)loadData:(void (^)(BOOL success))finished;
+
 @end
