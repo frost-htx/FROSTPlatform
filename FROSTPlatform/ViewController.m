@@ -8,11 +8,14 @@
 
 #import "ViewController.h"
 #import "EditMainViewController.h"
+#import "DemoViewController.h"
 
-@interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface ViewController ()<UITableViewDataSource,UITableViewDelegate,DemoViewControllerDelegate>
 
 @property (nonatomic,strong) NSMutableArray *dataArray;
 @property (nonatomic,strong) UITableView *mainTableView;
+@property (nonatomic,strong) DemoViewController *demoViewController;
+@property (nonatomic,strong) NSArray *array1;
 @end
 
 @implementation ViewController
@@ -39,7 +42,7 @@
 #pragma mark UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return self.dataArray.count;
 }
 
 
@@ -65,13 +68,24 @@
         EditMainViewController *editMainViewController = [[EditMainViewController alloc] init];
         [self.navigationController pushViewController:editMainViewController animated:YES];
     }
+    if ([titleName isEqualToString:@"Demo"]) {
+        DemoViewController *demoViewController1 = [[DemoViewController alloc] init];
+        self.demoViewController = demoViewController1;
+        [self.navigationController pushViewController:demoViewController1 animated:YES];
+    }
+}
+
+#pragma mark DemoViewControllerDelegate 
+
+-(void)test {
+    [self.mainTableView reloadData];
 }
 
 #pragma mark getters and setters
 
 -(NSMutableArray *)dataArray {
     if (!_dataArray) {
-        _dataArray = [NSMutableArray arrayWithObjects:@"编辑器", nil];
+        _dataArray = [NSMutableArray arrayWithObjects:@"编辑器",@"Demo",nil];
     }
     return _dataArray;
 }

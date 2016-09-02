@@ -15,12 +15,20 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - DZNEmptyDataSet (1.8)
+  - FBAllocationTracker (0.1.5)
+  - FBMemoryProfiler (0.1.3):
+    - FBAllocationTracker (~> 0.1)
+    - FBRetainCycleDetector (~> 0.1)
+  - FBRetainCycleDetector (0.1.2)
   - iCarousel (1.8.2)
   - IQKeyboardManager (4.0.2)
   - JSONModel (1.2.0)
   - LFLiveKit (2.0)
   - Masonry (1.0.0)
   - MJRefresh (3.1.0)
+  - NSLogger (1.7.0):
+    - NSLogger/Standard (= 1.7.0)
+  - NSLogger/Standard (1.7.0)
   - ReactiveCocoa (4.0.1):
     - ReactiveCocoa/UI (= 4.0.1)
     - Result (~> 1.0.2)
@@ -45,12 +53,14 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
   - DZNEmptyDataSet (~> 1.8)
+  - FBMemoryProfiler (~> 0.1.3)
   - iCarousel (~> 1.8.2)
   - IQKeyboardManager (~> 4.0.2)
   - JSONModel (~> 1.2.0)
   - LFLiveKit (~> 2.0)
   - Masonry (~> 1.0.0)
   - MJRefresh (~> 3.1.0)
+  - NSLogger (~> 1.7.0)
   - ReactiveCocoa (~> 4.0.0)
   - RSKImageCropper (~> 1.5.1)
   - SDWebImage (~> 3.7.5)
@@ -60,12 +70,16 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   DZNEmptyDataSet: d2351b2e8daefa40433ef292e246e21f6be31a7b
+  FBAllocationTracker: dfdca3f71aceca6a85e95e3c6ec76a9785eba0f1
+  FBMemoryProfiler: 623fc5f8a61f7d02ec75c87e3b97c90f621d8b02
+  FBRetainCycleDetector: 45462f9ed1af0cd77224a4cc4e6dacaca47371b4
   iCarousel: 67c8a43da5a46795b56aadfc96cd36a16f6149b2
   IQKeyboardManager: 2341089c4ae25fa2fa82ce356a259fcd267dc6b6
   JSONModel: 12523685c4b623553ccf844bbbf7007624317b2c
   LFLiveKit: 2a6cf2411ff06b62237af05f7b94f00681f0ce00
   Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
   MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
+  NSLogger: daa17368272ddf10a0850c218fe49de23b50f2eb
   ReactiveCocoa: f7011630aee4deeb16352fcb1b50d6bde9db4f90
   Result: dd3dd71af3fa2e262f1a999e14fba2c25ec14f16
   RSKImageCropper: edd65fedb3734332818deb139906d6b7f54b8a44
@@ -73,6 +87,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 6e48a1dda09ce3b58adc41d013baed3a8e8980ff
   YYKit: 76c3f2cee1a72d3c5b1d7fd8d170ee507fe5df68
 
-PODFILE CHECKSUM: be099465ba7beba03ac91c22c170e50cab5b7621
+PODFILE CHECKSUM: 6852376019cff75de17184f29e864f62dea3cdf3
 
 COCOAPODS: 1.0.1

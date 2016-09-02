@@ -18,6 +18,7 @@
 #import <IQKeyboardManager/IQKeyboardManager-umbrella.h>
 #import <YYKit/YYKit-umbrella.h>
 #import <YYKit/UIImageView+YYWebImage.h>
+#import <NSLogger/NSLogger.h>
 #import "EditNSNotificationCenter.h"
 
 #endif /* PrefixHeader_pch */

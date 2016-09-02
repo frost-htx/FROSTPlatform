@@ -8,7 +8,16 @@
 
 #import "AppDelegate.h"
 
+#if DEBUG
+#import <FBMemoryProfiler/FBMemoryProfiler.h>
+#endif
+
 @interface AppDelegate ()
+
+/**
+ *  FaceBook检测内存
+ */
+@property (nonatomic,strong) FBMemoryProfiler *memoryProfiler;
 
 @end
 
@@ -17,7 +26,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.currentNavigation = (UINavigationController *)self.window.rootViewController;
-    // Override point for customization after application launch.
+    FBMemoryProfiler *memoryProfiler = [FBMemoryProfiler new];
+    [memoryProfiler enable];
+    _memoryProfiler = memoryProfiler;
     return YES;
 }
 
@@ -42,5 +53,6 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
 
 @end

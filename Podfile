@@ -15,4 +15,6 @@ target :FROSTPlatform do
     pod 'iCarousel','~>1.8.2'
     pod 'RSKImageCropper','~> 1.5.1'
     pod 'LFLiveKit', '~> 2.0'
+    pod 'FBMemoryProfiler', '~> 0.1.3'
+    pod 'NSLogger', '~> 1.7.0'
 end
