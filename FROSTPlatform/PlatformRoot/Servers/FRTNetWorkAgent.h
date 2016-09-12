@@ -32,4 +32,10 @@
  */
 -(void)cancelRequest:(FRTBaseRequest *)request;
 
+/**
+ *  清除全部请求
+ */
+-(void)cancelAllRequest;
+
+
 @end

@@ -10,6 +10,26 @@
 #import <AFNetworking/AFNetworking.h>
 #import "FRTRequestError.h"
 
+@class FRTBaseRequest;
+
+@protocol FRTBaseRequestDelegate <NSObject>
+
+/**
+ *  请求成功
+ *
+ *  @param baseRequest FRTBaseRequest
+ */
+-(void)requestFinished:(FRTBaseRequest *)baseRequest;
+
+/**
+ *  请求失败
+ *
+ *  @param baseRequest FRTBaseRequest
+ */
+-(void)requestFailed:(FRTBaseRequest *)baseRequest;
+
+@end
+
 typedef NS_ENUM(NSInteger,FRTRequestMethod) {
     FRTRequestMethod_Get,
     FRTRequestMethod_Post,
@@ -33,12 +53,31 @@ typedef NS_ENUM(NSInteger,FRTRequestSerializerType) {
  */
 typedef void(^FRTRequestCompletionBlock)(__kindof FRTBaseRequest *request);
 
+/**
+ *  下载返回结果
+ *
+ *  @param response 返回结果
+ *  @param filePath 下载后保存的地址
+ *  @param error    错误
+ */
+typedef void(^DownloadCompletionHandler)(NSURLResponse *response, NSURL *filePath, NSError *error);
+
 @interface FRTBaseRequest : NSObject
+
+/**
+ *  BaseReques代理
+ */
+@property (nonatomic,strong) id<FRTBaseRequestDelegate> delegate;
 
 /**
  *  响应结果
  */
-@property (nonatomic,strong,readonly) id responseObject;
+@property (nonatomic,strong) id responseObject;
+
+/**
+ *  会话
+ */
+@property (nonatomic,strong) NSURLSessionTask *sessionTask;
 
 /**
  *  Http返回头
@@ -48,12 +87,22 @@ typedef void(^FRTRequestCompletionBlock)(__kindof FRTBaseRequest *request);
 /**
  *  返回错误描述
  */
-@property (nonatomic,strong,readonly) FRTRequestError *responseError;
+@property (nonatomic,strong) FRTRequestError *responseError;
+
+/**
+ *  服务器响应
+ */
+@property (nonatomic,strong) NSURLResponse *response;
 
 /**
  *  下载进度
  */
-@property (nonatomic,strong,readonly) NSProgress *downloadProgress;
+@property (nonatomic,strong) NSProgress *downloadProgress;
+
+/**
+ *  文件下载路径
+ */
+@property (nonatomic,strong) NSURL *filePath;
 
 /**
  *  SessionManager
@@ -71,15 +120,30 @@ typedef void(^FRTRequestCompletionBlock)(__kindof FRTBaseRequest *request);
 @property (nonatomic,copy) FRTRequestCompletionBlock failureCompletionBlock;
 
 /**
+ *  下载完成Block
+ */
+@property (nonatomic,copy) DownloadCompletionHandler downloadCompletionHandler;
+
+/**
  *  block回调
  */
-- (void)startWithCompletionBlockWithSuccess:(FRTRequestCompletionBlock)success
+-(void)startWithCompletionBlockWithSuccess:(FRTRequestCompletionBlock)success
                                     failure:(FRTRequestCompletionBlock)failure;
 
 /**
  *  开始请求
  */
 -(void)start;
+
+/**
+ *  取消请求
+ */
+-(void)cancel;
+
+/**
+ *  清除循环引用
+ */
+-(void)clearCircularBlock;
 
 /**
  *  请求方法
@@ -112,7 +176,7 @@ typedef void(^FRTRequestCompletionBlock)(__kindof FRTBaseRequest *request);
 -(NSDictionary *)requestHttpHeads;
 
 /**
- *  下载保存至
+ *  下载保存路径
  */
 -(NSString *)downloadSaveAddress;
 

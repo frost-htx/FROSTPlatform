@@ -11,4 +11,9 @@
 
 @interface FRTRequestError : NSObject
 
+/**
+ *  请求返回错误
+ */
+@property (nonatomic,strong) NSError *error;
+
 @end

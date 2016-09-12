@@ -30,6 +30,8 @@
 		27776A841D572053008178B7 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 27776A831D572053008178B7 /* libbz2.tbd */; };
 		27776A8A1D57232D008178B7 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27776A891D57232D008178B7 /* IJKMediaFramework.framework */; };
 		278F61CD1D48F0DF00EF5CDC /* EditViewControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 278F61CC1D48F0DF00EF5CDC /* EditViewControllerManager.m */; };
+		27942AF01D86672B00581782 /* FRTChainRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 27942AEF1D86672B00581782 /* FRTChainRequest.m */; };
+		27942AF41D86AA5500581782 /* FRTBatchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 27942AF31D86AA5500581782 /* FRTBatchRequest.m */; };
 		27C893231D4E169100FE4A32 /* TZAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C893111D4E169100FE4A32 /* TZAssetCell.m */; };
 		27C893241D4E169100FE4A32 /* TZAssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C893131D4E169100FE4A32 /* TZAssetModel.m */; };
 		27C893251D4E169100FE4A32 /* TZImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C893151D4E169100FE4A32 /* TZImageManager.m */; };
@@ -120,6 +122,10 @@
 		278F60BD1D47C39A00EF5CDC /* EditItemRecognizerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditItemRecognizerProtocol.h; sourceTree = "<group>"; };
 		278F61CB1D48F0DF00EF5CDC /* EditViewControllerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewControllerManager.h; sourceTree = "<group>"; };
 		278F61CC1D48F0DF00EF5CDC /* EditViewControllerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewControllerManager.m; sourceTree = "<group>"; };
+		27942AEE1D86672B00581782 /* FRTChainRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRTChainRequest.h; sourceTree = "<group>"; };
+		27942AEF1D86672B00581782 /* FRTChainRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRTChainRequest.m; sourceTree = "<group>"; };
+		27942AF21D86AA5500581782 /* FRTBatchRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRTBatchRequest.h; sourceTree = "<group>"; };
+		27942AF31D86AA5500581782 /* FRTBatchRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRTBatchRequest.m; sourceTree = "<group>"; };
 		27B9E7431D4318FB00E7345B /* BindViewWithModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BindViewWithModelProtocol.h; sourceTree = "<group>"; };
 		27C893101D4E169100FE4A32 /* TZAssetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZAssetCell.h; sourceTree = "<group>"; };
 		27C893111D4E169100FE4A32 /* TZAssetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZAssetCell.m; sourceTree = "<group>"; };
@@ -448,6 +454,10 @@
 			children = (
 				271227AA1D791845001F0EAE /* FRTBaseRequest.h */,
 				271227AB1D791845001F0EAE /* FRTBaseRequest.m */,
+				27942AEE1D86672B00581782 /* FRTChainRequest.h */,
+				27942AEF1D86672B00581782 /* FRTChainRequest.m */,
+				27942AF21D86AA5500581782 /* FRTBatchRequest.h */,
+				27942AF31D86AA5500581782 /* FRTBatchRequest.m */,
 				271227AD1D791864001F0EAE /* FRTRequest.h */,
 				271227AE1D791864001F0EAE /* FRTRequest.m */,
 				271227BC1D791EE6001F0EAE /* FRTNetWorkAgent.h */,
@@ -779,12 +789,14 @@
 				27C893271D4E169100FE4A32 /* TZImagePickerController.m in Sources */,
 				27DF39FF1D3E08D5001C5C33 /* JsonUtil.m in Sources */,
 				27C8932A1D4E169100FE4A32 /* TZPhotoPreviewController.m in Sources */,
+				27942AF01D86672B00581782 /* FRTChainRequest.m in Sources */,
 				27DF39DF1D3CA55F001C5C33 /* MainViewControler.m in Sources */,
 				27C893291D4E169100FE4A32 /* TZPhotoPreviewCell.m in Sources */,
 				278F61CD1D48F0DF00EF5CDC /* EditViewControllerManager.m in Sources */,
 				27CE945B1D3B484A003791FC /* ViewController.m in Sources */,
 				27C8932C1D4E169100FE4A32 /* UIView+Layout.m in Sources */,
 				27DF39DC1D3CA504001C5C33 /* RootViewController.m in Sources */,
+				27942AF41D86AA5500581782 /* FRTBatchRequest.m in Sources */,
 				27DF39D61D3C7A9B001C5C33 /* RootModel.m in Sources */,
 				27C893231D4E169100FE4A32 /* TZAssetCell.m in Sources */,
 				27128A911D6EED8F0034E706 /* DemoModel.m in Sources */,

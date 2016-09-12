@@ -31,9 +31,71 @@
 
 -(void)viewDidLoad {
     
-    [self loadData:^(BOOL success) {
-        LoggerModel(1,@"this DemoViewController model :%@",self.demoModel);
-    }];
+//    dispatch_queue_t queue = dispatch_queue_create("com.demo.serialQueue", DISPATCH_QUEUE_SERIAL);
+//    dispatch_async(dispatch_get_global_queue(0,0), ^{
+//        NSLog(@"1"); // 任务2
+//        dispatch_sync(dispatch_get_main_queue(), ^{
+//            NSLog(@"3"); // 任务3
+//        });
+//        NSLog(@"2"); // 任务4
+//    });
+    
+//    dispatch_queue_t queue = dispatch_queue_create("com.demo.serialQueue", DISPATCH_QUEUE_SERIAL);
+//    NSLog(@"1"); // 任务1
+//    dispatch_async(queue, ^{
+//        NSLog(@"2"); // 任务2
+//        dispatch_sync(queue, ^{
+//            NSLog(@"3"); // 任务3
+//        });
+//        NSLog(@"4"); // 任务4
+//    });
+//    NSLog(@"5"); // 任务5
+    
+//    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+//        NSLog(@"1"); // 任务1
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            NSLog(@"2"); // 任务2
+//            
+//        });
+//        NSLog(@"3"); // 任务3
+//    });
+//    NSLog(@"4"); // 任务4
+//    while (1) {
+//    }
+//    NSLog(@"5"); // 任务5
+    
+//    dispatch_sync(dispatch_get_global_queue(0,0),^{
+//        NSLog(@"%@",[NSThread currentThread]);
+//        NSLog(@"1");
+//    });
+//    NSLog(@"2");
+    
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        dispatch_sync(dispatch_get_global_queue(0,0),^{
+//            NSLog(@"%@",[NSThread currentThread]);
+//            NSLog(@"3");
+//        });
+//        NSLog(@"%@",[NSThread currentThread]);
+//        NSLog(@"1");
+//        NSLog(@"1");
+
+//    });
+//    NSLog(@"2");
+
+    dispatch_queue_t queue = dispatch_queue_create("com.demo.serialQueue", DISPATCH_QUEUE_SERIAL);
+
+    NSLog(@"1"); // 任务1
+    dispatch_async(queue, ^{
+        NSLog(@"2"); // 任务2
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            NSLog(@"3"); // 任务3
+        });
+        NSLog(@"4"); // 任务4
+    });
+    NSLog(@"5"); // 任务5
+
+
+    
 }
 
 - (void)loadData:(void (^)(BOOL success))finished {

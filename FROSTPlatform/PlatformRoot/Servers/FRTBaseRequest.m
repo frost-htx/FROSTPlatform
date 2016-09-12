@@ -11,21 +11,16 @@
 
 @interface FRTBaseRequest ()
 
-/**
- *  清除循环引用
- */
--(void)clearCircularBlock;
-
 @end
 
 @implementation FRTBaseRequest
+
+#pragma mark Public Medthods
 
 -(void)startWithCompletionBlockWithSuccess:(FRTRequestCompletionBlock)success failure:(FRTRequestCompletionBlock)failure {
     self.successCompletionBlock = success;
     self.failureCompletionBlock = failure;
 }
-
-#pragma mark Private Medthods 
 
 -(void)clearCircularBlock {
     self.successCompletionBlock = nil;
@@ -36,6 +31,11 @@
 
 -(void)start {
     [[FRTNetWorkAgent sharedInstance] addRequest:self];
+}
+
+-(void)cancel {
+    [[FRTNetWorkAgent sharedInstance] cancelRequest:self];
+    [self clearCircularBlock];
 }
 
 -(FRTRequestSerializerType)requestSerializerType {
