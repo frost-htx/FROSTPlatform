@@ -7,17 +7,17 @@
 //
 
 #import "DemoViewController.h"
-#import "DemoModel.h"
+#import "DemoViewModel.h"
 
 @interface DemoViewController ()
 {
+    
     id <DemoViewControllerDelegate> datasoure;
 }
 
-@property (nonatomic,strong) DemoModel *demoModel;
-
 @property (nonatomic,strong) UITableView *tableView;
 
+@property (nonatomic,strong) DemoViewModel *demoViewModel;
 
 @end
 
@@ -82,24 +82,48 @@
 //    });
 //    NSLog(@"2");
 
-    dispatch_queue_t queue = dispatch_queue_create("com.demo.serialQueue", DISPATCH_QUEUE_SERIAL);
+//    dispatch_queue_t queue = dispatch_queue_create("com.demo.serialQueue", DISPATCH_QUEUE_SERIAL);
+//
+//    NSLog(@"1"); // 任务1
+//    dispatch_async(queue, ^{
+//        NSLog(@"2"); // 任务2
+//        dispatch_sync(dispatch_get_main_queue(), ^{
+//            NSLog(@"3"); // 任务3
+//        });
+//        NSLog(@"4"); // 任务4
+//    });
+//    NSLog(@"5"); // 任务5
 
-    NSLog(@"1"); // 任务1
-    dispatch_async(queue, ^{
-        NSLog(@"2"); // 任务2
-        dispatch_sync(dispatch_get_main_queue(), ^{
-            NSLog(@"3"); // 任务3
-        });
-        NSLog(@"4"); // 任务4
-    });
-    NSLog(@"5"); // 任务5
-
-
-    
+//    [self.demoViewModel demoRequestAPI_ReadRequestCache:^() {
+//        
+//    } requestSuccessful:^{
+//        
+//    } requestFailure:^{
+//        
+//    }];
+    [self.demoViewModel demoRequestAPI_chainRequest:^{
+        
+    } requestFailure:^{
+        
+    }];
 }
+
+#pragma mark Public Methods
 
 - (void)loadData:(void (^)(BOOL success))finished {
     self.blocka = finished;
     finished(YES);
 }
+
+#pragma mark getters and setters 
+
+-(DemoViewModel *)demoViewModel {
+    if (!_demoViewModel) {
+        _demoViewModel = [[DemoViewModel alloc] init];
+    }
+    return _demoViewModel;
+}
+
+
+
 @end

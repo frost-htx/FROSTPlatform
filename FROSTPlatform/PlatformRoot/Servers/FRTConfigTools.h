@@ -10,4 +10,27 @@
 
 @interface FRTConfigTools : NSObject
 
+/**
+ *  创建单例
+ *
+ *  @return FRTConfigTools
+ */
++(FRTConfigTools *)sharedInstance;
+
+/**
+ *  获取appVersion
+ *
+ *  @return appVersion
+ */
+-(NSString *)appVersionString;
+
+/**
+ *  md5-String
+ *
+ *  @param string 需要MD5的String
+ *
+ *  @return MD5后的String
+ */
+-(NSString *)md5StringFromString:(NSString *)string;
+
 @end

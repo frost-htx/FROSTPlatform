@@ -38,8 +38,8 @@
     [self clearCircularBlock];
 }
 
--(FRTRequestSerializerType)requestSerializerType {
-    return FRTRequestSerializerTypeHTTP;
+-(FRTResponseSerializerType)responseSerializerType {
+    return FRTResponseSerializerTypeJSON;
 }
 
 -(FRTRequestMethod)requestMethod {
@@ -68,6 +68,15 @@
 
 -(NSTimeInterval)requestTimeoutInterval {
     return 60;
+}
+
+#pragma mark getters and setters
+
+-(NSString *)currentTime {
+    NSDate* dat = [NSDate dateWithTimeIntervalSinceNow:0];
+    NSTimeInterval time=[dat timeIntervalSince1970]*1000;
+    NSString *timeString = [NSString stringWithFormat:@"%f",time];
+    return timeString;
 }
 
 @end

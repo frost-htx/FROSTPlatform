@@ -20,5 +20,6 @@
 #import <YYKit/UIImageView+YYWebImage.h>
 #import <NSLogger/NSLogger.h>
 #import "EditNSNotificationCenter.h"
+#import "FRTRequest-umbrella.h"
 
 #endif /* PrefixHeader_pch */

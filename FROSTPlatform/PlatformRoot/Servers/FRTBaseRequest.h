@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <AFNetworking/AFNetworking.h>
+#import "FRTBaseRequest.h"
 #import "FRTRequestError.h"
+#import "FRTConfigTools.h"
 
 @class FRTBaseRequest;
 
@@ -37,9 +39,9 @@ typedef NS_ENUM(NSInteger,FRTRequestMethod) {
     FRTRequestMethod_Delete
 };
 
-typedef NS_ENUM(NSInteger,FRTRequestSerializerType) {
-    FRTRequestSerializerTypeHTTP,
-    FRTRequestSerializerTypeJSON,
+typedef NS_ENUM(NSInteger,FRTResponseSerializerType) {
+    FRTResponseSerializerTypeHTTP,
+    FRTResponseSerializerTypeJSON,
 };
 
 @class FRTBaseRequest;
@@ -67,13 +69,17 @@ typedef void(^DownloadCompletionHandler)(NSURLResponse *response, NSURL *filePat
 /**
  *  BaseReques代理
  */
-@property (nonatomic,strong) id<FRTBaseRequestDelegate> delegate;
+@property (nonatomic,weak) id<FRTBaseRequestDelegate> delegate;
 
 /**
  *  响应结果
  */
 @property (nonatomic,strong) id responseObject;
 
+/**
+ *  当前系统时间
+ */
+@property (nonatomic,strong) NSString *currentTime;
 /**
  *  会话
  */
@@ -125,7 +131,10 @@ typedef void(^DownloadCompletionHandler)(NSURLResponse *response, NSURL *filePat
 @property (nonatomic,copy) DownloadCompletionHandler downloadCompletionHandler;
 
 /**
- *  block回调
+ *  创建返回成功和返回失败的Block
+ *
+ *  @param success 返回成功Block
+ *  @param failure 返回失败Block
  */
 -(void)startWithCompletionBlockWithSuccess:(FRTRequestCompletionBlock)success
                                     failure:(FRTRequestCompletionBlock)failure;
@@ -153,7 +162,7 @@ typedef void(^DownloadCompletionHandler)(NSURLResponse *response, NSURL *filePat
 /**
  *  请求序列化Type
  */
--(FRTRequestSerializerType)requestSerializerType;
+-(FRTResponseSerializerType)responseSerializerType;
 
 /**
  *  域名

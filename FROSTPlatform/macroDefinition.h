@@ -13,6 +13,7 @@
 
 
 #define ImageServerPath(string) [@"http://img1.maka.im/" stringByAppendingString:string]
+#define IMAGEDOMAINURL @"http://test.api.maka.im/"
 
 /************************************* Size *******************************************/
 

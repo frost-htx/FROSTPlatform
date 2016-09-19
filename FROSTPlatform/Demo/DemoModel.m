@@ -8,6 +8,17 @@
 
 #import "DemoModel.h"
 
+@class DataList;
 @implementation DemoModel
+
++ (NSDictionary *)modelContainerPropertyGenericClass {
+    // value should be Class or Class name.
+    return @{@"dataList" : [DataList class]};
+}
+
+@end
+
+@implementation DataList
+
 
 @end

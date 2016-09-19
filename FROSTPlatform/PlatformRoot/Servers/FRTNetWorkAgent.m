@@ -32,11 +32,11 @@
 -(void)addRequest:(FRTBaseRequest *)request {
     
     FRTRequestMethod method = [request requestMethod];
-    FRTRequestSerializerType serializerType = [request requestSerializerType];
+    FRTResponseSerializerType serializerType = [request responseSerializerType];
     id parameters = [request requestParameters];
     NSString *requestUrl = [self buildRequesttUrl:request];
     NSDictionary *httpHeads = [request requestHttpHeads];
-    NSURLSessionTask *sessionTask = request.sessionTask;
+    NSURLSessionTask *sessionTask = nil;
 
     AFHTTPRequestSerializer *requestSerializer = [AFHTTPRequestSerializer serializer];
     if (httpHeads) {
@@ -45,8 +45,17 @@
         }];
     }
     
+    AFHTTPResponseSerializer *responseSerializer = nil;
+    if (serializerType == FRTResponseSerializerTypeHTTP) {
+        responseSerializer = [AFHTTPResponseSerializer serializer];
+    } else {
+        responseSerializer = [AFJSONResponseSerializer serializer];
+    }
+    responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", @"application/octet-stream", nil];
+    
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer = requestSerializer;
+    manager.responseSerializer = responseSerializer;
     
     if (method == FRTRequestMethod_Get) {
         if ([request downloadSaveAddress]) {
@@ -60,6 +69,9 @@
                 request.responseError.error = error;
                 request.filePath = filePath;
                 [self requestCompleteHandle:request];
+            }];
+            [manager setDownloadTaskDidWriteDataBlock:^(NSURLSession *session, NSURLSessionDownloadTask *downloadTask, int64_t bytesWritten, int64_t totalBytesWritten, int64_t totalBytesExpectedToWrite) {
+                NSLog(@"setDownloadTaskDidWriteDataBlock: %lld %lld %lld", bytesWritten, totalBytesWritten, totalBytesExpectedToWrite);
             }];
         } else {
             sessionTask = [manager GET:requestUrl parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
@@ -100,6 +112,8 @@
             [self requestCompleteHandle:request];
         }];
     }
+    
+    request.sessionTask = sessionTask;
     [self addRequestToRequstDic:request];
 }
 
@@ -124,11 +138,14 @@
 
 -(void)requestCompleteHandle:(FRTBaseRequest *)request {
     if (!request.responseError.error) {
+        if (!request.isIgnoreCache) {
+            [request writeCacheResponseData];
+        }
         if (request.successCompletionBlock) {
             request.successCompletionBlock(request);
         }
-        if (request.delegate && [request.delegate respondsToSelector:@selector(requestFailed:)]) {
-            [request.delegate requestFailed:request];
+        if (request.delegate && [request.delegate respondsToSelector:@selector(requestFinished:)]) {
+            [request.delegate requestFinished:request];
         }
     } else {
         if (request.failureCompletionBlock) {
@@ -149,6 +166,8 @@
 
     if (domainUrl && requestUrl) {
         return [NSString stringWithFormat:@"%@%@",domainUrl,requestUrl];
+    } else if (domainUrl){
+        return domainUrl;
     } else {
         return @"";
     }
