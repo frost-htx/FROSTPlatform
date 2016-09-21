@@ -44,4 +44,8 @@
     return [NSString stringWithFormat:@"%@/Documents/recommendroutes.zip",NSHomeDirectory()];
 }
 
+-(NSDictionary *)requestHttpHeads {
+    return @{@"User-Agent":@"ZZCIOS/com.tantu.map/1.3.0 (iPhone; iPhone OS 9.3; en_US)"};
+}
+
 @end

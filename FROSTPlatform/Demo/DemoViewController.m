@@ -101,7 +101,13 @@
 //    } requestFailure:^{
 //        
 //    }];
-    [self.demoViewModel demoRequestAPI_chainRequest:^{
+//    [self.demoViewModel demoRequestAPI_chainRequest:^{
+//        
+//    } requestFailure:^{
+//        
+//    }];
+    
+    [self.demoViewModel demoRequestAPI_BatchRequest:^{
         
     } requestFailure:^{
         

@@ -69,10 +69,6 @@
     }
     if ([titleName isEqualToString:@"Demo"]) {
         DemoViewController *demoViewController1 = [[DemoViewController alloc] init];
-        [demoViewController1 loadData:^(BOOL success) {
-            LoggerModel(1,@"this DemoViewController model :%@",self);
-        }];
-        self.demoViewController = demoViewController1;
         [self.navigationController pushViewController:demoViewController1 animated:YES];
     }
 }

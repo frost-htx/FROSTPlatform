@@ -79,4 +79,17 @@
     return timeString;
 }
 
+-(NSString *)filePathStr {
+    if (self.filePath) {
+        NSString *fileString = [[self.filePath absoluteString] stringByReplacingOccurrencesOfString:@"file://" withString:@""];
+        return fileString;
+    } else {
+        return nil;
+    }
+}
+
+-(NSString *)errorInfo {
+    return [self transformErrorInfo];
+}
+
 @end

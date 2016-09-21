@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		271227AC1D791845001F0EAE /* FRTBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 271227AB1D791845001F0EAE /* FRTBaseRequest.m */; };
-		271227B21D791A37001F0EAE /* FRTRequestError.m in Sources */ = {isa = PBXBuildFile; fileRef = 271227B11D791A37001F0EAE /* FRTRequestError.m */; };
 		271227B81D791EC8001F0EAE /* FRTNetWorkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 271227B71D791EC8001F0EAE /* FRTNetWorkConfig.m */; };
 		271227BB1D791ED9001F0EAE /* FRTConfigTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 271227BA1D791ED9001F0EAE /* FRTConfigTools.m */; };
 		271227BE1D791EE6001F0EAE /* FRTNetWorkAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 271227BD1D791EE6001F0EAE /* FRTNetWorkAgent.m */; };
@@ -33,6 +32,9 @@
 		27942AF01D86672B00581782 /* FRTChainRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 27942AEF1D86672B00581782 /* FRTChainRequest.m */; };
 		27942AF41D86AA5500581782 /* FRTBatchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 27942AF31D86AA5500581782 /* FRTBatchRequest.m */; };
 		27957CD81D87B1C500E181F9 /* FRTBaseRequest+RequestCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 27957CD71D87B1C500E181F9 /* FRTBaseRequest+RequestCache.m */; };
+		27AC260A1D91214D00C4ED32 /* DemoRequestImageAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AC26091D91214D00C4ED32 /* DemoRequestImageAPI.m */; };
+		27AC260D1D91278000C4ED32 /* FRTBatchRequestAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AC260C1D91278000C4ED32 /* FRTBatchRequestAgent.m */; };
+		27AC26101D91369C00C4ED32 /* FRTBaseRequest+RequestError.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AC260F1D91369C00C4ED32 /* FRTBaseRequest+RequestError.m */; };
 		27C893231D4E169100FE4A32 /* TZAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C893111D4E169100FE4A32 /* TZAssetCell.m */; };
 		27C893241D4E169100FE4A32 /* TZAssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C893131D4E169100FE4A32 /* TZAssetModel.m */; };
 		27C893251D4E169100FE4A32 /* TZImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C893151D4E169100FE4A32 /* TZImageManager.m */; };
@@ -93,8 +95,6 @@
 /* Begin PBXFileReference section */
 		271227AA1D791845001F0EAE /* FRTBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRTBaseRequest.h; sourceTree = "<group>"; };
 		271227AB1D791845001F0EAE /* FRTBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRTBaseRequest.m; sourceTree = "<group>"; };
-		271227B01D791A37001F0EAE /* FRTRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRTRequestError.h; sourceTree = "<group>"; };
-		271227B11D791A37001F0EAE /* FRTRequestError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRTRequestError.m; sourceTree = "<group>"; };
 		271227B61D791EC8001F0EAE /* FRTNetWorkConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRTNetWorkConfig.h; sourceTree = "<group>"; };
 		271227B71D791EC8001F0EAE /* FRTNetWorkConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRTNetWorkConfig.m; sourceTree = "<group>"; };
 		271227B91D791ED9001F0EAE /* FRTConfigTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRTConfigTools.h; sourceTree = "<group>"; };
@@ -133,6 +133,12 @@
 		27942AF31D86AA5500581782 /* FRTBatchRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRTBatchRequest.m; sourceTree = "<group>"; };
 		27957CD61D87B1C500E181F9 /* FRTBaseRequest+RequestCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FRTBaseRequest+RequestCache.h"; sourceTree = "<group>"; };
 		27957CD71D87B1C500E181F9 /* FRTBaseRequest+RequestCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FRTBaseRequest+RequestCache.m"; sourceTree = "<group>"; };
+		27AC26081D91214D00C4ED32 /* DemoRequestImageAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoRequestImageAPI.h; sourceTree = "<group>"; };
+		27AC26091D91214D00C4ED32 /* DemoRequestImageAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoRequestImageAPI.m; sourceTree = "<group>"; };
+		27AC260B1D91278000C4ED32 /* FRTBatchRequestAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRTBatchRequestAgent.h; sourceTree = "<group>"; };
+		27AC260C1D91278000C4ED32 /* FRTBatchRequestAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRTBatchRequestAgent.m; sourceTree = "<group>"; };
+		27AC260E1D91369C00C4ED32 /* FRTBaseRequest+RequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FRTBaseRequest+RequestError.h"; sourceTree = "<group>"; };
+		27AC260F1D91369C00C4ED32 /* FRTBaseRequest+RequestError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FRTBaseRequest+RequestError.m"; sourceTree = "<group>"; };
 		27B9E7431D4318FB00E7345B /* BindViewWithModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BindViewWithModelProtocol.h; sourceTree = "<group>"; };
 		27C893101D4E169100FE4A32 /* TZAssetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZAssetCell.h; sourceTree = "<group>"; };
 		27C893111D4E169100FE4A32 /* TZAssetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZAssetCell.m; sourceTree = "<group>"; };
@@ -277,6 +283,8 @@
 				27E3F0FA1D8FBC4900B878BB /* DemoRequestAPI1.m */,
 				27E3F0FC1D8FBC6500B878BB /* DemoRequestAPI2.h */,
 				27E3F0FD1D8FBC6500B878BB /* DemoRequestAPI2.m */,
+				27AC26081D91214D00C4ED32 /* DemoRequestImageAPI.h */,
+				27AC26091D91214D00C4ED32 /* DemoRequestImageAPI.m */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -303,6 +311,8 @@
 			children = (
 				27957CD61D87B1C500E181F9 /* FRTBaseRequest+RequestCache.h */,
 				27957CD71D87B1C500E181F9 /* FRTBaseRequest+RequestCache.m */,
+				27AC260E1D91369C00C4ED32 /* FRTBaseRequest+RequestError.h */,
+				27AC260F1D91369C00C4ED32 /* FRTBaseRequest+RequestError.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -494,16 +504,16 @@
 				27957CD51D87B18400E181F9 /* Category */,
 				271227AA1D791845001F0EAE /* FRTBaseRequest.h */,
 				271227AB1D791845001F0EAE /* FRTBaseRequest.m */,
-				27942AEE1D86672B00581782 /* FRTChainRequest.h */,
-				27942AEF1D86672B00581782 /* FRTChainRequest.m */,
-				27942AF21D86AA5500581782 /* FRTBatchRequest.h */,
-				27942AF31D86AA5500581782 /* FRTBatchRequest.m */,
 				271227BC1D791EE6001F0EAE /* FRTNetWorkAgent.h */,
 				271227BD1D791EE6001F0EAE /* FRTNetWorkAgent.m */,
+				27942AF21D86AA5500581782 /* FRTBatchRequest.h */,
+				27942AF31D86AA5500581782 /* FRTBatchRequest.m */,
+				27AC260B1D91278000C4ED32 /* FRTBatchRequestAgent.h */,
+				27AC260C1D91278000C4ED32 /* FRTBatchRequestAgent.m */,
+				27942AEE1D86672B00581782 /* FRTChainRequest.h */,
+				27942AEF1D86672B00581782 /* FRTChainRequest.m */,
 				27E3F1011D8FE25800B878BB /* FRTChainRequestAgent.h */,
 				27E3F1021D8FE25800B878BB /* FRTChainRequestAgent.m */,
-				271227B01D791A37001F0EAE /* FRTRequestError.h */,
-				271227B11D791A37001F0EAE /* FRTRequestError.m */,
 				271227B61D791EC8001F0EAE /* FRTNetWorkConfig.h */,
 				271227B71D791EC8001F0EAE /* FRTNetWorkConfig.m */,
 				271227B91D791ED9001F0EAE /* FRTConfigTools.h */,
@@ -813,9 +823,11 @@
 			files = (
 				27DF39F11D3DBD66001C5C33 /* EditMainCollectionCell.m in Sources */,
 				27C893251D4E169100FE4A32 /* TZImageManager.m in Sources */,
+				27AC26101D91369C00C4ED32 /* FRTBaseRequest+RequestError.m in Sources */,
 				27DF39E81D3CC893001C5C33 /* EditCollectionView.m in Sources */,
 				271227AC1D791845001F0EAE /* FRTBaseRequest.m in Sources */,
 				27128A921D6EED8F0034E706 /* DemoViewController.m in Sources */,
+				27AC260D1D91278000C4ED32 /* FRTBatchRequestAgent.m in Sources */,
 				27C893281D4E169100FE4A32 /* TZPhotoPickerController.m in Sources */,
 				271227BE1D791EE6001F0EAE /* FRTNetWorkAgent.m in Sources */,
 				27957CD81D87B1C500E181F9 /* FRTBaseRequest+RequestCache.m in Sources */,
@@ -825,7 +837,6 @@
 				27DF39D31D3C7A70001C5C33 /* RootViewModel.m in Sources */,
 				27DF39F41D3DBE05001C5C33 /* EditItemImageView.m in Sources */,
 				27E3F0FB1D8FBC4900B878BB /* DemoRequestAPI1.m in Sources */,
-				271227B21D791A37001F0EAE /* FRTRequestError.m in Sources */,
 				27C893271D4E169100FE4A32 /* TZImagePickerController.m in Sources */,
 				27DF39FF1D3E08D5001C5C33 /* JsonUtil.m in Sources */,
 				2788766A1D88F36900359885 /* DemoRequestAPI.m in Sources */,
@@ -842,6 +853,7 @@
 				27DF39D61D3C7A9B001C5C33 /* RootModel.m in Sources */,
 				27C893231D4E169100FE4A32 /* TZAssetCell.m in Sources */,
 				27128A911D6EED8F0034E706 /* DemoModel.m in Sources */,
+				27AC260A1D91214D00C4ED32 /* DemoRequestImageAPI.m in Sources */,
 				27DF39EE1D3DBD3D001C5C33 /* EditRootItemView.m in Sources */,
 				27C893241D4E169100FE4A32 /* TZAssetModel.m in Sources */,
 				27CE94A01D3BDFA1003791FC /* EditMainViewController.m in Sources */,

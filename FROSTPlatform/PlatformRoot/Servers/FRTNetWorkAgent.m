@@ -59,20 +59,23 @@
     
     if (method == FRTRequestMethod_Get) {
         if ([request downloadSaveAddress]) {
-            NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:requestUrl]];
+            NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:requestUrl]];
+            if (httpHeads) {
+                [httpHeads enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+                    [urlRequest setValue:obj forHTTPHeaderField:key];
+                }];
+            }
             sessionTask = [manager downloadTaskWithRequest:urlRequest progress:^(NSProgress * _Nonnull downloadProgress) {
                 request.downloadProgress = downloadProgress;
             } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
-                return [NSURL URLWithString:[request downloadSaveAddress]];
+                return [NSURL fileURLWithPath:[request downloadSaveAddress]];
             } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
                 request.response = response;
-                request.responseError.error = error;
+                request.requestError = error;
                 request.filePath = filePath;
                 [self requestCompleteHandle:request];
             }];
-            [manager setDownloadTaskDidWriteDataBlock:^(NSURLSession *session, NSURLSessionDownloadTask *downloadTask, int64_t bytesWritten, int64_t totalBytesWritten, int64_t totalBytesExpectedToWrite) {
-                NSLog(@"setDownloadTaskDidWriteDataBlock: %lld %lld %lld", bytesWritten, totalBytesWritten, totalBytesExpectedToWrite);
-            }];
+            [sessionTask resume];
         } else {
             sessionTask = [manager GET:requestUrl parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
                 request.downloadProgress = uploadProgress;
@@ -80,7 +83,7 @@
                 request.responseObject = responseObject;
                 [self requestCompleteHandle:request];
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                request.responseError.error = error;
+                request.requestError = error;
                 [self requestCompleteHandle:request];
             }];
         }
@@ -91,7 +94,7 @@
             request.responseObject = responseObject;
             [self requestCompleteHandle:request];
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            request.responseError.error = error;
+            request.requestError = error;
             [self requestCompleteHandle:request];
         }];
     
@@ -100,7 +103,7 @@
             request.responseObject = responseObject;
             [self requestCompleteHandle:request];
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            request.responseError.error = error;
+            request.requestError = error;
             [self requestCompleteHandle:request];
         }];
     } else if (method == FRTRequestMethod_Delete) {
@@ -108,7 +111,7 @@
             request.responseObject = responseObject;
             [self requestCompleteHandle:request];
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            request.responseError.error = error;
+            request.requestError = error;
             [self requestCompleteHandle:request];
         }];
     }
@@ -137,7 +140,7 @@
 #pragma mark private methods
 
 -(void)requestCompleteHandle:(FRTBaseRequest *)request {
-    if (!request.responseError.error) {
+    if (!request.requestError) {
         if (!request.isIgnoreCache) {
             [request writeCacheResponseData];
         }
@@ -151,11 +154,12 @@
         if (request.failureCompletionBlock) {
             request.failureCompletionBlock(request);
         }
-        if (request.delegate && [request.delegate respondsToSelector:@selector(requestFinished:)]) {
-            [request.delegate requestFinished:request];
+        if (request.delegate && [request.delegate respondsToSelector:@selector(requestFailed:)]) {
+            [request.delegate requestFailed:request];
         }
 
     }
+    [self removeRequestToRequstDic:request];
     [request clearCircularBlock];
 }
 
@@ -178,6 +182,15 @@
         NSString *key = [NSString stringWithFormat:@"%lu",(unsigned long)[request hash]];
         @synchronized (self) {
             [self.requestDic setObject:request forKey:key];
+        }
+    }
+}
+
+-(void)removeRequestToRequstDic:(FRTBaseRequest *)request {
+    if (request) {
+        NSString *key = [NSString stringWithFormat:@"%lu",(unsigned long)[request hash]];
+        @synchronized (self) {
+            [self.requestDic removeObjectForKey:key];
         }
     }
 }

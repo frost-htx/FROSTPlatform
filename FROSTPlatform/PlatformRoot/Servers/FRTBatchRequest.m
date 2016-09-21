@@ -8,6 +8,7 @@
 
 #import "FRTBatchRequest.h"
 #import "FRTBaseRequest.h"
+#import "FRTBatchRequestAgent.h"
 
 @interface FRTBatchRequest ()<FRTBaseRequestDelegate>
 
@@ -35,6 +36,7 @@
 -(instancetype)initWithBatchArray:(NSArray *)requests {
     if (self = [super init]) {
         if (requests) {
+            self.finishTag = 0;
             self.batchArray = [NSArray arrayWithArray:requests];
         }
     }
@@ -54,6 +56,7 @@
             self.successCompletionBlock(self);
         }
         [self clearCircularBlock];
+        [[FRTBatchRequestAgent sharedInstance] removeBatchRequest:self];
     }
 }
 
@@ -79,6 +82,8 @@
         [baseRequest cancel];
     }
     [self clearCircularBlock];
+    [[FRTBatchRequestAgent sharedInstance] removeBatchRequest:self];
+
 }
 
 #pragma mark Private Methods
@@ -89,6 +94,7 @@
         baseRequest.delegate = self;
         [baseRequest start];
     }
+    [[FRTBatchRequestAgent sharedInstance] addBatchRequest:self];
 }
 
 -(void)clearCircularBlock {

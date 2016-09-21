@@ -9,4 +9,5 @@
 #import <UIKit/UIKit.h>
 
 #import "FRTBaseRequest+RequestCache.h"
+#import "FRTBaseRequest+RequestError.h"
 #import "FRTBaseRequest.h"

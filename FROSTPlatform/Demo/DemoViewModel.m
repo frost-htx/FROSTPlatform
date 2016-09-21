@@ -8,10 +8,12 @@
 
 #import "DemoViewModel.h"
 #import "FRTChainRequest.h"
+#import "FRTBatchRequest.h"
 #import "DemoRequestAPI.h"
 #import "DemoModel.h"
 #import "DemoRequestAPI1.h"
 #import "DemoRequestAPI2.h"
+#import "DemoRequestImageAPI.h"
 
 @interface DemoViewModel ()<FRTChainRequestDeleate>
 
@@ -88,13 +90,27 @@
         DemoRequestAPI1 *api = (DemoRequestAPI1 *)baseRequest;
         NSString *url = [api url];
         DemoRequestAPI2 *demoRequestAPI2 = [[DemoRequestAPI2 alloc] initWithUrl:url];
-        [chainRequest setRequest:demoRequestAPI2 callBack:nil];
-//        DemoRequestAPI1 *demoRequestAPI1 = [[DemoRequestAPI1 alloc] initWithPlatform:self.platform version:self.version];
-//        [chainRequest setRequest:demoRequestAPI1 callBack:nil];
-
+        [chainRequest setRequest:demoRequestAPI2 callBack:^(FRTBaseRequest *baseRequest, FRTChainRequest *chainRequest) {
+            NSLog(@"%@",baseRequest.filePathStr);
+        }];
     }];
     chainRequest.delegate = self;
     [chainRequest start];
+}
+
+-(void)demoRequestAPI_BatchRequest:(void(^)())successful requestFailure:(void(^)())failure {
+    DemoRequestImageAPI *demoRequestImageAPI1 = [[DemoRequestImageAPI alloc] initWithImageId:@"05f13195-ff3d-468a-9709-e41764047fbe.jpg@248w_248h_80q"];
+    DemoRequestImageAPI *demoRequestImageAPI2 = [[DemoRequestImageAPI alloc] initWithImageId:@"063aca9c-4152-4f49-8d4d-30b66ecb4548.jpg@248w_248h_80q"];
+    DemoRequestImageAPI *demoRequestImageAPI3 = [[DemoRequestImageAPI alloc] initWithImageId:@"0825c075-b0db-410b-bf8e-1a64702f11e7.jpg@248w_248h_80q"];
+    DemoRequestImageAPI *demoRequestImageAPI4 = [[DemoRequestImageAPI alloc] initWithImageId:@"131f0102-baf4-4150-898b-669a4b2ee0ba.jpg@248w_248h_80q"];
+    DemoRequestImageAPI *demoRequestImageAPI5 = [[DemoRequestImageAPI alloc] initWithImageId:@"086045c0-fe73-4fe1-91162a-5901e4afeec8.jpg@248w_248h_80q"];
+    
+    FRTBatchRequest *batchRequest = [[FRTBatchRequest alloc] initWithBatchArray:@[demoRequestImageAPI1,demoRequestImageAPI2,demoRequestImageAPI3,demoRequestImageAPI4,demoRequestImageAPI5]];
+    [batchRequest startWithCompletionBlockWithSuccess:^(__kindof FRTBatchRequest *batchRequest) {
+        
+    } failure:^(__kindof FRTBatchRequest *batchRequest) {
+        NSString *error = batchRequest.failedRequest.errorInfo;
+    }];
 }
 
 #pragma mark Private Methods

@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <AFNetworking/AFNetworking.h>
 #import "FRTBaseRequest.h"
-#import "FRTRequestError.h"
 #import "FRTConfigTools.h"
 
 @class FRTBaseRequest;
@@ -91,11 +90,6 @@ typedef void(^DownloadCompletionHandler)(NSURLResponse *response, NSURL *filePat
 @property (nonatomic,strong,readonly) NSDictionary *responseHttpHeads;
 
 /**
- *  返回错误描述
- */
-@property (nonatomic,strong) FRTRequestError *responseError;
-
-/**
  *  服务器响应
  */
 @property (nonatomic,strong) NSURLResponse *response;
@@ -106,9 +100,19 @@ typedef void(^DownloadCompletionHandler)(NSURLResponse *response, NSURL *filePat
 @property (nonatomic,strong) NSProgress *downloadProgress;
 
 /**
- *  文件下载路径
+ *  文件下载路径(NSURL)
  */
 @property (nonatomic,strong) NSURL *filePath;
+
+/**
+ *  文件下载路径(NSString)
+ */
+@property (nonatomic,strong,readonly) NSString *filePathStr;
+
+/**
+ *  错误信息
+ */
+@property (nonatomic,strong,readonly) NSString *errorInfo;
 
 /**
  *  SessionManager

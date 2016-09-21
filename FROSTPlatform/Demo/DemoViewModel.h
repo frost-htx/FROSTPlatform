@@ -16,4 +16,6 @@
 
 -(void)demoRequestAPI_chainRequest:(void(^)())successful requestFailure:(void(^)())failure;
 
+-(void)demoRequestAPI_BatchRequest:(void(^)())successful requestFailure:(void(^)())failure;
+
 @end
