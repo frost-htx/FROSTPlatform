@@ -14,6 +14,32 @@
 #import "DemoRequestAPI1.h"
 #import "DemoRequestAPI2.h"
 #import "DemoRequestImageAPI.h"
+#import "BaseService.h"
+
+@implementation JsonHelp
+
++(instancetype)shareJsonHelp {
+    static JsonHelp *shareManager = nil;
+    static dispatch_once_t editManager;
+    dispatch_once(&editManager, ^{
+        shareManager = [[self alloc] init];
+    });
+    return shareManager;
+}
+
+//-(NSDictionary *)jsonDic {
+//    if (!_jsonDic) {
+//        _jsonDic = [NSDictionary dictionary];
+//    }
+//    return _jsonDic;
+//}
+
+-(void)setJsonDic:(NSDictionary *)jsonDic {
+    _jsonDic = [NSDictionary dictionaryWithDictionary:jsonDic];
+}
+
+@end
+
 
 @interface DemoViewModel ()<FRTChainRequestDeleate>
 
@@ -27,11 +53,17 @@
 @property (nonatomic,strong) DemoModel *demoModel;
 @property (nonatomic,strong) DemoRequestAPI *requestAPI;
 
+@property (nonatomic,strong) NSDictionary *demoDic;
+
 @end
 
 @implementation DemoViewModel
 
 #pragma mark life cycle
+
+-(void)dealloc {
+    
+}
 
 -(instancetype)init {
     if (self = [super init]) {
@@ -59,26 +91,77 @@
 
 -(void)demoRequestAPI_ReadRequestCache:(void(^)())cacheDataBlock requestSuccessful:(void(^)())successful requestFailure:(void(^)())failure {
     
-    DemoRequestAPI *requestAPI = [[DemoRequestAPI alloc] initWithCateId:self.cateId order:self.order pageNumber:self.pageNumber];
+//    DemoRequestAPI *requestAPI = [[DemoRequestAPI alloc] initWithCateId:self.cateId order:self.order pageNumber:self.pageNumber];
+//    
+//    if (cacheDataBlock) {
+//        NSDictionary *cacheDic = [requestAPI readCacheResponseData];
+//        [self buildDemoModel:cacheDic];
+//        cacheDataBlock();
+//    }
+//    
+//    [requestAPI startWithCompletionBlockWithSuccess:^(__kindof FRTBaseRequest *request) {
+//        [self buildDemoModel:request.responseObject];
+//        if (successful) {
+//            successful();
+//        }
+//    } failure:^(__kindof FRTBaseRequest *request) {
+//        if (failure) {
+//            failure();
+//        }
+//    }];
+//    
+//    [requestAPI start];
     
-    if (cacheDataBlock) {
-        NSDictionary *cacheDic = [requestAPI readCacheResponseData];
-        [self buildDemoModel:cacheDic];
-        cacheDataBlock();
-    }
+//    [BaseService getDataWithUrlPath:@"http://m.zuzuche.com/v2/?m=api/map/spots/getAllSpots" params:nil customHTTPHead:nil successfulBlock:^(NSURLSessionDataTask *dataTask, id responseObject) {
+//        
+//        NSDictionary *dic = [JsonUtil jsonDic_NSDataToNSDictionary:responseObject];
+//        
+//        self.demoDic = dic;
+//        [JsonHelp shareJsonHelp].jsonDic = dic;
+//        
+//        [JsonHelp shareJsonHelp].isfalg = NO;
+//        
+//        self.version = nil;
+//        [self testAction];
+//    } failureBlock:^(NSError *error) {
+//        
+//    }];
     
-    [requestAPI startWithCompletionBlockWithSuccess:^(__kindof FRTBaseRequest *request) {
-        [self buildDemoModel:request.responseObject];
-        if (successful) {
-            successful();
+    WS(weakSelf, self);
+    
+    
+    
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    [manager GET:@"http://m.zuzuche.com/v2/?m=api/map/spots/getAllSpots" parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    
+//        NSDictionary *dic = responseObject;
+////
+//        self.demoDic = dic;
+//        [JsonHelp shareJsonHelp].jsonDic = dic;
+//
+//        [JsonHelp shareJsonHelp].isfalg = NO;
+//        
+//        self.version = nil;
+//        [weakSelf testAction];
+        
+        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(handleCallBack)]) {
+            [weakSelf ]
         }
-    } failure:^(__kindof FRTBaseRequest *request) {
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if (failure) {
-            failure();
+            
         }
     }];
-    
-    [requestAPI start];
+}
+
+-(void)testAction {
+    printf("123");
 }
 
 -(void)demoRequestAPI_chainRequest:(void(^)())successful requestFailure:(void(^)())failure {
@@ -116,13 +199,20 @@
 #pragma mark Private Methods
 
 -(void)buildDemoModel:(NSDictionary *)dic {
-    if (dic) {
-        NSDictionary *jsonDic = [dic objectForKey:@"data"];
-        self.demoModel = [DemoModel modelWithJSON:jsonDic];
-    }
+//    if (dic) {
+//        NSDictionary *jsonDic = [dic objectForKey:@"data"];
+//        self.demoModel = [DemoModel modelWithJSON:jsonDic];
+//    }
 }
 
 #pragma mark getters and setters 
+
+-(NSDictionary *)demoDic {
+    if (!_demoDic) {
+        _demoDic = [NSDictionary dictionary];
+    }
+    return _demoDic;
+}
 
 -(DemoRequestAPI *)requestAPI {
     if (!_requestAPI) {

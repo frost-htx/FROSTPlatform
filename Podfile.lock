@@ -14,41 +14,33 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - DZNEmptyDataSet (1.8)
+  - DZNEmptyDataSet (1.8.1)
   - FBAllocationTracker (0.1.5)
   - FBMemoryProfiler (0.1.3):
     - FBAllocationTracker (~> 0.1)
     - FBRetainCycleDetector (~> 0.1)
   - FBRetainCycleDetector (0.1.2)
   - iCarousel (1.8.2)
-  - IQKeyboardManager (4.0.2)
+  - IQKeyboardManager (4.0.4)
   - JSONModel (1.2.0)
   - LFLiveKit (2.0)
-  - Masonry (1.0.0)
-  - MJRefresh (3.1.0)
+  - Mapbox-iOS-SDK (3.3.3)
+  - Masonry (1.0.1)
+  - MJRefresh (3.1.12)
   - NSLogger (1.7.0):
     - NSLogger/Standard (= 1.7.0)
   - NSLogger/Standard (1.7.0)
-  - ReactiveCocoa (4.0.1):
-    - ReactiveCocoa/UI (= 4.0.1)
-    - Result (~> 1.0.2)
-  - ReactiveCocoa/Core (4.0.1):
-    - ReactiveCocoa/no-arc
-    - Result (~> 1.0.2)
-  - ReactiveCocoa/no-arc (4.0.1):
-    - Result (~> 1.0.2)
-  - ReactiveCocoa/UI (4.0.1):
-    - ReactiveCocoa/Core
-    - Result (~> 1.0.2)
-  - Result (1.0.2)
+  - ReactiveCocoa (4.2.1):
+    - Result (~> 2.0)
+  - Result (2.1.3)
   - RSKImageCropper (1.5.1)
-  - SDWebImage (3.7.5):
-    - SDWebImage/Core (= 3.7.5)
-  - SDWebImage/Core (3.7.5)
-  - SVProgressHUD (2.0-beta8)
-  - YYKit (0.9.11):
-    - YYKit/no-arc (= 0.9.11)
-  - YYKit/no-arc (0.9.11)
+  - SDWebImage (3.7.6):
+    - SDWebImage/Core (= 3.7.6)
+  - SDWebImage/Core (3.7.6)
+  - SVProgressHUD (2.0.3)
+  - YYKit (1.0.7):
+    - YYKit/no-arc (= 1.0.7)
+  - YYKit/no-arc (1.0.7)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
@@ -58,35 +50,37 @@ DEPENDENCIES:
   - IQKeyboardManager (~> 4.0.2)
   - JSONModel (~> 1.2.0)
   - LFLiveKit (~> 2.0)
+  - Mapbox-iOS-SDK (~> 3.3.3)
   - Masonry (~> 1.0.0)
   - MJRefresh (~> 3.1.0)
   - NSLogger (~> 1.7.0)
-  - ReactiveCocoa (~> 4.0.0)
+  - ReactiveCocoa (~> 4.2.1)
   - RSKImageCropper (~> 1.5.1)
   - SDWebImage (~> 3.7.5)
   - SVProgressHUD (~> 2.0-beta8)
-  - YYKit (~> 0.9.11)
+  - YYKit (~> 1.0.1)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  DZNEmptyDataSet: d2351b2e8daefa40433ef292e246e21f6be31a7b
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   FBAllocationTracker: dfdca3f71aceca6a85e95e3c6ec76a9785eba0f1
   FBMemoryProfiler: 623fc5f8a61f7d02ec75c87e3b97c90f621d8b02
   FBRetainCycleDetector: 45462f9ed1af0cd77224a4cc4e6dacaca47371b4
   iCarousel: 67c8a43da5a46795b56aadfc96cd36a16f6149b2
-  IQKeyboardManager: 2341089c4ae25fa2fa82ce356a259fcd267dc6b6
+  IQKeyboardManager: 4a6f83b540283c2645aaeba2bd8dc0f09b5c77f8
   JSONModel: 12523685c4b623553ccf844bbbf7007624317b2c
   LFLiveKit: 2a6cf2411ff06b62237af05f7b94f00681f0ce00
-  Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
-  MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
+  Mapbox-iOS-SDK: 13cd4d7e118acae2782a1bdc5947164d8f6d80fd
+  Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   NSLogger: daa17368272ddf10a0850c218fe49de23b50f2eb
-  ReactiveCocoa: f7011630aee4deeb16352fcb1b50d6bde9db4f90
-  Result: dd3dd71af3fa2e262f1a999e14fba2c25ec14f16
+  ReactiveCocoa: 5a42745f11ea236f405bb9ce5e97c5e3b23562dd
+  Result: 18e1a7597fbcca5923c565b40a25a98afafdee02
   RSKImageCropper: edd65fedb3734332818deb139906d6b7f54b8a44
-  SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
-  SVProgressHUD: 6e48a1dda09ce3b58adc41d013baed3a8e8980ff
-  YYKit: 76c3f2cee1a72d3c5b1d7fd8d170ee507fe5df68
+  SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  YYKit: 843d1b26e20b82c695790c9a89907eaa1e99907f
 
-PODFILE CHECKSUM: 6852376019cff75de17184f29e864f62dea3cdf3
+PODFILE CHECKSUM: 9f56c051767a6b3348304dffe3459e60dfc7430a
 
 COCOAPODS: 1.0.1

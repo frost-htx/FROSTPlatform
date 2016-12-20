@@ -70,4 +70,9 @@
     return tmp;
 }
 
++(NSDictionary *)jsonDic_NSDataToNSDictionary:(NSData *)jsonData
+{
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:nil];
+    return dic;
+}
 @end

@@ -16,7 +16,6 @@
 #import "IQTitleBarButtonItem.h"
 #import "IQToolbar.h"
 #import "IQUIView+IQKeyboardToolbar.h"
-#import "KeyboardManager.h"
 
 FOUNDATION_EXPORT double IQKeyboardManagerVersionNumber;
 FOUNDATION_EXPORT const unsigned char IQKeyboardManagerVersionString[];

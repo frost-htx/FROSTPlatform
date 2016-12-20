@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "EditMainViewController.h"
 #import "DemoViewController.h"
+#import "MainMapsViewController.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate,DemoViewControllerDelegate>
 
@@ -71,6 +72,10 @@
         DemoViewController *demoViewController1 = [[DemoViewController alloc] init];
         [self.navigationController pushViewController:demoViewController1 animated:YES];
     }
+    if ([titleName isEqualToString:@"地图"]) {
+        MainMapsViewController *mainMapsViewController = [[MainMapsViewController alloc] init];
+        [self.navigationController pushViewController:mainMapsViewController animated:YES];
+    }
 }
 
 #pragma mark DemoViewControllerDelegate 
@@ -83,7 +88,7 @@
 
 -(NSMutableArray *)dataArray {
     if (!_dataArray) {
-        _dataArray = [NSMutableArray arrayWithObjects:@"编辑器",@"Demo",nil];
+        _dataArray = [NSMutableArray arrayWithObjects:@"编辑器",@"Demo",@"地图",nil];
     }
     return _dataArray;
 }

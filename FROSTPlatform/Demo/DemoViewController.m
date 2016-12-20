@@ -94,24 +94,24 @@
 //    });
 //    NSLog(@"5"); // 任务5
 
-//    [self.demoViewModel demoRequestAPI_ReadRequestCache:^() {
-//        
-//    } requestSuccessful:^{
-//        
-//    } requestFailure:^{
-//        
-//    }];
+    [self.demoViewModel demoRequestAPI_ReadRequestCache:^() {
+        
+    } requestSuccessful:^{
+        
+    } requestFailure:^{
+        
+    }];
 //    [self.demoViewModel demoRequestAPI_chainRequest:^{
 //        
 //    } requestFailure:^{
 //        
 //    }];
-    
-    [self.demoViewModel demoRequestAPI_BatchRequest:^{
-        
-    } requestFailure:^{
-        
-    }];
+//    
+//    [self.demoViewModel demoRequestAPI_BatchRequest:^{
+//        
+//    } requestFailure:^{
+//        
+//    }];
 }
 
 #pragma mark Public Methods

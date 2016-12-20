@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		270DA1671DF93AB800771D46 /* example.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 270DA1661DF93AB800771D46 /* example.geojson */; };
 		271227AC1D791845001F0EAE /* FRTBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 271227AB1D791845001F0EAE /* FRTBaseRequest.m */; };
 		271227B81D791EC8001F0EAE /* FRTNetWorkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 271227B71D791EC8001F0EAE /* FRTNetWorkConfig.m */; };
 		271227BB1D791ED9001F0EAE /* FRTConfigTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 271227BA1D791ED9001F0EAE /* FRTConfigTools.m */; };
 		271227BE1D791EE6001F0EAE /* FRTNetWorkAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 271227BD1D791EE6001F0EAE /* FRTNetWorkAgent.m */; };
 		27128A911D6EED8F0034E706 /* DemoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27128A8E1D6EED8F0034E706 /* DemoModel.m */; };
 		27128A921D6EED8F0034E706 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27128A901D6EED8F0034E706 /* DemoViewController.m */; };
+		273826831DF65BA9000CDF5A /* MainMapsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 273826821DF65BA9000CDF5A /* MainMapsViewController.m */; };
 		27776A6E1D571F8A008178B7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27776A6D1D571F8A008178B7 /* AudioToolbox.framework */; };
 		27776A701D571FA2008178B7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27776A6F1D571FA2008178B7 /* AVFoundation.framework */; };
 		27776A721D571FAB008178B7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27776A711D571FAB008178B7 /* CoreGraphics.framework */; };
@@ -26,6 +28,7 @@
 		27776A821D572048008178B7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 27776A811D572048008178B7 /* libz.tbd */; };
 		27776A841D572053008178B7 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 27776A831D572053008178B7 /* libbz2.tbd */; };
 		27776A8A1D57232D008178B7 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27776A891D57232D008178B7 /* IJKMediaFramework.framework */; };
+		278266781E07749E00A894BC /* BaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 278266771E07749E00A894BC /* BaseService.m */; };
 		278876611D88E6FD00359885 /* DemoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 278876601D88E6FD00359885 /* DemoViewModel.m */; };
 		2788766A1D88F36900359885 /* DemoRequestAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 278876691D88F36900359885 /* DemoRequestAPI.m */; };
 		278F61CD1D48F0DF00EF5CDC /* EditViewControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 278F61CC1D48F0DF00EF5CDC /* EditViewControllerManager.m */; };
@@ -93,6 +96,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		270DA1661DF93AB800771D46 /* example.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = example.geojson; sourceTree = "<group>"; };
 		271227AA1D791845001F0EAE /* FRTBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRTBaseRequest.h; sourceTree = "<group>"; };
 		271227AB1D791845001F0EAE /* FRTBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRTBaseRequest.m; sourceTree = "<group>"; };
 		271227B61D791EC8001F0EAE /* FRTNetWorkConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRTNetWorkConfig.h; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 		27128A8F1D6EED8F0034E706 /* DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
 		27128A901D6EED8F0034E706 /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
 		271D8ABF1D4A614A00B0F336 /* EditNSNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditNSNotificationCenter.h; sourceTree = "<group>"; };
+		273826811DF65BA9000CDF5A /* MainMapsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMapsViewController.h; sourceTree = "<group>"; };
+		273826821DF65BA9000CDF5A /* MainMapsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMapsViewController.m; sourceTree = "<group>"; };
 		27776A6D1D571F8A008178B7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		27776A6F1D571FA2008178B7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		27776A711D571FAB008178B7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -119,6 +125,8 @@
 		27776A811D572048008178B7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		27776A831D572053008178B7 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		27776A891D57232D008178B7 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
+		278266761E07749E00A894BC /* BaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseService.h; sourceTree = "<group>"; };
+		278266771E07749E00A894BC /* BaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseService.m; sourceTree = "<group>"; };
 		2788765F1D88E6FD00359885 /* DemoViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoViewModel.h; sourceTree = "<group>"; };
 		278876601D88E6FD00359885 /* DemoViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewModel.m; sourceTree = "<group>"; };
 		278876681D88F36900359885 /* DemoRequestAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoRequestAPI.h; sourceTree = "<group>"; };
@@ -271,6 +279,8 @@
 		27128A8C1D6EED8F0034E706 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				278266761E07749E00A894BC /* BaseService.h */,
+				278266771E07749E00A894BC /* BaseService.m */,
 				27128A8D1D6EED8F0034E706 /* DemoModel.h */,
 				27128A8E1D6EED8F0034E706 /* DemoModel.m */,
 				27128A8F1D6EED8F0034E706 /* DemoViewController.h */,
@@ -287,6 +297,24 @@
 				27AC26091D91214D00C4ED32 /* DemoRequestImageAPI.m */,
 			);
 			path = Demo;
+			sourceTree = "<group>";
+		};
+		2738267F1DF65B7A000CDF5A /* mapsBox */ = {
+			isa = PBXGroup;
+			children = (
+				273826801DF65B7A000CDF5A /* ViewController */,
+			);
+			path = mapsBox;
+			sourceTree = "<group>";
+		};
+		273826801DF65B7A000CDF5A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				270DA1661DF93AB800771D46 /* example.geojson */,
+				273826811DF65BA9000CDF5A /* MainMapsViewController.h */,
+				273826821DF65BA9000CDF5A /* MainMapsViewController.m */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		2788766B1D89050900359885 /* Support Files */ = {
@@ -386,6 +414,7 @@
 		27CE94521D3B484A003791FC /* FROSTPlatform */ = {
 			isa = PBXGroup;
 			children = (
+				2738267F1DF65B7A000CDF5A /* mapsBox */,
 				27128A8C1D6EED8F0034E706 /* Demo */,
 				27C8930E1D4E169100FE4A32 /* Third-partyLibraries */,
 				27B9E7421D43189600E7345B /* HeaderFile */,
@@ -708,6 +737,7 @@
 				TargetAttributes = {
 					27CE944F1D3B484A003791FC = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0810;
 					};
 					27CE94681D3B484A003791FC = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -748,6 +778,7 @@
 				27DF44901D3E0BB2001C5C33 /* Template.geojson in Resources */,
 				27C893261D4E169100FE4A32 /* TZImagePickerController.bundle in Resources */,
 				27CE94601D3B484A003791FC /* Assets.xcassets in Resources */,
+				270DA1671DF93AB800771D46 /* example.geojson in Resources */,
 				27CE945E1D3B484A003791FC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -833,6 +864,7 @@
 				27957CD81D87B1C500E181F9 /* FRTBaseRequest+RequestCache.m in Sources */,
 				27C8932B1D4E169100FE4A32 /* TZVideoPlayerController.m in Sources */,
 				271227B81D791EC8001F0EAE /* FRTNetWorkConfig.m in Sources */,
+				273826831DF65BA9000CDF5A /* MainMapsViewController.m in Sources */,
 				27E3F0FE1D8FBC6500B878BB /* DemoRequestAPI2.m in Sources */,
 				27DF39D31D3C7A70001C5C33 /* RootViewModel.m in Sources */,
 				27DF39F41D3DBE05001C5C33 /* EditItemImageView.m in Sources */,
@@ -861,6 +893,7 @@
 				27DF39D91D3C7AED001C5C33 /* EditViewModel.m in Sources */,
 				27E3F1031D8FE25800B878BB /* FRTChainRequestAgent.m in Sources */,
 				27DF39EB1D3CF4F7001C5C33 /* EditModel.m in Sources */,
+				278266781E07749E00A894BC /* BaseService.m in Sources */,
 				27CE94581D3B484A003791FC /* AppDelegate.m in Sources */,
 				27DF39F71D3DBE23001C5C33 /* EditItemLabelView.m in Sources */,
 				27C893361D504A0500FE4A32 /* PhotoCuttingViewController.m in Sources */,
@@ -1017,6 +1050,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = frost.FROSTPlatform;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1035,6 +1069,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = frost.FROSTPlatform;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

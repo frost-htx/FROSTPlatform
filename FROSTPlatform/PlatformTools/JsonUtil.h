@@ -30,4 +30,7 @@
  * @return              对象（dic或者array）
  */
 + (id)jsonStringToObject:(NSString *)jsonString;
+
++ (NSDictionary *)jsonDic_NSDataToNSDictionary:(NSData *)jsonData;
+
 @end

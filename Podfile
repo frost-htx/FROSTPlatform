@@ -7,9 +7,7 @@ target :FROSTPlatform do
     pod 'DZNEmptyDataSet','~> 1.8'
     pod 'IQKeyboardManager','~> 4.0.2'
     pod 'Masonry','~> 1.0.0'
-    pod 'ReactiveCocoa','~> 4.0.0'
     pod 'SDWebImage', '~> 3.7.5'
-    pod 'YYKit','~> 0.9.11'
     pod 'MJRefresh','~> 3.1.0'
     pod 'SVProgressHUD','~> 2.0-beta8'
     pod 'iCarousel','~>1.8.2'
@@ -17,4 +15,8 @@ target :FROSTPlatform do
     pod 'LFLiveKit', '~> 2.0'
     pod 'FBMemoryProfiler', '~> 0.1.3'
     pod 'NSLogger', '~> 1.7.0'
+    pod 'YYKit', '~> 1.0.1'
+    pod 'ReactiveCocoa','~> 4.2.1'
+    pod 'Mapbox-iOS-SDK', '~> 3.3.3'
+
 end

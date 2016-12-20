@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <Mapbox/MGLAccountManager.h>
 
 #if DEBUG
 #import <FBMemoryProfiler/FBMemoryProfiler.h>
@@ -17,7 +18,7 @@
 /**
  *  FaceBook检测内存
  */
-@property (nonatomic,strong) FBMemoryProfiler *memoryProfiler;
+//@property (nonatomic,strong) FBMemoryProfiler *memoryProfiler;
 
 @end
 
@@ -26,9 +27,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.currentNavigation = (UINavigationController *)self.window.rootViewController;
-    FBMemoryProfiler *memoryProfiler = [FBMemoryProfiler new];
-    [memoryProfiler enable];
-    _memoryProfiler = memoryProfiler;
+    [MGLAccountManager setAccessToken:@"pk.eyJ1IjoiY2FzdGlsZSIsImEiOiJjaXdmemhtMHMwMHh2Mm9wOXFrNDRnbzF4In0.JgNI3gkQgqWvQmbaCqNXBQ"];
+//    FBMemoryProfiler *memoryProfiler = [FBMemoryProfiler new];
+//    [memoryProfiler enable];
+//    _memoryProfiler = memoryProfiler;
     return YES;
 }
 
