@@ -18,7 +18,7 @@ int main(int argc, char * argv[]) {
 #if DEBUG
         [[FBAllocationTrackerManager sharedManager] startTrackingAllocations];
         [[FBAllocationTrackerManager sharedManager] enableGenerations];
-        LoggerStart(LoggerGetDefaultLogger());
+//        LoggerStart(LoggerGetDefaultLogger());
 #endif
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }

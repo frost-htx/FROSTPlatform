@@ -8,7 +8,7 @@
 
 #import "RootViewController.h"
 
-typedef void (^BlockA)(BOOL success);
+//typedef void (^BlockA)(BOOL success);
 
 @protocol DemoViewControllerDelegate <NSObject>
 
@@ -18,12 +18,12 @@ typedef void (^BlockA)(BOOL success);
 
 @interface DemoViewController : RootViewController
 
-@property (nonatomic,strong) id<DemoViewControllerDelegate> delegate;
+@property (nonatomic,assign) id<DemoViewControllerDelegate> delegate;
 
 @property (nonatomic,strong) NSArray *array1;
 
-@property (nonatomic,copy) BlockA blocka;
-
-- (void)loadData:(void (^)(BOOL success))finished;
+//@property (nonatomic,copy) BlockA blocka;
+//
+//- (void)loadData:(void (^)(BOOL success))finished;
 
 @end

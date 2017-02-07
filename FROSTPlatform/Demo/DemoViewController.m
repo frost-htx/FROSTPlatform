@@ -8,12 +8,13 @@
 
 #import "DemoViewController.h"
 #import "DemoViewModel.h"
+#import "ChildrenSearchFactory.h"
 
 @interface DemoViewController ()
-{
-    
-    id <DemoViewControllerDelegate> datasoure;
-}
+//{
+//    
+//    id <DemoViewControllerDelegate> datasoure;
+//}
 
 @property (nonatomic,strong) UITableView *tableView;
 
@@ -26,10 +27,13 @@
 #pragma mark life cycle
 
 -(void)dealloc {
-    
+    self.delegate = nil;
 }
 
 -(void)viewDidLoad {
+    
+    ChildrenSearchFactory *search = [[ChildrenSearchFactory alloc] init];
+    [search searchAction];
     
 //    dispatch_queue_t queue = dispatch_queue_create("com.demo.serialQueue", DISPATCH_QUEUE_SERIAL);
 //    dispatch_async(dispatch_get_global_queue(0,0), ^{
@@ -117,8 +121,8 @@
 #pragma mark Public Methods
 
 - (void)loadData:(void (^)(BOOL success))finished {
-    self.blocka = finished;
-    finished(YES);
+//    self.blocka = finished;
+//    finished(YES);
 }
 
 #pragma mark getters and setters 

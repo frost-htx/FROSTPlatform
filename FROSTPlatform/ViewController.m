@@ -10,13 +10,18 @@
 #import "EditMainViewController.h"
 #import "DemoViewController.h"
 #import "MainMapsViewController.h"
+#import "DemoViewModel.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate,DemoViewControllerDelegate>
 
 @property (nonatomic,strong) NSMutableArray *dataArray;
 @property (nonatomic,strong) UITableView *mainTableView;
-@property (nonatomic,strong) DemoViewController *demoViewController;
+@property (nonatomic,weak)   DemoViewController *demoViewController;
 @property (nonatomic,strong) NSArray *array1;
+@property (nonatomic,strong) DemoViewModel *demoViewModel;
+
+@property (nonatomic,strong) id <DemoViewControllerDelegate> demoDelegate;
+
 @end
 
 @implementation ViewController
@@ -26,6 +31,8 @@
     [super viewDidLoad];
     [self.view addSubview:self.mainTableView];
     [self layoutSubViews];
+
+
 }
 
 -(void)layoutSubViews {
@@ -69,8 +76,11 @@
         [self.navigationController pushViewController:editMainViewController animated:YES];
     }
     if ([titleName isEqualToString:@"Demo"]) {
-        DemoViewController *demoViewController1 = [[DemoViewController alloc] init];
-        [self.navigationController pushViewController:demoViewController1 animated:YES];
+        DemoViewController *demoViewController = [[DemoViewController alloc] init];
+        demoViewController.delegate = self ;
+        self.demoDelegate = demoViewController.delegate;
+        [self.navigationController pushViewController:demoViewController animated:YES];
+        self.demoViewController = demoViewController;
     }
     if ([titleName isEqualToString:@"地图"]) {
         MainMapsViewController *mainMapsViewController = [[MainMapsViewController alloc] init];
@@ -101,4 +111,12 @@
     }
     return _mainTableView;
 }
+
+-(DemoViewModel *)demoViewModel {
+    if (!_demoViewModel) {
+        _demoViewModel = [[DemoViewModel alloc] init];
+    }
+    return _demoViewModel;
+}
+
 @end

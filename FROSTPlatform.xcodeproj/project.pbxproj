@@ -14,7 +14,14 @@
 		271227BE1D791EE6001F0EAE /* FRTNetWorkAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 271227BD1D791EE6001F0EAE /* FRTNetWorkAgent.m */; };
 		27128A911D6EED8F0034E706 /* DemoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27128A8E1D6EED8F0034E706 /* DemoModel.m */; };
 		27128A921D6EED8F0034E706 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27128A901D6EED8F0034E706 /* DemoViewController.m */; };
+		2723AC5C1E23259E00C5764B /* HomeSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2723AC5B1E23259E00C5764B /* HomeSearchBar.m */; };
+		2723AC621E23261500C5764B /* SearchBarViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 2723AC611E23261500C5764B /* SearchBarViews.m */; };
+		2723AC651E233F2700C5764B /* SearchLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 2723AC641E233F2700C5764B /* SearchLogic.m */; };
 		273826831DF65BA9000CDF5A /* MainMapsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 273826821DF65BA9000CDF5A /* MainMapsViewController.m */; };
+		2743B4761E1F30E90057B033 /* BaseSearchFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2743B4751E1F30E90057B033 /* BaseSearchFactory.m */; };
+		2743B47A1E1F316B0057B033 /* ChildrenSearchFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2743B4791E1F316B0057B033 /* ChildrenSearchFactory.m */; };
+		2743B4B51E1F701F0057B033 /* SonSearchFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2743B4B41E1F701F0057B033 /* SonSearchFactory.m */; };
+		2747D6EC1E49AA7100C7F84F /* DijkstraDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2747D6EB1E49AA7100C7F84F /* DijkstraDemo.m */; };
 		27776A6E1D571F8A008178B7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27776A6D1D571F8A008178B7 /* AudioToolbox.framework */; };
 		27776A701D571FA2008178B7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27776A6F1D571FA2008178B7 /* AVFoundation.framework */; };
 		27776A721D571FAB008178B7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27776A711D571FAB008178B7 /* CoreGraphics.framework */; };
@@ -110,8 +117,24 @@
 		27128A8F1D6EED8F0034E706 /* DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
 		27128A901D6EED8F0034E706 /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
 		271D8ABF1D4A614A00B0F336 /* EditNSNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditNSNotificationCenter.h; sourceTree = "<group>"; };
+		2723AC5A1E23259E00C5764B /* HomeSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeSearchBar.h; sourceTree = "<group>"; };
+		2723AC5B1E23259E00C5764B /* HomeSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeSearchBar.m; sourceTree = "<group>"; };
+		2723AC601E23261500C5764B /* SearchBarViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchBarViews.h; sourceTree = "<group>"; };
+		2723AC611E23261500C5764B /* SearchBarViews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchBarViews.m; sourceTree = "<group>"; };
+		2723AC631E233F2700C5764B /* SearchLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchLogic.h; sourceTree = "<group>"; };
+		2723AC641E233F2700C5764B /* SearchLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchLogic.m; sourceTree = "<group>"; };
 		273826811DF65BA9000CDF5A /* MainMapsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMapsViewController.h; sourceTree = "<group>"; };
 		273826821DF65BA9000CDF5A /* MainMapsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMapsViewController.m; sourceTree = "<group>"; };
+		2740CCAD1E2480EC00DA2F48 /* SearchProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchProtocol.h; sourceTree = "<group>"; };
+		2743B4741E1F30E90057B033 /* BaseSearchFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseSearchFactory.h; sourceTree = "<group>"; };
+		2743B4751E1F30E90057B033 /* BaseSearchFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseSearchFactory.m; sourceTree = "<group>"; };
+		2743B4771E1F31080057B033 /* SearchManagerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchManagerProtocol.h; sourceTree = "<group>"; };
+		2743B4781E1F316B0057B033 /* ChildrenSearchFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildrenSearchFactory.h; sourceTree = "<group>"; };
+		2743B4791E1F316B0057B033 /* ChildrenSearchFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildrenSearchFactory.m; sourceTree = "<group>"; };
+		2743B4B31E1F701F0057B033 /* SonSearchFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SonSearchFactory.h; sourceTree = "<group>"; };
+		2743B4B41E1F701F0057B033 /* SonSearchFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SonSearchFactory.m; sourceTree = "<group>"; };
+		2747D6EA1E49AA7100C7F84F /* DijkstraDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DijkstraDemo.h; sourceTree = "<group>"; };
+		2747D6EB1E49AA7100C7F84F /* DijkstraDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DijkstraDemo.m; sourceTree = "<group>"; };
 		27776A6D1D571F8A008178B7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		27776A6F1D571FA2008178B7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		27776A711D571FAB008178B7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -299,6 +322,21 @@
 			path = Demo;
 			sourceTree = "<group>";
 		};
+		2723AC591E23217D00C5764B /* CombinationDemo */ = {
+			isa = PBXGroup;
+			children = (
+				2723AC5A1E23259E00C5764B /* HomeSearchBar.h */,
+				2723AC5B1E23259E00C5764B /* HomeSearchBar.m */,
+				2723AC601E23261500C5764B /* SearchBarViews.h */,
+				2723AC611E23261500C5764B /* SearchBarViews.m */,
+				2723AC631E233F2700C5764B /* SearchLogic.h */,
+				2723AC641E233F2700C5764B /* SearchLogic.m */,
+				2740CCAD1E2480EC00DA2F48 /* SearchProtocol.h */,
+			);
+			name = CombinationDemo;
+			path = InheritDemo;
+			sourceTree = "<group>";
+		};
 		2738267F1DF65B7A000CDF5A /* mapsBox */ = {
 			isa = PBXGroup;
 			children = (
@@ -315,6 +353,29 @@
 				273826821DF65BA9000CDF5A /* MainMapsViewController.m */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2743B4731E1F30AE0057B033 /* PolymorphismDemo */ = {
+			isa = PBXGroup;
+			children = (
+				2743B4771E1F31080057B033 /* SearchManagerProtocol.h */,
+				2743B4741E1F30E90057B033 /* BaseSearchFactory.h */,
+				2743B4751E1F30E90057B033 /* BaseSearchFactory.m */,
+				2743B4781E1F316B0057B033 /* ChildrenSearchFactory.h */,
+				2743B4791E1F316B0057B033 /* ChildrenSearchFactory.m */,
+				2743B4B31E1F701F0057B033 /* SonSearchFactory.h */,
+				2743B4B41E1F701F0057B033 /* SonSearchFactory.m */,
+			);
+			path = PolymorphismDemo;
+			sourceTree = "<group>";
+		};
+		2747D6E91E49AA0100C7F84F /* AlgorithmDemo */ = {
+			isa = PBXGroup;
+			children = (
+				2747D6EA1E49AA7100C7F84F /* DijkstraDemo.h */,
+				2747D6EB1E49AA7100C7F84F /* DijkstraDemo.m */,
+			);
+			path = AlgorithmDemo;
 			sourceTree = "<group>";
 		};
 		2788766B1D89050900359885 /* Support Files */ = {
@@ -414,6 +475,9 @@
 		27CE94521D3B484A003791FC /* FROSTPlatform */ = {
 			isa = PBXGroup;
 			children = (
+				2747D6E91E49AA0100C7F84F /* AlgorithmDemo */,
+				2723AC591E23217D00C5764B /* CombinationDemo */,
+				2743B4731E1F30AE0057B033 /* PolymorphismDemo */,
 				2738267F1DF65B7A000CDF5A /* mapsBox */,
 				27128A8C1D6EED8F0034E706 /* Demo */,
 				27C8930E1D4E169100FE4A32 /* Third-partyLibraries */,
@@ -858,8 +922,12 @@
 				27DF39E81D3CC893001C5C33 /* EditCollectionView.m in Sources */,
 				271227AC1D791845001F0EAE /* FRTBaseRequest.m in Sources */,
 				27128A921D6EED8F0034E706 /* DemoViewController.m in Sources */,
+				2747D6EC1E49AA7100C7F84F /* DijkstraDemo.m in Sources */,
 				27AC260D1D91278000C4ED32 /* FRTBatchRequestAgent.m in Sources */,
+				2743B4761E1F30E90057B033 /* BaseSearchFactory.m in Sources */,
+				2723AC621E23261500C5764B /* SearchBarViews.m in Sources */,
 				27C893281D4E169100FE4A32 /* TZPhotoPickerController.m in Sources */,
+				2723AC651E233F2700C5764B /* SearchLogic.m in Sources */,
 				271227BE1D791EE6001F0EAE /* FRTNetWorkAgent.m in Sources */,
 				27957CD81D87B1C500E181F9 /* FRTBaseRequest+RequestCache.m in Sources */,
 				27C8932B1D4E169100FE4A32 /* TZVideoPlayerController.m in Sources */,
@@ -871,6 +939,7 @@
 				27E3F0FB1D8FBC4900B878BB /* DemoRequestAPI1.m in Sources */,
 				27C893271D4E169100FE4A32 /* TZImagePickerController.m in Sources */,
 				27DF39FF1D3E08D5001C5C33 /* JsonUtil.m in Sources */,
+				2743B47A1E1F316B0057B033 /* ChildrenSearchFactory.m in Sources */,
 				2788766A1D88F36900359885 /* DemoRequestAPI.m in Sources */,
 				27C8932A1D4E169100FE4A32 /* TZPhotoPreviewController.m in Sources */,
 				27942AF01D86672B00581782 /* FRTChainRequest.m in Sources */,
@@ -894,11 +963,13 @@
 				27E3F1031D8FE25800B878BB /* FRTChainRequestAgent.m in Sources */,
 				27DF39EB1D3CF4F7001C5C33 /* EditModel.m in Sources */,
 				278266781E07749E00A894BC /* BaseService.m in Sources */,
+				2723AC5C1E23259E00C5764B /* HomeSearchBar.m in Sources */,
 				27CE94581D3B484A003791FC /* AppDelegate.m in Sources */,
 				27DF39F71D3DBE23001C5C33 /* EditItemLabelView.m in Sources */,
 				27C893361D504A0500FE4A32 /* PhotoCuttingViewController.m in Sources */,
 				271227BB1D791ED9001F0EAE /* FRTConfigTools.m in Sources */,
 				27CE94551D3B484A003791FC /* main.m in Sources */,
+				2743B4B51E1F701F0057B033 /* SonSearchFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

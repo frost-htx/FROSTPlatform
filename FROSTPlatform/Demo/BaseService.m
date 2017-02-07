@@ -202,7 +202,7 @@ typedef NS_ENUM(NSUInteger, RequestSerializerType)
     if (fileName) {
       return [[NSURL fileURLWithPath:filePath] URLByAppendingPathComponent:fileName];
     } else {
-      return [NSURL fileURLWithPath:filePath];
+      return nil;
     }
     
   } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
