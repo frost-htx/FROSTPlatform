@@ -154,7 +154,7 @@
                   moduleName = "FROSTPlatform"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/frost/Desktop/FROSTPlatform/FROSTPlatform/FROSTPlatform/Demo/DemoViewModel.m"
-                  timestampString = "508143333.155273"
+                  timestampString = "511152392.994842"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "133"
@@ -169,7 +169,7 @@
                   moduleName = "FROSTPlatform"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/frost/Desktop/FROSTPlatform/FROSTPlatform/FROSTPlatform/Demo/DemoViewModel.m"
-                  timestampString = "508143333.156576"
+                  timestampString = "511152392.996153"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "135"
@@ -202,7 +202,7 @@
                   moduleName = "FROSTPlatform"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/frost/Desktop/FROSTPlatform/FROSTPlatform/FROSTPlatform/Demo/DemoViewModel.m"
-                  timestampString = "508143333.159273"
+                  timestampString = "511152392.998631"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "133"
@@ -217,7 +217,7 @@
                   moduleName = "FROSTPlatform"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/frost/Desktop/FROSTPlatform/FROSTPlatform/FROSTPlatform/Demo/DemoViewModel.m"
-                  timestampString = "508143333.160506"
+                  timestampString = "511152392.999831"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "135"
@@ -250,7 +250,7 @@
                   moduleName = "FROSTPlatform"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/frost/Desktop/FROSTPlatform/FROSTPlatform/FROSTPlatform/Demo/DemoViewModel.m"
-                  timestampString = "508143333.163044"
+                  timestampString = "511152393.002321"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "133"
@@ -265,7 +265,7 @@
                   moduleName = "FROSTPlatform"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/frost/Desktop/FROSTPlatform/FROSTPlatform/FROSTPlatform/Demo/DemoViewModel.m"
-                  timestampString = "508143333.164308"
+                  timestampString = "511152393.003528"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "135"
@@ -551,6 +551,22 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "111"
             endingLineNumber = "111">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FROSTPlatform/Demo/DemoViewController.m"
+            timestampString = "511152306.756412"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
