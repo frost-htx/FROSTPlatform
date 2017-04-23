@@ -21,7 +21,6 @@
 		2743B4761E1F30E90057B033 /* BaseSearchFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2743B4751E1F30E90057B033 /* BaseSearchFactory.m */; };
 		2743B47A1E1F316B0057B033 /* ChildrenSearchFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2743B4791E1F316B0057B033 /* ChildrenSearchFactory.m */; };
 		2743B4B51E1F701F0057B033 /* SonSearchFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2743B4B41E1F701F0057B033 /* SonSearchFactory.m */; };
-		2747D6EC1E49AA7100C7F84F /* DijkstraDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2747D6EB1E49AA7100C7F84F /* DijkstraDemo.m */; };
 		27776A6E1D571F8A008178B7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27776A6D1D571F8A008178B7 /* AudioToolbox.framework */; };
 		27776A701D571FA2008178B7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27776A6F1D571FA2008178B7 /* AVFoundation.framework */; };
 		27776A721D571FAB008178B7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27776A711D571FAB008178B7 /* CoreGraphics.framework */; };
@@ -34,7 +33,6 @@
 		27776A801D57203B008178B7 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27776A7F1D57203B008178B7 /* VideoToolbox.framework */; };
 		27776A821D572048008178B7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 27776A811D572048008178B7 /* libz.tbd */; };
 		27776A841D572053008178B7 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 27776A831D572053008178B7 /* libbz2.tbd */; };
-		27776A8A1D57232D008178B7 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27776A891D57232D008178B7 /* IJKMediaFramework.framework */; };
 		278266781E07749E00A894BC /* BaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 278266771E07749E00A894BC /* BaseService.m */; };
 		278876611D88E6FD00359885 /* DemoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 278876601D88E6FD00359885 /* DemoViewModel.m */; };
 		2788766A1D88F36900359885 /* DemoRequestAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 278876691D88F36900359885 /* DemoRequestAPI.m */; };
@@ -65,6 +63,9 @@
 		27CE946E1D3B484A003791FC /* FROSTPlatformTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CE946D1D3B484A003791FC /* FROSTPlatformTests.m */; };
 		27CE94791D3B484A003791FC /* FROSTPlatformUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CE94781D3B484A003791FC /* FROSTPlatformUITests.m */; };
 		27CE94A01D3BDFA1003791FC /* EditMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CE949F1D3BDFA1003791FC /* EditMainViewController.m */; };
+		27D4E0D81E93633B00D70252 /* DijkstraDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D4E0D61E93633B00D70252 /* DijkstraDemo.m */; };
+		27D4E0DB1E93662E00D70252 /* HashTableDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D4E0DA1E93662E00D70252 /* HashTableDemo.m */; };
+		27D72C401E9A303E008FDD23 /* ChainTableDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D72C3F1E9A303E008FDD23 /* ChainTableDemo.m */; };
 		27DF39D31D3C7A70001C5C33 /* RootViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DF39D21D3C7A70001C5C33 /* RootViewModel.m */; };
 		27DF39D61D3C7A9B001C5C33 /* RootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DF39D51D3C7A9B001C5C33 /* RootModel.m */; };
 		27DF39D91D3C7AED001C5C33 /* EditViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DF39D81D3C7AED001C5C33 /* EditViewModel.m */; };
@@ -133,8 +134,6 @@
 		2743B4791E1F316B0057B033 /* ChildrenSearchFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildrenSearchFactory.m; sourceTree = "<group>"; };
 		2743B4B31E1F701F0057B033 /* SonSearchFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SonSearchFactory.h; sourceTree = "<group>"; };
 		2743B4B41E1F701F0057B033 /* SonSearchFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SonSearchFactory.m; sourceTree = "<group>"; };
-		2747D6EA1E49AA7100C7F84F /* DijkstraDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DijkstraDemo.h; sourceTree = "<group>"; };
-		2747D6EB1E49AA7100C7F84F /* DijkstraDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DijkstraDemo.m; sourceTree = "<group>"; };
 		27776A6D1D571F8A008178B7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		27776A6F1D571FA2008178B7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		27776A711D571FAB008178B7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -147,7 +146,6 @@
 		27776A7F1D57203B008178B7 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		27776A811D572048008178B7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		27776A831D572053008178B7 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
-		27776A891D57232D008178B7 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		278266761E07749E00A894BC /* BaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseService.h; sourceTree = "<group>"; };
 		278266771E07749E00A894BC /* BaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseService.m; sourceTree = "<group>"; };
 		2788765F1D88E6FD00359885 /* DemoViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoViewModel.h; sourceTree = "<group>"; };
@@ -212,6 +210,12 @@
 		27CE949A1D3BDB91003791FC /* macroDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macroDefinition.h; sourceTree = "<group>"; };
 		27CE949E1D3BDFA1003791FC /* EditMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditMainViewController.h; sourceTree = "<group>"; };
 		27CE949F1D3BDFA1003791FC /* EditMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditMainViewController.m; sourceTree = "<group>"; };
+		27D4E0D51E93633B00D70252 /* DijkstraDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DijkstraDemo.h; sourceTree = "<group>"; };
+		27D4E0D61E93633B00D70252 /* DijkstraDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DijkstraDemo.m; sourceTree = "<group>"; };
+		27D4E0D91E93662E00D70252 /* HashTableDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HashTableDemo.h; sourceTree = "<group>"; };
+		27D4E0DA1E93662E00D70252 /* HashTableDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HashTableDemo.m; sourceTree = "<group>"; };
+		27D72C3E1E9A303E008FDD23 /* ChainTableDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChainTableDemo.h; sourceTree = "<group>"; };
+		27D72C3F1E9A303E008FDD23 /* ChainTableDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChainTableDemo.m; sourceTree = "<group>"; };
 		27DF39D11D3C7A70001C5C33 /* RootViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewModel.h; sourceTree = "<group>"; };
 		27DF39D21D3C7A70001C5C33 /* RootViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewModel.m; sourceTree = "<group>"; };
 		27DF39D41D3C7A9B001C5C33 /* RootModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootModel.h; sourceTree = "<group>"; };
@@ -269,7 +273,6 @@
 				27776A701D571FA2008178B7 /* AVFoundation.framework in Frameworks */,
 				27776A6E1D571F8A008178B7 /* AudioToolbox.framework in Frameworks */,
 				286E63B1137A4979A98CF17D /* Pods_FROSTPlatform.framework in Frameworks */,
-				27776A8A1D57232D008178B7 /* IJKMediaFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,8 +375,9 @@
 		2747D6E91E49AA0100C7F84F /* AlgorithmDemo */ = {
 			isa = PBXGroup;
 			children = (
-				2747D6EA1E49AA7100C7F84F /* DijkstraDemo.h */,
-				2747D6EB1E49AA7100C7F84F /* DijkstraDemo.m */,
+				27D72C3D1E9A2FA6008FDD23 /* ChainTable */,
+				27D4E0D41E93633B00D70252 /* Dijkstra */,
+				27D4E0D71E93633B00D70252 /* HashTable */,
 			);
 			path = AlgorithmDemo;
 			sourceTree = "<group>";
@@ -700,6 +704,33 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		27D4E0D41E93633B00D70252 /* Dijkstra */ = {
+			isa = PBXGroup;
+			children = (
+				27D4E0D51E93633B00D70252 /* DijkstraDemo.h */,
+				27D4E0D61E93633B00D70252 /* DijkstraDemo.m */,
+			);
+			path = Dijkstra;
+			sourceTree = "<group>";
+		};
+		27D4E0D71E93633B00D70252 /* HashTable */ = {
+			isa = PBXGroup;
+			children = (
+				27D4E0D91E93662E00D70252 /* HashTableDemo.h */,
+				27D4E0DA1E93662E00D70252 /* HashTableDemo.m */,
+			);
+			path = HashTable;
+			sourceTree = "<group>";
+		};
+		27D72C3D1E9A2FA6008FDD23 /* ChainTable */ = {
+			isa = PBXGroup;
+			children = (
+				27D72C3E1E9A303E008FDD23 /* ChainTableDemo.h */,
+				27D72C3F1E9A303E008FDD23 /* ChainTableDemo.m */,
+			);
+			path = ChainTable;
+			sourceTree = "<group>";
+		};
 		27DF39FC1D3E08C1001C5C33 /* PlatformTools */ = {
 			isa = PBXGroup;
 			children = (
@@ -712,7 +743,6 @@
 		D7363DE09C9B427C05815CB5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				27776A891D57232D008178B7 /* IJKMediaFramework.framework */,
 				27776A831D572053008178B7 /* libbz2.tbd */,
 				27776A811D572048008178B7 /* libz.tbd */,
 				27776A7F1D57203B008178B7 /* VideoToolbox.framework */,
@@ -919,10 +949,12 @@
 				27DF39F11D3DBD66001C5C33 /* EditMainCollectionCell.m in Sources */,
 				27C893251D4E169100FE4A32 /* TZImageManager.m in Sources */,
 				27AC26101D91369C00C4ED32 /* FRTBaseRequest+RequestError.m in Sources */,
+				27D72C401E9A303E008FDD23 /* ChainTableDemo.m in Sources */,
 				27DF39E81D3CC893001C5C33 /* EditCollectionView.m in Sources */,
 				271227AC1D791845001F0EAE /* FRTBaseRequest.m in Sources */,
 				27128A921D6EED8F0034E706 /* DemoViewController.m in Sources */,
-				2747D6EC1E49AA7100C7F84F /* DijkstraDemo.m in Sources */,
+				27D4E0D81E93633B00D70252 /* DijkstraDemo.m in Sources */,
+				27D4E0DB1E93662E00D70252 /* HashTableDemo.m in Sources */,
 				27AC260D1D91278000C4ED32 /* FRTBatchRequestAgent.m in Sources */,
 				2743B4761E1F30E90057B033 /* BaseSearchFactory.m in Sources */,
 				2723AC621E23261500C5764B /* SearchBarViews.m in Sources */,

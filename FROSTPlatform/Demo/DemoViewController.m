@@ -9,6 +9,8 @@
 #import "DemoViewController.h"
 #import "DemoViewModel.h"
 #import "ChildrenSearchFactory.h"
+#import "HashTableDemo.h"
+#import "ChainTableDemo.h"
 
 @interface DemoViewController ()
 //{
@@ -37,8 +39,13 @@
 
 -(void)viewDidLoad {
     
-    ChildrenSearchFactory *search = [[ChildrenSearchFactory alloc] init];
-    [search searchAction];
+//    HashTableDemo * demo = [[HashTableDemo alloc] init];
+    
+    ChainTableDemo * demo = [[ChainTableDemo alloc] init];
+
+    
+//    ChildrenSearchFactory *search = [[ChildrenSearchFactory alloc] init];
+//    [search searchAction];
     
 //    dispatch_queue_t queue = dispatch_queue_create("com.demo.serialQueue", DISPATCH_QUEUE_SERIAL);
 //    dispatch_async(dispatch_get_global_queue(0,0), ^{

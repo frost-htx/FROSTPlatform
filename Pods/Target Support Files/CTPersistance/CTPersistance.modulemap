@@ -1,0 +1,6 @@
+framework module CTPersistance {
+  umbrella header "CTPersistance-umbrella.h"
+
+  export *
+  module * { export * }
+}
