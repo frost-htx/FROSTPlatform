@@ -154,7 +154,7 @@
                   moduleName = "FROSTPlatform"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/frost/Desktop/FROSTPlatform/FROSTPlatform/FROSTPlatform/Demo/DemoViewModel.m"
-                  timestampString = "514628945.039872"
+                  timestampString = "515936175.977997"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "133"
@@ -169,7 +169,7 @@
                   moduleName = "FROSTPlatform"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/frost/Desktop/FROSTPlatform/FROSTPlatform/FROSTPlatform/Demo/DemoViewModel.m"
-                  timestampString = "514628945.041121"
+                  timestampString = "515936175.979707"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "135"
@@ -202,7 +202,7 @@
                   moduleName = "FROSTPlatform"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/frost/Desktop/FROSTPlatform/FROSTPlatform/FROSTPlatform/Demo/DemoViewModel.m"
-                  timestampString = "514628945.044128"
+                  timestampString = "515936175.982725"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "133"
@@ -217,7 +217,7 @@
                   moduleName = "FROSTPlatform"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/frost/Desktop/FROSTPlatform/FROSTPlatform/FROSTPlatform/Demo/DemoViewModel.m"
-                  timestampString = "514628945.045293"
+                  timestampString = "515936175.983908"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "135"
@@ -250,7 +250,7 @@
                   moduleName = "FROSTPlatform"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/frost/Desktop/FROSTPlatform/FROSTPlatform/FROSTPlatform/Demo/DemoViewModel.m"
-                  timestampString = "514628945.047994"
+                  timestampString = "515936175.986978"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "133"
@@ -265,7 +265,7 @@
                   moduleName = "FROSTPlatform"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/frost/Desktop/FROSTPlatform/FROSTPlatform/FROSTPlatform/Demo/DemoViewModel.m"
-                  timestampString = "514628945.049155"
+                  timestampString = "515936175.988283"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "135"
@@ -560,12 +560,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FROSTPlatform/AlgorithmDemo/ChainTable/ChainTableDemo.m"
-            timestampString = "514628791.282165"
+            timestampString = "514806985.964839"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
-            landmarkName = "ChainListInsertItem()"
+            startingLineNumber = "262"
+            endingLineNumber = "262"
+            landmarkName = "InitDoublyChainList()"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -576,12 +576,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FROSTPlatform/AlgorithmDemo/ChainTable/ChainTableDemo.m"
-            timestampString = "514628791.282165"
+            timestampString = "514806985.964839"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "InitNodeData()"
+            startingLineNumber = "276"
+            endingLineNumber = "276"
+            landmarkName = "MakeNode()"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -592,12 +592,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FROSTPlatform/AlgorithmDemo/ChainTable/ChainTableDemo.m"
-            timestampString = "514628791.282165"
+            timestampString = "514806985.964839"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "InitNodeData()"
+            startingLineNumber = "272"
+            endingLineNumber = "272"
+            landmarkName = "MakeNode()"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -608,11 +608,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FROSTPlatform/AlgorithmDemo/ChainTable/ChainTableDemo.m"
-            timestampString = "514628782.437626"
+            timestampString = "514806985.964839"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "269"
+            endingLineNumber = "269"
+            landmarkName = "MakeNode()"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FROSTPlatform/AlgorithmDemo/ChainTable/ChainTableDemo.m"
+            timestampString = "514866497.024334"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "211"
+            endingLineNumber = "211"
+            landmarkName = "InsertNodeToList()"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FROSTPlatform/AlgorithmDemo/ChainTable/ChainTableDemo.m"
+            timestampString = "514806982.976304"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "-init"
             landmarkType = "7">
          </BreakpointContent>
@@ -624,12 +656,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FROSTPlatform/AlgorithmDemo/ChainTable/ChainTableDemo.m"
-            timestampString = "514628791.282165"
+            timestampString = "514807163.907135"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
-            landmarkName = "ChianListDeleteItem()"
+            startingLineNumber = "218"
+            endingLineNumber = "218"
+            landmarkName = "InsertNodeToList()"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -640,28 +672,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FROSTPlatform/AlgorithmDemo/ChainTable/ChainTableDemo.m"
-            timestampString = "514628872.698355"
+            timestampString = "514866522.789408"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "143"
-            endingLineNumber = "143"
-            landmarkName = "DeleteChainList()"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FROSTPlatform/AlgorithmDemo/ChainTable/ChainTableDemo.m"
-            timestampString = "514628895.884781"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
-            landmarkName = "DeleteChainList()"
+            startingLineNumber = "237"
+            endingLineNumber = "237"
+            landmarkName = "GetListLength()"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>

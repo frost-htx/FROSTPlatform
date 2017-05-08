@@ -21,6 +21,7 @@
 		2743B4761E1F30E90057B033 /* BaseSearchFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2743B4751E1F30E90057B033 /* BaseSearchFactory.m */; };
 		2743B47A1E1F316B0057B033 /* ChildrenSearchFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2743B4791E1F316B0057B033 /* ChildrenSearchFactory.m */; };
 		2743B4B51E1F701F0057B033 /* SonSearchFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2743B4B41E1F701F0057B033 /* SonSearchFactory.m */; };
+		275BAC3E1EC08EAD0091371A /* OpenGLDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275BAC3D1EC08EAD0091371A /* OpenGLDemoViewController.m */; };
 		27776A6E1D571F8A008178B7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27776A6D1D571F8A008178B7 /* AudioToolbox.framework */; };
 		27776A701D571FA2008178B7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27776A6F1D571FA2008178B7 /* AVFoundation.framework */; };
 		27776A721D571FAB008178B7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27776A711D571FAB008178B7 /* CoreGraphics.framework */; };
@@ -134,6 +135,8 @@
 		2743B4791E1F316B0057B033 /* ChildrenSearchFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildrenSearchFactory.m; sourceTree = "<group>"; };
 		2743B4B31E1F701F0057B033 /* SonSearchFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SonSearchFactory.h; sourceTree = "<group>"; };
 		2743B4B41E1F701F0057B033 /* SonSearchFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SonSearchFactory.m; sourceTree = "<group>"; };
+		275BAC3C1EC08EAD0091371A /* OpenGLDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLDemoViewController.h; sourceTree = "<group>"; };
+		275BAC3D1EC08EAD0091371A /* OpenGLDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLDemoViewController.m; sourceTree = "<group>"; };
 		27776A6D1D571F8A008178B7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		27776A6F1D571FA2008178B7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		27776A711D571FAB008178B7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -382,6 +385,15 @@
 			path = AlgorithmDemo;
 			sourceTree = "<group>";
 		};
+		275BAC3B1EC08E630091371A /* OpenGLDemo */ = {
+			isa = PBXGroup;
+			children = (
+				275BAC3C1EC08EAD0091371A /* OpenGLDemoViewController.h */,
+				275BAC3D1EC08EAD0091371A /* OpenGLDemoViewController.m */,
+			);
+			path = OpenGLDemo;
+			sourceTree = "<group>";
+		};
 		2788766B1D89050900359885 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -479,6 +491,7 @@
 		27CE94521D3B484A003791FC /* FROSTPlatform */ = {
 			isa = PBXGroup;
 			children = (
+				275BAC3B1EC08E630091371A /* OpenGLDemo */,
 				2747D6E91E49AA0100C7F84F /* AlgorithmDemo */,
 				2723AC591E23217D00C5764B /* CombinationDemo */,
 				2743B4731E1F30AE0057B033 /* PolymorphismDemo */,
@@ -964,6 +977,7 @@
 				27957CD81D87B1C500E181F9 /* FRTBaseRequest+RequestCache.m in Sources */,
 				27C8932B1D4E169100FE4A32 /* TZVideoPlayerController.m in Sources */,
 				271227B81D791EC8001F0EAE /* FRTNetWorkConfig.m in Sources */,
+				275BAC3E1EC08EAD0091371A /* OpenGLDemoViewController.m in Sources */,
 				273826831DF65BA9000CDF5A /* MainMapsViewController.m in Sources */,
 				27E3F0FE1D8FBC6500B878BB /* DemoRequestAPI2.m in Sources */,
 				27DF39D31D3C7A70001C5C33 /* RootViewModel.m in Sources */,
