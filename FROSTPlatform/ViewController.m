@@ -12,6 +12,7 @@
 #import "MainMapsViewController.h"
 #import "DemoViewModel.h"
 #import "OpenGLDemoViewController.h"
+#import "C++DemoViewController.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate,DemoViewControllerDelegate>
 
@@ -91,6 +92,10 @@
         OpenGLDemoViewController *openGLDemoViewController = [[OpenGLDemoViewController alloc] init];
         [self.navigationController pushViewController:openGLDemoViewController animated:YES];
     }
+    if ([titleName isEqualToString:@"C++"]) {
+        C__DemoViewController *c__DemoViewController = [[C__DemoViewController alloc] init];
+        [self.navigationController pushViewController:c__DemoViewController animated:YES];
+    }
 }
 
 #pragma mark DemoViewControllerDelegate 
@@ -103,7 +108,7 @@
 
 -(NSMutableArray *)dataArray {
     if (!_dataArray) {
-        _dataArray = [NSMutableArray arrayWithObjects:@"编辑器",@"Demo",@"地图",@"OpenGl",nil];
+        _dataArray = [NSMutableArray arrayWithObjects:@"编辑器",@"Demo",@"地图",@"OpenGl",@"C++",nil];
     }
     return _dataArray;
 }

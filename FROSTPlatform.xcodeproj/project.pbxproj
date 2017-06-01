@@ -21,7 +21,6 @@
 		2743B4761E1F30E90057B033 /* BaseSearchFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2743B4751E1F30E90057B033 /* BaseSearchFactory.m */; };
 		2743B47A1E1F316B0057B033 /* ChildrenSearchFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2743B4791E1F316B0057B033 /* ChildrenSearchFactory.m */; };
 		2743B4B51E1F701F0057B033 /* SonSearchFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2743B4B41E1F701F0057B033 /* SonSearchFactory.m */; };
-		275BAC3E1EC08EAD0091371A /* OpenGLDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275BAC3D1EC08EAD0091371A /* OpenGLDemoViewController.m */; };
 		27776A6E1D571F8A008178B7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27776A6D1D571F8A008178B7 /* AudioToolbox.framework */; };
 		27776A701D571FA2008178B7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27776A6F1D571FA2008178B7 /* AVFoundation.framework */; };
 		27776A721D571FAB008178B7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27776A711D571FAB008178B7 /* CoreGraphics.framework */; };
@@ -41,6 +40,9 @@
 		27942AF01D86672B00581782 /* FRTChainRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 27942AEF1D86672B00581782 /* FRTChainRequest.m */; };
 		27942AF41D86AA5500581782 /* FRTBatchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 27942AF31D86AA5500581782 /* FRTBatchRequest.m */; };
 		27957CD81D87B1C500E181F9 /* FRTBaseRequest+RequestCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 27957CD71D87B1C500E181F9 /* FRTBaseRequest+RequestCache.m */; };
+		27A1A18C1EE0623700621E7B /* OpenGLDemoViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 27A1A18B1EE0623700621E7B /* OpenGLDemoViewController.mm */; };
+		27A1A1951EE064BF00621E7B /* Sales_data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27A1A1931EE064BF00621E7B /* Sales_data.cpp */; };
+		27A1A1971EE0650300621E7B /* C++DemoViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 27A1A1961EE0650300621E7B /* C++DemoViewController.mm */; };
 		27AC260A1D91214D00C4ED32 /* DemoRequestImageAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AC26091D91214D00C4ED32 /* DemoRequestImageAPI.m */; };
 		27AC260D1D91278000C4ED32 /* FRTBatchRequestAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AC260C1D91278000C4ED32 /* FRTBatchRequestAgent.m */; };
 		27AC26101D91369C00C4ED32 /* FRTBaseRequest+RequestError.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AC260F1D91369C00C4ED32 /* FRTBaseRequest+RequestError.m */; };
@@ -136,7 +138,6 @@
 		2743B4B31E1F701F0057B033 /* SonSearchFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SonSearchFactory.h; sourceTree = "<group>"; };
 		2743B4B41E1F701F0057B033 /* SonSearchFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SonSearchFactory.m; sourceTree = "<group>"; };
 		275BAC3C1EC08EAD0091371A /* OpenGLDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLDemoViewController.h; sourceTree = "<group>"; };
-		275BAC3D1EC08EAD0091371A /* OpenGLDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLDemoViewController.m; sourceTree = "<group>"; };
 		27776A6D1D571F8A008178B7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		27776A6F1D571FA2008178B7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		27776A711D571FAB008178B7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -165,6 +166,11 @@
 		27942AF31D86AA5500581782 /* FRTBatchRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRTBatchRequest.m; sourceTree = "<group>"; };
 		27957CD61D87B1C500E181F9 /* FRTBaseRequest+RequestCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FRTBaseRequest+RequestCache.h"; sourceTree = "<group>"; };
 		27957CD71D87B1C500E181F9 /* FRTBaseRequest+RequestCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FRTBaseRequest+RequestCache.m"; sourceTree = "<group>"; };
+		27A1A1881EE061B400621E7B /* C++DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "C++DemoViewController.h"; sourceTree = "<group>"; };
+		27A1A18B1EE0623700621E7B /* OpenGLDemoViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenGLDemoViewController.mm; sourceTree = "<group>"; };
+		27A1A1931EE064BF00621E7B /* Sales_data.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sales_data.cpp; sourceTree = "<group>"; };
+		27A1A1941EE064BF00621E7B /* Sales_data.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Sales_data.hpp; sourceTree = "<group>"; };
+		27A1A1961EE0650300621E7B /* C++DemoViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "C++DemoViewController.mm"; sourceTree = "<group>"; };
 		27AC26081D91214D00C4ED32 /* DemoRequestImageAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoRequestImageAPI.h; sourceTree = "<group>"; };
 		27AC26091D91214D00C4ED32 /* DemoRequestImageAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoRequestImageAPI.m; sourceTree = "<group>"; };
 		27AC260B1D91278000C4ED32 /* FRTBatchRequestAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRTBatchRequestAgent.h; sourceTree = "<group>"; };
@@ -389,7 +395,7 @@
 			isa = PBXGroup;
 			children = (
 				275BAC3C1EC08EAD0091371A /* OpenGLDemoViewController.h */,
-				275BAC3D1EC08EAD0091371A /* OpenGLDemoViewController.m */,
+				27A1A18B1EE0623700621E7B /* OpenGLDemoViewController.mm */,
 			);
 			path = OpenGLDemo;
 			sourceTree = "<group>";
@@ -420,6 +426,25 @@
 				27AC260F1D91369C00C4ED32 /* FRTBaseRequest+RequestError.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		27A1A1871EE0614200621E7B /* C++Demo */ = {
+			isa = PBXGroup;
+			children = (
+				27A1A1881EE061B400621E7B /* C++DemoViewController.h */,
+				27A1A1961EE0650300621E7B /* C++DemoViewController.mm */,
+				27A1A18E1EE0636600621E7B /* Sales_data */,
+			);
+			path = "C++Demo";
+			sourceTree = "<group>";
+		};
+		27A1A18E1EE0636600621E7B /* Sales_data */ = {
+			isa = PBXGroup;
+			children = (
+				27A1A1931EE064BF00621E7B /* Sales_data.cpp */,
+				27A1A1941EE064BF00621E7B /* Sales_data.hpp */,
+			);
+			path = Sales_data;
 			sourceTree = "<group>";
 		};
 		27B9E7421D43189600E7345B /* HeaderFile */ = {
@@ -491,6 +516,7 @@
 		27CE94521D3B484A003791FC /* FROSTPlatform */ = {
 			isa = PBXGroup;
 			children = (
+				27A1A1871EE0614200621E7B /* C++Demo */,
 				275BAC3B1EC08E630091371A /* OpenGLDemo */,
 				2747D6E91E49AA0100C7F84F /* AlgorithmDemo */,
 				2723AC591E23217D00C5764B /* CombinationDemo */,
@@ -961,12 +987,14 @@
 			files = (
 				27DF39F11D3DBD66001C5C33 /* EditMainCollectionCell.m in Sources */,
 				27C893251D4E169100FE4A32 /* TZImageManager.m in Sources */,
+				27A1A1951EE064BF00621E7B /* Sales_data.cpp in Sources */,
 				27AC26101D91369C00C4ED32 /* FRTBaseRequest+RequestError.m in Sources */,
 				27D72C401E9A303E008FDD23 /* ChainTableDemo.m in Sources */,
 				27DF39E81D3CC893001C5C33 /* EditCollectionView.m in Sources */,
 				271227AC1D791845001F0EAE /* FRTBaseRequest.m in Sources */,
 				27128A921D6EED8F0034E706 /* DemoViewController.m in Sources */,
 				27D4E0D81E93633B00D70252 /* DijkstraDemo.m in Sources */,
+				27A1A18C1EE0623700621E7B /* OpenGLDemoViewController.mm in Sources */,
 				27D4E0DB1E93662E00D70252 /* HashTableDemo.m in Sources */,
 				27AC260D1D91278000C4ED32 /* FRTBatchRequestAgent.m in Sources */,
 				2743B4761E1F30E90057B033 /* BaseSearchFactory.m in Sources */,
@@ -977,11 +1005,11 @@
 				27957CD81D87B1C500E181F9 /* FRTBaseRequest+RequestCache.m in Sources */,
 				27C8932B1D4E169100FE4A32 /* TZVideoPlayerController.m in Sources */,
 				271227B81D791EC8001F0EAE /* FRTNetWorkConfig.m in Sources */,
-				275BAC3E1EC08EAD0091371A /* OpenGLDemoViewController.m in Sources */,
 				273826831DF65BA9000CDF5A /* MainMapsViewController.m in Sources */,
 				27E3F0FE1D8FBC6500B878BB /* DemoRequestAPI2.m in Sources */,
 				27DF39D31D3C7A70001C5C33 /* RootViewModel.m in Sources */,
 				27DF39F41D3DBE05001C5C33 /* EditItemImageView.m in Sources */,
+				27A1A1971EE0650300621E7B /* C++DemoViewController.mm in Sources */,
 				27E3F0FB1D8FBC4900B878BB /* DemoRequestAPI1.m in Sources */,
 				27C893271D4E169100FE4A32 /* TZImagePickerController.m in Sources */,
 				27DF39FF1D3E08D5001C5C33 /* JsonUtil.m in Sources */,
@@ -1161,6 +1189,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				GCC_INPUT_FILETYPE = automatic;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/FROSTPlatform/PrefixHeader.pch";
 				INFOPLIST_FILE = FROSTPlatform/Info.plist;
@@ -1181,6 +1210,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				GCC_INPUT_FILETYPE = automatic;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/FROSTPlatform/PrefixHeader.pch";
 				INFOPLIST_FILE = FROSTPlatform/Info.plist;

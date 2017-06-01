@@ -1,18 +1,18 @@
 //
-//  OpenGLDemoViewController.m
+//  C++DemoViewController.m
 //  FROSTPlatform
 //
-//  Created by frost on 17/5/8.
+//  Created by frost on 17/6/1.
 //  Copyright © 2017年 frost. All rights reserved.
 //
 
-#import "OpenGLDemoViewController.h"
+#import "C++DemoViewController.h"
 
-@interface OpenGLDemoViewController ()
+@interface C__DemoViewController ()
 
 @end
 
-@implementation OpenGLDemoViewController
+@implementation C__DemoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
