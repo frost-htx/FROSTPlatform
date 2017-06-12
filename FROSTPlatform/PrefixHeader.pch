@@ -21,5 +21,6 @@
 #import "EditNSNotificationCenter.h"
 #import "FRTRequest-umbrella.h"
 #import "JsonUtil.h"
+#import "PlatformTools.h"
 
 #endif /* PrefixHeader_pch */

@@ -33,8 +33,15 @@
     [super viewDidLoad];
     [self.view addSubview:self.mainTableView];
     [self layoutSubViews];
-
-
+    
+    NSDate* dat1 = [NSDate dateWithTimeIntervalSinceNow:0];
+    NSTimeInterval nowTime1 =[dat1 timeIntervalSince1970]*1000;
+    
+    NSDate* dat2 = [NSDate dateWithTimeIntervalSinceNow:0];
+    NSTimeInterval nowTime2 =[dat2 timeIntervalSince1970]*1000;
+    
+    double a = (nowTime2 - nowTime1)/1000;
+    
 }
 
 -(void)layoutSubViews {
