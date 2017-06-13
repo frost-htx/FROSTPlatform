@@ -48,9 +48,10 @@
     std::string writeStr = "天天好心情";
     
     FileOperationClass fileClass;
-    fileClass.ReadTxTFile(filePath);
-    fileClass.GetFileSize(filePath);
-    fileClass.WriteFile(filePath,writeStr);
+//    fileClass.ReadTxTFile(filePath);
+//    fileClass.GetFileSize(filePath);
+//    fileClass.WriteFile(filePath,writeStr);
+    fileClass.GetPersonInfo(filePath);
     
 }
 

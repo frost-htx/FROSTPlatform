@@ -70,6 +70,32 @@ bool FileOperationClass::WriteFile(std::string &path,std::string &txt)
     
 }
 
+vector<PersonInfo> FileOperationClass::GetPersonInfo(std::string &path)
+{
+    vector<PersonInfo> personVec;
+    
+    std::ifstream readStream(path,ios::in);
+    
+    if (!readStream.is_open()) {
+        std::cout << "Error opening file";
+        exit(1);
+    }
+    
+    std::string line , word;
+    
+    while (getline(readStream, line)) {
+        
+        PersonInfo info;
+        istringstream record(line);
+        record >> info.name;
+        while (record >> word) {
+            info.phones.push_back(word);
+        }
+        personVec.push_back(info);
+    }
+
+    return personVec;
+}
 
 
 

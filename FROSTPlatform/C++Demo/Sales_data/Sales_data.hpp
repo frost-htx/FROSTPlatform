@@ -13,6 +13,8 @@
 #include <string>
 #include <iostream>
 #include <fstream>
+#include <sstream>
+#include <vector>
 
 using namespace std;
 class Friend_class;
@@ -104,12 +106,20 @@ private:
 
 /******第八章 文件操作******/
 
+class PersonInfo {
+    
+public:
+    string name;
+    vector<string> phones;
+};
+
 class FileOperationClass {
     
 public:
     std::string ReadTxTFile(std::string &path);
     long GetFileSize(std::string &path);
     bool WriteFile(std::string &path , std::string &txt);
+    vector<PersonInfo> GetPersonInfo(std::string &path);
 
 };
 
