@@ -34,6 +34,9 @@
     [self.view addSubview:self.mainTableView];
     [self layoutSubViews];
     
+    NSString *docPath = [FileTools getAppDocumentsPath];
+    NSLog(@"------------DocumentsPath:%@",docPath);
+    
 }
 
 -(void)layoutSubViews {

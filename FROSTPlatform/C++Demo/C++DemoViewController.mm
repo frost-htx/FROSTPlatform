@@ -45,9 +45,12 @@
     
     std::string filePath = [path UTF8String];
     
+    std::string writeStr = "天天好心情";
+    
     FileOperationClass fileClass;
-    fileClass.ReadFile(filePath);
-//    fileClass.WriteFile(filePath);
+    fileClass.ReadTxTFile(filePath);
+    fileClass.GetFileSize(filePath);
+    fileClass.WriteFile(filePath,writeStr);
     
 }
 

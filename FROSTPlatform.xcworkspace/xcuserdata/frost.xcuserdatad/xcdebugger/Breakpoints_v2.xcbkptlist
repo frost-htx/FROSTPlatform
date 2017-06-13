@@ -116,28 +116,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FROSTPlatform/C++Demo/Sales_data/Sales_data.mm"
-            timestampString = "519047603.158982"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "FileOperationClass::WriteFile(std::string &amp;path)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FROSTPlatform/C++Demo/Sales_data/Sales_data.mm"
-            timestampString = "519047603.158982"
+            timestampString = "519061174.947156"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
             endingLineNumber = "51"
-            landmarkName = "FileOperationClass::WriteFile(std::string &amp;path)"
+            landmarkName = "FileOperationClass::GetFileSize(std::string &amp;path)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -148,44 +132,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FROSTPlatform/C++Demo/Sales_data/Sales_data.mm"
-            timestampString = "519047603.158982"
+            timestampString = "519061223.436953"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "FileOperationClass::ReadFile(std::string &amp;path)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FROSTPlatform/C++Demo/Sales_data/Sales_data.mm"
-            timestampString = "519047603.158982"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "FileOperationClass::ReadFile(std::string &amp;path)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FROSTPlatform/C++Demo/Sales_data/Sales_data.mm"
-            timestampString = "519047602.018925"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "FileOperationClass::ReadFile(std::string &amp;path)"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "FileOperationClass::WriteFile(std::string &amp;path,std::string &amp;txt)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -19,9 +19,11 @@ Sales_data &Sales_data::combineFunction(const Sales::Sales_data &data)
     
 }
 
-char FileOperationClass::ReadFile(std::string &path)
+std::string FileOperationClass::ReadTxTFile(std::string &path)
 {
     char buffer[256];
+    
+    std::string total = "";
     
     std::ifstream readStream(path,ios::in);
     
@@ -30,29 +32,40 @@ char FileOperationClass::ReadFile(std::string &path)
         exit(1);
     }
     
-    std::string line;
-    while (getline (readStream, line)) {
-        std::cout << line << std::endl;
-
-    }
-    
     while (!readStream.eof()) {
         readStream.getline(buffer, 100);
-        std::cout << buffer << std::endl;
-    }
-    
-    cout<<readStream.tellg()<<endl;
-    
-    return *buffer;
+        total = total+buffer;
+    }    
+    return total;
 }
 
-void FileOperationClass::WriteFile(std::string &path)
+long FileOperationClass::GetFileSize(std::string &path)
 {
-    std::ofstream writeStream(path,ios::app);
+    std::ifstream readStream(path,ios::in);
+    
+    if (!readStream.is_open()) {
+        std::cout<< "Open file Error";
+    }
+    
+    readStream.seekg(0,ios::end);
+    long fileSize = readStream.tellg();
+    
+    return fileSize;
+    
+}
+
+
+bool FileOperationClass::WriteFile(std::string &path,std::string &txt)
+{
+    std::ofstream writeStream(path,ios::out);
     
     if (writeStream.is_open()) {
-        writeStream << "This is a line.\n";
-        writeStream << "This is another line.\n";
+        writeStream << txt;
+        return true;
+        
+    } else {
+        std::cout << "Open file Error";
+        return false;
     }
     
 }

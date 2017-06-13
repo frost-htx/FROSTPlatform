@@ -107,8 +107,9 @@ private:
 class FileOperationClass {
     
 public:
-    char ReadFile(std::string &path);
-    void WriteFile(std::string &path);
+    std::string ReadTxTFile(std::string &path);
+    long GetFileSize(std::string &path);
+    bool WriteFile(std::string &path , std::string &txt);
 
 };
 
