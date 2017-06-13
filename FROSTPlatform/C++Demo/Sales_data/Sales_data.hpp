@@ -108,7 +108,8 @@ class FileOperationClass {
     
 public:
     char ReadFile(std::string &path);
-    
+    void WriteFile(std::string &path);
+
 };
 
 #endif /* Sales_data_hpp */

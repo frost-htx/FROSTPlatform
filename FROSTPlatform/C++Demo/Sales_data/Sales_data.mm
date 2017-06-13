@@ -30,10 +30,42 @@ char FileOperationClass::ReadFile(std::string &path)
         exit(1);
     }
     
+    std::string line;
+    while (getline (readStream, line)) {
+        std::cout << line << std::endl;
+
+    }
+    
     while (!readStream.eof()) {
         readStream.getline(buffer, 100);
         std::cout << buffer << std::endl;
     }
     
+    cout<<readStream.tellg()<<endl;
+    
     return *buffer;
 }
+
+void FileOperationClass::WriteFile(std::string &path)
+{
+    std::ofstream writeStream(path,ios::app);
+    
+    if (writeStream.is_open()) {
+        writeStream << "This is a line.\n";
+        writeStream << "This is another line.\n";
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
