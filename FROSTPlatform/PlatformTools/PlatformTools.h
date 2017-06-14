@@ -41,3 +41,36 @@
 
 
 @end
+
+@interface NetWorkTools : NSObject
+
+/**
+ 获取IP地址/ipv4/ipv6
+ 
+ @param preferIPv4 是否是ipv4
+ @return 地址
+ */
++(NSString *)getIPAddress:(BOOL)preferIPv4;
+
+/**
+ 获取ip地址
+ 
+ @return ip dic
+ */
++(NSDictionary *)getIPAddresses;
+
+@end
+
+
+
+
+
+
+
+
+
+
+
+
+
+

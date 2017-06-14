@@ -53,6 +53,8 @@
 //    fileClass.WriteFile(filePath,writeStr);
     fileClass.GetPersonInfo(filePath);
     
+    NSString *ipadress = [NetWorkTools getIPAddress:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning {
