@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import <Mapbox/MGLAccountManager.h>
+
 
 #if DEBUG
 #import <FBMemoryProfiler/FBMemoryProfiler.h>
@@ -27,10 +27,22 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.currentNavigation = (UINavigationController *)self.window.rootViewController;
-    [MGLAccountManager setAccessToken:@"pk.eyJ1IjoiY2FzdGlsZSIsImEiOiJjaXdmemhtMHMwMHh2Mm9wOXFrNDRnbzF4In0.JgNI3gkQgqWvQmbaCqNXBQ"];
 //    FBMemoryProfiler *memoryProfiler = [FBMemoryProfiler new];
 //    [memoryProfiler enable];
 //    _memoryProfiler = memoryProfiler;
+    
+    // Configure tracker from GoogleService-Info.plist.
+//    NSError *configureError;
+//    [[GGLContext sharedInstance] configureWithError:&configureError];
+//    NSAssert(!configureError, @"Error configuring Google services: %@", configureError);
+//    
+//    // Optional: configure GAI options.
+//    GAI *gai = [GAI sharedInstance];
+//    [gai trackerWithTrackingId:@"UA-101368045-1"];
+//    gai.trackUncaughtExceptions = YES;  // report uncaught exceptions
+//    gai.logger.logLevel = kGAILogLevelVerbose;  // remove before app release
+
+
     return YES;
 }
 

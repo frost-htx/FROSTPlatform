@@ -7,17 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		270DA1671DF93AB800771D46 /* example.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 270DA1661DF93AB800771D46 /* example.geojson */; };
 		271227AC1D791845001F0EAE /* FRTBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 271227AB1D791845001F0EAE /* FRTBaseRequest.m */; };
 		271227B81D791EC8001F0EAE /* FRTNetWorkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 271227B71D791EC8001F0EAE /* FRTNetWorkConfig.m */; };
 		271227BB1D791ED9001F0EAE /* FRTConfigTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 271227BA1D791ED9001F0EAE /* FRTConfigTools.m */; };
 		271227BE1D791EE6001F0EAE /* FRTNetWorkAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 271227BD1D791EE6001F0EAE /* FRTNetWorkAgent.m */; };
 		27128A911D6EED8F0034E706 /* DemoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27128A8E1D6EED8F0034E706 /* DemoModel.m */; };
 		27128A921D6EED8F0034E706 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27128A901D6EED8F0034E706 /* DemoViewController.m */; };
+		2714848A1EF94864009A29DA /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271484891EF94864009A29DA /* iAd.framework */; };
 		2723AC5C1E23259E00C5764B /* HomeSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2723AC5B1E23259E00C5764B /* HomeSearchBar.m */; };
 		2723AC621E23261500C5764B /* SearchBarViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 2723AC611E23261500C5764B /* SearchBarViews.m */; };
 		2723AC651E233F2700C5764B /* SearchLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 2723AC641E233F2700C5764B /* SearchLogic.m */; };
-		273826831DF65BA9000CDF5A /* MainMapsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 273826821DF65BA9000CDF5A /* MainMapsViewController.m */; };
 		2743B4761E1F30E90057B033 /* BaseSearchFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2743B4751E1F30E90057B033 /* BaseSearchFactory.m */; };
 		2743B47A1E1F316B0057B033 /* ChildrenSearchFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2743B4791E1F316B0057B033 /* ChildrenSearchFactory.m */; };
 		2743B4B51E1F701F0057B033 /* SonSearchFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2743B4B41E1F701F0057B033 /* SonSearchFactory.m */; };
@@ -70,6 +69,7 @@
 		27D4E0D81E93633B00D70252 /* DijkstraDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D4E0D61E93633B00D70252 /* DijkstraDemo.m */; };
 		27D4E0DB1E93662E00D70252 /* HashTableDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D4E0DA1E93662E00D70252 /* HashTableDemo.m */; };
 		27D72C401E9A303E008FDD23 /* ChainTableDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D72C3F1E9A303E008FDD23 /* ChainTableDemo.m */; };
+		27D84DBB1EFA6651004F6303 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27D84DBA1EFA6651004F6303 /* GoogleService-Info.plist */; };
 		27DF39D31D3C7A70001C5C33 /* RootViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DF39D21D3C7A70001C5C33 /* RootViewModel.m */; };
 		27DF39D61D3C7A9B001C5C33 /* RootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DF39D51D3C7A9B001C5C33 /* RootModel.m */; };
 		27DF39D91D3C7AED001C5C33 /* EditViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DF39D81D3C7AED001C5C33 /* EditViewModel.m */; };
@@ -109,7 +109,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		270DA1661DF93AB800771D46 /* example.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = example.geojson; sourceTree = "<group>"; };
 		271227AA1D791845001F0EAE /* FRTBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRTBaseRequest.h; sourceTree = "<group>"; };
 		271227AB1D791845001F0EAE /* FRTBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRTBaseRequest.m; sourceTree = "<group>"; };
 		271227B61D791EC8001F0EAE /* FRTNetWorkConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRTNetWorkConfig.h; sourceTree = "<group>"; };
@@ -122,6 +121,7 @@
 		27128A8E1D6EED8F0034E706 /* DemoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoModel.m; sourceTree = "<group>"; };
 		27128A8F1D6EED8F0034E706 /* DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
 		27128A901D6EED8F0034E706 /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
+		271484891EF94864009A29DA /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		271D8ABF1D4A614A00B0F336 /* EditNSNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditNSNotificationCenter.h; sourceTree = "<group>"; };
 		2723AC5A1E23259E00C5764B /* HomeSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeSearchBar.h; sourceTree = "<group>"; };
 		2723AC5B1E23259E00C5764B /* HomeSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeSearchBar.m; sourceTree = "<group>"; };
@@ -129,8 +129,6 @@
 		2723AC611E23261500C5764B /* SearchBarViews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchBarViews.m; sourceTree = "<group>"; };
 		2723AC631E233F2700C5764B /* SearchLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchLogic.h; sourceTree = "<group>"; };
 		2723AC641E233F2700C5764B /* SearchLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchLogic.m; sourceTree = "<group>"; };
-		273826811DF65BA9000CDF5A /* MainMapsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMapsViewController.h; sourceTree = "<group>"; };
-		273826821DF65BA9000CDF5A /* MainMapsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMapsViewController.m; sourceTree = "<group>"; };
 		2740CCAD1E2480EC00DA2F48 /* SearchProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchProtocol.h; sourceTree = "<group>"; };
 		2743B4741E1F30E90057B033 /* BaseSearchFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseSearchFactory.h; sourceTree = "<group>"; };
 		2743B4751E1F30E90057B033 /* BaseSearchFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseSearchFactory.m; sourceTree = "<group>"; };
@@ -229,6 +227,7 @@
 		27D4E0DA1E93662E00D70252 /* HashTableDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HashTableDemo.m; sourceTree = "<group>"; };
 		27D72C3E1E9A303E008FDD23 /* ChainTableDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChainTableDemo.h; sourceTree = "<group>"; };
 		27D72C3F1E9A303E008FDD23 /* ChainTableDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChainTableDemo.m; sourceTree = "<group>"; };
+		27D84DBA1EFA6651004F6303 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		27DF39D11D3C7A70001C5C33 /* RootViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewModel.h; sourceTree = "<group>"; };
 		27DF39D21D3C7A70001C5C33 /* RootViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewModel.m; sourceTree = "<group>"; };
 		27DF39D41D3C7A9B001C5C33 /* RootModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootModel.h; sourceTree = "<group>"; };
@@ -275,6 +274,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2714848A1EF94864009A29DA /* iAd.framework in Frameworks */,
 				27776A841D572053008178B7 /* libbz2.tbd in Frameworks */,
 				27776A821D572048008178B7 /* libz.tbd in Frameworks */,
 				27776A801D57203B008178B7 /* VideoToolbox.framework in Frameworks */,
@@ -353,24 +353,6 @@
 			);
 			name = CombinationDemo;
 			path = InheritDemo;
-			sourceTree = "<group>";
-		};
-		2738267F1DF65B7A000CDF5A /* mapsBox */ = {
-			isa = PBXGroup;
-			children = (
-				273826801DF65B7A000CDF5A /* ViewController */,
-			);
-			path = mapsBox;
-			sourceTree = "<group>";
-		};
-		273826801DF65B7A000CDF5A /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				270DA1661DF93AB800771D46 /* example.geojson */,
-				273826811DF65BA9000CDF5A /* MainMapsViewController.h */,
-				273826821DF65BA9000CDF5A /* MainMapsViewController.m */,
-			);
-			path = ViewController;
 			sourceTree = "<group>";
 		};
 		2743B4731E1F30AE0057B033 /* PolymorphismDemo */ = {
@@ -529,7 +511,6 @@
 				2747D6E91E49AA0100C7F84F /* AlgorithmDemo */,
 				2723AC591E23217D00C5764B /* CombinationDemo */,
 				2743B4731E1F30AE0057B033 /* PolymorphismDemo */,
-				2738267F1DF65B7A000CDF5A /* mapsBox */,
 				27128A8C1D6EED8F0034E706 /* Demo */,
 				27C8930E1D4E169100FE4A32 /* Third-partyLibraries */,
 				27B9E7421D43189600E7345B /* HeaderFile */,
@@ -545,6 +526,7 @@
 				27CE945F1D3B484A003791FC /* Assets.xcassets */,
 				27CE94611D3B484A003791FC /* LaunchScreen.storyboard */,
 				27CE94641D3B484A003791FC /* Info.plist */,
+				27D84DBA1EFA6651004F6303 /* GoogleService-Info.plist */,
 				27CE94531D3B484A003791FC /* Supporting Files */,
 			);
 			path = FROSTPlatform;
@@ -792,6 +774,7 @@
 		D7363DE09C9B427C05815CB5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				271484891EF94864009A29DA /* iAd.framework */,
 				27776A831D572053008178B7 /* libbz2.tbd */,
 				27776A811D572048008178B7 /* libz.tbd */,
 				27776A7F1D57203B008178B7 /* VideoToolbox.framework */,
@@ -880,7 +863,9 @@
 				TargetAttributes = {
 					27CE944F1D3B484A003791FC = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = E6377HWWVF;
 						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
 					};
 					27CE94681D3B484A003791FC = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -921,8 +906,8 @@
 				27DF44901D3E0BB2001C5C33 /* Template.geojson in Resources */,
 				27C893261D4E169100FE4A32 /* TZImagePickerController.bundle in Resources */,
 				27CE94601D3B484A003791FC /* Assets.xcassets in Resources */,
-				270DA1671DF93AB800771D46 /* example.geojson in Resources */,
 				27CE945E1D3B484A003791FC /* Main.storyboard in Resources */,
+				27D84DBB1EFA6651004F6303 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -985,7 +970,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1016,7 +1001,6 @@
 				27C8932B1D4E169100FE4A32 /* TZVideoPlayerController.m in Sources */,
 				279F9F5C1EE2D215009A68AD /* Friend_Function.mm in Sources */,
 				271227B81D791EC8001F0EAE /* FRTNetWorkConfig.m in Sources */,
-				273826831DF65BA9000CDF5A /* MainMapsViewController.m in Sources */,
 				27E3F0FE1D8FBC6500B878BB /* DemoRequestAPI2.m in Sources */,
 				27DF39D31D3C7A70001C5C33 /* RootViewModel.m in Sources */,
 				27DF39F41D3DBE05001C5C33 /* EditItemImageView.m in Sources */,
@@ -1197,6 +1181,8 @@
 			baseConfigurationReference = FB86FCA52A348ACF2224FB81 /* Pods-FROSTPlatform.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = E6377HWWVF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1206,7 +1192,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/FROSTPlatform/PrefixHeader.pch";
 				INFOPLIST_FILE = FROSTPlatform/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = frost.FROSTPlatform;
+				PRODUCT_BUNDLE_IDENTIFIER = com.frost.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				USER_HEADER_SEARCH_PATHS = "";
@@ -1218,6 +1204,8 @@
 			baseConfigurationReference = 52B4438758A0ED35874F2CD5 /* Pods-FROSTPlatform.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = E6377HWWVF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1227,7 +1215,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/FROSTPlatform/PrefixHeader.pch";
 				INFOPLIST_FILE = FROSTPlatform/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = frost.FROSTPlatform;
+				PRODUCT_BUNDLE_IDENTIFIER = com.frost.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				USER_HEADER_SEARCH_PATHS = "";

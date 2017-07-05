@@ -41,7 +41,7 @@
     
 //    HashTableDemo * demo = [[HashTableDemo alloc] init];
     
-    ChainTableDemo * demo = [[ChainTableDemo alloc] init];
+//    ChainTableDemo * demo = [[ChainTableDemo alloc] init];
 
     
 //    ChildrenSearchFactory *search = [[ChildrenSearchFactory alloc] init];
@@ -110,13 +110,13 @@
 //    });
 //    NSLog(@"5"); // 任务5
 
-//    [self.demoViewModel demoRequestAPI_ReadRequestCache:^() {
-//        
-//    } requestSuccessful:^{
-//        
-//    } requestFailure:^{
-//        
-//    }];
+    [self.demoViewModel demoRequestAPI_ReadRequestCache:^() {
+        
+    } requestSuccessful:^{
+        
+    } requestFailure:^{
+        
+    }];
 //    [self.demoViewModel demoRequestAPI_chainRequest:^{
 //        
 //    } requestFailure:^{
@@ -129,17 +129,17 @@
 //        
 //    }];
     
-    NSString *mut_str = @"123";
-    NSLog(@"mut_str --------> %p",mut_str);
-    self.s_Str = mut_str;
-    NSLog(@"s_Str --------> %p",self.s_Str);
-    self.c_Str = mut_str;
-    NSLog(@"c_Str --------> %p",self.c_Str);
-    
-    mut_str = @"321";
-    NSLog(@"mut_str --------> %p",mut_str);
-    NSLog(@"s_Str --------> %p",self.s_Str);
-    NSLog(@"c_Str --------> %p",self.c_Str);
+//    NSString *mut_str = @"123";
+//    NSLog(@"mut_str --------> %p",mut_str);
+//    self.s_Str = mut_str;
+//    NSLog(@"s_Str --------> %p",self.s_Str);
+//    self.c_Str = mut_str;
+//    NSLog(@"c_Str --------> %p",self.c_Str);
+//    
+//    mut_str = @"321";
+//    NSLog(@"mut_str --------> %p",mut_str);
+//    NSLog(@"s_Str --------> %p",self.s_Str);
+//    NSLog(@"c_Str --------> %p",self.c_Str);
 
     
 

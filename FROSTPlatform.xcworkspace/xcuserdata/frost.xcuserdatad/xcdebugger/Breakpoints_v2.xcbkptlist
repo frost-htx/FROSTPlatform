@@ -27,6 +27,38 @@
             endingLineNumber = "146"
             landmarkName = "-demoRequestAPI_ReadRequestCache:requestSuccessful:requestFailure:"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[DemoViewModel demoRequestAPI_ReadRequestCache:requestSuccessful:requestFailure:]"
+                  moduleName = "FROSTPlatform"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/frost/Desktop/FROSTPlatform/FROSTPlatform/FROSTPlatform/Demo/DemoViewModel.m"
+                  timestampString = "519728193.580633"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "146"
+                  endingLineNumber = "146"
+                  offsetFromSymbolStart = "260">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__82-[DemoViewModel demoRequestAPI_ReadRequestCache:requestSuccessful:requestFailure:]_block_invoke"
+                  moduleName = "FROSTPlatform"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/frost/Desktop/FROSTPlatform/FROSTPlatform/FROSTPlatform/Demo/DemoViewModel.m"
+                  timestampString = "519728193.581793"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "149"
+                  endingLineNumber = "149"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -235,6 +267,133 @@
             endingLineNumber = "75"
             landmarkName = "+getIPAddress:"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FROSTPlatform/Demo/DemoViewModel.m"
+            timestampString = "519654559.368954"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "166"
+            endingLineNumber = "166"
+            landmarkName = "-demoRequestAPI_ReadRequestCache:requestSuccessful:requestFailure:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FROSTPlatform/Demo/DemoViewController.m"
+            timestampString = "519654612.195153"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[DemoViewController viewDidLoad]"
+                  moduleName = "FROSTPlatform"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/frost/Desktop/FROSTPlatform/FROSTPlatform/FROSTPlatform/Demo/DemoViewController.m"
+                  timestampString = "519728193.616525"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "113"
+                  endingLineNumber = "113"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__33-[DemoViewController viewDidLoad]_block_invoke"
+                  moduleName = "FROSTPlatform"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/frost/Desktop/FROSTPlatform/FROSTPlatform/FROSTPlatform/Demo/DemoViewController.m"
+                  timestampString = "519728193.617948"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FROSTPlatform/Demo/DemoViewModel.m"
+            timestampString = "519654653.759463"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
+            landmarkName = "-demoRequestAPI_ReadRequestCache:requestSuccessful:requestFailure:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[DemoViewModel demoRequestAPI_ReadRequestCache:requestSuccessful:requestFailure:]"
+                  moduleName = "FROSTPlatform"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/frost/Desktop/FROSTPlatform/FROSTPlatform/FROSTPlatform/Demo/DemoViewModel.m"
+                  timestampString = "519728193.620528"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "149"
+                  endingLineNumber = "149"
+                  offsetFromSymbolStart = "276">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__82-[DemoViewModel demoRequestAPI_ReadRequestCache:requestSuccessful:requestFailure:]_block_invoke"
+                  moduleName = "FROSTPlatform"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/frost/Desktop/FROSTPlatform/FROSTPlatform/FROSTPlatform/Demo/DemoViewModel.m"
+                  timestampString = "519728193.621749"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "149"
+                  endingLineNumber = "149"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__82-[DemoViewModel demoRequestAPI_ReadRequestCache:requestSuccessful:requestFailure:]_block_invoke_2"
+                  moduleName = "FROSTPlatform"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/frost/Desktop/FROSTPlatform/FROSTPlatform/FROSTPlatform/Demo/DemoViewModel.m"
+                  timestampString = "519728193.623014"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "161"
+                  endingLineNumber = "161"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -130,43 +130,43 @@
 //        
 //    }];
     
-    [BaseService downloadFileWithUrlPath:@"https://m.zuzuche.com/api/poi/get_message_zip.php" customHTTPHead:dic saveFilePath:nil saveFileName:nil progress:nil successfulBlock:^(NSURL *filePath, NSURLResponse *response) {
-        
-    } failureBlock:^(NSError *error) {
-        
-    }];
-    
-//    WS(weakSelf, self);
-//    
-//    
-//    
-//    
-//    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-//    
-//    [manager GET:@"http://m.zuzuche.com/v2/?m=api/map/spots/getAllSpots" parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
+//    [BaseService downloadFileWithUrlPath:@"https://m.zuzuche.com/api/poi/get_message_zip.php" customHTTPHead:dic saveFilePath:nil saveFileName:nil progress:nil successfulBlock:^(NSURL *filePath, NSURLResponse *response) {
 //        
+//    } failureBlock:^(NSError *error) {
 //        
-//    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//    
-////        NSDictionary *dic = responseObject;
-//////
-////        self.demoDic = dic;
-////        [JsonHelp shareJsonHelp].jsonDic = dic;
-////
-////        [JsonHelp shareJsonHelp].isfalg = NO;
-////        
-////        self.version = nil;
-////        [weakSelf testAction];
-//        
-//        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(handleCallBack)]) {
-////            [weakSelf ]
-//        }
-//        
-//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//        if (failure) {
-//            
-//        }
 //    }];
+    
+    WS(weakSelf, self);
+//
+//    
+//    
+//    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+//
+    [manager GET:@"https://m.zuzuche.com/v2/?m=api/map/spots/getAllSpots" parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    
+//        NSDictionary *dic = responseObject;
+////
+//        self.demoDic = dic;
+//        [JsonHelp shareJsonHelp].jsonDic = dic;
+//
+//        [JsonHelp shareJsonHelp].isfalg = NO;
+//        
+//        self.version = nil;
+//        [weakSelf testAction];
+        
+        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(handleCallBack)]) {
+//            [weakSelf ]
+        }
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (failure) {
+            
+        }
+    }];
 }
 
 -(void)testAction {
