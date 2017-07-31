@@ -7,21 +7,27 @@
 //
 
 #import "OpenGLDemoViewController.h"
+#import "OpenGLView.h"
+
 
 @interface OpenGLDemoViewController ()
+
+@property (nonatomic,strong) OpenGLView *openGLView;
+
 
 @end
 
 @implementation OpenGLDemoViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
+#pragma mark - life cycle
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewDidLoad {
+    
+    [super viewDidLoad];
+    
+    self.view = [[OpenGLView alloc] initWithFrame:self.view.bounds];
+
+    
 }
 
 @end

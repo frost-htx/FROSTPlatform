@@ -16,7 +16,7 @@ target 'FROSTPlatform' do
     pod 'NSLogger', '~> 1.7.0'
     pod 'YYKit', '~> 1.0.1'
     pod 'ReactiveCocoa','~> 2.5'
-    pod 'GPUImage', '~> 0.1.7'
+#    pod 'GPUImage', '~> 0.1.7'
 end
 
 post_install do |installer|

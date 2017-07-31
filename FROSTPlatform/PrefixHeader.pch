@@ -9,6 +9,7 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
+#if defined(__OBJC__)
 #import "AppDelegate.h"
 #import "macroDefinition.h"
 #import <Masonry/Masonry.h>
@@ -22,5 +23,6 @@
 #import "FRTRequest-umbrella.h"
 #import "JsonUtil.h"
 #import "PlatformTools.h"
+#endif
 
 #endif /* PrefixHeader_pch */

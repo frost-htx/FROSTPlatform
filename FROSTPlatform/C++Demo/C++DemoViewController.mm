@@ -9,6 +9,7 @@
 #import "C++DemoViewController.h"
 
 #include "Sales_data.hpp"
+#include "ContainerOperation.hpp"
 
 @interface C__DemoViewController ()
 
@@ -24,36 +25,46 @@
     Sales::Sales_data data3;
     Sales::Sales_data data5(80);
     
-    Sales::Sales_data data6(90);
-    data5.combineFunction(data6);
-    data5.combineFunction(static_cast<Sales::Sales_data>(data1));
+    Sales::Sales_data data6("12");
+    Sales::Sales_data data7;
+    data7 = data6;
 
+//
+//    Sales::Sales_data data6(90);
+//    data5.combineFunction(data6);
+//    data5.combineFunction(static_cast<Sales::Sales_data>(data1));
+//
+//    
+//    string no_book = "1123123";
+//    
+//    Sales::Sales_data data4 = no_book;
+//    
+//    data3.combineFunction(no_book);
+//    
+//    NODefault nodefual ("123");
+//    StructA structA(nodefual);
+//    
+//    
+//    AggregateClass ball = {0,"123"};
+//    
+//    NSString *path = [FileTools getAppDocuments_FilePath:@"123.txt"];
+//    
+//    std::string filePath = [path UTF8String];
+//    
+//    std::string writeStr = "天天好心情";
     
-    string no_book = "1123123";
-    
-    Sales::Sales_data data4 = no_book;
-    
-    data3.combineFunction(no_book);
-    
-    NODefault nodefual ("123");
-    StructA structA(nodefual);
-    
-    
-    AggregateClass ball = {0,"123"};
-    
-    NSString *path = [FileTools getAppDocuments_FilePath:@"123.txt"];
-    
-    std::string filePath = [path UTF8String];
-    
-    std::string writeStr = "天天好心情";
-    
-    FileOperationClass fileClass;
+//    FileOperationClass fileClass;
 //    fileClass.ReadTxTFile(filePath);
 //    fileClass.GetFileSize(filePath);
 //    fileClass.WriteFile(filePath,writeStr);
-    fileClass.GetPersonInfo(filePath);
+//    fileClass.GetPersonInfo(filePath);
     
-    NSString *ipadress = [NetWorkTools getIPAddress:YES];
+//    std::vector<int> v1 = {0,1,2,3};
+    
+//    ContainerOperation::VectorOperation vectorOperation;
+//    vectorOperation.OperationVecotActionOne(v1);
+//    vectorOperation.OperationVecotActionTwo(v1);
+
     
 }
 

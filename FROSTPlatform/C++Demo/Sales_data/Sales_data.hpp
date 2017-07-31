@@ -31,6 +31,10 @@ namespace Sales {
         
         Sales_data () = default;
         
+        Sales_data& operator = (Sales_data data);
+        
+        void swap(Sales_data & data);
+        
         Sales_data (const std::string &s,unsigned n,double p) : bookNo(s),units_sold(n),revenue(p) {}
         Sales_data (const std::string &s ):Sales_data(s,0,0){};
         

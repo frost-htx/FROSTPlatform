@@ -7,6 +7,8 @@
 //
 
 #include "Sales_data.hpp"
+#include <stdio.h>
+#include <algorithm>
 
 namespace Sales {
 
@@ -16,6 +18,21 @@ Sales_data &Sales_data::combineFunction(const Sales::Sales_data &data)
     revenue += data.revenue;
     return *this;
 }
+    
+Sales_data &Sales_data::operator=(Sales::Sales_data data) {
+    
+//    Sales_data::swap(data);
+    std::swap(*this, data);
+
+    return *this;
+}
+    
+void Sales_data::swap(Sales_data & data) {
+    
+    std::swap(*this, data);
+    
+}
+
     
 }
 
