@@ -12,7 +12,7 @@
 #import "DemoViewModel.h"
 #import "OpenGLDemoViewController.h"
 #import "C++DemoViewController.h"
-
+#import "AlgorithmViewController.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate,DemoViewControllerDelegate>
 
@@ -102,6 +102,10 @@
         C__DemoViewController *c__DemoViewController = [[C__DemoViewController alloc] init];
         [self.navigationController pushViewController:c__DemoViewController animated:YES];
     }
+    if ([titleName isEqualToString:@"Algorith"]) {
+        AlgorithmViewController *c__DemoViewController = [[AlgorithmViewController alloc] init];
+        [self.navigationController pushViewController:c__DemoViewController animated:YES];
+    }
 }
 
 #pragma mark DemoViewControllerDelegate 
@@ -114,7 +118,7 @@
 
 -(NSMutableArray *)dataArray {
     if (!_dataArray) {
-        _dataArray = [NSMutableArray arrayWithObjects:@"编辑器",@"Demo",@"OpenGl",@"C++",nil];
+        _dataArray = [NSMutableArray arrayWithObjects:@"编辑器",@"Demo",@"OpenGl",@"C++",@"Algorith",nil];
     }
     return _dataArray;
 }

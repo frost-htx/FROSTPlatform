@@ -177,6 +177,8 @@
 		27E3F0FB1D8FBC4900B878BB /* DemoRequestAPI1.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E3F0FA1D8FBC4900B878BB /* DemoRequestAPI1.m */; };
 		27E3F0FE1D8FBC6500B878BB /* DemoRequestAPI2.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E3F0FD1D8FBC6500B878BB /* DemoRequestAPI2.m */; };
 		27E3F1031D8FE25800B878BB /* FRTChainRequestAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E3F1021D8FE25800B878BB /* FRTChainRequestAgent.m */; };
+		27E92A221F402AE100A41563 /* SortingDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E92A211F402AE100A41563 /* SortingDemo.m */; };
+		27E92A251F403A4300A41563 /* AlgorithmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E92A241F403A4300A41563 /* AlgorithmViewController.m */; };
 		27E96EF21EEEAC2600F4D436 /* PlatformTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E96EF11EEEAC2600F4D436 /* PlatformTools.m */; };
 		286E63B1137A4979A98CF17D /* Pods_FROSTPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB6F7A8B1931D6E0FE5AB1F /* Pods_FROSTPlatform.framework */; };
 /* End PBXBuildFile section */
@@ -562,6 +564,10 @@
 		27E3F0FD1D8FBC6500B878BB /* DemoRequestAPI2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoRequestAPI2.m; sourceTree = "<group>"; };
 		27E3F1011D8FE25800B878BB /* FRTChainRequestAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRTChainRequestAgent.h; sourceTree = "<group>"; };
 		27E3F1021D8FE25800B878BB /* FRTChainRequestAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRTChainRequestAgent.m; sourceTree = "<group>"; };
+		27E92A201F402AE100A41563 /* SortingDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortingDemo.h; sourceTree = "<group>"; };
+		27E92A211F402AE100A41563 /* SortingDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortingDemo.m; sourceTree = "<group>"; };
+		27E92A231F403A4300A41563 /* AlgorithmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlgorithmViewController.h; sourceTree = "<group>"; };
+		27E92A241F403A4300A41563 /* AlgorithmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlgorithmViewController.m; sourceTree = "<group>"; };
 		27E96EF01EEEAC2600F4D436 /* PlatformTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlatformTools.h; sourceTree = "<group>"; };
 		27E96EF11EEEAC2600F4D436 /* PlatformTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlatformTools.m; sourceTree = "<group>"; };
 		52B4438758A0ED35874F2CD5 /* Pods-FROSTPlatform.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FROSTPlatform.release.xcconfig"; path = "Pods/Target Support Files/Pods-FROSTPlatform/Pods-FROSTPlatform.release.xcconfig"; sourceTree = "<group>"; };
@@ -938,6 +944,9 @@
 		2747D6E91E49AA0100C7F84F /* AlgorithmDemo */ = {
 			isa = PBXGroup;
 			children = (
+				27E92A231F403A4300A41563 /* AlgorithmViewController.h */,
+				27E92A241F403A4300A41563 /* AlgorithmViewController.m */,
+				27E92A1F1F402AA900A41563 /* Sorting */,
 				27D72C3D1E9A2FA6008FDD23 /* ChainTable */,
 				27D4E0D41E93633B00D70252 /* Dijkstra */,
 				27D4E0D71E93633B00D70252 /* HashTable */,
@@ -1356,6 +1365,15 @@
 			path = PlatformTools;
 			sourceTree = "<group>";
 		};
+		27E92A1F1F402AA900A41563 /* Sorting */ = {
+			isa = PBXGroup;
+			children = (
+				27E92A201F402AE100A41563 /* SortingDemo.h */,
+				27E92A211F402AE100A41563 /* SortingDemo.m */,
+			);
+			path = Sorting;
+			sourceTree = "<group>";
+		};
 		D7363DE09C9B427C05815CB5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1682,6 +1700,7 @@
 				27C893271D4E169100FE4A32 /* TZImagePickerController.m in Sources */,
 				27DF39FF1D3E08D5001C5C33 /* JsonUtil.m in Sources */,
 				2743B47A1E1F316B0057B033 /* ChildrenSearchFactory.m in Sources */,
+				27E92A221F402AE100A41563 /* SortingDemo.m in Sources */,
 				2788766A1D88F36900359885 /* DemoRequestAPI.m in Sources */,
 				27C8932A1D4E169100FE4A32 /* TZPhotoPreviewController.m in Sources */,
 				27942AF01D86672B00581782 /* FRTChainRequest.m in Sources */,
@@ -1701,6 +1720,7 @@
 				27DF39EE1D3DBD3D001C5C33 /* EditRootItemView.m in Sources */,
 				27C893241D4E169100FE4A32 /* TZAssetModel.m in Sources */,
 				2717A1861F1207FF0064A031 /* ContainerOperation.mm in Sources */,
+				27E92A251F403A4300A41563 /* AlgorithmViewController.m in Sources */,
 				27E96EF21EEEAC2600F4D436 /* PlatformTools.m in Sources */,
 				27CE94A01D3BDFA1003791FC /* EditMainViewController.m in Sources */,
 				27DF39E51D3CC7F7001C5C33 /* RootView.m in Sources */,
