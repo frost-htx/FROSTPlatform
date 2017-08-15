@@ -123,7 +123,8 @@ typedef struct {
 //    [self setupCircularVertexData];
 //    [self setupTriangleVertexDataCaseVBO];
 //    [self setupTextureDemeo];
-    [self setup3DTextureDemeo];
+//    [self setup3DTextureDemeo];
+    [self setupLightDemeo];
 
     
     [self.glContext presentRenderbuffer:GL_RENDERBUFFER];
@@ -522,6 +523,144 @@ typedef struct {
         glDrawArrays(GL_TRIANGLES, 0, 36);
     }
 
+}
+
+/**
+ 光照demo
+ */
+-(void)setupLightDemeo {
+    
+    glEnable(GL_DEPTH_TEST);
+    
+    float vertices[] = {
+        -0.5f, -0.5f, -0.5f,
+        0.5f, -0.5f, -0.5f,
+        0.5f,  0.5f, -0.5f,
+        0.5f,  0.5f, -0.5f,
+        -0.5f,  0.5f, -0.5f,
+        -0.5f, -0.5f, -0.5f,
+        
+        -0.5f, -0.5f,  0.5f,
+        0.5f, -0.5f,  0.5f,
+        0.5f,  0.5f,  0.5f,
+        0.5f,  0.5f,  0.5f,
+        -0.5f,  0.5f,  0.5f,
+        -0.5f, -0.5f,  0.5f,
+        
+        -0.5f,  0.5f,  0.5f,
+        -0.5f,  0.5f, -0.5f,
+        -0.5f, -0.5f, -0.5f,
+        -0.5f, -0.5f, -0.5f,
+        -0.5f, -0.5f,  0.5f,
+        -0.5f,  0.5f,  0.5f,
+        
+        0.5f,  0.5f,  0.5f,
+        0.5f,  0.5f, -0.5f,
+        0.5f, -0.5f, -0.5f,
+        0.5f, -0.5f, -0.5f,
+        0.5f, -0.5f,  0.5f,
+        0.5f,  0.5f,  0.5f,
+        
+        -0.5f, -0.5f, -0.5f,
+        0.5f, -0.5f, -0.5f,
+        0.5f, -0.5f,  0.5f,
+        0.5f, -0.5f,  0.5f,
+        -0.5f, -0.5f,  0.5f,
+        -0.5f, -0.5f, -0.5f,
+        
+        -0.5f,  0.5f, -0.5f,
+        0.5f,  0.5f, -0.5f,
+        0.5f,  0.5f,  0.5f,
+        0.5f,  0.5f,  0.5f,
+        -0.5f,  0.5f,  0.5f,
+        -0.5f,  0.5f, -0.5f
+    };
+    
+    GLuint VBO, containerVAO;
+    glGenVertexArrays(1, &containerVAO);
+    glGenBuffers(1, &VBO);
+    
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+    
+    glBindVertexArray(containerVAO);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), (GLvoid*)0);
+    glEnableVertexAttribArray(0);
+    glBindVertexArray(0);
+    
+    GLuint lightVAO;
+    glGenVertexArrays(1, &lightVAO);
+    glBindVertexArray(lightVAO);
+    
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), (GLvoid*)0);
+    glEnableVertexAttribArray(0);
+    glBindVertexArray(0);
+    
+    GLint objectColorLoc = glGetUniformLocation(_glProgramBuffer, "objectColor");
+    GLint lightColorLoc  = glGetUniformLocation(_glProgramBuffer, "lightColor");
+    
+    glUniform3f(objectColorLoc, 1.0f, 0.5f, 0.31f);// 我们所熟悉的珊瑚红
+    glUniform3f(lightColorLoc,  1.0f, 1.0f, 1.0f); // 依旧把光源设置为白色
+
+    
+    glm::mat4 model;
+    float Angle1 = glm::radians(0.0f);
+    model = glm::rotate(model, Angle1, glm::vec3(0.5f, 1.0f, 0.0f));
+    
+    glm::mat4 view;
+    view = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f));
+    
+    glm::mat4 projection;
+    float scale = self.frame.size.width / self.frame.size.height;
+    float Angle = glm::radians(45.0);
+    
+    projection = glm::perspective(Angle, scale, 0.1f, 100.0f);
+    
+    GLuint modelLoc = glGetUniformLocation(_glProgramBuffer, "model");
+    glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+    
+    GLuint viewLoc = glGetUniformLocation(_glProgramBuffer, "view");
+    glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
+    
+    GLuint projectionLoc = glGetUniformLocation(_glProgramBuffer, "projection");
+    glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, glm::value_ptr(projection));
+    
+    glBindVertexArray(containerVAO);
+//    GLfloat angle = 10.0f;
+//    model = glm::rotate(model, angle, glm::vec3(0.0, 1.0f, 0.0f));
+    model = glm::translate(model,  glm::vec3( 0.0f,  0.0f, -3.0f));
+    glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+    glDrawArrays(GL_TRIANGLES, 0, 36);
+    glBindVertexArray(0);
+
+    
+    
+//    glm::mat4 view;
+//    view = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f));
+//
+//    glm::mat4 projection;
+//    float scale = self.frame.size.width / self.frame.size.height;
+//    float Angle = glm::radians(45.0);
+//    projection = glm::perspective(Angle, scale, 0.1f, 100.0f);
+//    
+//    GLint modelLoc = glGetUniformLocation(_glProgramBuffer, "model");
+//    GLint viewLoc  = glGetUniformLocation(_glProgramBuffer,  "view");
+//    GLint projLoc  = glGetUniformLocation(_glProgramBuffer,  "projection");
+//    
+//    glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
+//    glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
+//    
+//    glBindVertexArray(containerVAO);
+//    
+//    float Angle1 = glm::radians(0.0f);
+//    glm::mat4  model = glm::rotate(model, Angle1, glm::vec3(0.0f, 0.0f, 0.0f));
+//
+//    glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+//    glDrawArrays(GL_TRIANGLES, 0, 36);
+//    glBindVertexArray(0);
+    
+    
 }
 
 /**
