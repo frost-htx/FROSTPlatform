@@ -14,4 +14,7 @@ void selectionSortingAction();
 
 void InsertionSortingAction();
 
+void ShellSortingAction();
+
+
 @end

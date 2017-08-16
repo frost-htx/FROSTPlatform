@@ -77,6 +77,32 @@ void InsertionSortingAction() {
     
 }
 
+void ShellSortingAction() {
+    
+    int i, j, gap ,temObjec;
+    
+    int sortArray[9] = {9,8,7,6,5,4,3,2,1};
+    
+    int arraySize = sizeof(sortArray)/sizeof(sortArray[0]);
+    
+    for(gap = arraySize/2; gap>0 ; gap/=2 ){
+        //从第gap个元素，逐个对其所在组进行直接插入排序操作
+        for( i = gap; i < arraySize ; i++){
+            
+            j = i;
+            
+            while(j-gap>=0 && sortArray[j]<sortArray[j-gap]){
+                
+                temObjec = sortArray[j];
+                sortArray[i] = sortArray[j-gap];
+                sortArray[j-gap] = temObjec;
+                
+                j-=gap;
+                }
+            }
+    }
+}
+
 bool lessAction(int obj1,int obj2) {
     
     if (obj1 < obj2) {
