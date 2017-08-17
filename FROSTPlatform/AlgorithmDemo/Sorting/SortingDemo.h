@@ -16,5 +16,7 @@ void InsertionSortingAction();
 
 void ShellSortingAction();
 
+void MergeSortingAction();
+
 
 @end

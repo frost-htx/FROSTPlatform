@@ -19,9 +19,10 @@
     [super viewDidLoad];
         
 //    selectionSortingAction();
-    InsertionSortingAction();
-    ShellSortingAction();
-    
+//    InsertionSortingAction();
+//    ShellSortingAction();
+    MergeSortingAction();
+
 }
 
 - (void)didReceiveMemoryWarning {

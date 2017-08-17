@@ -78,39 +78,85 @@ void InsertionSortingAction() {
 }
 
 void ShellSortingAction() {
-    
+
     int i, j, gap ,temObjec;
     
     int sortArray[9] = {9,8,7,6,5,4,3,2,1};
     
     int arraySize = sizeof(sortArray)/sizeof(sortArray[0]);
     
-    for(gap = arraySize/2; gap>0 ; gap/=2 ){
-        //从第gap个元素，逐个对其所在组进行直接插入排序操作
-        for( i = gap; i < arraySize ; i++){
+    gap = arraySize/2;
+    
+    while (gap > 0 ) {
+        
+        for (i = gap; i < arraySize; i++) {
             
-            j = i;
-            
-            while(j-gap>=0 && sortArray[j]<sortArray[j-gap]){
+            for (j = i; j - gap>=0; j=j-gap) {
                 
-                temObjec = sortArray[j];
-                sortArray[i] = sortArray[j-gap];
-                sortArray[j-gap] = temObjec;
-                
-                j-=gap;
+                if (sortArray[j] < sortArray[j - gap]) {
+                    temObjec = sortArray[j];
+                    sortArray[j] = sortArray[j - gap];
+                    sortArray[j - gap] = temObjec;
                 }
+                
             }
+            
+        }
+        
+        gap = gap/2;
+        
     }
+    
 }
 
-bool lessAction(int obj1,int obj2) {
+void MergeSortingAction()
+{
+    int sortArray[9] = {9,8,7,6,5,4,3,2,1};
     
-    if (obj1 < obj2) {
-        return true;
-    } else {
-        return false;
+    int arraySize = sizeof(sortArray)/sizeof(sortArray[0]);
+    
+    merge_sort(sortArray, 0, arraySize-1);
+}
+
+void merge_sort(int a[], int start, int end)
+{
+    int mid;
+    
+    if (start < end)
+    {
+         mid = (start + end) / 2;
+         merge_sort(a, start, mid);
+         merge_sort(a, mid+1, end);
+        
+         merge(a, start, mid, end);
     }
     
+}
+
+void merge(int a[], int start, int mid, int end)
+{
+    int n1 = mid - start + 1;
+    int n2 = end - mid;
+    int left[n1], right[n2];
+    int i, j, k;
+    
+    for (i = 0; i < n1; i++) /* left holds a[start..mid] */
+        left[i] = a[start+i];
+    for (j = 0; j < n2; j++) /* right holds a[mid+1..end] */
+        right[j] = a[mid+1+j];
+    
+    i = j = 0;
+    k = start;
+    while (i < n1 && j < n2)
+    if (left[i] < right[j])
+            a[k++] = left[i++];
+    else
+        a[k++] = right[j++];
+    
+    while (i < n1) /* left[] is not exhausted */
+        a[k++] = left[i++];
+    while (j < n2) /* right[] is not exhausted */
+        a[k++] = right[j++];
 }
 
 @end
