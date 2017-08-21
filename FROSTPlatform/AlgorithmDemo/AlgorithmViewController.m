@@ -21,7 +21,8 @@
 //    selectionSortingAction();
 //    InsertionSortingAction();
 //    ShellSortingAction();
-    MergeSortingAction();
+//    MergeSortingAction();
+    QuickSortingAction();
 
 }
 

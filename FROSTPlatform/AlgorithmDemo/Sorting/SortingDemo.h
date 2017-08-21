@@ -18,5 +18,6 @@ void ShellSortingAction();
 
 void MergeSortingAction();
 
+void QuickSortingAction();
 
 @end
