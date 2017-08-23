@@ -220,46 +220,96 @@ void quick_sort(int s[], int l, int r)
 }
 
 
+void HeapSortingAction()
+{
+//    int a[6] = {10,15,56,25,30};
+//    MinHeapAddNumber(a, 5, 41);
+    
+    int a[6] = {10,15,56,25,30,70};
+    MinHeapDeleteNumber(a, 6);
+}
 
+void MinHeapAddNumber(int a[], int n, int nNum)
+{
+    for (int g = 0; g < 6; g++) {
+        printf("%d ", a[g]);
+    }
+    
+    a[n] = nNum;
+    
+    for (int g = 0; g < 6; g++) {
+        printf("%d ", a[g]);
+    }
+    
+    MinHeapFixup(a, n);
+}
 
+void MinHeapFixup(int a[], int i)
+{
+    int j; int tem;
+    
+    tem = a[i];
+    
+    j = (i - 1)/2;
+    
+    while (j >= 0 && i != 0) {
+        
+        if (a[j] <= tem ) {
+            break;
+        }
+        
+        a[i] = a[j];
+        i = j;
+        j = (i - 1)/2;
+    }
+    a[i] = tem;
 
+}
 
+void MinHeapDeleteNumber(int a[], int arraySize)
+{
+    for (int g = 0; g < 6; g++) {
+        printf("%d ", a[g]);
+    }
+    
+    int temp = a[0];
+    a[0] = a[arraySize - 1];
+    a[arraySize - 1] = temp;
+    
+    for (int g = 0; g < 6; g++) {
+        printf("%d ", a[g]);
+    }
+    
+    MinHeapFixdown(a, 0, arraySize - 1);
+    
+    for (int g = 0; g < 6; g++) {
+        printf("%d ", a[g]);
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-//void quick_sort(int s[], int l, int r)
-//{
-//    if (l < r)
-//    {
-//        //Swap(s[l], s[(l + r) / 2]); //将中间的这个数和第一个数交换 参见注1
-//        int i = l, j = r, x = s[l];
-//        while (i < j)
-//        {
-//            while(i < j && s[j] >= x) // 从右向左找第一个小于x的数
-//                j--;
-//            if(i < j)
-//                s[i++] = s[j];
-//            
-//            while(i < j && s[i] < x) // 从左向右找第一个大于等于x的数
-//                i++;
-//            if(i < j)
-//                s[j--] = s[i];
-//        }
-//        s[i] = x;
-//        quick_sort(s, l, i - 1); // 递归调用
-//        quick_sort(s, i + 1, r);
-//    }
-//}
+void MinHeapFixdown(int a[], int i, int arraySize)
+{
+    int tem = a[i];
+    
+    int j = 2*i + 1;
+    
+    while (j < arraySize) {
+        
+        if (j + 1 < arraySize && a[j] < a[j+1] ) {
+            j ++;
+        }
+        
+        a[i] = a[j];
+        
+        i = j;
+        
+        j = 2*i + 1;
+        
+    }
+    
+    a[i] = tem;
+    
+    
+}
 
 @end
