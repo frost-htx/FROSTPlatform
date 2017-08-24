@@ -23,7 +23,6 @@
 //    ShellSortingAction();
 //    MergeSortingAction();
 //    QuickSortingAction();
-    HeapSortingAction();
 
 }
 

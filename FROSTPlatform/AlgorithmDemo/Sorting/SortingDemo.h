@@ -20,7 +20,5 @@ void MergeSortingAction();
 
 void QuickSortingAction();
 
-void HeapSortingAction();
-
 
 @end
