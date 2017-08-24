@@ -134,6 +134,7 @@
 		279F9F5C1EE2D215009A68AD /* Friend_Function.mm in Sources */ = {isa = PBXBuildFile; fileRef = 279F9F5B1EE2D215009A68AD /* Friend_Function.mm */; };
 		27A1A18C1EE0623700621E7B /* OpenGLDemoViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 27A1A18B1EE0623700621E7B /* OpenGLDemoViewController.mm */; };
 		27A1A1971EE0650300621E7B /* C++DemoViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 27A1A1961EE0650300621E7B /* C++DemoViewController.mm */; };
+		27AB30CB1F4DD18200D9BE4A /* BinaryHeapSorting.c in Sources */ = {isa = PBXBuildFile; fileRef = 27AB30C91F4DD18200D9BE4A /* BinaryHeapSorting.c */; };
 		27AC260A1D91214D00C4ED32 /* DemoRequestImageAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AC26091D91214D00C4ED32 /* DemoRequestImageAPI.m */; };
 		27AC260D1D91278000C4ED32 /* FRTBatchRequestAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AC260C1D91278000C4ED32 /* FRTBatchRequestAgent.m */; };
 		27AC26101D91369C00C4ED32 /* FRTBaseRequest+RequestError.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AC260F1D91369C00C4ED32 /* FRTBaseRequest+RequestError.m */; };
@@ -476,6 +477,8 @@
 		27A1A18B1EE0623700621E7B /* OpenGLDemoViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenGLDemoViewController.mm; sourceTree = "<group>"; };
 		27A1A1941EE064BF00621E7B /* Sales_data.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Sales_data.hpp; sourceTree = "<group>"; };
 		27A1A1961EE0650300621E7B /* C++DemoViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "C++DemoViewController.mm"; sourceTree = "<group>"; };
+		27AB30C91F4DD18200D9BE4A /* BinaryHeapSorting.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = BinaryHeapSorting.c; sourceTree = "<group>"; };
+		27AB30CA1F4DD18200D9BE4A /* BinaryHeapSorting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinaryHeapSorting.h; sourceTree = "<group>"; };
 		27AC26081D91214D00C4ED32 /* DemoRequestImageAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoRequestImageAPI.h; sourceTree = "<group>"; };
 		27AC26091D91214D00C4ED32 /* DemoRequestImageAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoRequestImageAPI.m; sourceTree = "<group>"; };
 		27AC260B1D91278000C4ED32 /* FRTBatchRequestAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRTBatchRequestAgent.h; sourceTree = "<group>"; };
@@ -1370,6 +1373,8 @@
 			children = (
 				27E92A201F402AE100A41563 /* SortingDemo.h */,
 				27E92A211F402AE100A41563 /* SortingDemo.m */,
+				27AB30C91F4DD18200D9BE4A /* BinaryHeapSorting.c */,
+				27AB30CA1F4DD18200D9BE4A /* BinaryHeapSorting.h */,
 			);
 			path = Sorting;
 			sourceTree = "<group>";
@@ -1676,6 +1681,7 @@
 				27DF39E81D3CC893001C5C33 /* EditCollectionView.m in Sources */,
 				271227AC1D791845001F0EAE /* FRTBaseRequest.m in Sources */,
 				27128A921D6EED8F0034E706 /* DemoViewController.m in Sources */,
+				27AB30CB1F4DD18200D9BE4A /* BinaryHeapSorting.c in Sources */,
 				27D4E0D81E93633B00D70252 /* DijkstraDemo.m in Sources */,
 				2788E5021EE11E140010362A /* Sales_data.mm in Sources */,
 				27A1A18C1EE0623700621E7B /* OpenGLDemoViewController.mm in Sources */,
