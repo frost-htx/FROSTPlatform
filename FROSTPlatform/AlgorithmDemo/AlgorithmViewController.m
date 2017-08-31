@@ -8,6 +8,7 @@
 
 #import "AlgorithmViewController.h"
 #import "SortingDemo.h"
+#import "LeftistHeaps.h"
 
 @interface AlgorithmViewController ()
 
@@ -23,6 +24,8 @@
 //    ShellSortingAction();
 //    MergeSortingAction();
 //    QuickSortingAction();
+
+    LeftistHeaps_main();
 
 }
 

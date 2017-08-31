@@ -106,6 +106,7 @@
 		2730D7711F26F07A00B4955A /* wrap.inl in Resources */ = {isa = PBXBuildFile; fileRef = 2730D6E11F26F07A00B4955A /* wrap.inl */; };
 		2730D8631F26FBC300B4955A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2730D8621F26FBC300B4955A /* main.m */; };
 		2730D8671F26FDA700B4955A /* OpenGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2730D8661F26FDA700B4955A /* OpenGLView.mm */; };
+		2733E69F1F4FBF52000C6E12 /* LeftistHeaps.c in Sources */ = {isa = PBXBuildFile; fileRef = 2733E69D1F4FBF52000C6E12 /* LeftistHeaps.c */; };
 		2743B4761E1F30E90057B033 /* BaseSearchFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2743B4751E1F30E90057B033 /* BaseSearchFactory.m */; };
 		2743B47A1E1F316B0057B033 /* ChildrenSearchFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2743B4791E1F316B0057B033 /* ChildrenSearchFactory.m */; };
 		2743B4B51E1F701F0057B033 /* SonSearchFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2743B4B41E1F701F0057B033 /* SonSearchFactory.m */; };
@@ -426,6 +427,8 @@
 		2730D6FC1F26F07A00B4955A /* vector_relational.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = vector_relational.hpp; sourceTree = "<group>"; };
 		2730D8621F26FBC300B4955A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2730D8661F26FDA700B4955A /* OpenGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenGLView.mm; sourceTree = "<group>"; };
+		2733E69D1F4FBF52000C6E12 /* LeftistHeaps.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LeftistHeaps.c; sourceTree = "<group>"; };
+		2733E69E1F4FBF52000C6E12 /* LeftistHeaps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftistHeaps.h; sourceTree = "<group>"; };
 		2740CCAD1E2480EC00DA2F48 /* SearchProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchProtocol.h; sourceTree = "<group>"; };
 		2743B4741E1F30E90057B033 /* BaseSearchFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseSearchFactory.h; sourceTree = "<group>"; };
 		2743B4751E1F30E90057B033 /* BaseSearchFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseSearchFactory.m; sourceTree = "<group>"; };
@@ -1375,6 +1378,8 @@
 				27E92A211F402AE100A41563 /* SortingDemo.m */,
 				27AB30C91F4DD18200D9BE4A /* BinaryHeapSorting.c */,
 				27AB30CA1F4DD18200D9BE4A /* BinaryHeapSorting.h */,
+				2733E69D1F4FBF52000C6E12 /* LeftistHeaps.c */,
+				2733E69E1F4FBF52000C6E12 /* LeftistHeaps.h */,
 			);
 			path = Sorting;
 			sourceTree = "<group>";
@@ -1712,6 +1717,7 @@
 				27942AF01D86672B00581782 /* FRTChainRequest.m in Sources */,
 				27DF39DF1D3CA55F001C5C33 /* MainViewControler.m in Sources */,
 				27C893291D4E169100FE4A32 /* TZPhotoPreviewCell.m in Sources */,
+				2733E69F1F4FBF52000C6E12 /* LeftistHeaps.c in Sources */,
 				278876611D88E6FD00359885 /* DemoViewModel.m in Sources */,
 				278F61CD1D48F0DF00EF5CDC /* EditViewControllerManager.m in Sources */,
 				27CE945B1D3B484A003791FC /* ViewController.m in Sources */,
