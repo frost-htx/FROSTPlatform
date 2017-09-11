@@ -110,6 +110,7 @@
 		2743B4761E1F30E90057B033 /* BaseSearchFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2743B4751E1F30E90057B033 /* BaseSearchFactory.m */; };
 		2743B47A1E1F316B0057B033 /* ChildrenSearchFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2743B4791E1F316B0057B033 /* ChildrenSearchFactory.m */; };
 		2743B4B51E1F701F0057B033 /* SonSearchFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2743B4B41E1F701F0057B033 /* SonSearchFactory.m */; };
+		274616581F60E60300FD1A3E /* EffectiveDemo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 274616561F60E60300FD1A3E /* EffectiveDemo.cpp */; };
 		27614B501F20B45B00FE4C06 /* JpegUtil.c in Sources */ = {isa = PBXBuildFile; fileRef = 27614B4D1F20B45B00FE4C06 /* JpegUtil.c */; };
 		27614B511F20B45B00FE4C06 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27614B4F1F20B45B00FE4C06 /* libjpeg.a */; };
 		27776A6E1D571F8A008178B7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27776A6D1D571F8A008178B7 /* AudioToolbox.framework */; };
@@ -437,6 +438,8 @@
 		2743B4791E1F316B0057B033 /* ChildrenSearchFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildrenSearchFactory.m; sourceTree = "<group>"; };
 		2743B4B31E1F701F0057B033 /* SonSearchFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SonSearchFactory.h; sourceTree = "<group>"; };
 		2743B4B41E1F701F0057B033 /* SonSearchFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SonSearchFactory.m; sourceTree = "<group>"; };
+		274616561F60E60300FD1A3E /* EffectiveDemo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EffectiveDemo.cpp; sourceTree = "<group>"; };
+		274616571F60E60300FD1A3E /* EffectiveDemo.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EffectiveDemo.hpp; sourceTree = "<group>"; };
 		275BAC3C1EC08EAD0091371A /* OpenGLDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLDemoViewController.h; sourceTree = "<group>"; };
 		27614B491F20B45B00FE4C06 /* jconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jconfig.h; sourceTree = "<group>"; };
 		27614B4A1F20B45B00FE4C06 /* jerror.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jerror.h; sourceTree = "<group>"; };
@@ -1033,6 +1036,8 @@
 				279F9F5B1EE2D215009A68AD /* Friend_Function.mm */,
 				27A1A1941EE064BF00621E7B /* Sales_data.hpp */,
 				2788E5011EE11E140010362A /* Sales_data.mm */,
+				274616561F60E60300FD1A3E /* EffectiveDemo.cpp */,
+				274616571F60E60300FD1A3E /* EffectiveDemo.hpp */,
 			);
 			path = Sales_data;
 			sourceTree = "<group>";
@@ -1476,9 +1481,8 @@
 				TargetAttributes = {
 					27CE944F1D3B484A003791FC = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = E6377HWWVF;
 						LastSwiftMigration = 0810;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					27CE94681D3B484A003791FC = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -1745,6 +1749,7 @@
 				27DF39F71D3DBE23001C5C33 /* EditItemLabelView.m in Sources */,
 				27C893361D504A0500FE4A32 /* PhotoCuttingViewController.m in Sources */,
 				271227BB1D791ED9001F0EAE /* FRTConfigTools.m in Sources */,
+				274616581F60E60300FD1A3E /* EffectiveDemo.cpp in Sources */,
 				2743B4B51E1F701F0057B033 /* SonSearchFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1888,7 +1893,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = E6377HWWVF;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1940,6 +1945,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.frost.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
@@ -1951,7 +1957,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = E6377HWWVF;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -2003,6 +2009,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.frost.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				USER_HEADER_SEARCH_PATHS = "";
 			};

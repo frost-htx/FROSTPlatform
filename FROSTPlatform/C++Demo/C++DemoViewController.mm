@@ -10,6 +10,10 @@
 
 #include "Sales_data.hpp"
 #include "ContainerOperation.hpp"
+#import "EffectiveDemo.hpp"
+
+#include <stdio.h>
+#include <iostream>
 
 @interface C__DemoViewController ()
 
@@ -20,14 +24,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    Sales::Sales_data data1("12");
-    Sales::Sales_data data2("12");
-    Sales::Sales_data data3;
-    Sales::Sales_data data5(80);
+    Widge  widge1(100);
+    Widge  widge2(200);
+//
+    int a = 10;
+    int b = 20;
     
-    Sales::Sales_data data6("12");
-    Sales::Sales_data data7;
-    data7 = data6;
+    std::swap(a, b);
+    std::swap(widge1, widge2);
+    
+    
+//    CopyStructure::Rect rect1(100);
+//    
+//    CopyStructure::Rect rect2(rect1);
+//    
+//    
+//    std::cout << &rect2 <<std::endl;
+    
+//    Sales::Sales_data data1("12");
+//    Sales::Sales_data data2("12");
+//    Sales::Sales_data data3;
+//    Sales::Sales_data data5(80);
+//    
+//    Sales::Sales_data data6("12");
+//    Sales::Sales_data data7;
+//    data7 = data6;
 
 //
 //    Sales::Sales_data data6(90);
