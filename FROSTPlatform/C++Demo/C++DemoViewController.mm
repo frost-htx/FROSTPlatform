@@ -23,15 +23,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     
-    Widge  widge1(100);
-    Widge  widge2(200);
+    
+
+//    PerformWindowsAction();
+    
+    PerformAction();
+    
+//    Widge  widge1(100);
+//    Widge  widge2(200);
 //
-    int a = 10;
-    int b = 20;
-    
-    std::swap(a, b);
-    std::swap(widge1, widge2);
+//    int a = 10;
+//    int b = 20;
+//    
+//    std::swap(a, b);
+//    std::swap(widge1, widge2);
     
     
 //    CopyStructure::Rect rect1(100);

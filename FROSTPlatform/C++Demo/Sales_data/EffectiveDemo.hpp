@@ -11,6 +11,11 @@
 
 #include <stdio.h>
 #include <iostream>
+#include <memory>
+#include <vector>
+
+using std::shared_ptr;
+
 
 class WidgetImpl
 {
@@ -110,19 +115,22 @@ namespace CopyStructure {
     };
 }
 
+
+/**********条款27：尽量少做转型动作***********/
 class A{
     
 public:
     A(int a) :a(a) {
-        
+        std::cout << "A 的构造函数-------" << this << std::endl;
+
     }
     
-    virtual void show() {
-        std::cout << "A 的show（）-------" << a << std::endl;
+    void show() {
+        std::cout << "A 的show（）-------" << this << std::endl;
     }
     
     virtual ~A() {
-        std::cout << "A 的虚构函数-------"<< std::endl;
+        std::cout << "A 的虚析构函数-------"<< this<<std::endl;
     }
     
 private:
@@ -130,8 +138,87 @@ private:
     
 };
 
-class AA :public A {
+
+class B {
     
+public:
+    B(int b) :b(b) {
+        std::cout << "B 的构造函数-------" << this << std::endl;
+        
+    }
+    
+    virtual void show() {
+        std::cout << "B 的show（）-------" << this << std::endl;
+    }
+    
+    virtual ~B() {
+        std::cout << "B 的虚析构函数-------"<< this<<std::endl;
+    }
+private:
+    int b;
 };
+
+class AA :public A , public B{
+    
+public:
+    AA(int a, int b,int c):A(a),B(b),c(c){
+        std::cout << "AA的构造函数-------" << this <<std::endl;
+
+    }
+    
+    void show() {
+//        static_cast<A>(*this).show();
+        A::show();
+        B::show();
+        std::cout << "AA的show函数-------" << this <<std::endl;
+    }
+    
+    ~AA () {
+        std::cout << "AA的析构函数-------" << this <<std::endl;
+    }
+    
+private:
+    int c;
+};
+
+class Window {
+public:
+    Window(int a):a(a){};
+    
+    virtual void blink() {
+        std::cout << "Window的blink函数-------" << this <<std::endl;
+    }
+    
+private:
+    int a;
+};
+
+class SquareWindow : public Window {
+public:
+    SquareWindow(int a,int b):Window(a),b(b){};
+    virtual void blink() {
+        std::cout << "SquareWindow的blink函数-------" << this <<std::endl;
+    };
+    
+private:
+    int b;
+};
+
+class CircularWindow : public Window {
+public:
+    CircularWindow(int a,int c):Window(a),c(c){};
+
+    virtual void blink() {
+        std::cout << "CircularWindow的blink函数-------" << this <<std::endl;
+    };
+    
+private:
+    int c;
+};
+
+
+void PerformAction ();
+
+void PerformWindowsAction ();
 
 #endif /* EffectiveDemo_hpp */
