@@ -8,6 +8,10 @@
 
 #include "EffectiveDemo.hpp"
 
+using namespace terms27;
+using namespace terms28;
+
+
 void PerformAction () {
     
     AA *ab = new AA(10,20,30);
@@ -27,7 +31,7 @@ void PerformAction () {
     
 }
 
-void PerformWindowsAction ()
+void PerformTerms27Action ()
 {
     
     shared_ptr<SquareWindow> squareWindow_ptr(new SquareWindow(100,200));
@@ -42,4 +46,14 @@ void PerformWindowsAction ()
     for(VPW::iterator iter = winPtrs.begin(); iter != winPtrs.end(); ++iter) {
         (*iter)->blink();
     }
+}
+
+void PerformTerms28Action ()
+{
+    Point coord1(0,0);
+    Point coord2(100,100);
+    
+    RectangleHandle  rect(coord1, coord2);
+//    rect.upperLeft().Set_X(50);
+
 }

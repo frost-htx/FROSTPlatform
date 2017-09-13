@@ -25,11 +25,9 @@
     [super viewDidLoad];
 
     
-    
-
-//    PerformWindowsAction();
-    
-    PerformAction();
+//    PerformAction();
+//    PerformTerms27Action();
+    PerformTerms28Action();
     
 //    Widge  widge1(100);
 //    Widge  widge2(200);

@@ -117,108 +117,164 @@ namespace CopyStructure {
 
 
 /**********条款27：尽量少做转型动作***********/
-class A{
-    
-public:
-    A(int a) :a(a) {
-        std::cout << "A 的构造函数-------" << this << std::endl;
 
-    }
+namespace terms27 {
     
-    void show() {
-        std::cout << "A 的show（）-------" << this << std::endl;
-    }
-    
-    virtual ~A() {
-        std::cout << "A 的虚析构函数-------"<< this<<std::endl;
-    }
-    
-private:
-    int a;
-    
-};
-
-
-class B {
-    
-public:
-    B(int b) :b(b) {
-        std::cout << "B 的构造函数-------" << this << std::endl;
+    class A{
         
-    }
-    
-    virtual void show() {
-        std::cout << "B 的show（）-------" << this << std::endl;
-    }
-    
-    virtual ~B() {
-        std::cout << "B 的虚析构函数-------"<< this<<std::endl;
-    }
-private:
-    int b;
-};
-
-class AA :public A , public B{
-    
-public:
-    AA(int a, int b,int c):A(a),B(b),c(c){
-        std::cout << "AA的构造函数-------" << this <<std::endl;
-
-    }
-    
-    void show() {
-//        static_cast<A>(*this).show();
-        A::show();
-        B::show();
-        std::cout << "AA的show函数-------" << this <<std::endl;
-    }
-    
-    ~AA () {
-        std::cout << "AA的析构函数-------" << this <<std::endl;
-    }
-    
-private:
-    int c;
-};
-
-class Window {
-public:
-    Window(int a):a(a){};
-    
-    virtual void blink() {
-        std::cout << "Window的blink函数-------" << this <<std::endl;
-    }
-    
-private:
-    int a;
-};
-
-class SquareWindow : public Window {
-public:
-    SquareWindow(int a,int b):Window(a),b(b){};
-    virtual void blink() {
-        std::cout << "SquareWindow的blink函数-------" << this <<std::endl;
+    public:
+        A(int a) :a(a) {
+            std::cout << "A 的构造函数-------" << this << std::endl;
+            
+        }
+        
+        void show() {
+            std::cout << "A 的show（）-------" << this << std::endl;
+        }
+        
+        virtual ~A() {
+            std::cout << "A 的虚析构函数-------"<< this<<std::endl;
+        }
+        
+    private:
+        int a;
+        
     };
     
-private:
-    int b;
-};
-
-class CircularWindow : public Window {
-public:
-    CircularWindow(int a,int c):Window(a),c(c){};
-
-    virtual void blink() {
-        std::cout << "CircularWindow的blink函数-------" << this <<std::endl;
+    
+    class B {
+        
+    public:
+        B(int b) :b(b) {
+            std::cout << "B 的构造函数-------" << this << std::endl;
+            
+        }
+        
+        virtual void show() {
+            std::cout << "B 的show（）-------" << this << std::endl;
+        }
+        
+        virtual ~B() {
+            std::cout << "B 的虚析构函数-------"<< this<<std::endl;
+        }
+    private:
+        int b;
     };
     
-private:
-    int c;
-};
+    class AA :public A , public B{
+        
+    public:
+        AA(int a, int b,int c):A(a),B(b),c(c){
+            std::cout << "AA的构造函数-------" << this <<std::endl;
+            
+        }
+        
+        void show() {
+            //        static_cast<A>(*this).show();
+            A::show();
+            B::show();
+            std::cout << "AA的show函数-------" << this <<std::endl;
+        }
+        
+        ~AA () {
+            std::cout << "AA的析构函数-------" << this <<std::endl;
+        }
+        
+    private:
+        int c;
+    };
+    
+    class Window {
+    public:
+        Window(int a):a(a){};
+        
+        virtual void blink() {
+            std::cout << "Window的blink函数-------" << this <<std::endl;
+        }
+        
+    private:
+        int a;
+    };
+    
+    class SquareWindow : public Window {
+    public:
+        SquareWindow(int a,int b):Window(a),b(b){};
+        virtual void blink() {
+            std::cout << "SquareWindow的blink函数-------" << this <<std::endl;
+        };
+        
+    private:
+        int b;
+    };
+    
+    class CircularWindow : public Window {
+    public:
+        CircularWindow(int a,int c):Window(a),c(c){};
+        
+        virtual void blink() {
+            std::cout << "CircularWindow的blink函数-------" << this <<std::endl;
+        };
+        
+    private:
+        int c;
+    };
+    
+}
+
+/**********条款28：避免返回handles指向对象内部成分***********/
+
+namespace terms28 {
+    
+    class Point {
+        
+    public:
+        
+        Point(int x, int y):x(x),y(y) {};
+        
+        void Set_X(int x_val) { x = x_val; };
+        void Set_Y(int y_val) { y = y_val; };
+
+    private:
+        int x;
+        int y;
+        
+    };
+    
+    class RectangleData {
+    
+    public:
+        
+        RectangleData(Point ulhc_val , Point lrhc_val):ulhc(ulhc_val),lrhc(lrhc_val) {};
+        
+        Point ulhc;
+        Point lrhc;
+        
+    };
+    
+    
+    class RectangleHandle {
+        
+    public:
+        
+        RectangleHandle(Point x, Point y):rectangleData(new RectangleData(x,y)) {};
+        
+       const Point& upperLeft() const { return rectangleData->ulhc; }
+       const Point& lowerRight() const { return rectangleData->lrhc; }
+        
+    private:
+        shared_ptr<RectangleData> rectangleData;
+    };
+    
+    
+}
+
 
 
 void PerformAction ();
 
-void PerformWindowsAction ();
+void PerformTerms27Action ();
+
+void PerformTerms28Action ();
+
 
 #endif /* EffectiveDemo_hpp */
