@@ -13,6 +13,7 @@
 #include <iostream>
 #include <memory>
 #include <vector>
+#include <mutex>
 
 using std::shared_ptr;
 
@@ -115,8 +116,77 @@ namespace CopyStructure {
     };
 }
 
+#pragma mark - /**********条款14：在资源管理类中小心coping行为***********/
 
-/**********条款27：尽量少做转型动作***********/
+namespace terms14{
+    
+    
+    class Uncopyable{
+    protected:
+        Uncopyable(){}//允许子类对象构造析构
+        ~Uncopyable(){}
+    private:
+        Uncopyable(const Uncopyable&);//阻止
+        Uncopyable&operator=(const Uncopyable&);
+    };
+    
+    class Lock1 {
+    
+    public:
+        explicit Lock1(std::mutex* pm):mutexPtr(pm) {
+            
+            mutexPtr->lock();
+        };
+        
+        ~Lock1() {
+            mutexPtr->unlock();
+        }
+        
+    private:
+        std::mutex *mutexPtr;
+        
+    };
+    
+    class Lock2 :private Uncopyable{
+        
+    public:
+        explicit Lock2(std::mutex* pm):mutexPtr(pm) {
+            
+            mutexPtr->lock();
+        };
+        
+        ~Lock2() {
+            mutexPtr->unlock();
+        }
+        
+    private:
+        std::mutex *mutexPtr;
+        
+    };
+    
+    
+    void mutex_lock() {};
+    void mutex_unlock() {};
+
+    
+    class Lock3{
+    public:
+        explicit Lock3(std::mutex* pm):mutexPtr(pm,mutex_unlock) {
+            
+            mutexPtr.get()->lock();
+            
+        }
+        //不需要析构 mutexPrt的析构函数会在互斥器的引用次数为0时自动调用shared_ptr的删除器 （unlock）
+    private:
+        shared_ptr<std::mutex>mutexPtr;
+    };
+    
+}
+
+void PerformTerms14Action ();
+
+
+#pragma mark - /**********条款27：尽量少做转型动作***********/
 
 namespace terms27 {
     
@@ -221,13 +291,19 @@ namespace terms27 {
     
 }
 
-/**********条款28：避免返回handles指向对象内部成分***********/
+void PerformTerms27Action ();
+
+
+#pragma mark - /**********条款28：避免返回handles指向对象内部成分***********/
 
 namespace terms28 {
     
     class Point {
         
     public:
+        
+        
+        Point(const Point &point)  { x = point.x; y = point.y; };
         
         Point(int x, int y):x(x),y(y) {};
         
@@ -261,20 +337,21 @@ namespace terms28 {
        const Point& upperLeft() const { return rectangleData->ulhc; }
        const Point& lowerRight() const { return rectangleData->lrhc; }
         
+        ~RectangleHandle() {};
+        
     private:
         shared_ptr<RectangleData> rectangleData;
     };
     
+    class GUIObject {
+        
+    };
     
 }
 
-
-
-void PerformAction ();
-
-void PerformTerms27Action ();
-
 void PerformTerms28Action ();
+
+const terms28::RectangleHandle BoundingBox(const  terms28::GUIObject & obj);
 
 
 #endif /* EffectiveDemo_hpp */

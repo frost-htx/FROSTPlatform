@@ -8,26 +8,24 @@
 
 #include "EffectiveDemo.hpp"
 
+using namespace terms14;
 using namespace terms27;
 using namespace terms28;
 
 
-void PerformAction () {
+void PerformTerms14Action ()
+{
+    std::mutex m;
+        
+    Lock1 lock1(&m);
+    Lock1 lock2(lock1);
+
     
-    AA *ab = new AA(10,20,30);
-    ab->show();
-    
-    A *a = ab;
-    a->show();
-    
-    B *b = ab;
-    b->show();
+//    Lock2 lock3(&m);
+//    Lock2 lock4(lock1);
     
     
-    std::cout << a << " " << sizeof(*a) << std::endl;
-    std::cout << b << " " << sizeof(*b) << std::endl;
-    std::cout << ab << " " << sizeof(*ab) << std::endl;
-    delete a;
+
     
 }
 
@@ -54,6 +52,29 @@ void PerformTerms28Action ()
     Point coord2(100,100);
     
     RectangleHandle  rect(coord1, coord2);
+    
+    GUIObject *pgo = nullptr;
+    
+    
+    const Point  *pupPointer = &(BoundingBox(*pgo).upperLeft());
+    
+//    const Point  pupperLeft = (BoundingBox(*pgo).upperLeft());
+//    pupPointer->Set_x(100);
+    
+    Point coord3(0,0);
+    coord3 = *pupPointer; // dangling pointer
+    
 //    rect.upperLeft().Set_X(50);
 
 }
+
+const RectangleHandle BoundingBox(const  GUIObject & obj) {
+    
+    Point coord1(200,200);
+    Point coord2(100,100);
+    
+    RectangleHandle  rect(coord1, coord2);
+    
+    return rect;
+};
+
