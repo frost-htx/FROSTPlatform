@@ -11,21 +11,71 @@
 using namespace terms14;
 using namespace terms27;
 using namespace terms28;
+using namespace terms29;
 
 
-void PerformTerms14Action ()
-{
-    std::mutex m;
+namespace terms14 {
+
+    void Mutex_lock(Mutex *mutex)
+    {
+        mutex->mutex.lock();
+    }
+    void Mutex_unlock(Mutex *mutex)
+    {
+        mutex->mutex.unlock();
+    }
+    
+    
+    void PerformTerms14Action ()
+    {
+        terms14::Mutex m;
         
-    Lock1 lock1(&m);
-    Lock1 lock2(lock1);
+    //    Lock1 lock1(&m);
+    //    Lock1 lock2(lock1);
+    
+    
+    //    Lock2 lock3(&m);
+    //    Lock2 lock4(lock1);
+    
+        Lock3 lock5(&m);
+        Lock3 lock6(lock5);
+    }
 
-    
-//    Lock2 lock3(&m);
-//    Lock2 lock4(lock1);
-    
-    
+}
 
+
+namespace terms29 {
+    
+    void Mutex_lock(Mutex *mutex)
+    {
+        mutex->mutex.lock();
+    }
+    void Mutex_unlock(Mutex *mutex)
+    {
+        mutex->mutex.unlock();
+    }
+    
+    void PrettyMenu::changeBackground (std::ifstream & imgSrc)
+    {
+        terms29::Lock lock(&mutex);
+        
+        std::shared_ptr<PMImpl> newImp (new PMImpl(*pMImpl));
+        
+        newImp->bgimage.reset(new Image(imgSrc));
+        ++newImp->imageChange;
+        std::swap(pMImpl, newImp);
+        
+    }
+    
+    void PerformTerms29Action ()
+    {
+        std::string path = "";
+        std::ifstream imgSrc1(path,std::ios::in);
+        
+        PrettyMenu prettyMenu(imgSrc1);
+        prettyMenu.changeBackground(imgSrc1);
+        
+    }
     
 }
 

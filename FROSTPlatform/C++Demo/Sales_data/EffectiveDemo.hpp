@@ -14,6 +14,8 @@
 #include <memory>
 #include <vector>
 #include <mutex>
+#include <fstream>
+#include <sstream>
 
 using std::shared_ptr;
 
@@ -120,6 +122,18 @@ namespace CopyStructure {
 
 namespace terms14{
     
+    class Mutex {
+    
+    public:
+        
+        Mutex() {};
+        
+        std::mutex mutex;
+    };
+    
+    void Mutex_lock(Mutex *mutex);
+    void Mutex_unlock(Mutex *mutex);
+    
     
     class Uncopyable{
     protected:
@@ -133,57 +147,53 @@ namespace terms14{
     class Lock1 {
     
     public:
-        explicit Lock1(std::mutex* pm):mutexPtr(pm) {
+        explicit Lock1(Mutex * pm):mutexPtr(pm) {
             
-            mutexPtr->lock();
+            Mutex_lock(mutexPtr);
         };
         
         ~Lock1() {
-            mutexPtr->unlock();
+            Mutex_unlock(mutexPtr);
         }
         
     private:
-        std::mutex *mutexPtr;
+        Mutex *mutexPtr;
         
     };
     
     class Lock2 :private Uncopyable{
         
     public:
-        explicit Lock2(std::mutex* pm):mutexPtr(pm) {
+        explicit Lock2(Mutex * pm):mutexPtr(pm) {
             
-            mutexPtr->lock();
+            Mutex_lock(mutexPtr);
         };
         
         ~Lock2() {
-            mutexPtr->unlock();
+            Mutex_unlock(mutexPtr);
         }
         
     private:
-        std::mutex *mutexPtr;
+        Mutex *mutexPtr;
         
     };
-    
-    
-    void mutex_lock() {};
-    void mutex_unlock() {};
 
     
     class Lock3{
     public:
-        explicit Lock3(std::mutex* pm):mutexPtr(pm,mutex_unlock) {
+        explicit Lock3(Mutex * pm):mutexPtr(pm,Mutex_unlock) {
             
-            mutexPtr.get()->lock();
+            Mutex_lock(mutexPtr.get());
             
         }
         //不需要析构 mutexPrt的析构函数会在互斥器的引用次数为0时自动调用shared_ptr的删除器 （unlock）
     private:
-        shared_ptr<std::mutex>mutexPtr;
+        shared_ptr<Mutex>mutexPtr;
     };
     
+    void PerformTerms14Action ();
+    
 }
-
-void PerformTerms14Action ();
 
 
 #pragma mark - /**********条款27：尽量少做转型动作***********/
@@ -332,7 +342,7 @@ namespace terms28 {
         
     public:
         
-        RectangleHandle(Point x, Point y):rectangleData(new RectangleData(x,y)) {};
+       RectangleHandle(Point x, Point y):rectangleData(new RectangleData(x,y)) {};
         
        const Point& upperLeft() const { return rectangleData->ulhc; }
        const Point& lowerRight() const { return rectangleData->lrhc; }
@@ -353,5 +363,71 @@ void PerformTerms28Action ();
 
 const terms28::RectangleHandle BoundingBox(const  terms28::GUIObject & obj);
 
+
+#pragma mark - /**********条款29：为“异常安全”而努力是值得的**********/
+
+namespace terms29 {
+    
+    class Mutex {
+        
+    public:
+        
+        Mutex() {};
+        
+        std::mutex mutex;
+    };
+    
+    class Image {
+        
+    public:
+        
+        Image (std::ifstream & imgSrc):m_imgSrc(imgSrc) {};
+        
+        ~Image(){};
+        
+    private:
+        std::ifstream & m_imgSrc;
+        
+    };
+    
+    void Mutex_lock(terms29::Mutex *mutex);
+    void Mutex_unlock(terms29::Mutex *mutex);
+    
+    class Lock{
+    public:
+        
+        explicit Lock(terms29::Mutex * pm):mutexPtr(pm,Mutex_unlock) {
+            
+            Mutex_lock(mutexPtr.get());
+            
+        }
+        
+    private:
+        shared_ptr<terms29::Mutex>mutexPtr;
+    };
+    
+    struct PMImpl {
+        
+        std::shared_ptr<Image>  bgimage;
+        int imageChange = 0;
+        
+    };
+    
+    class PrettyMenu{
+        
+    public:
+        
+        PrettyMenu(std::ifstream & imgSrc):pMImpl(new PMImpl()) {};
+        
+        void changeBackground(std::ifstream & imgSrc);
+        
+    private:
+        terms29::Mutex mutex;
+        std::shared_ptr<PMImpl>  pMImpl;
+    };
+    
+    void PerformTerms29Action();
+    
+}
 
 #endif /* EffectiveDemo_hpp */
