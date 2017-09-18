@@ -430,4 +430,61 @@ namespace terms29 {
     
 }
 
+
+#pragma mark - /**********条款30：透彻了解inlining的里里外外**********/
+
+/*
+ 1，对于一个inline函数,你可以调用它们又不蒙受函数调用招致的额外开销。
+ 
+ 2，inline造成的代码膨胀亦会导致额外的换页行为,降低指令高速缓存装置的击中率,以及伴随而来的效率损失。
+ 
+ 3，inline只是对编译器的一个申请不是强制命令,该申请可以隐喻提出也可明确提出,隐喻提出就是将函数定义于class定义式内,这样的函数通常是成员函数或者是friend函数。
+ 
+ 4，inline函数通常一定要被置于头文件内,其在大多数C++程序中是编译器行为。
+ 
+ 5，大部分编译器拒绝将太过复杂的函数inlining。
+ 
+ 6，将构造函数和析构函数进行inling"是一个很糟糕的想法。
+ 
+ */
+
+#pragma mark - /**********条款31：将文件间的编译依存关系降至最低**********/
+
+class EffectiveItem1;
+class PersonIMP;
+
+namespace terms31 {
+    
+    class Person { //第一种方法：Handler classes化类的成员变量为指针
+      
+    public:
+        
+        Person(const EffectiveItem1 &item1);
+        
+        std::string GetBookNo();
+        
+    private:
+        
+        std::shared_ptr<PersonIMP> personIMP;
+        
+    };
+    
+    
+    class PersonInterface { //第二种方法：Interface classes将细节放在子类中
+        
+    public:
+        
+        virtual std::string GetBookNo() const = 0;
+        
+        static std::shared_ptr<PersonInterface> CreatePerson(const EffectiveItem1 &item1);
+
+        virtual ~PersonInterface() {};
+        
+    };
+    
+    void PerformTerms31Action();
+
+}
+
+
 #endif /* EffectiveDemo_hpp */

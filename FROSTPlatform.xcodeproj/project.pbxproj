@@ -177,6 +177,9 @@
 		27DF39F71D3DBE23001C5C33 /* EditItemLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DF39F61D3DBE23001C5C33 /* EditItemLabelView.m */; };
 		27DF39FF1D3E08D5001C5C33 /* JsonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DF39FE1D3E08D5001C5C33 /* JsonUtil.m */; };
 		27DF44901D3E0BB2001C5C33 /* Template.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 27DF448F1D3E0BB2001C5C33 /* Template.geojson */; };
+		27E2D4711F6D14F3005DEFEC /* EffectiveItem1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27E2D46F1F6D14F3005DEFEC /* EffectiveItem1.cpp */; };
+		27E2D4741F6E65C9005DEFEC /* PersonIMP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27E2D4721F6E65C9005DEFEC /* PersonIMP.cpp */; };
+		27E2D4771F6E744D005DEFEC /* RealPerson.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27E2D4751F6E744D005DEFEC /* RealPerson.cpp */; };
 		27E3F0FB1D8FBC4900B878BB /* DemoRequestAPI1.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E3F0FA1D8FBC4900B878BB /* DemoRequestAPI1.m */; };
 		27E3F0FE1D8FBC6500B878BB /* DemoRequestAPI2.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E3F0FD1D8FBC6500B878BB /* DemoRequestAPI2.m */; };
 		27E3F1031D8FE25800B878BB /* FRTChainRequestAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E3F1021D8FE25800B878BB /* FRTChainRequestAgent.m */; };
@@ -567,6 +570,12 @@
 		27DF39FD1D3E08D5001C5C33 /* JsonUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonUtil.h; sourceTree = "<group>"; };
 		27DF39FE1D3E08D5001C5C33 /* JsonUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonUtil.m; sourceTree = "<group>"; };
 		27DF448F1D3E0BB2001C5C33 /* Template.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Template.geojson; sourceTree = "<group>"; };
+		27E2D46F1F6D14F3005DEFEC /* EffectiveItem1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EffectiveItem1.cpp; sourceTree = "<group>"; };
+		27E2D4701F6D14F3005DEFEC /* EffectiveItem1.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EffectiveItem1.hpp; sourceTree = "<group>"; };
+		27E2D4721F6E65C9005DEFEC /* PersonIMP.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PersonIMP.cpp; sourceTree = "<group>"; };
+		27E2D4731F6E65C9005DEFEC /* PersonIMP.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PersonIMP.hpp; sourceTree = "<group>"; };
+		27E2D4751F6E744D005DEFEC /* RealPerson.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RealPerson.cpp; sourceTree = "<group>"; };
+		27E2D4761F6E744D005DEFEC /* RealPerson.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RealPerson.hpp; sourceTree = "<group>"; };
 		27E3F0F91D8FBC4900B878BB /* DemoRequestAPI1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoRequestAPI1.h; sourceTree = "<group>"; };
 		27E3F0FA1D8FBC4900B878BB /* DemoRequestAPI1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoRequestAPI1.m; sourceTree = "<group>"; };
 		27E3F0FC1D8FBC6500B878BB /* DemoRequestAPI2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoRequestAPI2.h; sourceTree = "<group>"; };
@@ -1032,6 +1041,7 @@
 		27A1A18E1EE0636600621E7B /* Sales_data */ = {
 			isa = PBXGroup;
 			children = (
+				27E2D46E1F6D14D0005DEFEC /* EffectiveDemoItem */,
 				279F9F591EE2D1FB009A68AD /* Friend_Function.hpp */,
 				279F9F5B1EE2D215009A68AD /* Friend_Function.mm */,
 				27A1A1941EE064BF00621E7B /* Sales_data.hpp */,
@@ -1376,6 +1386,19 @@
 			path = PlatformTools;
 			sourceTree = "<group>";
 		};
+		27E2D46E1F6D14D0005DEFEC /* EffectiveDemoItem */ = {
+			isa = PBXGroup;
+			children = (
+				27E2D46F1F6D14F3005DEFEC /* EffectiveItem1.cpp */,
+				27E2D4701F6D14F3005DEFEC /* EffectiveItem1.hpp */,
+				27E2D4721F6E65C9005DEFEC /* PersonIMP.cpp */,
+				27E2D4731F6E65C9005DEFEC /* PersonIMP.hpp */,
+				27E2D4751F6E744D005DEFEC /* RealPerson.cpp */,
+				27E2D4761F6E744D005DEFEC /* RealPerson.hpp */,
+			);
+			path = EffectiveDemoItem;
+			sourceTree = "<group>";
+		};
 		27E92A1F1F402AA900A41563 /* Sorting */ = {
 			isa = PBXGroup;
 			children = (
@@ -1684,6 +1707,7 @@
 				2730D8631F26FBC300B4955A /* main.m in Sources */,
 				27DF39F11D3DBD66001C5C33 /* EditMainCollectionCell.m in Sources */,
 				27C893251D4E169100FE4A32 /* TZImageManager.m in Sources */,
+				27E2D4741F6E65C9005DEFEC /* PersonIMP.cpp in Sources */,
 				27188FDC1F1F573200F8D1D0 /* SamplerImageUtil.m in Sources */,
 				27AC26101D91369C00C4ED32 /* FRTBaseRequest+RequestError.m in Sources */,
 				27D72C401E9A303E008FDD23 /* ChainTableDemo.m in Sources */,
@@ -1697,6 +1721,7 @@
 				27D4E0DB1E93662E00D70252 /* HashTableDemo.m in Sources */,
 				27AC260D1D91278000C4ED32 /* FRTBatchRequestAgent.m in Sources */,
 				2743B4761E1F30E90057B033 /* BaseSearchFactory.m in Sources */,
+				27E2D4771F6E744D005DEFEC /* RealPerson.cpp in Sources */,
 				2723AC621E23261500C5764B /* SearchBarViews.m in Sources */,
 				27C893281D4E169100FE4A32 /* TZPhotoPickerController.m in Sources */,
 				2723AC651E233F2700C5764B /* SearchLogic.m in Sources */,
@@ -1722,6 +1747,7 @@
 				27DF39DF1D3CA55F001C5C33 /* MainViewControler.m in Sources */,
 				27C893291D4E169100FE4A32 /* TZPhotoPreviewCell.m in Sources */,
 				2733E69F1F4FBF52000C6E12 /* LeftistHeaps.c in Sources */,
+				27E2D4711F6D14F3005DEFEC /* EffectiveItem1.cpp in Sources */,
 				278876611D88E6FD00359885 /* DemoViewModel.m in Sources */,
 				278F61CD1D48F0DF00EF5CDC /* EditViewControllerManager.m in Sources */,
 				27CE945B1D3B484A003791FC /* ViewController.m in Sources */,

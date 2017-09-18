@@ -79,6 +79,22 @@ namespace terms29 {
     
 }
 
+#include "EffectiveItem1.hpp"
+
+namespace terms31 {
+    
+    void PerformTerms31Action()
+    {
+        std::string bookNo = "123";
+        
+        EffectiveItem1 item(bookNo);
+        
+        std::shared_ptr<PersonInterface> person(PersonInterface::CreatePerson(item));
+        
+        std::string book1 = person->GetBookNo();
+    }
+}
+
 void PerformTerms27Action ()
 {
     
@@ -127,4 +143,22 @@ const RectangleHandle BoundingBox(const  GUIObject & obj) {
     
     return rect;
 };
+
+#include "PersonIMP.hpp"
+
+namespace terms31 {
+    
+    Person::Person(const EffectiveItem1 &item1):
+    personIMP(new PersonIMP(item1))
+    {
+        
+    };
+    
+    std::string Person::GetBookNo () {
+        return personIMP->GetBookNo();
+    }
+
+}
+
+
 
