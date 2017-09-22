@@ -7,11 +7,15 @@
 //
 
 #include "EffectiveDemo.hpp"
+#include <assert.h>
 
 using namespace terms14;
 using namespace terms27;
 using namespace terms28;
 using namespace terms29;
+using namespace terms31;
+using namespace terms32;
+using namespace terms33;
 
 
 namespace terms14 {
@@ -160,5 +164,43 @@ namespace terms31 {
 
 }
 
+namespace terms32 {
+    
+    void PerformTerms32Action()
+    {
+        Square square;
+        
+        assert(square.width() == square.height());
+        makeHeightlengthier(square);
+        assert(square.width() == square.height());//错误：因为Square继承RectangleRect，Square只要改变了宽度，高度就会发生改变
 
+        
+    }
+    
+    void makeHeightlengthier(RectangleRect &r)
+    {
+        int oldHeight = r.height();
+        r.SetWidth(r.width() + 10);
+        assert(r.height() == oldHeight);
+    }
+
+    
+}
+
+namespace terms33 {
+    
+    void PerformTerms33Action()
+    {
+        int a = 0;
+        
+        Terms33PublicDerived derived1;
+        derived1.CommonFunction(a);
+        
+        Terms33PrivateDerived derived2;
+        derived2.CommonFunction(a);
+        
+    }
+    
+    
+}
 

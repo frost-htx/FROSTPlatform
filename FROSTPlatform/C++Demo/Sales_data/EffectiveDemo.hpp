@@ -486,5 +486,150 @@ namespace terms31 {
 
 }
 
+#pragma mark - /**********条款32：确定你的Public继承塑模出is-a关系**********/
+
+namespace terms32 {
+    
+    /*** 请记住： **
+     “public 继承” 意味 is-a。适用于 base class 身上的每一件事情一定也适用于 derived class 身上，
+     因为每一个 derived class 对象也都是一个 base class 对象。
+     */
+    
+    /*第一种设计：*/
+    /*所有的鸟都有飞行能力*/
+    class Bird1{
+    public:
+        
+        virtual void fly();
+        
+    };
+    
+    class Penguin1:public Bird1 {/*企鹅也是一种鸟，也会飞。（错误的is-a设计）*/
+        
+    };
+    
+    
+    /*第二种设计：这样的继承体系比第一种更能忠实的反应我们真正的意思*/
+    /*定义鸟类*/
+    class Bird2{
+    public:
+        
+    };
+    
+    class FlyBird:public Bird2 {/*会飞的鸟*/
+        virtual void fly();
+    };
+
+    class Penguin2:public Bird2 {/*企鹅*/
+        
+    };
+    
+    /*第三种设计：在运行时起抛出错误，这样的设计不好，好的接口可以防止无效的代码通过编译，
+     因此你宁可采取 “在编译期拒绝企鹅飞行”的设计，
+     而不是 “只在运行期才能侦测他们” 的设计
+     */
+    /*定义鸟类*/
+    class Bird3{
+    public:
+        virtual void fly();
+
+    };
+    
+    class Penguin3:public Bird3 {/*企鹅*/
+        virtual void fly() { std::cout <<"error ！，Attempt to make a pengnin fly!" ;} /*调用企鹅飞机方法时，抛出错误*/
+    };
+    
+    /*定义矩形*/
+    class RectangleRect {
+        
+    public:
+        
+        virtual void SetHeight(int newHeight ) {m_height = newHeight;};
+        virtual void SetWidth(int newWidth ) {m_width = newWidth;};
+        virtual int height() const {return m_height; };
+        virtual int width() const {return m_width; };
+        
+    private:
+        int m_height;
+        int m_width;
+        
+    };
+    
+    /*正方形继承矩形：这里的继承关系存在问题，原因是：
+     某些可能施行于矩形身上的事情，
+     却不可施行于正方形身上，
+     比如改变矩形的宽时，高度不会发生变化，
+     但是正方形的高度会跟着改变
+     */
+    class Square:public RectangleRect {
+        
+        
+    };
+    
+    
+    void PerformTerms32Action();
+    void makeHeightlengthier(RectangleRect &r);
+}
+
+#pragma mark - /**********条款33：避免遮掩继承而来的名称**********/
+
+namespace terms33 {
+
+    class Terms33Base {
+      
+    public:
+        
+        void CommonFunction() {std::cout<<"Base::CommonFunction"<<std::endl;};
+        
+        void CommonFunction(int x) {std::cout<<"Base::CommonFunction (x)"<<std::endl;};
+        
+        void  virtual VirtualFunction() {std::cout<<"Base::VirtualFunction"<<std::endl;};
+
+        void  virtual PureVirtualFunction() = 0;
+    };
+    
+    
+    /*子类的方法名称遮掩了父类的名称，
+     需要使用using申明来使得父类的函数名可查找。
+     */
+    
+    class Terms33PublicDerived:public Terms33Base {
+        
+    public:
+        
+        using Terms33Base::CommonFunction; //申明第一级查找也要包括Base::CommonFunction
+        
+        void CommonFunction() {std::cout<<"Derived::CommonFunction"<<std::endl;};
+        
+        void virtual VirtualFunction() {std::cout<<"Derived::VirtualFunction"<<std::endl;};
+        
+        virtual void PureVirtualFunction() {std::cout<<"Derived::PureVirtualFunction"<<std::endl;}
+
+    };
+    
+    /*有时候不想继承Base的所有函数，
+     那么就不能使用Public继承，因为这违背了is-a关系。
+     可以使用private继承，如果想使用父类中的函数，
+     可以使用一个简单的转交函数（forwarding function）
+     这里也不能使用：using申明，
+     因为using申明会把父类的所有同名函数全部暴露给子类，
+     这也是我们不希望看到的
+     */
+    
+    class Terms33PrivateDerived:private Terms33Base {
+        
+    public:
+        
+        void CommonFunction(int x) {Terms33Base::CommonFunction(x);};
+        
+        void virtual VirtualFunction() {std::cout<<"Derived::VirtualFunction"<<std::endl;};
+        
+        virtual void PureVirtualFunction() {std::cout<<"Derived::PureVirtualFunction"<<std::endl;}
+        
+    };
+    
+    void PerformTerms33Action();
+
+}
 
 #endif /* EffectiveDemo_hpp */
