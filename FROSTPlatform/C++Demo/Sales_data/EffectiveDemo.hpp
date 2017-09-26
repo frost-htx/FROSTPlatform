@@ -632,4 +632,265 @@ namespace terms33 {
 
 }
 
+#pragma mark - /**********条款34：区分接口继承和实现继承**********/
+
+namespace terms34 {
+    
+    /*要点：1，纯虚函数只继承接口。纯虚函数可以有默认的实现。
+           2，虚函数既继承接口，也提供一份默认的实现。
+           3，普通函数既继承接口，也强制继承实现。
+     
+     提倡使用纯虚函数代替虚函数，因为虚函数提供了一份默认的实现，
+     有时候派生类想要的行为和这个虚函数不一致，而又恰好忘记在派生类中覆盖虚函数，
+     就会出现问题。但纯虚函数不会，因为它从语法上限定派生类必须要去实现它，
+     否则将无法定义派生类的对象。
+     */
+    
+    class Terms34Base {
+        
+    public:
+        
+        void CommonFunction();
+        
+        void  virtual VirtualFunction();
+        
+        void  virtual PureVirtualFunction() = 0;
+    };
+    
+    class Terms34Derived1:public Terms34Base {
+        
+    public:
+
+        void  virtual VirtualFunction();
+        
+        void  virtual PureVirtualFunction();
+
+    };
+    
+    class Terms34Derived2:public Terms34Base {
+        
+    public:
+
+        void  virtual PureVirtualFunction();
+        
+    };
+    
+    void PerformTerms34Action();
+
+}
+
+
+#pragma mark - /**********条款35：考虑虚函数以外的其他选择**********/
+
+namespace terms35 {
+
+    //1.模版方法模式。在类中确定派生类要做的事情的顺序，然后让派生类自己实现它们。
+    
+    /*在基类中，限定了先做什么，后做什么。
+     但是具体怎样做，把权力移交给了派生类。
+     这种思路，称为模板方法模式，它的定义为：定义一个方法的骨架，
+     而将一些方法实现延迟到子类。
+     模板方法使得子类可以不改变一个方法的结构即可以重定义该方法的某些特定步骤
+     */
+    class GameCharacter1 {
+        
+    public:
+        
+        int healthValue()
+        {
+            int val = getInitialVal(); //先初始化人物的初始血线。
+            val = calcVal(val);        //再调用计算血量的方法。
+            return val;
+        }
+        
+    private:
+        
+        virtual int getInitialVal() = 0;
+        virtual int calcVal(int ) = 0;
+        
+    };
+    
+    class Soldier1:public GameCharacter1 {
+        
+    private:
+        
+       virtual int getInitialVal()
+        {
+            return 50;
+        }
+        
+        virtual int calcVal(int val)
+        {
+            return val/2;
+        };
+        
+    };
+    
+    class Patient1:public GameCharacter1 {
+        
+    private:
+        
+        virtual int getInitialVal()
+        {
+            return 20;
+        }
+        
+        virtual int calcVal(int val)
+        {
+            return val*2;
+        };
+        
+    };
+    
+    //2.使用函数指针。将虚函数移到类的外部，但是它不能访问类的private成分。
+
+    /*假如希望同一个类型的不同对象有不同的计算生命值的方法，上述的方式就不合适了。
+     人物健康指数的计算，其实，不一定与人物的特定类型有关，
+     对于同一个类型，也可以有不同的计算方法。
+     */
+    
+    class GameCharacter2;
+    
+    int defaultHealthCalc_2(const GameCharacter2&);
+    int loseHealthQuickly_2(const GameCharacter2&);
+
+    class GameCharacter2 {
+        
+    public:
+        
+        typedef int (*HealthCalcFn)(const GameCharacter2&);
+        explicit GameCharacter2(HealthCalcFn hcf = defaultHealthCalc_2 ):healthFn(hcf){}
+        
+        virtual int getInitialVal() const = 0;
+        int getHealthValue()
+        {
+            int val = healthFn(*this);
+            return val;
+        }
+        
+    private:
+        
+        HealthCalcFn healthFn;
+        
+    };
+    
+    
+    
+    class Soldier2:public GameCharacter2 {
+        
+    public:
+
+        explicit Soldier2(HealthCalcFn hcf = defaultHealthCalc_2 ):GameCharacter2(hcf){}
+
+        virtual int getInitialVal() const
+        {
+            return 50;
+        }
+    };
+    
+    //3.使用tr1::function指定“泛型”函数指针，是得我们可以通过函数、函数对象、成员函数来替代虚函数。
+    
+    class GameCharacter3;
+    
+    int defaultHealthCalc_3(const GameCharacter3&);
+    int loseHealthQuickly_3(const GameCharacter3&);
+    
+    class GameCharacter3 {
+        
+    public:
+        
+        typedef std::function<int (const GameCharacter3&)> HealthCalcFn;
+        explicit GameCharacter3(HealthCalcFn hcf = defaultHealthCalc_3 ):healthFn(hcf){}
+        
+        virtual int getInitialVal() const = 0;
+        int getHealthValue()
+        {
+            int val = healthFn(*this);
+            return val;
+        }
+        
+    private:
+        
+        HealthCalcFn healthFn;
+        
+    };
+    
+    class Soldier3:public GameCharacter3 {
+        
+    public:
+        
+        explicit Soldier3(HealthCalcFn hcf = defaultHealthCalc_3 ):GameCharacter3(hcf){}
+        
+        virtual int getInitialVal() const
+        {
+            return 50;
+        }
+    };
+    
+    
+    struct AddHealth
+    {
+        int operator()(const GameCharacter3& gc)const
+        {
+            int health = gc.getInitialVal();
+            health = health + 10;
+            std::cout<<"生命值加10"<<std::endl;
+            return health;
+        }  
+    };
+    
+    class GameLevel
+    {
+    public:
+        float hard(const GameCharacter3&)const;
+        float easy(const GameCharacter3&)const;
+    };
+    
+    //4.使用策略模式，将虚函数所要完成的事情封装成类，以便于扩展。
+    
+    class GameCharacter4;
+    
+    int defaultHealthCalc_4(const GameCharacter4&);
+    int loseHealthQuickly_4(const GameCharacter4&);
+    
+    class HealthCalcClass
+    {
+    public:
+        virtual int calc(const GameCharacter4& gc)const;
+        
+    };
+    
+    class AddCalcHealth:public HealthCalcClass
+    {
+    public:
+        int calc( const GameCharacter4& gc) const ;
+    };
+    
+    class DoubleCalcHealth:public HealthCalcClass
+    {
+    public:
+        int calc(const GameCharacter4& gc)const;
+    };
+    
+    class GameCharacter4 {
+        
+    public:
+        
+        GameCharacter4( HealthCalcClass* phcf):healthClass(phcf){}
+        
+        int getInitialVal() const { return 10; };
+        int getHealthVaule() const;
+
+    private:
+        
+        HealthCalcClass *healthClass;
+        
+    };
+    
+    
+    void PerformTerms35Action();
+
+}
+
+
 #endif /* EffectiveDemo_hpp */

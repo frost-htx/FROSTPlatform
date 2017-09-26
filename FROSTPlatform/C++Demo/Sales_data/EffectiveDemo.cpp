@@ -9,6 +9,7 @@
 #include "EffectiveDemo.hpp"
 #include <assert.h>
 
+using namespace std::placeholders;
 using namespace terms14;
 using namespace terms27;
 using namespace terms28;
@@ -16,7 +17,8 @@ using namespace terms29;
 using namespace terms31;
 using namespace terms32;
 using namespace terms33;
-
+using namespace terms34;
+using namespace terms35;
 
 namespace terms14 {
 
@@ -204,3 +206,163 @@ namespace terms33 {
     
 }
 
+namespace terms34 {
+    
+    void Terms34Base::CommonFunction()
+    {
+        std::cout<<"Base::CommonFunction"<<std::endl;
+    }
+        
+        void Terms34Base::VirtualFunction()
+    {
+        std::cout<<"Base::VirtualFunction"<<std::endl;
+    }
+        
+        void Terms34Base::PureVirtualFunction()
+    {
+        std::cout<<"Base::PureVirtualFunction"<<std::endl;
+    };
+    
+    void Terms34Derived1::VirtualFunction()
+    {
+        std::cout<<"Derived1::VirtualFunction"<<std::endl;
+    };
+    
+    void Terms34Derived1::PureVirtualFunction()
+    {
+        Terms34Base::PureVirtualFunction();
+    };
+    
+    void Terms34Derived2::PureVirtualFunction()
+    {
+        std::cout<<"Derived2::PureVirtualFunction"<<std::endl;
+    };
+    
+    void PerformTerms34Action()
+    {
+        Terms34Derived1  derived1;
+        derived1.VirtualFunction();
+        derived1.PureVirtualFunction();
+
+        Terms34Derived2  derived2;
+        derived2.VirtualFunction();
+        derived2.PureVirtualFunction();
+    }
+
+}
+
+
+namespace terms35 {
+    
+    void PerformTerms35Action()
+    {
+        Soldier1  soldier1;
+        int val1 = soldier1.healthValue();
+        std::cout << "Soldier1 healthValue: "<< val1 << std::endl;
+        
+        Patient1  patient1;
+        int val2 = patient1.healthValue();
+        std::cout << "Patient1 healthValue: "<< val2 << std::endl;
+
+        Soldier2  soldier2;
+        int val3 = soldier2.getHealthValue();
+        std::cout << "Soldier2 healthValue: "<< val3 << std::endl;
+        
+        Soldier2  soldier2_1(loseHealthQuickly_2);
+        int val4 = soldier2_1.getHealthValue();
+        std::cout << "Soldier2 healthValue: "<< val4 << std::endl;
+        
+        
+        Soldier3  soldier3_1;
+        int val5 = soldier3_1.getHealthValue();
+        std::cout << "soldier3_1 healthValue: "<< val5 << std::endl;
+
+        AddHealth addHealth;
+        Soldier3  soldier3_2(addHealth);
+        int val6 = soldier3_2.getHealthValue();
+        std::cout << "soldier3_1 healthValue: "<< val6 << std::endl;
+        
+        GameLevel level;
+        Soldier3  soldier3_3(std::bind(&GameLevel::easy,level,_1));
+        int val7 = soldier3_3.getHealthValue();
+        std::cout << "soldier3_1 healthValue: "<< val7 << std::endl;
+        
+        
+        AddCalcHealth addCalcHealth;
+        GameCharacter4 gc1(&addCalcHealth);
+        gc1.getHealthVaule();
+        
+        DoubleCalcHealth doubleCalcHealth;
+        GameCharacter4 gc2(&doubleCalcHealth);
+        gc2.getHealthVaule();
+    }
+
+    
+    int defaultHealthCalc_2(const GameCharacter2& gc)
+    {
+        int health = gc.getInitialVal();
+        health = health / 2;
+        return health;
+    }
+    
+    int loseHealthQuickly_2(const GameCharacter2& gc)
+    {
+        int health = gc.getInitialVal();
+        health = health / 4;
+        return health;
+    }
+    
+    
+    int defaultHealthCalc_3(const GameCharacter3& gc)
+    {
+        int health = gc.getInitialVal();
+        health = health / 2;
+        return health;
+    }
+    
+    int loseHealthQuickly_3(const GameCharacter3& gc)
+    {
+        int health = gc.getInitialVal();
+        health = health / 4;
+        return health;
+    }
+    
+    float GameLevel::hard(const GameCharacter3& gc)const
+    {
+        float health = gc.getInitialVal();
+        std::cout<<"困难模式，生命值为初始值的四分之一"<<std::endl;
+        return health / 4;
+    }
+    
+    float  GameLevel::easy(const GameCharacter3& gc)const
+    {
+        float health = gc.getInitialVal();
+        std::cout<<"简单模式，生命值为初始值的四倍"<<std::endl;
+        return health * 4;  
+    }
+    
+    
+    int HealthCalcClass::calc(const GameCharacter4& gc)const
+    {
+        int a = gc.getInitialVal();
+        return a;
+    }
+    
+    int AddCalcHealth::calc(const terms35::GameCharacter4 &gc) const
+    {
+        int a = gc.getInitialVal();
+        return a + 10;
+    }
+    
+    int DoubleCalcHealth::calc(const GameCharacter4 &gc) const
+    {
+        int a = gc.getInitialVal();
+        return a * 2;
+    };
+    
+    int GameCharacter4::getHealthVaule () const
+    {
+        return healthClass->calc(*this);
+    };
+    
+}
