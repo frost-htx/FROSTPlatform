@@ -19,6 +19,8 @@ using namespace terms32;
 using namespace terms33;
 using namespace terms34;
 using namespace terms35;
+using namespace terms36;
+using namespace terms37;
 
 namespace terms14 {
 
@@ -366,3 +368,41 @@ namespace terms35 {
     };
     
 }
+
+namespace terms36 {
+    
+    void PerformTerms36Action()
+    {
+        DerivedClass derivedClass;
+        
+        BaseClass *baseClassPtr = &derivedClass;
+        DerivedClass *derivedClassPtr = &derivedClass;
+
+        baseClassPtr->NonVirtualFunction();
+        derivedClassPtr->NonVirtualFunction();
+        
+    }
+
+}
+
+namespace terms37 {
+    
+    void PerformTerms37Action()
+    {
+        Rectangle1 rectangle;
+        Circle1 circle;
+        
+        Shape1 *ptrC = &circle;
+        ptrC->draw();
+        
+        Shape1 *ptrR = &rectangle;
+        ptrR->draw();
+        
+        Rectangle2 rectangle2;
+        Shape2  *ptrR2  = &rectangle2;
+        ptrR2->doDraw();
+        ptrR2->doDraw(Shape2::Blue);
+
+    }
+}
+

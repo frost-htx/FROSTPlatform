@@ -892,5 +892,101 @@ namespace terms35 {
 
 }
 
+#pragma mark - /**********条款36：绝不重新定义继承而来的non-virtual函数**********/
+
+namespace terms36 {
+    
+    class BaseClass {
+        
+    public:
+        
+         void NonVirtualFunction()
+        {
+            std::cout << "BaseClass::NonVirtualFunction" << std::endl;
+         }
+        
+    };
+    
+    class DerivedClass :public BaseClass {
+        
+        public:
+        
+        void NonVirtualFunction()
+        {
+            std::cout << "DerivedClass::NonVirtualFunction" << std::endl;
+        }
+        
+    };
+    
+    void PerformTerms36Action();
+
+}
+
+
+#pragma mark - /**********条款37：绝不重新定义继承而来的缺省参数值**********/
+
+namespace terms37 {
+
+    class Shape1 {
+        
+    public:
+        
+        enum ShapeColor {Red,Green,Blue};
+        
+        virtual void draw(ShapeColor color = Red) const = 0;
+        
+    };
+    
+    class Rectangle1:public Shape1 {
+    
+    public:
+        virtual void draw(ShapeColor color = Green) const //virtual函数是动态绑定，而缺省参数值却是静态绑定
+        {
+            std::cout << "Rectangle::draw" << std::endl;
+        };
+    
+    };
+    
+    class Circle1: public Shape1 {
+        
+    public:
+        virtual void draw(ShapeColor color) const
+        {
+            std::cout << "Circle::draw" << std::endl;
+        };
+    };
+    
+    
+    class Shape2 {
+        
+    public:
+        
+        enum ShapeColor {Red,Green,Blue};
+        
+        void doDraw(ShapeColor color = Red)
+        {
+            draw(color);
+        }
+        
+    private:
+        
+        virtual void draw(ShapeColor color) const = 0;
+        
+    };
+    
+    class Rectangle2:public Shape2{
+        
+    private:
+        
+        virtual void draw(ShapeColor color) const
+        {
+            std::cout << "Rectangle2::draw" << std::endl;
+        }
+
+    };
+    
+    void PerformTerms37Action();
+
+}
 
 #endif /* EffectiveDemo_hpp */
