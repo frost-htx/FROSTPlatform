@@ -21,6 +21,7 @@ using namespace terms34;
 using namespace terms35;
 using namespace terms36;
 using namespace terms37;
+using namespace terms38;
 
 namespace terms14 {
 
@@ -404,5 +405,26 @@ namespace terms37 {
         ptrR2->doDraw(Shape2::Blue);
 
     }
+}
+
+namespace terms38 {
+    
+    void PerformTerms38Action()
+    {
+        terms38Set<std::string> set;
+        
+        std::string s1 = "1";
+        set.insert(s1);
+        
+        std::string s2 = "2";
+        set.insert(s2);
+        
+        bool a = set.member(s1);
+        set.remove(s1);
+        
+        set.print();
+        
+    }
+    
 }
 

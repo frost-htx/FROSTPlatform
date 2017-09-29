@@ -16,6 +16,7 @@
 #include <mutex>
 #include <fstream>
 #include <sstream>
+#include <list>
 
 using std::shared_ptr;
 
@@ -987,6 +988,111 @@ namespace terms37 {
     
     void PerformTerms37Action();
 
+}
+
+
+#pragma mark - /**********条款38：通过复合塑模出has-a或“根据某物实现出”**********/
+
+namespace terms38 {
+    
+    /*Person不应该去public继承Address，
+     虽然这样做也能让一个人有地址，但是它却违背了public表示is-a的关系。
+     人又不是一个特化了的“地址”。所以，这里使用复合会更恰当一些*/
+    
+    class Address {
+    
+    public:
+        std::string country;
+        std::string city;
+        std::string street_name;
+    };
+    
+    class Person {
+        
+    public:
+        
+        Address address;
+        std::string name;
+        
+    };
+    
+    /*虽然list和Set有很多相同的地方，但是list和Set也有不同的地方，
+     比如list能容纳相同的元素，而Set不行，
+     所以使用复合的形式来实现Set容器，而不是使用Public继承*/
+    
+    template<typename T>
+    class terms38Set
+    {
+        
+    public:
+        
+        bool member(const T & item) const
+        {
+            return find(rep.begin(),rep.end(),item) != rep.end();
+        }
+        
+        void insert(const T & item)
+        {
+            if (!member(item)) {
+                rep.push_back(item);
+            }
+        }
+        
+        void remove(const T & item)
+        {
+            typename std::list<T>::iterator it = find(rep.begin(),rep.end(),item);
+            if  ( it != rep.end()) {
+                rep.erase(it);
+            }
+        }
+        
+        void print()
+        {
+            typename std::list<T>::iterator it = rep.begin();
+            for(;it != rep.end();++it)
+                std::cout<<*it<<"\t"<<std::endl;
+        }
+        
+    private:
+        std::list<T> rep;
+        
+    };
+    
+    void PerformTerms38Action();
+
+    
+}
+
+#pragma mark - /**********条款 39：明智而审慎地使用 private 继承**********/
+
+namespace terms38 {
+
+    /*利用复合的方式来代替private继承*/
+    
+    class Timer {
+    public:
+        explicit Timer(int tickFrequency);
+        virtual void onTick() const;
+    };
+    
+    class Widget {
+        
+    private:
+        
+        class WidgetTimer :public Timer {
+        public:
+            virtual void onTick() const;
+        };
+        
+    public:
+        
+        WidgetTimer widgetTimer;
+        
+    };
+    
+    void PerformTerms39Action();
+
+    
 }
 
 #endif /* EffectiveDemo_hpp */
