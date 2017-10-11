@@ -1065,7 +1065,7 @@ namespace terms38 {
 
 #pragma mark - /**********条款 39：明智而审慎地使用 private 继承**********/
 
-namespace terms38 {
+namespace terms39 {
 
     /*利用复合的方式来代替private继承*/
     
@@ -1093,6 +1093,67 @@ namespace terms38 {
     void PerformTerms39Action();
 
     
+}
+
+#pragma mark - /**********条款 40：明智而审慎地使用多重继承**********/
+
+namespace terms40 {
+    
+    typedef std::string PersonName;
+    
+    class IPerson{
+    public:
+        virtual std::string name() const = 0;
+    };
+
+    
+    class PersonInfo{
+    public:
+        explicit PersonInfo(PersonName personName) {
+            m_name = personName;
+        };
+        virtual const std::string theName()const {
+            
+            std::string temp = valueDelimOpen();
+            
+            temp = temp + m_name;
+            
+            temp = temp + valueDelimClose();
+            
+            return temp;
+        };
+        
+    private:
+        
+        PersonName m_name;
+        
+        virtual const std::string valueDelimOpen() const {
+            return "[";
+        };
+        
+        virtual const std::string valueDelimClose() const {
+            return "]";
+        };
+    };
+    
+    class Cperson: public IPerson, private PersonInfo{
+    public:
+        explicit Cperson(PersonName pName): PersonInfo(pName){
+            
+        }
+        
+        virtual std::string name() const
+        {
+            return PersonInfo::theName();
+        }
+        
+    private:
+        const std::string valueDelimOpen() const {return "(";}
+        const std::string valueDelimClose() const {return ")";}
+    };
+
+    void PerformTerms40Action();
+
 }
 
 #endif /* EffectiveDemo_hpp */

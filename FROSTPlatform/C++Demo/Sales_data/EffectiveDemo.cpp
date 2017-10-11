@@ -428,3 +428,25 @@ namespace terms38 {
     
 }
 
+namespace terms39 {
+    
+    void PerformTerms40Action()
+    {
+    
+    }
+
+}
+
+
+namespace terms40 {
+    
+    void PerformTerms40Action()
+    {
+        
+        Cperson c_person("Aaron");
+        std::string name =  c_person.name();
+        std::cout << name <<std::endl;
+    }
+
+    
+}
