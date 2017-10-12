@@ -107,6 +107,7 @@
 		2730D8631F26FBC300B4955A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2730D8621F26FBC300B4955A /* main.m */; };
 		2730D8671F26FDA700B4955A /* OpenGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2730D8661F26FDA700B4955A /* OpenGLView.mm */; };
 		2733E69F1F4FBF52000C6E12 /* LeftistHeaps.c in Sources */ = {isa = PBXBuildFile; fileRef = 2733E69D1F4FBF52000C6E12 /* LeftistHeaps.c */; };
+		273B0F541F8F0A6200BC5E35 /* DesignPatternsDemo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 273B0F521F8F0A6200BC5E35 /* DesignPatternsDemo.cpp */; };
 		2743B4761E1F30E90057B033 /* BaseSearchFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2743B4751E1F30E90057B033 /* BaseSearchFactory.m */; };
 		2743B47A1E1F316B0057B033 /* ChildrenSearchFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2743B4791E1F316B0057B033 /* ChildrenSearchFactory.m */; };
 		2743B4B51E1F701F0057B033 /* SonSearchFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2743B4B41E1F701F0057B033 /* SonSearchFactory.m */; };
@@ -433,6 +434,8 @@
 		2730D8661F26FDA700B4955A /* OpenGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenGLView.mm; sourceTree = "<group>"; };
 		2733E69D1F4FBF52000C6E12 /* LeftistHeaps.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LeftistHeaps.c; sourceTree = "<group>"; };
 		2733E69E1F4FBF52000C6E12 /* LeftistHeaps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftistHeaps.h; sourceTree = "<group>"; };
+		273B0F521F8F0A6200BC5E35 /* DesignPatternsDemo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DesignPatternsDemo.cpp; sourceTree = "<group>"; };
+		273B0F531F8F0A6200BC5E35 /* DesignPatternsDemo.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DesignPatternsDemo.hpp; sourceTree = "<group>"; };
 		2740CCAD1E2480EC00DA2F48 /* SearchProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchProtocol.h; sourceTree = "<group>"; };
 		2743B4741E1F30E90057B033 /* BaseSearchFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseSearchFactory.h; sourceTree = "<group>"; };
 		2743B4751E1F30E90057B033 /* BaseSearchFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseSearchFactory.m; sourceTree = "<group>"; };
@@ -945,6 +948,15 @@
 			path = simd;
 			sourceTree = "<group>";
 		};
+		273B0F511F8F0A1B00BC5E35 /* DesignPatterns */ = {
+			isa = PBXGroup;
+			children = (
+				273B0F521F8F0A6200BC5E35 /* DesignPatternsDemo.cpp */,
+				273B0F531F8F0A6200BC5E35 /* DesignPatternsDemo.hpp */,
+			);
+			path = DesignPatterns;
+			sourceTree = "<group>";
+		};
 		2743B4731E1F30AE0057B033 /* PolymorphismDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -1030,6 +1042,7 @@
 		27A1A1871EE0614200621E7B /* C++Demo */ = {
 			isa = PBXGroup;
 			children = (
+				273B0F511F8F0A1B00BC5E35 /* DesignPatterns */,
 				27A1A18E1EE0636600621E7B /* Sales_data */,
 				2717A1811F12077A0064A031 /* ContainerOperation */,
 				27A1A1881EE061B400621E7B /* C++DemoViewController.h */,
@@ -1765,6 +1778,7 @@
 				27E92A251F403A4300A41563 /* AlgorithmViewController.m in Sources */,
 				27E96EF21EEEAC2600F4D436 /* PlatformTools.m in Sources */,
 				27CE94A01D3BDFA1003791FC /* EditMainViewController.m in Sources */,
+				273B0F541F8F0A6200BC5E35 /* DesignPatternsDemo.cpp in Sources */,
 				27DF39E51D3CC7F7001C5C33 /* RootView.m in Sources */,
 				27DF39D91D3C7AED001C5C33 /* EditViewModel.m in Sources */,
 				27E3F1031D8FE25800B878BB /* FRTChainRequestAgent.m in Sources */,
