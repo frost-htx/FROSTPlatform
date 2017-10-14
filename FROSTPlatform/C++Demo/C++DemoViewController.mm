@@ -13,6 +13,43 @@
 #import "EffectiveDemo.hpp"
 #import "DesignPatternsDemo.hpp"
 
+@interface MonthArray ()
+
+
+@end
+
+@implementation MonthArray
+
+static MonthArray *sharedMonthArray = nil;
+static NSString *months[] = { @"January", @"February", @"March",
+    @"April", @"May", @"June", @"July", @"August", @"September",
+    @"October", @"November", @"December" };
+
++(id) monthArray
+{
+    if (!sharedMonthArray) {
+        sharedMonthArray = [[MonthArray alloc] init];
+    }
+    return sharedMonthArray;
+}
+
+- (unsigned)count
+{
+    return 12;
+}
+
+-(id) objectAtIndex:(unsigned)index
+{
+    if (index >= [self count]) {
+        NSLog(@"Error");
+        return nil;
+    }
+    else
+        return months[index];
+}
+
+@end;
+
 @interface C__DemoViewController ()
 
 @end
@@ -21,8 +58,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     
+    MonthArray *monthArray = [MonthArray monthArray];
+    NSLog(@"%@",[monthArray objectAtIndex:2]);
+    NSLog(@"%@",monthArray.firstObject);
+    NSLog(@"%@",monthArray.lastObject);
+
 //    PerformAction();
 //    terms14::PerformTerms14Action();
 //    terms29::PerformTerms29Action();
@@ -34,12 +75,16 @@
 //    terms36::PerformTerms36Action();
 //    terms37::PerformTerms37Action();
 //    terms38::PerformTerms38Action();
-    terms40::PerformTerms40Action();
+//    terms40::PerformTerms40Action();
 //    PerformTerms27Action();
 //    PerformTerms28Action();
     
     
-    ObserverPattern::ObserverPatternAction();
+//    ObserverPattern::ObserverPatternAction();
+//    SimpleFactoryPattern::SimpleFactoryPatternAction();
+//    GeneralFactoryPattern::GeneralFactoryPatternAction();
+//    AbstractFactoryPattern::AbstractFactoryPatternAction();
+    StrategyPattern::StrategyPatternAction();
 }
 
 - (void)didReceiveMemoryWarning {

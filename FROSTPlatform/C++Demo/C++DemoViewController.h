@@ -9,6 +9,14 @@
 #import <UIKit/UIKit.h>
 
 
+@interface MonthArray : NSArray
+
++ monthArray;
+- (unsigned)count;
+- (id)objectAtIndex:(unsigned)index;
+
+@end
+
 @interface C__DemoViewController : UIViewController
 
 @end
