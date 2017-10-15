@@ -93,6 +93,37 @@ namespace StrategyPattern {
         CacheTemplate<Random_Algorithm> cacheTemplate;
         cacheTemplate.AlgorithmAction();
     }
-    
 
 }
+
+namespace AdapterPattern {
+    
+    void AdapterPatternAction ()
+    {
+        Sequence *que1 = new Stack();
+        Sequence *que2 = new Queue();
+        
+        que1->push(100) ; que1->pop();
+        que2->push(100) ; que2->pop();
+        
+        ToTarget *toTarget = new ToTarget();
+        
+        TargetAdapter *adapter = new TargetAdapter(toTarget);
+        
+        AdapterPattern::AdapterPatternDemo1(adapter);
+        
+        Target *classTargetAdapter = new ClassTargetAdapter();
+        
+        AdapterPattern::AdapterPatternDemo1(classTargetAdapter);
+
+    }
+    
+    void AdapterPatternDemo1(Target *target)
+    {
+        target->Request();
+    }
+
+}
+
+
+

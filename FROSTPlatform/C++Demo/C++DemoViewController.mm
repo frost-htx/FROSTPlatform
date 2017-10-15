@@ -84,7 +84,9 @@ static NSString *months[] = { @"January", @"February", @"March",
 //    SimpleFactoryPattern::SimpleFactoryPatternAction();
 //    GeneralFactoryPattern::GeneralFactoryPatternAction();
 //    AbstractFactoryPattern::AbstractFactoryPatternAction();
-    StrategyPattern::StrategyPatternAction();
+//    StrategyPattern::StrategyPatternAction();
+    AdapterPattern::AdapterPatternAction();
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -13,6 +13,8 @@
 #include <list>
 #include <iostream>
 
+using namespace std;
+
 #pragma mark - /**********设计模式：工厂模式**********/
 
 /*简单工厂模式:
@@ -433,5 +435,107 @@ namespace StrategyPattern {
     void StrategyPatternAction();
     
 }
+
+#pragma mark - /**********设计模式：适配器模式**********/
+
+namespace AdapterPattern {
+    
+    class Deque {
+    
+    public:
+        void push_back(int x) { cout<<"Deque push_back"<<endl; }
+        void push_front(int x) { cout<<"Deque push_front"<<endl; }
+        void pop_back() { cout<<"Deque pop_back"<<endl; }
+        void pop_front() { cout<<"Deque pop_front"<<endl; }
+    };
+    
+    class Sequence {
+    
+    public:
+        virtual void push(int x) = 0;
+        virtual void pop() = 0;
+    };
+    
+    class Stack:public Sequence {
+        
+    public:
+        virtual void push(int x) {
+            deque.push_back(x);
+        };
+        virtual void pop() {
+            deque.pop_back();
+        }
+        
+    private:
+        Deque deque;
+    };
+    
+    class Queue:public Sequence {
+    
+    public:
+        virtual void push(int x) {
+            deque.push_back(x);
+        }
+        
+        virtual void pop() {
+            deque.pop_front();
+        }
+        
+    private:
+        Deque deque;
+    };
+    
+    class Target {
+    
+    public:
+        
+        virtual void Request() {
+            cout << "Target: Request()" << endl;
+        }
+    };
+    
+    class ToTarget {
+        
+    public:
+        
+        virtual void SpecialRequest() {
+            cout << "ToTarget: SpecialRequest()" << endl;
+        }
+    };
+    
+    /*类适配模式*/
+    class ClassTargetAdapter:public Target,private ToTarget {
+        
+    public:
+        
+        virtual void Request() {
+            this -> SpecialRequest();
+        }
+    };
+
+    /*对象适配模式*/
+    class TargetAdapter:public Target {
+        
+    public:
+        
+        TargetAdapter(ToTarget *toTarget) {
+            m_toTarget = toTarget;
+        };
+        
+        virtual void Request() {
+            m_toTarget ->SpecialRequest();
+        }
+        
+    private:
+        
+        ToTarget *m_toTarget;
+    };
+    
+    void AdapterPatternAction();
+    void AdapterPatternDemo1(Target *target);
+
+    
+}
+
 
 #endif /* DesignPatternsDemo_hpp */
