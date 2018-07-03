@@ -23,6 +23,7 @@
 		2723AC5C1E23259E00C5764B /* HomeSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2723AC5B1E23259E00C5764B /* HomeSearchBar.m */; };
 		2723AC621E23261500C5764B /* SearchBarViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 2723AC611E23261500C5764B /* SearchBarViews.m */; };
 		2723AC651E233F2700C5764B /* SearchLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 2723AC641E233F2700C5764B /* SearchLogic.m */; };
+		272B5F6D20EB73F20003E7F5 /* GPUImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 272B5F6C20EB73F20003E7F5 /* GPUImageViewController.m */; };
 		2730D4581F2604C400B4955A /* smile.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2730D4571F2604C400B4955A /* smile.jpg */; };
 		2730D6FD1F26F07A00B4955A /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2730D5F11F26F07A00B4955A /* CMakeLists.txt */; };
 		2730D7231F26F07A00B4955A /* bitfield.inl in Resources */ = {isa = PBXBuildFile; fileRef = 2730D6431F26F07A00B4955A /* bitfield.inl */; };
@@ -141,6 +142,7 @@
 		27AC260A1D91214D00C4ED32 /* DemoRequestImageAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AC26091D91214D00C4ED32 /* DemoRequestImageAPI.m */; };
 		27AC260D1D91278000C4ED32 /* FRTBatchRequestAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AC260C1D91278000C4ED32 /* FRTBatchRequestAgent.m */; };
 		27AC26101D91369C00C4ED32 /* FRTBaseRequest+RequestError.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AC260F1D91369C00C4ED32 /* FRTBaseRequest+RequestError.m */; };
+		27B1CC5620B015D100D46F16 /* PrimarySorting.c in Sources */ = {isa = PBXBuildFile; fileRef = 27B1CC5520B015D000D46F16 /* PrimarySorting.c */; };
 		27C893231D4E169100FE4A32 /* TZAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C893111D4E169100FE4A32 /* TZAssetCell.m */; };
 		27C893241D4E169100FE4A32 /* TZAssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C893131D4E169100FE4A32 /* TZAssetModel.m */; };
 		27C893251D4E169100FE4A32 /* TZImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C893151D4E169100FE4A32 /* TZImageManager.m */; };
@@ -237,6 +239,8 @@
 		2723AC611E23261500C5764B /* SearchBarViews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchBarViews.m; sourceTree = "<group>"; };
 		2723AC631E233F2700C5764B /* SearchLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchLogic.h; sourceTree = "<group>"; };
 		2723AC641E233F2700C5764B /* SearchLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchLogic.m; sourceTree = "<group>"; };
+		272B5F6B20EB73F20003E7F5 /* GPUImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPUImageViewController.h; sourceTree = "<group>"; };
+		272B5F6C20EB73F20003E7F5 /* GPUImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPUImageViewController.m; sourceTree = "<group>"; };
 		2730D4571F2604C400B4955A /* smile.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = smile.jpg; sourceTree = "<group>"; };
 		2730D5F11F26F07A00B4955A /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
 		2730D5F21F26F07A00B4955A /* common.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = common.hpp; sourceTree = "<group>"; };
@@ -498,6 +502,8 @@
 		27AC260E1D91369C00C4ED32 /* FRTBaseRequest+RequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FRTBaseRequest+RequestError.h"; sourceTree = "<group>"; };
 		27AC260F1D91369C00C4ED32 /* FRTBaseRequest+RequestError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FRTBaseRequest+RequestError.m"; sourceTree = "<group>"; };
 		27AFD82A1F0F721B00376913 /* OpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLView.h; sourceTree = "<group>"; };
+		27B1CC4C20AFFB2D00D46F16 /* PrimarySorting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrimarySorting.h; sourceTree = "<group>"; };
+		27B1CC5520B015D000D46F16 /* PrimarySorting.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PrimarySorting.c; sourceTree = "<group>"; };
 		27B9E7431D4318FB00E7345B /* BindViewWithModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BindViewWithModelProtocol.h; sourceTree = "<group>"; };
 		27C893101D4E169100FE4A32 /* TZAssetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZAssetCell.h; sourceTree = "<group>"; };
 		27C893111D4E169100FE4A32 /* TZAssetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZAssetCell.m; sourceTree = "<group>"; };
@@ -715,6 +721,15 @@
 			);
 			name = CombinationDemo;
 			path = InheritDemo;
+			sourceTree = "<group>";
+		};
+		272B5F6A20EB73DD0003E7F5 /* GPUImageDemo */ = {
+			isa = PBXGroup;
+			children = (
+				272B5F6B20EB73F20003E7F5 /* GPUImageViewController.h */,
+				272B5F6C20EB73F20003E7F5 /* GPUImageViewController.m */,
+			);
+			path = GPUImageDemo;
 			sourceTree = "<group>";
 		};
 		2730D5EF1F26F07A00B4955A /* GLMUtil */ = {
@@ -976,6 +991,7 @@
 			children = (
 				27E92A231F403A4300A41563 /* AlgorithmViewController.h */,
 				27E92A241F403A4300A41563 /* AlgorithmViewController.m */,
+				27B1CC4920AFFAB200D46F16 /* <Algorithms> */,
 				27E92A1F1F402AA900A41563 /* Sorting */,
 				27D72C3D1E9A2FA6008FDD23 /* ChainTable */,
 				27D4E0D41E93633B00D70252 /* Dijkstra */,
@@ -1065,6 +1081,31 @@
 			path = Sales_data;
 			sourceTree = "<group>";
 		};
+		27B1CC4920AFFAB200D46F16 /* <Algorithms> */ = {
+			isa = PBXGroup;
+			children = (
+				27B1CC4A20AFFAB200D46F16 /* Chapter2 */,
+			);
+			path = "<Algorithms>";
+			sourceTree = "<group>";
+		};
+		27B1CC4A20AFFAB200D46F16 /* Chapter2 */ = {
+			isa = PBXGroup;
+			children = (
+				27B1CC4B20AFFAB200D46F16 /* Chapter2_1 */,
+			);
+			path = Chapter2;
+			sourceTree = "<group>";
+		};
+		27B1CC4B20AFFAB200D46F16 /* Chapter2_1 */ = {
+			isa = PBXGroup;
+			children = (
+				27B1CC4C20AFFB2D00D46F16 /* PrimarySorting.h */,
+				27B1CC5520B015D000D46F16 /* PrimarySorting.c */,
+			);
+			path = Chapter2_1;
+			sourceTree = "<group>";
+		};
 		27B9E7421D43189600E7345B /* HeaderFile */ = {
 			isa = PBXGroup;
 			children = (
@@ -1134,6 +1175,7 @@
 		27CE94521D3B484A003791FC /* FROSTPlatform */ = {
 			isa = PBXGroup;
 			children = (
+				272B5F6A20EB73DD0003E7F5 /* GPUImageDemo */,
 				27A1A1871EE0614200621E7B /* C++Demo */,
 				275BAC3B1EC08E630091371A /* OpenGLDemo */,
 				2747D6E91E49AA0100C7F84F /* AlgorithmDemo */,
@@ -1204,26 +1246,9 @@
 		27CE948A1D3BC719003791FC /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				27CE948B1D3BC719003791FC /* Model */,
-				27CE948C1D3BC719003791FC /* View */,
 				27CE948D1D3BC719003791FC /* ViewController */,
-				27CE948E1D3BC719003791FC /* ViewModel */,
 			);
 			path = Main;
-			sourceTree = "<group>";
-		};
-		27CE948B1D3BC719003791FC /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		27CE948C1D3BC719003791FC /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		27CE948D1D3BC719003791FC /* ViewController */ = {
@@ -1233,13 +1258,6 @@
 				27DF39DE1D3CA55F001C5C33 /* MainViewControler.m */,
 			);
 			path = ViewController;
-			sourceTree = "<group>";
-		};
-		27CE948E1D3BC719003791FC /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		27CE948F1D3BC726003791FC /* Model */ = {
@@ -1755,6 +1773,7 @@
 				2743B47A1E1F316B0057B033 /* ChildrenSearchFactory.m in Sources */,
 				27E92A221F402AE100A41563 /* SortingDemo.m in Sources */,
 				2788766A1D88F36900359885 /* DemoRequestAPI.m in Sources */,
+				27B1CC5620B015D100D46F16 /* PrimarySorting.c in Sources */,
 				27C8932A1D4E169100FE4A32 /* TZPhotoPreviewController.m in Sources */,
 				27942AF01D86672B00581782 /* FRTChainRequest.m in Sources */,
 				27DF39DF1D3CA55F001C5C33 /* MainViewControler.m in Sources */,
@@ -1765,6 +1784,7 @@
 				278F61CD1D48F0DF00EF5CDC /* EditViewControllerManager.m in Sources */,
 				27CE945B1D3B484A003791FC /* ViewController.m in Sources */,
 				27C8932C1D4E169100FE4A32 /* UIView+Layout.m in Sources */,
+				272B5F6D20EB73F20003E7F5 /* GPUImageViewController.m in Sources */,
 				27DF39DC1D3CA504001C5C33 /* RootViewController.m in Sources */,
 				27942AF41D86AA5500581782 /* FRTBatchRequest.m in Sources */,
 				27DF39D61D3C7A9B001C5C33 /* RootModel.m in Sources */,

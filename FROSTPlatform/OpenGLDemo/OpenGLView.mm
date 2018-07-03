@@ -32,6 +32,8 @@ typedef struct {
 @property (assign) GLuint colorRenderBuffer;
 @property (assign) GLuint frameBuffer;
 @property (assign) GLuint glProgramBuffer;
+@property (assign) GLuint triangleVAO;
+@property (nonatomic, strong) CADisplayLink *displayLink;
 
 
 @end
@@ -58,8 +60,9 @@ typedef struct {
 
         [self setupGLProgram];
         
-        [self render];
+        [self creatViewport];
         
+        [self creatDrawEngine];
         
     }
     
@@ -111,23 +114,14 @@ typedef struct {
     
 }
 
--(void)render {
-    glClearColor(1.0, 1.0, 0, 1.0);     //用来设置清屏颜色
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+-(void)creatViewport {
 
     glViewport(0, 0, self.frame.size.width, self.frame.size.height);
-
-//    [self setupTriangleVertexDataDemo];
-//    [self setupTriangleVertexDataCaseNormal];
-//    [self setupTriangleVertexData];
-//    [self setupCircularVertexData];
-//    [self setupTriangleVertexDataCaseVBO];
-//    [self setupTextureDemeo];
-//    [self setup3DTextureDemeo];
-    [self setupLightDemeo];
-
     
-    [self.glContext presentRenderbuffer:GL_RENDERBUFFER];
+    glClearColor(0.0, 0.0, 0.0, 1.0);     //用来设置清屏颜色
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    
+    [self setupTriangleVertexDataDemo];
     
 }
 
@@ -136,506 +130,267 @@ typedef struct {
     NSString *vertFile = [[NSBundle mainBundle] pathForResource:@"vert.glsl" ofType:nil];
     NSString *fragFile = [[NSBundle mainBundle] pathForResource:@"frag.glsl" ofType:nil];
     _glProgramBuffer = createGLProgramFromFile(vertFile.UTF8String, fragFile.UTF8String);
-    
     glUseProgram(_glProgramBuffer);
+
 }
 
 -(void)setupTriangleVertexDataDemo {
     
     GLfloat vertices[] = {
-        0.0f,  0.5f, 0.0f,
-        -0.5f, -0.5f, 0.0f,
-        0.5f,  -0.5f, 0.0f };
-    
-    GLint posSlot = glGetAttribLocation(_glProgramBuffer, "position");
-    glVertexAttribPointer(posSlot, 3, GL_FLOAT, GL_FALSE, 0, vertices);
-    glEnableVertexAttribArray(posSlot);
-    
-    GLuint vertexBuffer;
-    glGenBuffers(1, &vertexBuffer);
-    glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-    
-    glVertexAttribPointer(posSlot, 3, GL_FLOAT, GL_FALSE, 0, 0);
-    glEnableVertexAttribArray(posSlot);
-    
-    glDrawArrays(GL_LINE_LOOP, 0, 3);
-    
-}
-
--(void)setupTriangleVertexDataCaseNormal {
-
-    // 需要加static关键字，否则数据传输存在问题
-    static GLfloat vertices[] = { //顶点坐标
-        -1.0f,-1.0f, 0.0f,
-        1.0f,1.0f,0.0f,
-        -1.0f,1.0f, 0.0f
+        0.5f, 0.5f, 0.0f,   // 右上角
+        0.5f, -0.5f, 0.0f,  // 右下角
+        -0.5f, -0.5f, 0.0f, // 左下角
+        -0.5f, 0.5f, 0.0f   // 左上角
     };
     
-    GLint posSlot = glGetAttribLocation(_glProgramBuffer, "position");
-    glVertexAttribPointer(posSlot, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*3, vertices);
-    glEnableVertexAttribArray(posSlot);
-    
-    static GLfloat colors[] = {
-        0.0f, 1.0f, 0.0f,
-        0.0f, 1.0f, 0.0f,
-        0.0f, 1.0f, 0.0f
+    GLuint indices[] = { // 注意索引从0开始!
+        0, 1, 3, // 第一个三角形
+        1, 2, 3  // 第二个三角形
     };
     
-    GLint colorSlot = glGetAttribLocation(_glProgramBuffer, "color");
-    glVertexAttribPointer(colorSlot, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*3, colors);
-    glEnableVertexAttribArray(colorSlot);
+    glGenVertexArrays(1, &_triangleVAO);
     
-    glDrawArrays(GL_TRIANGLES, 0, 3); //直接食用顶点数据画三角形
-
-}
-
-/**
- 使用数组索引画三角形
- */
--(void)setupTriangleVertexDataCaseArrayIndex {
-    
-    // 需要加static关键字，否则数据传输存在问题
-    static GLfloat vertices[] = { //顶点坐标
-        -1.0f,-1.0f, 0.0f,
-        1.0f,1.0f,0.0f,
-        -1.0f,1.0f, 0.0f,
-        
-        -1.0f,-1.0f,0.0f,
-        1.0f,-1.0f,0.0f,
-        1.0f,1.0f,0.0f
-    };
-    
-    static GLbyte indexs[] = { //索引数组
-        
-        0,1,2,
-        
-        2,4,5
-    };
-    
-    GLint posSlot = glGetAttribLocation(_glProgramBuffer, "position");
-    glVertexAttribPointer(posSlot, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*3, vertices);
-    glEnableVertexAttribArray(posSlot);
-    
-    static GLfloat colors[] = {
-        0.0f, 1.0f, 0.0f,
-        0.0f, 1.0f, 0.0f,
-        0.0f, 1.0f, 0.0f,
-        
-        0.0f, 1.0f, 0.0f,
-        0.0f, 1.0f, 0.0f,
-        0.0f, 1.0f, 0.0f
-    };
-    GLint colorSlot = glGetAttribLocation(_glProgramBuffer, "color");
-    glVertexAttribPointer(colorSlot, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*3, colors);
-    glEnableVertexAttribArray(colorSlot);
-    
-    glDrawElements(GL_TRIANGLES, sizeof(indexs)/sizeof(indexs[0]), GL_UNSIGNED_BYTE, indexs); //使用索引数组三角形
-}
-
-/**
- 使用VBO画三角形
- */
--(void)setupTriangleVertexDataCaseVBO {
-    
-    typedef struct {
-        float Position[3];
-        float Color[4];
-    } Vertex;
-    
-    const Vertex Vertices[] = {
-        {{-1,-1,0}, {0,0,0,1}},// 左下，黑色
-        {{1,-1,0}, {1,0,0,1}}, // 右下，红色
-        {{-1,1,0}, {0,0,1,1}}, // 左上，蓝色
-        {{1,1,0}, {0,1,0,1}},  // 右上，绿色
-    };
-    
-    
-    const GLubyte Indices[] = {
-        0,1,2, // 三角形0
-        1,2,3  // 三角形1
-    };
-    
-    GLuint vertexBuffer;
-    glGenBuffers(1, &vertexBuffer);
-    glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);// 绑定vertexBuffer到GL_ARRAY_BUFFER，
-    glBufferData(GL_ARRAY_BUFFER, sizeof(Vertices), Vertices, GL_STATIC_DRAW); // 给VBO传递数据
-    
-    GLuint indexBuffer;
-    glGenBuffers(1, &indexBuffer);
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indexBuffer);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(Indices), Indices, GL_STATIC_DRAW);
-    
-    GLint posSlot = glGetAttribLocation(_glProgramBuffer, "position");
-    GLint colorSlot = glGetAttribLocation(_glProgramBuffer, "color");
-    
-    glVertexAttribPointer(posSlot, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), 0);
-    glEnableVertexAttribArray(posSlot);
-    
-    glVertexAttribPointer(colorSlot, 4, GL_FLOAT, GL_FALSE, sizeof(Vertex), (GLvoid *)(sizeof(float) * 3));
-    glEnableVertexAttribArray(colorSlot);
-    
-    glDrawElements(GL_TRIANGLE_STRIP, sizeof(Indices)/sizeof(Indices[0]), GL_UNSIGNED_BYTE, 0);
-    
-}
-
-/**
- 画圆形
- */
--(void)setupCircularVertexData {
-
-    int num = 100;
-    
-    Vertex *vertext = (Vertex *)malloc(sizeof(Vertex) * num);
-    memset(vertext, 0x00, sizeof(Vertex) * num);
-    
-    float horizontal_R = 0.8;
-    float vertical_R = horizontal_R*self.frame.size.width/self.frame.size.height;
-    
-    float delta = 2.0*M_PI/100;
-    
-    for (int i = 0; i< 100; i++) {
-        GLfloat x = horizontal_R * cos(delta * i);
-        GLfloat y = vertical_R * sin(delta * i);
-        GLfloat z = 0.0;
-        vertext[i] = (Vertex){x, y, z, x, y, x+y};
-    }
-    
-    GLint posSlot = glGetAttribLocation(_glProgramBuffer, "position");
-    glVertexAttribPointer(posSlot, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), vertext);
-    glEnableVertexAttribArray(posSlot);
-    
-    GLint colorSlot = glGetAttribLocation(_glProgramBuffer, "color");
-    glVertexAttribPointer(colorSlot, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), vertext+sizeof(GLfloat)*3);
-    glEnableVertexAttribArray(colorSlot);
-    
-    glDrawArrays(GL_LINES, 0, num);
-
-}
-
-/**
- 绘制纹理
- */
--(void)setupTextureDemeo {
-    
-    NSString *path1 = [[NSBundle mainBundle] pathForResource:@"wood" ofType:@"jpg"];
-    NSString *path2 = [[NSBundle mainBundle] pathForResource:@"smile" ofType:@"jpg"];
-
-    GLfloat b = 0.5 * self.frame.size.width / self.frame.size.height;
-    
-   GLfloat vertices[] = {
-       0.5f,  0.5, 0.0f,   1.0f, 0.0f, 0.0f,   1.0f, 1.0f,   // 右上
-       0.5f, -0.5, 0.0f,   0.0f, 1.0f, 0.0f,   1.0f, 0.0f,   // 右下
-       -0.5f, -0.5, 0.0f,   0.0f, 0.0f, 1.0f,   0.0f, 0.0f,   // 左下
-       -0.5f,  0.5, 0.0f,   1.0f, 1.0f, 0.0f,   0.0f, 1.0f    // 左上
-    };
-    
-    GLuint Indices[] = {
-        0,1,3, // 三角形0
-        1,2,3  // 三角形1
-    };
-    
-    GLuint VAO;
-    glGenVertexArrays(1, &VAO);
-    glBindVertexArray(VAO);
-
-    GLuint vertexBuffer;
-    glGenBuffers(1, &vertexBuffer);
-    glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);// 绑定vertexBuffer到GL_ARRAY_BUFFER，
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW); // 给VBO传递数据
-    
-    GLuint indexBuffer;
-    glGenBuffers(1, &indexBuffer);
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indexBuffer);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(Indices), Indices, GL_STATIC_DRAW);
-    
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*8, NULL);
-    glEnableVertexAttribArray(0);
-    
-    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*8, (GLvoid*)(3 * sizeof(GLfloat)));
-    glEnableVertexAttribArray(1);
-
-    glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*8, (GLvoid*)(6 * sizeof(GLfloat)));
-    glEnableVertexAttribArray(2);
-    
-    glm::mat4 model;
-    float Angle1 = glm::radians(-55.0);
-
-    model = glm::rotate(model, Angle1, glm::vec3(1.0f, 0.0f, 0.0f));
-    
-    glm::mat4 view;
-    view = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f));
-    
-    glm::mat4 projection;
-    float scale = self.frame.size.width / self.frame.size.height;
-    float Angle = glm::radians(45.0);
-    projection = glm::perspective(Angle, scale, 0.1f, 100.0f);
-    
-    GLuint modelLoc = glGetUniformLocation(_glProgramBuffer, "model");
-    GLuint viewLoc = glGetUniformLocation(_glProgramBuffer, "view");
-    GLuint projectionLoc = glGetUniformLocation(_glProgramBuffer, "projection");
-    
-    
-    glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-    glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
-    glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, glm::value_ptr(projection));
-    
-    glActiveTexture(GL_TEXTURE0);
-    GLint texture1 = [SamplerImageUtil setupTextureCoreGraphicsToImage:path1];
-    glBindTexture(GL_TEXTURE_2D, texture1);
-    GLint textureSlot1 = glGetUniformLocation(_glProgramBuffer, "ourTexture1");
-    glUniform1i(textureSlot1, 0);
-
-
-    glActiveTexture(GL_TEXTURE1);
-    GLint texture2 = [SamplerImageUtil setupTextureCoreGraphicsToImage:path2];
-    glBindTexture(GL_TEXTURE_2D, texture2);
-    GLint textureSlot2 = glGetUniformLocation(_glProgramBuffer, "ourTexture2");
-    glUniform1i(textureSlot2, 1);
-    
-    glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-    
-}
-
-/**
- 绘制3D纹理
- */
--(void)setup3DTextureDemeo {
-
-    glEnable(GL_DEPTH_TEST);
-    
-    float vertices[] = {
-        -0.5f, -0.5f, -0.5f,  0.0f, 0.0f,
-        0.5f, -0.5f, -0.5f,  1.0f, 0.0f,
-        0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-        0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-        -0.5f,  0.5f, -0.5f,  0.0f, 1.0f,
-        -0.5f, -0.5f, -0.5f,  0.0f, 0.0f,
-        
-        -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
-        0.5f, -0.5f,  0.5f,  1.0f, 0.0f,
-        0.5f,  0.5f,  0.5f,  1.0f, 1.0f,
-        0.5f,  0.5f,  0.5f,  1.0f, 1.0f,
-        -0.5f,  0.5f,  0.5f,  0.0f, 1.0f,
-        -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
-        
-        -0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-        -0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-        -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-        -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-        -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
-        -0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-        
-        0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-        0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-        0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-        0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-        0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
-        0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-        
-        -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-        0.5f, -0.5f, -0.5f,  1.0f, 1.0f,
-        0.5f, -0.5f,  0.5f,  1.0f, 0.0f,
-        0.5f, -0.5f,  0.5f,  1.0f, 0.0f,
-        -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
-        -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-        
-        -0.5f,  0.5f, -0.5f,  0.0f, 1.0f,
-        0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-        0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-        0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-        -0.5f,  0.5f,  0.5f,  0.0f, 0.0f,
-        -0.5f,  0.5f, -0.5f,  0.0f, 1.0f
-    };
-    
-    glm::vec3 cubePositions[] = {
-        glm::vec3( 0.0f,  0.0f,  0.0f),
-        glm::vec3( 2.0f,  5.0f, -15.0f),
-        glm::vec3(-1.5f, -2.2f, -2.5f),
-        glm::vec3(-3.8f, -2.0f, -12.3f),
-        glm::vec3( 2.4f, -0.4f, -3.5f),
-        glm::vec3(-1.7f,  3.0f, -7.5f),
-        glm::vec3( 1.3f, -2.0f, -2.5f),
-        glm::vec3( 1.5f,  2.0f, -2.5f),
-        glm::vec3( 1.5f,  0.2f, -1.5f),
-        glm::vec3(-1.3f,  1.0f, -1.5f)
-    };
-    
-    NSString *path1 = [[NSBundle mainBundle] pathForResource:@"wood" ofType:@"jpg"];
-    NSString *path2 = [[NSBundle mainBundle] pathForResource:@"smile" ofType:@"jpg"];
-    
-    GLuint vertexBuffer;
-    glGenBuffers(1, &vertexBuffer);
-    glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);// 绑定vertexBuffer到GL_ARRAY_BUFFER，
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW); // 给VBO传递数据
-    
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*5, NULL);
-    glEnableVertexAttribArray(0);
-    
-    glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*5, (GLvoid*)(3 * sizeof(GLfloat)));
-    glEnableVertexAttribArray(2);
-    
-    glm::mat4 model;
-    float Angle1 = glm::radians(0.0f);
-    
-    model = glm::rotate(model, Angle1, glm::vec3(0.5f, 1.0f, 0.0f));
-    
-    glm::mat4 view;
-    view = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f));
-    
-    glm::mat4 projection;
-    float scale = self.frame.size.width / self.frame.size.height;
-    float Angle = glm::radians(45.0);
-    
-    projection = glm::perspective(Angle, scale, 0.1f, 100.0f);
-    
-    GLuint modelLoc = glGetUniformLocation(_glProgramBuffer, "model");
-    glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-    
-    GLuint viewLoc = glGetUniformLocation(_glProgramBuffer, "view");
-    glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
-    
-    GLuint projectionLoc = glGetUniformLocation(_glProgramBuffer, "projection");
-    glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, glm::value_ptr(projection));
-
-    glActiveTexture(GL_TEXTURE0);
-    GLint texture1 = [SamplerImageUtil setupTextureCoreGraphicsToImage:path1];
-    glBindTexture(GL_TEXTURE_2D, texture1);
-    GLint textureSlot1 = glGetUniformLocation(_glProgramBuffer, "ourTexture1");
-    glUniform1i(textureSlot1, 0);
-    
-    
-    glActiveTexture(GL_TEXTURE1);
-    GLint texture2 = [SamplerImageUtil setupTextureCoreGraphicsToImage:path2];
-    glBindTexture(GL_TEXTURE_2D, texture2);
-    GLint textureSlot2 = glGetUniformLocation(_glProgramBuffer, "ourTexture2");
-    glUniform1i(textureSlot2, 1);
-    
-    for (GLuint i = 0; i < 10; i++)
-    {
-        // Calculate the model matrix for each object and pass it to shader before drawing
-        glm::mat4 model;
-        model = glm::translate(model, cubePositions[i]);
-        GLfloat angle = 20.0f * i;
-        model = glm::rotate(model, angle, glm::vec3(1.0f, 0.3f, 0.5f));
-        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-        
-        glDrawArrays(GL_TRIANGLES, 0, 36);
-    }
-
-}
-
-/**
- 光照demo
- */
--(void)setupLightDemeo {
-    
-    glEnable(GL_DEPTH_TEST);
-    
-    float vertices[] = {
-        -0.5f, -0.5f, -0.5f,
-        0.5f, -0.5f, -0.5f,
-        0.5f,  0.5f, -0.5f,
-        0.5f,  0.5f, -0.5f,
-        -0.5f,  0.5f, -0.5f,
-        -0.5f, -0.5f, -0.5f,
-        
-        -0.5f, -0.5f,  0.5f,
-        0.5f, -0.5f,  0.5f,
-        0.5f,  0.5f,  0.5f,
-        0.5f,  0.5f,  0.5f,
-        -0.5f,  0.5f,  0.5f,
-        -0.5f, -0.5f,  0.5f,
-        
-        -0.5f,  0.5f,  0.5f,
-        -0.5f,  0.5f, -0.5f,
-        -0.5f, -0.5f, -0.5f,
-        -0.5f, -0.5f, -0.5f,
-        -0.5f, -0.5f,  0.5f,
-        -0.5f,  0.5f,  0.5f,
-        
-        0.5f,  0.5f,  0.5f,
-        0.5f,  0.5f, -0.5f,
-        0.5f, -0.5f, -0.5f,
-        0.5f, -0.5f, -0.5f,
-        0.5f, -0.5f,  0.5f,
-        0.5f,  0.5f,  0.5f,
-        
-        -0.5f, -0.5f, -0.5f,
-        0.5f, -0.5f, -0.5f,
-        0.5f, -0.5f,  0.5f,
-        0.5f, -0.5f,  0.5f,
-        -0.5f, -0.5f,  0.5f,
-        -0.5f, -0.5f, -0.5f,
-        
-        -0.5f,  0.5f, -0.5f,
-        0.5f,  0.5f, -0.5f,
-        0.5f,  0.5f,  0.5f,
-        0.5f,  0.5f,  0.5f,
-        -0.5f,  0.5f,  0.5f,
-        -0.5f,  0.5f, -0.5f
-    };
-    
-    GLuint VBO, containerVAO;
-    glGenVertexArrays(1, &containerVAO);
+    GLuint VBO;
     glGenBuffers(1, &VBO);
     
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+    GLuint EBO;
+    glGenBuffers(1, &EBO);
     
-    glBindVertexArray(containerVAO);
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), (GLvoid*)0);
-    glEnableVertexAttribArray(0);
+    
+    glBindVertexArray(_triangleVAO);
+        glBindBuffer(GL_ARRAY_BUFFER, VBO);
+        glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+    
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+        glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
+    
+        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), (GLvoid*)0);
+        glEnableVertexAttribArray(0);
     glBindVertexArray(0);
-    
-    GLuint lightVAO;
-    glGenVertexArrays(1, &lightVAO);
-    glBindVertexArray(lightVAO);
-    
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), (GLvoid*)0);
-    glEnableVertexAttribArray(0);
-    glBindVertexArray(0);
-    
-    GLint objectColorLoc = glGetUniformLocation(_glProgramBuffer, "objectColor");
-    GLint lightColorLoc  = glGetUniformLocation(_glProgramBuffer, "lightColor");
-    
-    glUniform3f(objectColorLoc, 1.0f, 0.5f, 0.31f);// 我们所熟悉的珊瑚红
-    glUniform3f(lightColorLoc,  1.0f, 1.0f, 1.0f); // 依旧把光源设置为白色
+}
 
-    
-    glm::mat4 model;
-    float Angle1 = glm::radians(0.0f);
-    model = glm::rotate(model, Angle1, glm::vec3(0.5f, 1.0f, 0.0f));
-    
-    glm::mat4 view;
-    view = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f));
-    
-    glm::mat4 projection;
-    float scale = self.frame.size.width / self.frame.size.height;
-    float Angle = glm::radians(45.0);
-    
-    projection = glm::perspective(Angle, scale, 0.1f, 100.0f);
-    
-    GLuint modelLoc = glGetUniformLocation(_glProgramBuffer, "model");
-    glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-    
-    GLuint viewLoc = glGetUniformLocation(_glProgramBuffer, "view");
-    glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
-    
-    GLuint projectionLoc = glGetUniformLocation(_glProgramBuffer, "projection");
-    glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, glm::value_ptr(projection));
-    
-    glBindVertexArray(containerVAO);
-//    GLfloat angle = 10.0f;
-//    model = glm::rotate(model, angle, glm::vec3(0.0, 1.0f, 0.0f));
-    model = glm::translate(model,  glm::vec3( 0.0f,  0.0f, -3.0f));
-    glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-    glDrawArrays(GL_TRIANGLES, 0, 36);
-    glBindVertexArray(0);
+-(void)creatDrawEngine
+{
+    self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(drawAction)];
+    self.displayLink.paused = YES;
+    [self.displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+    self.displayLink.paused = NO;
+}
 
+-(void)drawAction
+{
     
+    GLfloat greenValue = (sin(arc4random() % 2) / 2) + 0.5;
+    GLint vertexColorLocation = glGetUniformLocation(_glProgramBuffer, "ourColor");
+    glUniform4f(vertexColorLocation, greenValue, greenValue, 0.0f, 1.0f);
     
+    glBindVertexArray(_triangleVAO);
+    glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+    glBindVertexArray(0);
+    [self.glContext presentRenderbuffer:GL_RENDERBUFFER];
+
+}
+
+//-(void)setupTriangleVertexDataCaseNormal {
+//
+//    // 需要加static关键字，否则数据传输存在问题
+//    static GLfloat vertices[] = { //顶点坐标
+//        -1.0f,-1.0f, 0.0f,
+//        1.0f,1.0f,0.0f,
+//        -1.0f,1.0f, 0.0f
+//    };
+//
+//    GLint posSlot = glGetAttribLocation(_glProgramBuffer, "position");
+//    glVertexAttribPointer(posSlot, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*3, vertices);
+//    glEnableVertexAttribArray(posSlot);
+//
+//    static GLfloat colors[] = {
+//        0.0f, 1.0f, 0.0f,
+//        0.0f, 1.0f, 0.0f,
+//        0.0f, 1.0f, 0.0f
+//    };
+//
+//    GLint colorSlot = glGetAttribLocation(_glProgramBuffer, "color");
+//    glVertexAttribPointer(colorSlot, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*3, colors);
+//    glEnableVertexAttribArray(colorSlot);
+//
+//    glDrawArrays(GL_TRIANGLES, 0, 3); //直接食用顶点数据画三角形
+//
+//}
+//
+///**
+// 使用数组索引画三角形
+// */
+//-(void)setupTriangleVertexDataCaseArrayIndex {
+//
+//    // 需要加static关键字，否则数据传输存在问题
+//    static GLfloat vertices[] = { //顶点坐标
+//        -1.0f,-1.0f, 0.0f,
+//        1.0f,1.0f,0.0f,
+//        -1.0f,1.0f, 0.0f,
+//
+//        -1.0f,-1.0f,0.0f,
+//        1.0f,-1.0f,0.0f,
+//        1.0f,1.0f,0.0f
+//    };
+//
+//    static GLbyte indexs[] = { //索引数组
+//
+//        0,1,2,
+//
+//        2,4,5
+//    };
+//
+//    GLint posSlot = glGetAttribLocation(_glProgramBuffer, "position");
+//    glVertexAttribPointer(posSlot, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*3, vertices);
+//    glEnableVertexAttribArray(posSlot);
+//
+//    static GLfloat colors[] = {
+//        0.0f, 1.0f, 0.0f,
+//        0.0f, 1.0f, 0.0f,
+//        0.0f, 1.0f, 0.0f,
+//
+//        0.0f, 1.0f, 0.0f,
+//        0.0f, 1.0f, 0.0f,
+//        0.0f, 1.0f, 0.0f
+//    };
+//    GLint colorSlot = glGetAttribLocation(_glProgramBuffer, "color");
+//    glVertexAttribPointer(colorSlot, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*3, colors);
+//    glEnableVertexAttribArray(colorSlot);
+//
+//    glDrawElements(GL_TRIANGLES, sizeof(indexs)/sizeof(indexs[0]), GL_UNSIGNED_BYTE, indexs); //使用索引数组三角形
+//}
+//
+///**
+// 使用VBO画三角形
+// */
+//-(void)setupTriangleVertexDataCaseVBO {
+//
+//    typedef struct {
+//        float Position[3];
+//        float Color[4];
+//    } Vertex;
+//
+//    const Vertex Vertices[] = {
+//        {{-1,-1,0}, {0,0,0,1}},// 左下，黑色
+//        {{1,-1,0}, {1,0,0,1}}, // 右下，红色
+//        {{-1,1,0}, {0,0,1,1}}, // 左上，蓝色
+//        {{1,1,0}, {0,1,0,1}},  // 右上，绿色
+//    };
+//
+//
+//    const GLubyte Indices[] = {
+//        0,1,2, // 三角形0
+//        1,2,3  // 三角形1
+//    };
+//
+//    GLuint vertexBuffer;
+//    glGenBuffers(1, &vertexBuffer);
+//    glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);// 绑定vertexBuffer到GL_ARRAY_BUFFER，
+//    glBufferData(GL_ARRAY_BUFFER, sizeof(Vertices), Vertices, GL_STATIC_DRAW); // 给VBO传递数据
+//
+//    GLuint indexBuffer;
+//    glGenBuffers(1, &indexBuffer);
+//    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indexBuffer);
+//    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(Indices), Indices, GL_STATIC_DRAW);
+//
+//    GLint posSlot = glGetAttribLocation(_glProgramBuffer, "position");
+//    GLint colorSlot = glGetAttribLocation(_glProgramBuffer, "color");
+//
+//    glVertexAttribPointer(posSlot, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), 0);
+//    glEnableVertexAttribArray(posSlot);
+//
+//    glVertexAttribPointer(colorSlot, 4, GL_FLOAT, GL_FALSE, sizeof(Vertex), (GLvoid *)(sizeof(float) * 3));
+//    glEnableVertexAttribArray(colorSlot);
+//
+//    glDrawElements(GL_TRIANGLE_STRIP, sizeof(Indices)/sizeof(Indices[0]), GL_UNSIGNED_BYTE, 0);
+//
+//}
+//
+///**
+// 画圆形
+// */
+//-(void)setupCircularVertexData {
+//
+//    int num = 100;
+//
+//    Vertex *vertext = (Vertex *)malloc(sizeof(Vertex) * num);
+//    memset(vertext, 0x00, sizeof(Vertex) * num);
+//
+//    float horizontal_R = 0.8;
+//    float vertical_R = horizontal_R*self.frame.size.width/self.frame.size.height;
+//
+//    float delta = 2.0*M_PI/100;
+//
+//    for (int i = 0; i< 100; i++) {
+//        GLfloat x = horizontal_R * cos(delta * i);
+//        GLfloat y = vertical_R * sin(delta * i);
+//        GLfloat z = 0.0;
+//        vertext[i] = (Vertex){x, y, z, x, y, x+y};
+//    }
+//
+//    GLint posSlot = glGetAttribLocation(_glProgramBuffer, "position");
+//    glVertexAttribPointer(posSlot, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), vertext);
+//    glEnableVertexAttribArray(posSlot);
+//
+//    GLint colorSlot = glGetAttribLocation(_glProgramBuffer, "color");
+//    glVertexAttribPointer(colorSlot, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), vertext+sizeof(GLfloat)*3);
+//    glEnableVertexAttribArray(colorSlot);
+//
+//    glDrawArrays(GL_LINES, 0, num);
+//
+//}
+//
+///**
+// 绘制纹理
+// */
+//-(void)setupTextureDemeo {
+//
+//    NSString *path1 = [[NSBundle mainBundle] pathForResource:@"wood" ofType:@"jpg"];
+//    NSString *path2 = [[NSBundle mainBundle] pathForResource:@"smile" ofType:@"jpg"];
+//
+//    GLfloat b = 0.5 * self.frame.size.width / self.frame.size.height;
+//
+//   GLfloat vertices[] = {
+//       0.5f,  0.5, 0.0f,   1.0f, 0.0f, 0.0f,   1.0f, 1.0f,   // 右上
+//       0.5f, -0.5, 0.0f,   0.0f, 1.0f, 0.0f,   1.0f, 0.0f,   // 右下
+//       -0.5f, -0.5, 0.0f,   0.0f, 0.0f, 1.0f,   0.0f, 0.0f,   // 左下
+//       -0.5f,  0.5, 0.0f,   1.0f, 1.0f, 0.0f,   0.0f, 1.0f    // 左上
+//    };
+//
+//    GLuint Indices[] = {
+//        0,1,3, // 三角形0
+//        1,2,3  // 三角形1
+//    };
+//
+//    GLuint VAO;
+//    glGenVertexArrays(1, &VAO);
+//    glBindVertexArray(VAO);
+//
+//    GLuint vertexBuffer;
+//    glGenBuffers(1, &vertexBuffer);
+//    glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);// 绑定vertexBuffer到GL_ARRAY_BUFFER，
+//    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW); // 给VBO传递数据
+//
+//    GLuint indexBuffer;
+//    glGenBuffers(1, &indexBuffer);
+//    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indexBuffer);
+//    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(Indices), Indices, GL_STATIC_DRAW);
+//
+//    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*8, NULL);
+//    glEnableVertexAttribArray(0);
+//
+//    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*8, (GLvoid*)(3 * sizeof(GLfloat)));
+//    glEnableVertexAttribArray(1);
+//
+//    glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*8, (GLvoid*)(6 * sizeof(GLfloat)));
+//    glEnableVertexAttribArray(2);
+//
+//    glm::mat4 model;
+//    float Angle1 = glm::radians(-55.0);
+//
+//    model = glm::rotate(model, Angle1, glm::vec3(1.0f, 0.0f, 0.0f));
+//
 //    glm::mat4 view;
 //    view = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f));
 //
@@ -643,25 +398,298 @@ typedef struct {
 //    float scale = self.frame.size.width / self.frame.size.height;
 //    float Angle = glm::radians(45.0);
 //    projection = glm::perspective(Angle, scale, 0.1f, 100.0f);
-//    
-//    GLint modelLoc = glGetUniformLocation(_glProgramBuffer, "model");
-//    GLint viewLoc  = glGetUniformLocation(_glProgramBuffer,  "view");
-//    GLint projLoc  = glGetUniformLocation(_glProgramBuffer,  "projection");
-//    
-//    glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
-//    glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
-//    
-//    glBindVertexArray(containerVAO);
-//    
-//    float Angle1 = glm::radians(0.0f);
-//    glm::mat4  model = glm::rotate(model, Angle1, glm::vec3(0.0f, 0.0f, 0.0f));
 //
+//    GLuint modelLoc = glGetUniformLocation(_glProgramBuffer, "model");
+//    GLuint viewLoc = glGetUniformLocation(_glProgramBuffer, "view");
+//    GLuint projectionLoc = glGetUniformLocation(_glProgramBuffer, "projection");
+//
+//
+//    glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+//    glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
+//    glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, glm::value_ptr(projection));
+//
+//    glActiveTexture(GL_TEXTURE0);
+//    GLint texture1 = [SamplerImageUtil setupTextureCoreGraphicsToImage:path1];
+//    glBindTexture(GL_TEXTURE_2D, texture1);
+//    GLint textureSlot1 = glGetUniformLocation(_glProgramBuffer, "ourTexture1");
+//    glUniform1i(textureSlot1, 0);
+//
+//
+//    glActiveTexture(GL_TEXTURE1);
+//    GLint texture2 = [SamplerImageUtil setupTextureCoreGraphicsToImage:path2];
+//    glBindTexture(GL_TEXTURE_2D, texture2);
+//    GLint textureSlot2 = glGetUniformLocation(_glProgramBuffer, "ourTexture2");
+//    glUniform1i(textureSlot2, 1);
+//
+//    glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+//
+//}
+//
+///**
+// 绘制3D纹理
+// */
+//-(void)setup3DTextureDemeo {
+//
+//    glEnable(GL_DEPTH_TEST);
+//
+//    float vertices[] = {
+//        -0.5f, -0.5f, -0.5f,  0.0f, 0.0f,
+//        0.5f, -0.5f, -0.5f,  1.0f, 0.0f,
+//        0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
+//        0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
+//        -0.5f,  0.5f, -0.5f,  0.0f, 1.0f,
+//        -0.5f, -0.5f, -0.5f,  0.0f, 0.0f,
+//
+//        -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
+//        0.5f, -0.5f,  0.5f,  1.0f, 0.0f,
+//        0.5f,  0.5f,  0.5f,  1.0f, 1.0f,
+//        0.5f,  0.5f,  0.5f,  1.0f, 1.0f,
+//        -0.5f,  0.5f,  0.5f,  0.0f, 1.0f,
+//        -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
+//
+//        -0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
+//        -0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
+//        -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
+//        -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
+//        -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
+//        -0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
+//
+//        0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
+//        0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
+//        0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
+//        0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
+//        0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
+//        0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
+//
+//        -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
+//        0.5f, -0.5f, -0.5f,  1.0f, 1.0f,
+//        0.5f, -0.5f,  0.5f,  1.0f, 0.0f,
+//        0.5f, -0.5f,  0.5f,  1.0f, 0.0f,
+//        -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
+//        -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
+//
+//        -0.5f,  0.5f, -0.5f,  0.0f, 1.0f,
+//        0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
+//        0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
+//        0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
+//        -0.5f,  0.5f,  0.5f,  0.0f, 0.0f,
+//        -0.5f,  0.5f, -0.5f,  0.0f, 1.0f
+//    };
+//
+//    glm::vec3 cubePositions[] = {
+//        glm::vec3( 0.0f,  0.0f,  0.0f),
+//        glm::vec3( 2.0f,  5.0f, -15.0f),
+//        glm::vec3(-1.5f, -2.2f, -2.5f),
+//        glm::vec3(-3.8f, -2.0f, -12.3f),
+//        glm::vec3( 2.4f, -0.4f, -3.5f),
+//        glm::vec3(-1.7f,  3.0f, -7.5f),
+//        glm::vec3( 1.3f, -2.0f, -2.5f),
+//        glm::vec3( 1.5f,  2.0f, -2.5f),
+//        glm::vec3( 1.5f,  0.2f, -1.5f),
+//        glm::vec3(-1.3f,  1.0f, -1.5f)
+//    };
+//
+//    NSString *path1 = [[NSBundle mainBundle] pathForResource:@"wood" ofType:@"jpg"];
+//    NSString *path2 = [[NSBundle mainBundle] pathForResource:@"smile" ofType:@"jpg"];
+//
+//    GLuint vertexBuffer;
+//    glGenBuffers(1, &vertexBuffer);
+//    glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);// 绑定vertexBuffer到GL_ARRAY_BUFFER，
+//    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW); // 给VBO传递数据
+//
+//    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*5, NULL);
+//    glEnableVertexAttribArray(0);
+//
+//    glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*5, (GLvoid*)(3 * sizeof(GLfloat)));
+//    glEnableVertexAttribArray(2);
+//
+//    glm::mat4 model;
+//    float Angle1 = glm::radians(0.0f);
+//
+//    model = glm::rotate(model, Angle1, glm::vec3(0.5f, 1.0f, 0.0f));
+//
+//    glm::mat4 view;
+//    view = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f));
+//
+//    glm::mat4 projection;
+//    float scale = self.frame.size.width / self.frame.size.height;
+//    float Angle = glm::radians(45.0);
+//
+//    projection = glm::perspective(Angle, scale, 0.1f, 100.0f);
+//
+//    GLuint modelLoc = glGetUniformLocation(_glProgramBuffer, "model");
+//    glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+//
+//    GLuint viewLoc = glGetUniformLocation(_glProgramBuffer, "view");
+//    glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
+//
+//    GLuint projectionLoc = glGetUniformLocation(_glProgramBuffer, "projection");
+//    glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, glm::value_ptr(projection));
+//
+//    glActiveTexture(GL_TEXTURE0);
+//    GLint texture1 = [SamplerImageUtil setupTextureCoreGraphicsToImage:path1];
+//    glBindTexture(GL_TEXTURE_2D, texture1);
+//    GLint textureSlot1 = glGetUniformLocation(_glProgramBuffer, "ourTexture1");
+//    glUniform1i(textureSlot1, 0);
+//
+//
+//    glActiveTexture(GL_TEXTURE1);
+//    GLint texture2 = [SamplerImageUtil setupTextureCoreGraphicsToImage:path2];
+//    glBindTexture(GL_TEXTURE_2D, texture2);
+//    GLint textureSlot2 = glGetUniformLocation(_glProgramBuffer, "ourTexture2");
+//    glUniform1i(textureSlot2, 1);
+//
+//    for (GLuint i = 0; i < 10; i++)
+//    {
+//        // Calculate the model matrix for each object and pass it to shader before drawing
+//        glm::mat4 model;
+//        model = glm::translate(model, cubePositions[i]);
+//        GLfloat angle = 20.0f * i;
+//        model = glm::rotate(model, angle, glm::vec3(1.0f, 0.3f, 0.5f));
+//        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+//
+//        glDrawArrays(GL_TRIANGLES, 0, 36);
+//    }
+//
+//}
+//
+///**
+// 光照demo
+// */
+//-(void)setupLightDemeo {
+//
+//    glEnable(GL_DEPTH_TEST);
+//
+//    float vertices[] = {
+//        -0.5f, -0.5f, -0.5f,
+//        0.5f, -0.5f, -0.5f,
+//        0.5f,  0.5f, -0.5f,
+//        0.5f,  0.5f, -0.5f,
+//        -0.5f,  0.5f, -0.5f,
+//        -0.5f, -0.5f, -0.5f,
+//
+//        -0.5f, -0.5f,  0.5f,
+//        0.5f, -0.5f,  0.5f,
+//        0.5f,  0.5f,  0.5f,
+//        0.5f,  0.5f,  0.5f,
+//        -0.5f,  0.5f,  0.5f,
+//        -0.5f, -0.5f,  0.5f,
+//
+//        -0.5f,  0.5f,  0.5f,
+//        -0.5f,  0.5f, -0.5f,
+//        -0.5f, -0.5f, -0.5f,
+//        -0.5f, -0.5f, -0.5f,
+//        -0.5f, -0.5f,  0.5f,
+//        -0.5f,  0.5f,  0.5f,
+//
+//        0.5f,  0.5f,  0.5f,
+//        0.5f,  0.5f, -0.5f,
+//        0.5f, -0.5f, -0.5f,
+//        0.5f, -0.5f, -0.5f,
+//        0.5f, -0.5f,  0.5f,
+//        0.5f,  0.5f,  0.5f,
+//
+//        -0.5f, -0.5f, -0.5f,
+//        0.5f, -0.5f, -0.5f,
+//        0.5f, -0.5f,  0.5f,
+//        0.5f, -0.5f,  0.5f,
+//        -0.5f, -0.5f,  0.5f,
+//        -0.5f, -0.5f, -0.5f,
+//
+//        -0.5f,  0.5f, -0.5f,
+//        0.5f,  0.5f, -0.5f,
+//        0.5f,  0.5f,  0.5f,
+//        0.5f,  0.5f,  0.5f,
+//        -0.5f,  0.5f,  0.5f,
+//        -0.5f,  0.5f, -0.5f
+//    };
+//
+//    GLuint VBO, containerVAO;
+//    glGenVertexArrays(1, &containerVAO);
+//    glGenBuffers(1, &VBO);
+//
+//    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+//    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+//
+//    glBindVertexArray(containerVAO);
+//    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), (GLvoid*)0);
+//    glEnableVertexAttribArray(0);
+//    glBindVertexArray(0);
+//
+//    GLuint lightVAO;
+//    glGenVertexArrays(1, &lightVAO);
+//    glBindVertexArray(lightVAO);
+//
+//    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+//    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), (GLvoid*)0);
+//    glEnableVertexAttribArray(0);
+//    glBindVertexArray(0);
+//
+//    GLint objectColorLoc = glGetUniformLocation(_glProgramBuffer, "objectColor");
+//    GLint lightColorLoc  = glGetUniformLocation(_glProgramBuffer, "lightColor");
+//
+//    glUniform3f(objectColorLoc, 1.0f, 0.5f, 0.31f);// 我们所熟悉的珊瑚红
+//    glUniform3f(lightColorLoc,  1.0f, 1.0f, 1.0f); // 依旧把光源设置为白色
+//
+//
+//    glm::mat4 model;
+//    float Angle1 = glm::radians(0.0f);
+//    model = glm::rotate(model, Angle1, glm::vec3(0.5f, 1.0f, 0.0f));
+//
+//    glm::mat4 view;
+//    view = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f));
+//
+//    glm::mat4 projection;
+//    float scale = self.frame.size.width / self.frame.size.height;
+//    float Angle = glm::radians(45.0);
+//
+//    projection = glm::perspective(Angle, scale, 0.1f, 100.0f);
+//
+//    GLuint modelLoc = glGetUniformLocation(_glProgramBuffer, "model");
+//    glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+//
+//    GLuint viewLoc = glGetUniformLocation(_glProgramBuffer, "view");
+//    glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
+//
+//    GLuint projectionLoc = glGetUniformLocation(_glProgramBuffer, "projection");
+//    glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, glm::value_ptr(projection));
+//
+//    glBindVertexArray(containerVAO);
+////    GLfloat angle = 10.0f;
+////    model = glm::rotate(model, angle, glm::vec3(0.0, 1.0f, 0.0f));
+//    model = glm::translate(model,  glm::vec3( 0.0f,  0.0f, -3.0f));
 //    glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 //    glDrawArrays(GL_TRIANGLES, 0, 36);
 //    glBindVertexArray(0);
-    
-    
-}
+//
+//
+//
+////    glm::mat4 view;
+////    view = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f));
+////
+////    glm::mat4 projection;
+////    float scale = self.frame.size.width / self.frame.size.height;
+////    float Angle = glm::radians(45.0);
+////    projection = glm::perspective(Angle, scale, 0.1f, 100.0f);
+////
+////    GLint modelLoc = glGetUniformLocation(_glProgramBuffer, "model");
+////    GLint viewLoc  = glGetUniformLocation(_glProgramBuffer,  "view");
+////    GLint projLoc  = glGetUniformLocation(_glProgramBuffer,  "projection");
+////
+////    glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
+////    glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
+////
+////    glBindVertexArray(containerVAO);
+////
+////    float Angle1 = glm::radians(0.0f);
+////    glm::mat4  model = glm::rotate(model, Angle1, glm::vec3(0.0f, 0.0f, 0.0f));
+////
+////    glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+////    glDrawArrays(GL_TRIANGLES, 0, 36);
+////    glBindVertexArray(0);
+//
+//
+//}
 
 /**
  释放

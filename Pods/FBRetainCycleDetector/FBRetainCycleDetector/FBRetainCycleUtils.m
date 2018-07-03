@@ -19,28 +19,48 @@
 #import "FBObjectiveCObject.h"
 #import "FBObjectGraphConfiguration.h"
 
-FBObjectiveCGraphElement *FBWrapObjectGraphElementWithContext(id object,
+static BOOL _ShouldBreakGraphEdge(FBObjectGraphConfiguration *configuration,
+                                  FBObjectiveCGraphElement *fromObject,
+                                  NSString *byIvar,
+                                  Class toObjectOfClass) {
+  for (FBGraphEdgeFilterBlock filterBlock in configuration.filterBlocks) {
+    if (filterBlock(fromObject, byIvar, toObjectOfClass) == FBGraphEdgeInvalid) {
+      return YES;
+    }
+  }
+
+  return NO;
+}
+
+FBObjectiveCGraphElement *FBWrapObjectGraphElementWithContext(FBObjectiveCGraphElement *sourceElement,
+                                                              id object,
                                                               FBObjectGraphConfiguration *configuration,
                                                               NSArray<NSString *> *namePath) {
+  if (_ShouldBreakGraphEdge(configuration, sourceElement, [namePath firstObject], object_getClass(object))) {
+    return nil;
+  }
+  FBObjectiveCGraphElement *newElement;
   if (FBObjectIsBlock((__bridge void *)object)) {
-    return [[FBObjectiveCBlock alloc] initWithObject:object
-                                      configuration:configuration
-                                            namePath:namePath];
+    newElement = [[FBObjectiveCBlock alloc] initWithObject:object
+                                             configuration:configuration
+                                                  namePath:namePath];
   } else {
     if ([object_getClass(object) isSubclassOfClass:[NSTimer class]] &&
         configuration.shouldInspectTimers) {
-      return [[FBObjectiveCNSCFTimer alloc] initWithObject:object
-                                             configuration:configuration
-                                                  namePath:namePath];
+      newElement = [[FBObjectiveCNSCFTimer alloc] initWithObject:object
+                                                   configuration:configuration
+                                                        namePath:namePath];
     } else {
-      return [[FBObjectiveCObject alloc] initWithObject:object
-                                          configuration:configuration
-                                               namePath:namePath];
+      newElement = [[FBObjectiveCObject alloc] initWithObject:object
+                                                configuration:configuration
+                                                     namePath:namePath];
     }
   }
+  return (configuration && configuration.transformerBlock) ? configuration.transformerBlock(newElement) : newElement;
 }
 
-FBObjectiveCGraphElement *FBWrapObjectGraphElement(id object,
+FBObjectiveCGraphElement *FBWrapObjectGraphElement(FBObjectiveCGraphElement *sourceElement,
+                                                   id object,
                                                    FBObjectGraphConfiguration *configuration) {
-  return FBWrapObjectGraphElementWithContext(object, configuration, nil);
+  return FBWrapObjectGraphElementWithContext(sourceElement, object, configuration, nil);
 }

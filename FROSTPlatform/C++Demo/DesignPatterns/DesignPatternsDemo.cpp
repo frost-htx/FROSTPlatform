@@ -125,5 +125,18 @@ namespace AdapterPattern {
 
 }
 
-
+namespace PrototypePattern {
+    
+    void PrototypePatternAction ()
+    {
+        string str = "123";
+        PrototypeClass *p = new PrototypeClassA(str);
+        PrototypeClass *p1 = p->Clone();
+        p1->Show();
+    
+        Resume *r1 = new ResumeA();
+        r1->FillResume();
+        
+    }
+}
 

@@ -1,5 +1,5 @@
 //
-//  IQKeyboardManagerConstantsInternal.h
+// IQKeyboardManagerConstantsInternal.h
 // https://github.com/hackiftekhar/IQKeyboardManager
 // Copyright (c) 2013-16 Iftekhar Qurashi.
 //
@@ -44,5 +44,8 @@ typedef NS_ENUM(NSInteger, IQLayoutGuidePosition) {
     IQLayoutGuidePositionTop,
     IQLayoutGuidePositionBottom,
 };
+
+#define IQ_IS_IOS10_OR_GREATER ([[NSProcessInfo processInfo] operatingSystemVersion].majorVersion >= 10)
+#define IQ_IS_IOS11_OR_GREATER ([[NSProcessInfo processInfo] operatingSystemVersion].majorVersion >= 11)
 
 #endif

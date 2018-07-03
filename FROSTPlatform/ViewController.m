@@ -13,6 +13,7 @@
 #import "OpenGLDemoViewController.h"
 #import "C++DemoViewController.h"
 #import "AlgorithmViewController.h"
+#import "GPUImageViewController.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate,DemoViewControllerDelegate>
 
@@ -106,6 +107,10 @@
         AlgorithmViewController *c__DemoViewController = [[AlgorithmViewController alloc] init];
         [self.navigationController pushViewController:c__DemoViewController animated:YES];
     }
+    if ([titleName isEqualToString:@"GPUImage"]) {
+        GPUImageViewController *gpuImageViewController = [[GPUImageViewController alloc] init];
+        [self.navigationController pushViewController:gpuImageViewController animated:YES];
+    }
 }
 
 #pragma mark DemoViewControllerDelegate 
@@ -118,7 +123,7 @@
 
 -(NSMutableArray *)dataArray {
     if (!_dataArray) {
-        _dataArray = [NSMutableArray arrayWithObjects:@"编辑器",@"Demo",@"OpenGl",@"C++",@"Algorith",nil];
+        _dataArray = [NSMutableArray arrayWithObjects:@"编辑器",@"Demo",@"OpenGl",@"C++",@"Algorith",@"GPUImage",nil];
     }
     return _dataArray;
 }

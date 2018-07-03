@@ -537,5 +537,89 @@ namespace AdapterPattern {
     
 }
 
+#pragma mark - /**********原型模式、模板方法模式**********/
+
+namespace PrototypePattern {
+    
+    class PrototypeClass {
+      
+    protected:
+        string name;
+        
+    public:
+        virtual PrototypeClass *Clone() {
+            return NULL;
+        };
+        
+        virtual void Show() {
+            
+        };
+        
+    };
+    
+    class PrototypeClassA:public PrototypeClass {
+        
+    public:
+        
+        PrototypeClassA(const PrototypeClassA &r) {
+            name = r.name;
+        };
+        
+        PrototypeClassA(string &str) {
+            name = str;
+        }
+    
+        PrototypeClassA *Clone() {
+            return new PrototypeClassA(*this);
+            
+        }
+        
+        void show() {
+            cout << "Name :" << name << endl;
+        }
+    };
+    
+    class Resume
+    {
+    protected:
+        
+        virtual void SetPersonalInfo() {};
+        virtual void SetEducation() {};
+        virtual void SetWorkExp(){};
+        
+    public:
+        
+        void FillResume()
+        {
+            SetPersonalInfo();
+            SetEducation();
+            SetWorkExp();
+        }
+        
+    };
+    
+    class ResumeA:public Resume {
+      
+    protected:
+        void SetPersonalInfo()
+        {
+            cout<< "A'Personal"<<endl;
+        }
+        
+        void SetEducation()
+        {
+            cout<< "A'Education"<<endl;
+        }
+        
+        void SetWorkExp()
+        {
+            cout<< "A'WorkExp"<<endl;
+        }
+        
+    };
+    
+    void PrototypePatternAction();
+    
+}
 
 #endif /* DesignPatternsDemo_hpp */
