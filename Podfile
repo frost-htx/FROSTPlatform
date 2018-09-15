@@ -1,4 +1,4 @@
-platform :ios, '8.0'
+platform :ios, '9.0'
 use_frameworks!
 
 target 'FROSTPlatform' do
@@ -17,6 +17,8 @@ target 'FROSTPlatform' do
     pod 'YYKit', '~> 1.0.1'
     pod 'ReactiveCocoa','~> 2.5'
     pod 'GPUImage', '~> 0.1.7'
+    pod 'Mapbox-iOS-SDK', '~> 4.1.1'
+
 end
 
 post_install do |installer|

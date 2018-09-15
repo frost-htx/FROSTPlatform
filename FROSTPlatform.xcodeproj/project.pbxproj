@@ -131,6 +131,8 @@
 		278876611D88E6FD00359885 /* DemoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 278876601D88E6FD00359885 /* DemoViewModel.m */; };
 		2788766A1D88F36900359885 /* DemoRequestAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 278876691D88F36900359885 /* DemoRequestAPI.m */; };
 		2788E5021EE11E140010362A /* Sales_data.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2788E5011EE11E140010362A /* Sales_data.mm */; };
+		278A1F31214CE0E80062D82B /* MYTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 278A1F30214CE0E80062D82B /* MYTestObject.m */; };
+		278A1F37214CE9060062D82B /* MYTestObject+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 278A1F36214CE9060062D82B /* MYTestObject+Category.m */; };
 		278F61CD1D48F0DF00EF5CDC /* EditViewControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 278F61CC1D48F0DF00EF5CDC /* EditViewControllerManager.m */; };
 		27942AF01D86672B00581782 /* FRTChainRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 27942AEF1D86672B00581782 /* FRTChainRequest.m */; };
 		27942AF41D86AA5500581782 /* FRTBatchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 27942AF31D86AA5500581782 /* FRTBatchRequest.m */; };
@@ -162,6 +164,10 @@
 		27CE946E1D3B484A003791FC /* FROSTPlatformTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CE946D1D3B484A003791FC /* FROSTPlatformTests.m */; };
 		27CE94791D3B484A003791FC /* FROSTPlatformUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CE94781D3B484A003791FC /* FROSTPlatformUITests.m */; };
 		27CE94A01D3BDFA1003791FC /* EditMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CE949F1D3BDFA1003791FC /* EditMainViewController.m */; };
+		27CF0C1120F8423600372FC4 /* GPUImageDemoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CF0C1020F8423600372FC4 /* GPUImageDemoView.m */; };
+		27D441232133A33000B36629 /* MapBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D441222133A33000B36629 /* MapBoxViewController.m */; };
+		27D441262133A3C900B36629 /* TTMGLMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D441252133A3C900B36629 /* TTMGLMapView.m */; };
+		27D441292133A48900B36629 /* MBMapObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D441282133A48900B36629 /* MBMapObject.m */; };
 		27D4E0D81E93633B00D70252 /* DijkstraDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D4E0D61E93633B00D70252 /* DijkstraDemo.m */; };
 		27D4E0DB1E93662E00D70252 /* HashTableDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D4E0DA1E93662E00D70252 /* HashTableDemo.m */; };
 		27D72C401E9A303E008FDD23 /* ChainTableDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D72C3F1E9A303E008FDD23 /* ChainTableDemo.m */; };
@@ -478,6 +484,10 @@
 		278876691D88F36900359885 /* DemoRequestAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoRequestAPI.m; sourceTree = "<group>"; };
 		2788766C1D89056000359885 /* FRTRequest-umbrella.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FRTRequest-umbrella.h"; sourceTree = "<group>"; };
 		2788E5011EE11E140010362A /* Sales_data.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Sales_data.mm; sourceTree = "<group>"; };
+		278A1F2F214CE0E80062D82B /* MYTestObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYTestObject.h; sourceTree = "<group>"; };
+		278A1F30214CE0E80062D82B /* MYTestObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYTestObject.m; sourceTree = "<group>"; };
+		278A1F35214CE9060062D82B /* MYTestObject+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MYTestObject+Category.h"; sourceTree = "<group>"; };
+		278A1F36214CE9060062D82B /* MYTestObject+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MYTestObject+Category.m"; sourceTree = "<group>"; };
 		278F60BD1D47C39A00EF5CDC /* EditItemRecognizerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditItemRecognizerProtocol.h; sourceTree = "<group>"; };
 		278F61CB1D48F0DF00EF5CDC /* EditViewControllerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewControllerManager.h; sourceTree = "<group>"; };
 		278F61CC1D48F0DF00EF5CDC /* EditViewControllerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewControllerManager.m; sourceTree = "<group>"; };
@@ -545,6 +555,14 @@
 		27CE949A1D3BDB91003791FC /* macroDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macroDefinition.h; sourceTree = "<group>"; };
 		27CE949E1D3BDFA1003791FC /* EditMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditMainViewController.h; sourceTree = "<group>"; };
 		27CE949F1D3BDFA1003791FC /* EditMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditMainViewController.m; sourceTree = "<group>"; };
+		27CF0C0F20F8423600372FC4 /* GPUImageDemoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPUImageDemoView.h; sourceTree = "<group>"; };
+		27CF0C1020F8423600372FC4 /* GPUImageDemoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPUImageDemoView.m; sourceTree = "<group>"; };
+		27D441212133A33000B36629 /* MapBoxViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapBoxViewController.h; sourceTree = "<group>"; };
+		27D441222133A33000B36629 /* MapBoxViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapBoxViewController.m; sourceTree = "<group>"; };
+		27D441242133A3C900B36629 /* TTMGLMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTMGLMapView.h; sourceTree = "<group>"; };
+		27D441252133A3C900B36629 /* TTMGLMapView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTMGLMapView.m; sourceTree = "<group>"; };
+		27D441272133A48900B36629 /* MBMapObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBMapObject.h; sourceTree = "<group>"; };
+		27D441282133A48900B36629 /* MBMapObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBMapObject.m; sourceTree = "<group>"; };
 		27D4E0D51E93633B00D70252 /* DijkstraDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DijkstraDemo.h; sourceTree = "<group>"; };
 		27D4E0D61E93633B00D70252 /* DijkstraDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DijkstraDemo.m; sourceTree = "<group>"; };
 		27D4E0D91E93662E00D70252 /* HashTableDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HashTableDemo.h; sourceTree = "<group>"; };
@@ -726,6 +744,8 @@
 		272B5F6A20EB73DD0003E7F5 /* GPUImageDemo */ = {
 			isa = PBXGroup;
 			children = (
+				27CF0C0F20F8423600372FC4 /* GPUImageDemoView.h */,
+				27CF0C1020F8423600372FC4 /* GPUImageDemoView.m */,
 				272B5F6B20EB73F20003E7F5 /* GPUImageViewController.h */,
 				272B5F6C20EB73F20003E7F5 /* GPUImageViewController.m */,
 			);
@@ -1175,6 +1195,7 @@
 		27CE94521D3B484A003791FC /* FROSTPlatform */ = {
 			isa = PBXGroup;
 			children = (
+				27D441202133A31600B36629 /* MapboxDemo */,
 				272B5F6A20EB73DD0003E7F5 /* GPUImageDemo */,
 				27A1A1871EE0614200621E7B /* C++Demo */,
 				275BAC3B1EC08E630091371A /* OpenGLDemo */,
@@ -1377,6 +1398,23 @@
 				27DF39D81D3C7AED001C5C33 /* EditViewModel.m */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		27D441202133A31600B36629 /* MapboxDemo */ = {
+			isa = PBXGroup;
+			children = (
+				27D441272133A48900B36629 /* MBMapObject.h */,
+				27D441282133A48900B36629 /* MBMapObject.m */,
+				27D441242133A3C900B36629 /* TTMGLMapView.h */,
+				27D441252133A3C900B36629 /* TTMGLMapView.m */,
+				27D441212133A33000B36629 /* MapBoxViewController.h */,
+				27D441222133A33000B36629 /* MapBoxViewController.m */,
+				278A1F35214CE9060062D82B /* MYTestObject+Category.h */,
+				278A1F36214CE9060062D82B /* MYTestObject+Category.m */,
+				278A1F2F214CE0E80062D82B /* MYTestObject.h */,
+				278A1F30214CE0E80062D82B /* MYTestObject.m */,
+			);
+			path = MapboxDemo;
 			sourceTree = "<group>";
 		};
 		27D4E0D41E93633B00D70252 /* Dijkstra */ = {
@@ -1743,7 +1781,9 @@
 				27AC26101D91369C00C4ED32 /* FRTBaseRequest+RequestError.m in Sources */,
 				27D72C401E9A303E008FDD23 /* ChainTableDemo.m in Sources */,
 				27DF39E81D3CC893001C5C33 /* EditCollectionView.m in Sources */,
+				278A1F31214CE0E80062D82B /* MYTestObject.m in Sources */,
 				271227AC1D791845001F0EAE /* FRTBaseRequest.m in Sources */,
+				27D441232133A33000B36629 /* MapBoxViewController.m in Sources */,
 				27128A921D6EED8F0034E706 /* DemoViewController.m in Sources */,
 				27AB30CB1F4DD18200D9BE4A /* BinaryHeapSorting.c in Sources */,
 				27D4E0D81E93633B00D70252 /* DijkstraDemo.m in Sources */,
@@ -1777,6 +1817,9 @@
 				27C8932A1D4E169100FE4A32 /* TZPhotoPreviewController.m in Sources */,
 				27942AF01D86672B00581782 /* FRTChainRequest.m in Sources */,
 				27DF39DF1D3CA55F001C5C33 /* MainViewControler.m in Sources */,
+				27D441262133A3C900B36629 /* TTMGLMapView.m in Sources */,
+				27D441292133A48900B36629 /* MBMapObject.m in Sources */,
+				278A1F37214CE9060062D82B /* MYTestObject+Category.m in Sources */,
 				27C893291D4E169100FE4A32 /* TZPhotoPreviewCell.m in Sources */,
 				2733E69F1F4FBF52000C6E12 /* LeftistHeaps.c in Sources */,
 				27E2D4711F6D14F3005DEFEC /* EffectiveItem1.cpp in Sources */,
@@ -1784,6 +1827,7 @@
 				278F61CD1D48F0DF00EF5CDC /* EditViewControllerManager.m in Sources */,
 				27CE945B1D3B484A003791FC /* ViewController.m in Sources */,
 				27C8932C1D4E169100FE4A32 /* UIView+Layout.m in Sources */,
+				27CF0C1120F8423600372FC4 /* GPUImageDemoView.m in Sources */,
 				272B5F6D20EB73F20003E7F5 /* GPUImageViewController.m in Sources */,
 				27DF39DC1D3CA504001C5C33 /* RootViewController.m in Sources */,
 				27942AF41D86AA5500581782 /* FRTBatchRequest.m in Sources */,

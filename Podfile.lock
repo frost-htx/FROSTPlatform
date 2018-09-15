@@ -24,6 +24,7 @@ PODS:
   - iCarousel (1.8.3)
   - IQKeyboardManager (4.0.13)
   - JSONModel (1.2.0)
+  - Mapbox-iOS-SDK (4.1.1)
   - Masonry (1.0.2)
   - MJRefresh (3.1.15.3)
   - NSLogger (1.7.0):
@@ -53,6 +54,7 @@ DEPENDENCIES:
   - iCarousel (~> 1.8.2)
   - IQKeyboardManager (~> 4.0.2)
   - JSONModel (~> 1.2.0)
+  - Mapbox-iOS-SDK (~> 4.1.1)
   - Masonry (~> 1.0.0)
   - MJRefresh (~> 3.1.0)
   - NSLogger (~> 1.7.0)
@@ -72,6 +74,7 @@ SPEC CHECKSUMS:
   iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
   IQKeyboardManager: 8eab4d8111418414619d1df8e4779ce5d0f8d7e2
   JSONModel: 12523685c4b623553ccf844bbbf7007624317b2c
+  Mapbox-iOS-SDK: 78e66fad4085433d04fccb9364df4be08042fb82
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
   NSLogger: daa17368272ddf10a0850c218fe49de23b50f2eb
@@ -81,6 +84,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 577ded012f032588b6cf83ed22453cd5f72bf203
+PODFILE CHECKSUM: '029de8d4178fa153140fd9eee40bfec1308821f1'
 
 COCOAPODS: 1.2.1

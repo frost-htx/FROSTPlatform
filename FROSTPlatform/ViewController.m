@@ -14,6 +14,7 @@
 #import "C++DemoViewController.h"
 #import "AlgorithmViewController.h"
 #import "GPUImageViewController.h"
+#import "MapBoxViewController.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate,DemoViewControllerDelegate>
 
@@ -111,6 +112,10 @@
         GPUImageViewController *gpuImageViewController = [[GPUImageViewController alloc] init];
         [self.navigationController pushViewController:gpuImageViewController animated:YES];
     }
+    if ([titleName isEqualToString:@"Mapbox"]) {
+        MapBoxViewController *gpuImageViewController = [[MapBoxViewController alloc] init];
+        [self.navigationController pushViewController:gpuImageViewController animated:YES];
+    }
 }
 
 #pragma mark DemoViewControllerDelegate 
@@ -123,7 +128,7 @@
 
 -(NSMutableArray *)dataArray {
     if (!_dataArray) {
-        _dataArray = [NSMutableArray arrayWithObjects:@"编辑器",@"Demo",@"OpenGl",@"C++",@"Algorith",@"GPUImage",nil];
+        _dataArray = [NSMutableArray arrayWithObjects:@"编辑器",@"Demo",@"OpenGl",@"C++",@"Algorith",@"GPUImage",@"Mapbox",nil];
     }
     return _dataArray;
 }
