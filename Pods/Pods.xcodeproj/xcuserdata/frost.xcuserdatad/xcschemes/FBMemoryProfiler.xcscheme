@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '131981766F2F9BAF0702F862C451AE39'
-               BlueprintName = 'FBMemoryProfiler'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'FBMemoryProfiler.framework'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2571E7C0810DB2B62893F138CF83D308"
+               BlueprintName = "FBMemoryProfiler"
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "FBMemoryProfiler.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

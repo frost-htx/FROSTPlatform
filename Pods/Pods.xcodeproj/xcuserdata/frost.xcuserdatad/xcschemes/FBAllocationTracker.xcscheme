@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'C34C11083B98E06F16A638EE1DE47AD6'
-               BlueprintName = 'FBAllocationTracker'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'FBAllocationTracker.framework'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "04B5C0F647EABE05EB809F758C45BE17"
+               BlueprintName = "FBAllocationTracker"
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "FBAllocationTracker.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

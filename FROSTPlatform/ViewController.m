@@ -14,7 +14,6 @@
 #import "C++DemoViewController.h"
 #import "AlgorithmViewController.h"
 #import "GPUImageViewController.h"
-#import "MapBoxViewController.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate,DemoViewControllerDelegate>
 
@@ -113,8 +112,6 @@
         [self.navigationController pushViewController:gpuImageViewController animated:YES];
     }
     if ([titleName isEqualToString:@"Mapbox"]) {
-        MapBoxViewController *gpuImageViewController = [[MapBoxViewController alloc] init];
-        [self.navigationController pushViewController:gpuImageViewController animated:YES];
     }
 }
 

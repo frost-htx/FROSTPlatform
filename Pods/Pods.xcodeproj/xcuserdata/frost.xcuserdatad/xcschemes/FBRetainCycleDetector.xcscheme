@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'B37B4DFB076D254F62C50A56A96130CB'
-               BlueprintName = 'FBRetainCycleDetector'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'FBRetainCycleDetector.framework'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0237BBEFB0E24888884F23D5BCF2AFC9"
+               BlueprintName = "FBRetainCycleDetector"
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "FBRetainCycleDetector.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

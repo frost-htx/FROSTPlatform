@@ -7,7 +7,6 @@
 //
 
 #import "GPUImageViewController.h"
-#import <GPUImage/GPUImage.h>
 #import "GPUImageDemoView.h"
 
 @interface GPUImageViewController ()
@@ -48,11 +47,7 @@
 }
 
 -(void)onCustom {
-    GPUImageFilter *filter = [[GPUImageSepiaFilter alloc] init];
-    UIImage *image = [UIImage imageNamed:@"wood.jpg"];
-    if (image) {
-        self.mImageView.image = [filter imageByFilteringImage:image];
-    }
+
 }
 
 - (void)didReceiveMemoryWarning {
