@@ -102,6 +102,7 @@
 		2730D8671F26FDA700B4955A /* OpenGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2730D8661F26FDA700B4955A /* OpenGLView.mm */; };
 		2733E69F1F4FBF52000C6E12 /* LeftistHeaps.c in Sources */ = {isa = PBXBuildFile; fileRef = 2733E69D1F4FBF52000C6E12 /* LeftistHeaps.c */; };
 		273B0F541F8F0A6200BC5E35 /* DesignPatternsDemo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 273B0F521F8F0A6200BC5E35 /* DesignPatternsDemo.cpp */; };
+		2741635E232892FE007516F7 /* LeetCodeDemo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2741635C232892FE007516F7 /* LeetCodeDemo.cpp */; };
 		2743B4761E1F30E90057B033 /* BaseSearchFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2743B4751E1F30E90057B033 /* BaseSearchFactory.m */; };
 		2743B47A1E1F316B0057B033 /* ChildrenSearchFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2743B4791E1F316B0057B033 /* ChildrenSearchFactory.m */; };
 		2743B4B51E1F701F0057B033 /* SonSearchFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2743B4B41E1F701F0057B033 /* SonSearchFactory.m */; };
@@ -125,6 +126,7 @@
 		2788766A1D88F36900359885 /* DemoRequestAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 278876691D88F36900359885 /* DemoRequestAPI.m */; };
 		2788E5021EE11E140010362A /* Sales_data.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2788E5011EE11E140010362A /* Sales_data.mm */; };
 		278F61CD1D48F0DF00EF5CDC /* EditViewControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 278F61CC1D48F0DF00EF5CDC /* EditViewControllerManager.m */; };
+		27921B00235AB460007A1391 /* AlgorithmFourth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27921AFE235AB460007A1391 /* AlgorithmFourth.cpp */; };
 		27942AF01D86672B00581782 /* FRTChainRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 27942AEF1D86672B00581782 /* FRTChainRequest.m */; };
 		27942AF41D86AA5500581782 /* FRTBatchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 27942AF31D86AA5500581782 /* FRTBatchRequest.m */; };
 		27957CD81D87B1C500E181F9 /* FRTBaseRequest+RequestCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 27957CD71D87B1C500E181F9 /* FRTBaseRequest+RequestCache.m */; };
@@ -181,7 +183,7 @@
 		27E3F0FE1D8FBC6500B878BB /* DemoRequestAPI2.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E3F0FD1D8FBC6500B878BB /* DemoRequestAPI2.m */; };
 		27E3F1031D8FE25800B878BB /* FRTChainRequestAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E3F1021D8FE25800B878BB /* FRTChainRequestAgent.m */; };
 		27E92A221F402AE100A41563 /* SortingDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E92A211F402AE100A41563 /* SortingDemo.m */; };
-		27E92A251F403A4300A41563 /* AlgorithmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E92A241F403A4300A41563 /* AlgorithmViewController.m */; };
+		27E92A251F403A4300A41563 /* AlgorithmViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 27E92A241F403A4300A41563 /* AlgorithmViewController.mm */; };
 		27E96EF21EEEAC2600F4D436 /* PlatformTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E96EF11EEEAC2600F4D436 /* PlatformTools.m */; };
 		286E63B1137A4979A98CF17D /* Pods_FROSTPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB6F7A8B1931D6E0FE5AB1F /* Pods_FROSTPlatform.framework */; };
 /* End PBXBuildFile section */
@@ -428,6 +430,8 @@
 		273B0F521F8F0A6200BC5E35 /* DesignPatternsDemo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DesignPatternsDemo.cpp; sourceTree = "<group>"; };
 		273B0F531F8F0A6200BC5E35 /* DesignPatternsDemo.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DesignPatternsDemo.hpp; sourceTree = "<group>"; };
 		2740CCAD1E2480EC00DA2F48 /* SearchProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchProtocol.h; sourceTree = "<group>"; };
+		2741635C232892FE007516F7 /* LeetCodeDemo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LeetCodeDemo.cpp; sourceTree = "<group>"; };
+		2741635D232892FE007516F7 /* LeetCodeDemo.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LeetCodeDemo.hpp; sourceTree = "<group>"; };
 		2743B4741E1F30E90057B033 /* BaseSearchFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseSearchFactory.h; sourceTree = "<group>"; };
 		2743B4751E1F30E90057B033 /* BaseSearchFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseSearchFactory.m; sourceTree = "<group>"; };
 		2743B4771E1F31080057B033 /* SearchManagerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchManagerProtocol.h; sourceTree = "<group>"; };
@@ -468,6 +472,8 @@
 		278F60BD1D47C39A00EF5CDC /* EditItemRecognizerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditItemRecognizerProtocol.h; sourceTree = "<group>"; };
 		278F61CB1D48F0DF00EF5CDC /* EditViewControllerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewControllerManager.h; sourceTree = "<group>"; };
 		278F61CC1D48F0DF00EF5CDC /* EditViewControllerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewControllerManager.m; sourceTree = "<group>"; };
+		27921AFE235AB460007A1391 /* AlgorithmFourth.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AlgorithmFourth.cpp; sourceTree = "<group>"; };
+		27921AFF235AB460007A1391 /* AlgorithmFourth.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AlgorithmFourth.hpp; sourceTree = "<group>"; };
 		27942AEE1D86672B00581782 /* FRTChainRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRTChainRequest.h; sourceTree = "<group>"; };
 		27942AEF1D86672B00581782 /* FRTChainRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRTChainRequest.m; sourceTree = "<group>"; };
 		27942AF21D86AA5500581782 /* FRTBatchRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRTBatchRequest.h; sourceTree = "<group>"; };
@@ -583,7 +589,7 @@
 		27E92A201F402AE100A41563 /* SortingDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortingDemo.h; sourceTree = "<group>"; };
 		27E92A211F402AE100A41563 /* SortingDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortingDemo.m; sourceTree = "<group>"; };
 		27E92A231F403A4300A41563 /* AlgorithmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlgorithmViewController.h; sourceTree = "<group>"; };
-		27E92A241F403A4300A41563 /* AlgorithmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlgorithmViewController.m; sourceTree = "<group>"; };
+		27E92A241F403A4300A41563 /* AlgorithmViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AlgorithmViewController.mm; sourceTree = "<group>"; };
 		27E96EF01EEEAC2600F4D436 /* PlatformTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlatformTools.h; sourceTree = "<group>"; };
 		27E96EF11EEEAC2600F4D436 /* PlatformTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlatformTools.m; sourceTree = "<group>"; };
 		52B4438758A0ED35874F2CD5 /* Pods-FROSTPlatform.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FROSTPlatform.release.xcconfig"; path = "Pods/Target Support Files/Pods-FROSTPlatform/Pods-FROSTPlatform.release.xcconfig"; sourceTree = "<group>"; };
@@ -956,6 +962,15 @@
 			path = DesignPatterns;
 			sourceTree = "<group>";
 		};
+		2741635B232892B8007516F7 /* LeetCode */ = {
+			isa = PBXGroup;
+			children = (
+				2741635C232892FE007516F7 /* LeetCodeDemo.cpp */,
+				2741635D232892FE007516F7 /* LeetCodeDemo.hpp */,
+			);
+			path = LeetCode;
+			sourceTree = "<group>";
+		};
 		2743B4731E1F30AE0057B033 /* PolymorphismDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -974,7 +989,7 @@
 			isa = PBXGroup;
 			children = (
 				27E92A231F403A4300A41563 /* AlgorithmViewController.h */,
-				27E92A241F403A4300A41563 /* AlgorithmViewController.m */,
+				27E92A241F403A4300A41563 /* AlgorithmViewController.mm */,
 				27B1CC4920AFFAB200D46F16 /* <Algorithms> */,
 				27E92A1F1F402AA900A41563 /* Sorting */,
 				27D72C3D1E9A2FA6008FDD23 /* ChainTable */,
@@ -1028,6 +1043,15 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		27921AFD235AB42F007A1391 /* AlgorithmFourth */ = {
+			isa = PBXGroup;
+			children = (
+				27921AFE235AB460007A1391 /* AlgorithmFourth.cpp */,
+				27921AFF235AB460007A1391 /* AlgorithmFourth.hpp */,
+			);
+			path = AlgorithmFourth;
+			sourceTree = "<group>";
+		};
 		27957CD51D87B18400E181F9 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -1042,6 +1066,8 @@
 		27A1A1871EE0614200621E7B /* C++Demo */ = {
 			isa = PBXGroup;
 			children = (
+				27921AFD235AB42F007A1391 /* AlgorithmFourth */,
+				2741635B232892B8007516F7 /* LeetCode */,
 				273B0F511F8F0A1B00BC5E35 /* DesignPatterns */,
 				27A1A18E1EE0636600621E7B /* Sales_data */,
 				2717A1811F12077A0064A031 /* ContainerOperation */,
@@ -1536,6 +1562,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -1766,6 +1793,7 @@
 				27A1A1971EE0650300621E7B /* C++DemoViewController.mm in Sources */,
 				27E3F0FB1D8FBC4900B878BB /* DemoRequestAPI1.m in Sources */,
 				27C893271D4E169100FE4A32 /* TZImagePickerController.m in Sources */,
+				27921B00235AB460007A1391 /* AlgorithmFourth.cpp in Sources */,
 				27DF39FF1D3E08D5001C5C33 /* JsonUtil.m in Sources */,
 				2743B47A1E1F316B0057B033 /* ChildrenSearchFactory.m in Sources */,
 				27E92A221F402AE100A41563 /* SortingDemo.m in Sources */,
@@ -1793,8 +1821,9 @@
 				27DF39EE1D3DBD3D001C5C33 /* EditRootItemView.m in Sources */,
 				27C893241D4E169100FE4A32 /* TZAssetModel.m in Sources */,
 				2717A1861F1207FF0064A031 /* ContainerOperation.mm in Sources */,
-				27E92A251F403A4300A41563 /* AlgorithmViewController.m in Sources */,
+				27E92A251F403A4300A41563 /* AlgorithmViewController.mm in Sources */,
 				27E96EF21EEEAC2600F4D436 /* PlatformTools.m in Sources */,
+				2741635E232892FE007516F7 /* LeetCodeDemo.cpp in Sources */,
 				27CE94A01D3BDFA1003791FC /* EditMainViewController.m in Sources */,
 				273B0F541F8F0A6200BC5E35 /* DesignPatternsDemo.cpp in Sources */,
 				27DF39E51D3CC7F7001C5C33 /* RootView.m in Sources */,

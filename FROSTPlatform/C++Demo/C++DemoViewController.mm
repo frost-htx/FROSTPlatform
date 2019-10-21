@@ -13,7 +13,8 @@
 #import "EffectiveDemo.hpp"
 #import "DesignPatternsDemo.hpp"
 #import <CommonCrypto/CommonDigest.h>
-
+#include "LeetCode/LeetCodeDemo.hpp"
+#include "AlgorithmFourth/AlgorithmFourth.hpp"
 
 @interface MonthArray ()
 
@@ -60,14 +61,55 @@ static NSString *months[] = { @"January", @"February", @"March",
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    NSString *str = [self encryptionStrMethods:nil];
-    
-    MonthArray *monthArray = [MonthArray monthArray];
-    NSLog(@"%@",[monthArray objectAtIndex:2]);
-    NSLog(@"%@",monthArray.firstObject);
-    NSLog(@"%@",monthArray.lastObject);
 
+    [self AlgorithmFourth];
+    vector<int> a{1,5,8,10,2,3,7,6};
+    int target = 10;
+    vector<int> result1 = LeetCode::Solution1_TwoSum(a, target);
+    vector<int> result2 = LeetCode::Solution1_1TwoSum(a, target);
+    vector<int> result3 = LeetCode::Solution1_2TwoSum(a, target);
+
+    LeetCode::Solution2ListNode *tem1 = new LeetCode::Solution2ListNode(5);
+    tem1->next = new LeetCode::Solution2ListNode(4);
+    
+    LeetCode::Solution2ListNode *tem2 = new LeetCode::Solution2ListNode(5);
+    tem2->next = new LeetCode::Solution2ListNode(6);
+    
+    
+    LeetCode::Solution2ListNode *temP = LeetCode::Solution2_AddTwoListNode(tem1, tem2);
+
+    
+    string solution3String = "12323445223107";
+    
+    LeetCode::Solution3 temSolution3;
+    int solution3Int = temSolution3.Solution3_LongestSubstring(solution3String);
+    
+    int solution3_1Int = temSolution3.Solution3_1LongestSubstring(solution3String);
+
+    
+    string solution5String = "babad";
+
+    LeetCode::Solution5 temSolution5;
+    string solution5Str = temSolution5.Solution5_longestPalindrome(solution5String);
+    string solution5_1Str = temSolution5.Solution5_1longestPalindrome(solution5String);
+
+    string s1 = "abcefga";
+    string s2 = "adbceda";
+    string publicSubsequence = temSolution5.Solution5longestPublicSubsequence(s1,s2);
+
+    LeetCode::Solution6 temSolution6;
+    string convertZcharacter = temSolution6.Solution6_convertZcharacter("LeetCode", 3);
+    
+    LeetCode::Solution7 temSolution7;
+    int rev = temSolution7.Solution7_reverseInteger(-123456);
+    
+    LeetCode::Solution8 temSolution8;
+    int rev1 = temSolution8.Solution8_character_aoti("-2147483647");
+
+    LeetCode::Solution9 temSolution9;
+    int rev2 = temSolution9.Solution9_1PalindromeInteger(121);
+    NSLog(@"123123");
+    
 //    PerformAction();
 //    terms14::PerformTerms14Action();
 //    terms29::PerformTerms29Action();
@@ -90,9 +132,24 @@ static NSString *months[] = { @"January", @"February", @"March",
 //    AbstractFactoryPattern::AbstractFactoryPatternAction();
 //    StrategyPattern::StrategyPatternAction();
 //    AdapterPattern::AdapterPatternAction();
-    PrototypePattern::PrototypePatternAction();
+//    PrototypePattern::PrototypePatternAction();
     
 }
+
+-(void)AlgorithmFourth
+{
+    vector<int> a = {7,5,6,3};
+    vector<int> b (a.size());
+
+    AlgorithmFourth::Sorting Soring;
+//    vector<int> result = Soring.SelectionSort(a);
+//    vector<int> result = Soring.InsertSort(a);
+//    vector<int> result = Soring.ShellSort(a);
+    Soring.MergeSort(a, 0, a.size(), b);
+    Soring.show(a);
+    Soring.show(b);
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

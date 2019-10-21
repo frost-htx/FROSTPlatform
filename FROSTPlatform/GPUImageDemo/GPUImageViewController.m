@@ -34,16 +34,7 @@
     imagView.layer.transform = rotate;
     
     [self.view addSubview:imagView];
-    
-    
 
-    
-    
-//    UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
-//    imageView.contentMode = UIViewContentModeScaleAspectFill;
-//    [self.view addSubview:imageView];
-//    self.mImageView = imageView;
-//    [self onCustom];
 }
 
 -(void)onCustom {
@@ -52,7 +43,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 /*
