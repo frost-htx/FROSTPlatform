@@ -138,16 +138,25 @@ static NSString *months[] = { @"January", @"February", @"March",
 
 -(void)AlgorithmFourth
 {
-    vector<int> a = {7,5,6,3};
+    vector<int> a = {1,2,3,3,4,5,6,5,2,1,3,2,1,1,7,8,3,9,0};
     vector<int> b (a.size());
 
     AlgorithmFourth::Sorting Soring;
 //    vector<int> result = Soring.SelectionSort(a);
 //    vector<int> result = Soring.InsertSort(a);
 //    vector<int> result = Soring.ShellSort(a);
-    Soring.MergeSort(a, 0, a.size(), b);
-    Soring.show(a);
-    Soring.show(b);
+//    Soring.MergeSort(a, 0, a.size() - 1, b);
+//    Soring.MergeArray(a, 0, (a.size() - 1) / 2, a.size() - 1, b);
+
+//    Soring.QuickSort(a, 0, a.size() - 1);
+//
+//    Soring.show(a);
+    
+    AlgorithmFourth::BinaryHeap BinaryHeap;
+    BinaryHeap.AscendingOrder(a, a.size());
+//    BinaryHeap.CreatMaxHeap(a, a.size());
+    
+    
 }
 
 
