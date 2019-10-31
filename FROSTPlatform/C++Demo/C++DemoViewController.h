@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <objc/runtime.h>
+#import "ObjectiveCTest.h"
 
 @interface MonthArray : NSArray
 
@@ -18,5 +19,7 @@
 @end
 
 @interface C__DemoViewController : UIViewController
+
+-(void)AlgorithmFourth;
 
 @end

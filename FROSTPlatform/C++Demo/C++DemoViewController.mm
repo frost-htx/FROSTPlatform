@@ -15,6 +15,8 @@
 #import <CommonCrypto/CommonDigest.h>
 #include "LeetCode/LeetCodeDemo.hpp"
 #include "AlgorithmFourth/AlgorithmFourth.hpp"
+#include "AlgorithmFifth/AlgorithmFifth.hpp"
+#import "NSArray+CrashHandle.h"
 
 @interface MonthArray ()
 
@@ -62,53 +64,59 @@ static NSString *months[] = { @"January", @"February", @"March",
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self AlgorithmFourth];
-    vector<int> a{1,5,8,10,2,3,7,6};
-    int target = 10;
-    vector<int> result1 = LeetCode::Solution1_TwoSum(a, target);
-    vector<int> result2 = LeetCode::Solution1_1TwoSum(a, target);
-    vector<int> result3 = LeetCode::Solution1_2TwoSum(a, target);
-
-    LeetCode::Solution2ListNode *tem1 = new LeetCode::Solution2ListNode(5);
-    tem1->next = new LeetCode::Solution2ListNode(4);
+    ObjectiveCTest *obj = [[ObjectiveCTest alloc] init];
+    [obj missMessageTest];
     
-    LeetCode::Solution2ListNode *tem2 = new LeetCode::Solution2ListNode(5);
-    tem2->next = new LeetCode::Solution2ListNode(6);
+    NSArray *testArray = [NSArray array];
+    [testArray objectAtIndex:10];
     
-    
-    LeetCode::Solution2ListNode *temP = LeetCode::Solution2_AddTwoListNode(tem1, tem2);
-
-    
-    string solution3String = "12323445223107";
-    
-    LeetCode::Solution3 temSolution3;
-    int solution3Int = temSolution3.Solution3_LongestSubstring(solution3String);
-    
-    int solution3_1Int = temSolution3.Solution3_1LongestSubstring(solution3String);
-
-    
-    string solution5String = "babad";
-
-    LeetCode::Solution5 temSolution5;
-    string solution5Str = temSolution5.Solution5_longestPalindrome(solution5String);
-    string solution5_1Str = temSolution5.Solution5_1longestPalindrome(solution5String);
-
-    string s1 = "abcefga";
-    string s2 = "adbceda";
-    string publicSubsequence = temSolution5.Solution5longestPublicSubsequence(s1,s2);
-
-    LeetCode::Solution6 temSolution6;
-    string convertZcharacter = temSolution6.Solution6_convertZcharacter("LeetCode", 3);
-    
-    LeetCode::Solution7 temSolution7;
-    int rev = temSolution7.Solution7_reverseInteger(-123456);
-    
-    LeetCode::Solution8 temSolution8;
-    int rev1 = temSolution8.Solution8_character_aoti("-2147483647");
-
-    LeetCode::Solution9 temSolution9;
-    int rev2 = temSolution9.Solution9_1PalindromeInteger(121);
-    NSLog(@"123123");
+//    [self AlgorithmFourth];
+//    vector<int> a{1,5,8,10,2,3,7,6};
+//    int target = 10;
+//    vector<int> result1 = LeetCode::Solution1_TwoSum(a, target);
+//    vector<int> result2 = LeetCode::Solution1_1TwoSum(a, target);
+//    vector<int> result3 = LeetCode::Solution1_2TwoSum(a, target);
+//
+//    LeetCode::Solution2ListNode *tem1 = new LeetCode::Solution2ListNode(5);
+//    tem1->next = new LeetCode::Solution2ListNode(4);
+//
+//    LeetCode::Solution2ListNode *tem2 = new LeetCode::Solution2ListNode(5);
+//    tem2->next = new LeetCode::Solution2ListNode(6);
+//
+//
+//    LeetCode::Solution2ListNode *temP = LeetCode::Solution2_AddTwoListNode(tem1, tem2);
+//
+//
+//    string solution3String = "12323445223107";
+//
+//    LeetCode::Solution3 temSolution3;
+//    int solution3Int = temSolution3.Solution3_LongestSubstring(solution3String);
+//
+//    int solution3_1Int = temSolution3.Solution3_1LongestSubstring(solution3String);
+//
+//
+//    string solution5String = "babad";
+//
+//    LeetCode::Solution5 temSolution5;
+//    string solution5Str = temSolution5.Solution5_longestPalindrome(solution5String);
+//    string solution5_1Str = temSolution5.Solution5_1longestPalindrome(solution5String);
+//
+//    string s1 = "abcefga";
+//    string s2 = "adbceda";
+//    string publicSubsequence = temSolution5.Solution5longestPublicSubsequence(s1,s2);
+//
+//    LeetCode::Solution6 temSolution6;
+//    string convertZcharacter = temSolution6.Solution6_convertZcharacter("LeetCode", 3);
+//
+//    LeetCode::Solution7 temSolution7;
+//    int rev = temSolution7.Solution7_reverseInteger(-123456);
+//
+//    LeetCode::Solution8 temSolution8;
+//    int rev1 = temSolution8.Solution8_character_aoti("-2147483647");
+//
+//    LeetCode::Solution9 temSolution9;
+//    int rev2 = temSolution9.Solution9_1PalindromeInteger(121);
+//    NSLog(@"123123");
     
 //    PerformAction();
 //    terms14::PerformTerms14Action();
@@ -136,12 +144,12 @@ static NSString *months[] = { @"January", @"February", @"March",
     
 }
 
--(void)AlgorithmFourth
-{
-    vector<int> a = {1,2,3,3,4,5,6,5,2,1,3,2,1,1,7,8,3,9,0};
-    vector<int> b (a.size());
-
-    AlgorithmFourth::Sorting Soring;
+//-(void)AlgorithmFourth
+//{
+//    vector<int> a = {1,2,3,3,4,5,6,5,2,1,3,2,1,1,7,8,3,9,0};
+//    vector<int> b (a.size());
+//
+//    AlgorithmFourth::Sorting Soring;
 //    vector<int> result = Soring.SelectionSort(a);
 //    vector<int> result = Soring.InsertSort(a);
 //    vector<int> result = Soring.ShellSort(a);
@@ -152,12 +160,17 @@ static NSString *months[] = { @"January", @"February", @"March",
 //
 //    Soring.show(a);
     
-    AlgorithmFourth::BinaryHeap BinaryHeap;
-    BinaryHeap.AscendingOrder(a, a.size());
-//    BinaryHeap.CreatMaxHeap(a, a.size());
-    
-    
-}
+//    AlgorithmFifth::SearchClass SearchClass;
+//    int resultIndex = SearchClass.BinaryRecursionSearch(a, 0, a.size() - 1, 9);
+//    int resultIndex1 = SearchClass.BinaryNormalSearch(a, 0, a.size() - 1, 9);
+//
+//    AlgorithmFifth::BinarySearchTrees BinarySearchTrees;
+//    for (int i = 0; i < 10 ; i ++) {
+//        BinarySearchTrees.Insert(i);
+//    }
+//
+//    BinarySearchTrees.Delete(5);
+//}
 
 
 - (void)didReceiveMemoryWarning {
@@ -217,15 +230,5 @@ static NSString *months[] = { @"January", @"February", @"March",
             result[12], result[13], result[14], result[15]
             ];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -233,5 +233,5 @@ namespace AlgorithmFourth {
     {
         return 0;
     }
-    
+
 }

@@ -14,6 +14,7 @@
 #import "C++DemoViewController.h"
 #import "AlgorithmViewController.h"
 #import "GPUImageViewController.h"
+#import "IOSBaseReviewViewController.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate,DemoViewControllerDelegate>
 
@@ -112,6 +113,12 @@
         [self.navigationController pushViewController:gpuImageViewController animated:YES];
     }
     if ([titleName isEqualToString:@"Mapbox"]) {
+        
+    }
+    
+    if ([titleName isEqualToString:@"IOSBaseReview"]) {
+        IOSBaseReviewViewController *baseReviewViewController = [[IOSBaseReviewViewController alloc] init];
+        [self.navigationController pushViewController:baseReviewViewController animated:YES];
     }
 }
 
@@ -125,7 +132,7 @@
 
 -(NSMutableArray *)dataArray {
     if (!_dataArray) {
-        _dataArray = [NSMutableArray arrayWithObjects:@"编辑器",@"Demo",@"OpenGl",@"C++",@"Algorith",@"GPUImage",@"Mapbox",nil];
+        _dataArray = [NSMutableArray arrayWithObjects:@"编辑器",@"Demo",@"OpenGl",@"C++",@"Algorith",@"GPUImage",@"Mapbox",@"IOSBaseReview",nil];
     }
     return _dataArray;
 }

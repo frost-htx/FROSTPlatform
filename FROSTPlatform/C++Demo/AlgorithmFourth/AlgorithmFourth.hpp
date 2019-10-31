@@ -51,9 +51,8 @@ namespace AlgorithmFourth {
         
         vector<int> maxHeap;
         vector<int> minHeap;
-
-        
     };
+    
 }
 
 
