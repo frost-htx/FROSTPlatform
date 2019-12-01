@@ -1,25 +1,24 @@
 //
-//  IOSBaseReviewViewController.m
+//  UIDemoCollectionViewController.m
 //  FROSTPlatform
 //
-//  Created by frost on 2019/10/30.
+//  Created by frost on 2019/12/1.
 //  Copyright © 2019 frost. All rights reserved.
 //
 
-#import "IOSBaseReviewViewController.h"
-#import "KVO_KVCReviewViewController.h"
-#import "OperationReviewViewController.h"
-#import "GCDReviewViewController.h"
+#import "UIDemoCollectionViewController.h"
+#import "PhotoSelectSildeTableViewController.h"
 
-@interface IOSBaseReviewViewController ()<UITableViewDataSource,UITableViewDelegate>
+
+@interface UIDemoCollectionViewController ()
+<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic,strong) UITableView *mainTableView;
 @property (nonatomic,strong) NSMutableArray *dataArray;
 
-
 @end
 
-@implementation IOSBaseReviewViewController
+@implementation UIDemoCollectionViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -61,22 +60,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *titleName = [_dataArray objectAtIndex:indexPath.row ];
+    
+    if ([titleName isEqualToString:@"PhotoSelectView"]) {
+        PhotoSelectSildeTableViewController *sildeTable = [[PhotoSelectSildeTableViewController alloc] init];
+        [self.navigationController pushViewController:sildeTable animated:YES];
+    }
 
-    
-    if ([titleName isEqualToString:@"KOV/KVC"]) {
-        KVO_KVCReviewViewController *kVO_KVCReviewViewController = [[KVO_KVCReviewViewController alloc] init];
-        [self.navigationController pushViewController:kVO_KVCReviewViewController animated:YES];
-    }
-    
-    if ([titleName isEqualToString:@"Operation"]) {
-        OperationReviewViewController *operationReviewViewController = [[OperationReviewViewController alloc] init];
-        [self.navigationController pushViewController:operationReviewViewController animated:YES];
-    }
-    
-    if ([titleName isEqualToString:@"GCD"]) {
-        GCDReviewViewController *gcdReviewViewController = [[GCDReviewViewController alloc] init];
-        [self.navigationController pushViewController:gcdReviewViewController animated:YES];
-    }
 }
 
 
@@ -94,7 +83,7 @@
 
 -(NSMutableArray *)dataArray {
     if (!_dataArray) {
-        _dataArray = [NSMutableArray arrayWithObjects:@"KOV/KVC",@"GCD",@"Runloop",@"Operation",@"RunTime",nil];
+        _dataArray = [NSMutableArray arrayWithObjects:@"PhotoSelectView",nil];
     }
     return _dataArray;
 }

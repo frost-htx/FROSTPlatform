@@ -189,8 +189,18 @@
 		27E92A221F402AE100A41563 /* SortingDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E92A211F402AE100A41563 /* SortingDemo.m */; };
 		27E92A251F403A4300A41563 /* AlgorithmViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 27E92A241F403A4300A41563 /* AlgorithmViewController.mm */; };
 		27E96EF21EEEAC2600F4D436 /* PlatformTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E96EF11EEEAC2600F4D436 /* PlatformTools.m */; };
+		27EAACB1236FB5A80037DAC1 /* KVO_KVCViewReview.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EAACB0236FB5A80037DAC1 /* KVO_KVCViewReview.m */; };
+		27EAACB4236FB5D60037DAC1 /* KVO_KVCModelReview.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EAACB3236FB5D60037DAC1 /* KVO_KVCModelReview.m */; };
+		27EAACB7236FB85F0037DAC1 /* KVO_KVCReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EAACB6236FB85F0037DAC1 /* KVO_KVCReviewViewController.m */; };
+		27EAACBA236FBAF20037DAC1 /* OperationReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EAACB9236FBAF20037DAC1 /* OperationReviewViewController.m */; };
+		27EAACBD236FBBD50037DAC1 /* GCDReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EAACBC236FBBD50037DAC1 /* GCDReviewViewController.m */; };
+		27EAACC0236FDC730037DAC1 /* KVOHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EAACBF236FDC730037DAC1 /* KVOHelp.m */; };
 		27ED48CD2367DD2000FA70EE /* ObjectiveCTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 27ED48CC2367DD2000FA70EE /* ObjectiveCTest.m */; };
 		27ED48D023680BE700FA70EE /* NSArray+CrashHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 27ED48CF23680BE700FA70EE /* NSArray+CrashHandle.m */; };
+		27EDD098239362500079709A /* UIDemoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EDD097239362500079709A /* UIDemoCollectionViewController.m */; };
+		27EDD09C2393643F0079709A /* PhotoSelectSildeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EDD09B2393643F0079709A /* PhotoSelectSildeTableViewController.m */; };
+		27EDD09F239369440079709A /* PhotoSelectSildeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EDD09E239369440079709A /* PhotoSelectSildeView.m */; };
+		27EDD0A22393A3A00079709A /* PhotoAlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EDD0A12393A3A00079709A /* PhotoAlbumCell.m */; };
 		286E63B1137A4979A98CF17D /* Pods_FROSTPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB6F7A8B1931D6E0FE5AB1F /* Pods_FROSTPlatform.framework */; };
 /* End PBXBuildFile section */
 
@@ -606,10 +616,30 @@
 		27E92A241F403A4300A41563 /* AlgorithmViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AlgorithmViewController.mm; sourceTree = "<group>"; };
 		27E96EF01EEEAC2600F4D436 /* PlatformTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlatformTools.h; sourceTree = "<group>"; };
 		27E96EF11EEEAC2600F4D436 /* PlatformTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlatformTools.m; sourceTree = "<group>"; };
+		27EAACAF236FB5A80037DAC1 /* KVO_KVCViewReview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVO_KVCViewReview.h; sourceTree = "<group>"; };
+		27EAACB0236FB5A80037DAC1 /* KVO_KVCViewReview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVO_KVCViewReview.m; sourceTree = "<group>"; };
+		27EAACB2236FB5D60037DAC1 /* KVO_KVCModelReview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVO_KVCModelReview.h; sourceTree = "<group>"; };
+		27EAACB3236FB5D60037DAC1 /* KVO_KVCModelReview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVO_KVCModelReview.m; sourceTree = "<group>"; };
+		27EAACB5236FB85F0037DAC1 /* KVO_KVCReviewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVO_KVCReviewViewController.h; sourceTree = "<group>"; };
+		27EAACB6236FB85F0037DAC1 /* KVO_KVCReviewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVO_KVCReviewViewController.m; sourceTree = "<group>"; };
+		27EAACB8236FBAF20037DAC1 /* OperationReviewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OperationReviewViewController.h; sourceTree = "<group>"; };
+		27EAACB9236FBAF20037DAC1 /* OperationReviewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OperationReviewViewController.m; sourceTree = "<group>"; };
+		27EAACBB236FBBD50037DAC1 /* GCDReviewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDReviewViewController.h; sourceTree = "<group>"; };
+		27EAACBC236FBBD50037DAC1 /* GCDReviewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDReviewViewController.m; sourceTree = "<group>"; };
+		27EAACBE236FDC730037DAC1 /* KVOHelp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOHelp.h; sourceTree = "<group>"; };
+		27EAACBF236FDC730037DAC1 /* KVOHelp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOHelp.m; sourceTree = "<group>"; };
 		27ED48CB2367DD2000FA70EE /* ObjectiveCTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectiveCTest.h; sourceTree = "<group>"; };
 		27ED48CC2367DD2000FA70EE /* ObjectiveCTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCTest.m; sourceTree = "<group>"; };
 		27ED48CE23680BE700FA70EE /* NSArray+CrashHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+CrashHandle.h"; sourceTree = "<group>"; };
 		27ED48CF23680BE700FA70EE /* NSArray+CrashHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CrashHandle.m"; sourceTree = "<group>"; };
+		27EDD096239362500079709A /* UIDemoCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIDemoCollectionViewController.h; sourceTree = "<group>"; };
+		27EDD097239362500079709A /* UIDemoCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIDemoCollectionViewController.m; sourceTree = "<group>"; };
+		27EDD09A2393643F0079709A /* PhotoSelectSildeTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoSelectSildeTableViewController.h; sourceTree = "<group>"; };
+		27EDD09B2393643F0079709A /* PhotoSelectSildeTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoSelectSildeTableViewController.m; sourceTree = "<group>"; };
+		27EDD09D239369440079709A /* PhotoSelectSildeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoSelectSildeView.h; sourceTree = "<group>"; };
+		27EDD09E239369440079709A /* PhotoSelectSildeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoSelectSildeView.m; sourceTree = "<group>"; };
+		27EDD0A02393A3A00079709A /* PhotoAlbumCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoAlbumCell.h; sourceTree = "<group>"; };
+		27EDD0A12393A3A00079709A /* PhotoAlbumCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoAlbumCell.m; sourceTree = "<group>"; };
 		52B4438758A0ED35874F2CD5 /* Pods-FROSTPlatform.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FROSTPlatform.release.xcconfig"; path = "Pods/Target Support Files/Pods-FROSTPlatform/Pods-FROSTPlatform.release.xcconfig"; sourceTree = "<group>"; };
 		A1D6098F2B2EE1545375D99E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB6F7A8B1931D6E0FE5AB1F /* Pods_FROSTPlatform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FROSTPlatform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -691,6 +721,7 @@
 		271682F42369435A0087AEA5 /* IOSBasedReview */ = {
 			isa = PBXGroup;
 			children = (
+				27EAACA8236FB4580037DAC1 /* KVO:KVC */,
 				271682FC23696D900087AEA5 /* GCD */,
 				271682F8236943CF0087AEA5 /* Operation */,
 				271682F52369439E0087AEA5 /* IOSBaseReviewViewController.h */,
@@ -704,6 +735,8 @@
 			children = (
 				271682F9236944470087AEA5 /* CustomNSOperation.h */,
 				271682FA236944470087AEA5 /* CustomNSOperation.m */,
+				27EAACB8236FBAF20037DAC1 /* OperationReviewViewController.h */,
+				27EAACB9236FBAF20037DAC1 /* OperationReviewViewController.m */,
 			);
 			path = Operation;
 			sourceTree = "<group>";
@@ -713,6 +746,8 @@
 			children = (
 				271682FD23696DE10087AEA5 /* GCDReview.h */,
 				271682FE23696DE10087AEA5 /* GCDReview.m */,
+				27EAACBB236FBBD50037DAC1 /* GCDReviewViewController.h */,
+				27EAACBC236FBBD50037DAC1 /* GCDReviewViewController.m */,
 			);
 			path = GCD;
 			sourceTree = "<group>";
@@ -1246,6 +1281,7 @@
 		27CE94521D3B484A003791FC /* FROSTPlatform */ = {
 			isa = PBXGroup;
 			children = (
+				27EDD0952393622F0079709A /* UIDemo */,
 				271682F42369435A0087AEA5 /* IOSBasedReview */,
 				272B5F6A20EB73DD0003E7F5 /* GPUImageDemo */,
 				27A1A1871EE0614200621E7B /* C++Demo */,
@@ -1513,6 +1549,44 @@
 				2733E69E1F4FBF52000C6E12 /* LeftistHeaps.h */,
 			);
 			path = Sorting;
+			sourceTree = "<group>";
+		};
+		27EAACA8236FB4580037DAC1 /* KVO:KVC */ = {
+			isa = PBXGroup;
+			children = (
+				27EAACAF236FB5A80037DAC1 /* KVO_KVCViewReview.h */,
+				27EAACB0236FB5A80037DAC1 /* KVO_KVCViewReview.m */,
+				27EAACB2236FB5D60037DAC1 /* KVO_KVCModelReview.h */,
+				27EAACB3236FB5D60037DAC1 /* KVO_KVCModelReview.m */,
+				27EAACB5236FB85F0037DAC1 /* KVO_KVCReviewViewController.h */,
+				27EAACB6236FB85F0037DAC1 /* KVO_KVCReviewViewController.m */,
+				27EAACBE236FDC730037DAC1 /* KVOHelp.h */,
+				27EAACBF236FDC730037DAC1 /* KVOHelp.m */,
+			);
+			path = "KVO:KVC";
+			sourceTree = "<group>";
+		};
+		27EDD0952393622F0079709A /* UIDemo */ = {
+			isa = PBXGroup;
+			children = (
+				27EDD099239364140079709A /* PhotoSelectSildeTable */,
+				27EDD096239362500079709A /* UIDemoCollectionViewController.h */,
+				27EDD097239362500079709A /* UIDemoCollectionViewController.m */,
+			);
+			path = UIDemo;
+			sourceTree = "<group>";
+		};
+		27EDD099239364140079709A /* PhotoSelectSildeTable */ = {
+			isa = PBXGroup;
+			children = (
+				27EDD09A2393643F0079709A /* PhotoSelectSildeTableViewController.h */,
+				27EDD09B2393643F0079709A /* PhotoSelectSildeTableViewController.m */,
+				27EDD09D239369440079709A /* PhotoSelectSildeView.h */,
+				27EDD09E239369440079709A /* PhotoSelectSildeView.m */,
+				27EDD0A02393A3A00079709A /* PhotoAlbumCell.h */,
+				27EDD0A12393A3A00079709A /* PhotoAlbumCell.m */,
+			);
+			path = PhotoSelectSildeTable;
 			sourceTree = "<group>";
 		};
 		D7363DE09C9B427C05815CB5 /* Frameworks */ = {
@@ -1823,11 +1897,13 @@
 			files = (
 				2730D8631F26FBC300B4955A /* main.m in Sources */,
 				27DF39F11D3DBD66001C5C33 /* EditMainCollectionCell.m in Sources */,
+				27EAACBA236FBAF20037DAC1 /* OperationReviewViewController.m in Sources */,
 				27C893251D4E169100FE4A32 /* TZImageManager.m in Sources */,
 				27E2D4741F6E65C9005DEFEC /* PersonIMP.cpp in Sources */,
 				27188FDC1F1F573200F8D1D0 /* SamplerImageUtil.m in Sources */,
 				27AC26101D91369C00C4ED32 /* FRTBaseRequest+RequestError.m in Sources */,
 				27D72C401E9A303E008FDD23 /* ChainTableDemo.m in Sources */,
+				27EDD09C2393643F0079709A /* PhotoSelectSildeTableViewController.m in Sources */,
 				27DF39E81D3CC893001C5C33 /* EditCollectionView.m in Sources */,
 				271227AC1D791845001F0EAE /* FRTBaseRequest.m in Sources */,
 				27128A921D6EED8F0034E706 /* DemoViewController.m in Sources */,
@@ -1849,6 +1925,7 @@
 				279F9F5C1EE2D215009A68AD /* Friend_Function.mm in Sources */,
 				27ED48CD2367DD2000FA70EE /* ObjectiveCTest.m in Sources */,
 				271227B81D791EC8001F0EAE /* FRTNetWorkConfig.m in Sources */,
+				27EAACB7236FB85F0037DAC1 /* KVO_KVCReviewViewController.m in Sources */,
 				27E3F0FE1D8FBC6500B878BB /* DemoRequestAPI2.m in Sources */,
 				27DF39D31D3C7A70001C5C33 /* RootViewModel.m in Sources */,
 				27DF39F41D3DBE05001C5C33 /* EditItemImageView.m in Sources */,
@@ -1859,11 +1936,15 @@
 				27C893271D4E169100FE4A32 /* TZImagePickerController.m in Sources */,
 				27921B00235AB460007A1391 /* AlgorithmFourth.cpp in Sources */,
 				27DF39FF1D3E08D5001C5C33 /* JsonUtil.m in Sources */,
+				27EDD0A22393A3A00079709A /* PhotoAlbumCell.m in Sources */,
+				27EAACB1236FB5A80037DAC1 /* KVO_KVCViewReview.m in Sources */,
 				2743B47A1E1F316B0057B033 /* ChildrenSearchFactory.m in Sources */,
 				27E92A221F402AE100A41563 /* SortingDemo.m in Sources */,
 				2788766A1D88F36900359885 /* DemoRequestAPI.m in Sources */,
 				27B1CC5620B015D100D46F16 /* PrimarySorting.c in Sources */,
 				27C8932A1D4E169100FE4A32 /* TZPhotoPreviewController.m in Sources */,
+				27EDD09F239369440079709A /* PhotoSelectSildeView.m in Sources */,
+				27EDD098239362500079709A /* UIDemoCollectionViewController.m in Sources */,
 				27942AF01D86672B00581782 /* FRTChainRequest.m in Sources */,
 				271682FF23696DE10087AEA5 /* GCDReview.m in Sources */,
 				27DF39DF1D3CA55F001C5C33 /* MainViewControler.m in Sources */,
@@ -1886,9 +1967,11 @@
 				2730D8671F26FDA700B4955A /* OpenGLView.mm in Sources */,
 				27DF39EE1D3DBD3D001C5C33 /* EditRootItemView.m in Sources */,
 				27C893241D4E169100FE4A32 /* TZAssetModel.m in Sources */,
+				27EAACB4236FB5D60037DAC1 /* KVO_KVCModelReview.m in Sources */,
 				2717A1861F1207FF0064A031 /* ContainerOperation.mm in Sources */,
 				27E92A251F403A4300A41563 /* AlgorithmViewController.mm in Sources */,
 				27E96EF21EEEAC2600F4D436 /* PlatformTools.m in Sources */,
+				27EAACC0236FDC730037DAC1 /* KVOHelp.m in Sources */,
 				2741635E232892FE007516F7 /* LeetCodeDemo.cpp in Sources */,
 				27CE94A01D3BDFA1003791FC /* EditMainViewController.m in Sources */,
 				273B0F541F8F0A6200BC5E35 /* DesignPatternsDemo.cpp in Sources */,
@@ -1906,6 +1989,7 @@
 				271227BB1D791ED9001F0EAE /* FRTConfigTools.m in Sources */,
 				274616581F60E60300FD1A3E /* EffectiveDemo.cpp in Sources */,
 				2743B4B51E1F701F0057B033 /* SonSearchFactory.m in Sources */,
+				27EAACBD236FBBD50037DAC1 /* GCDReviewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

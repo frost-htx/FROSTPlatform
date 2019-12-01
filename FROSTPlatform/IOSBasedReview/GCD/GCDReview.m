@@ -74,6 +74,17 @@
     }
 }
 
+-(void)GCDReviewTest3
+{
+    dispatch_queue_t queue = dispatch_queue_create("tk.bourne.testQueue",DISPATCH_QUEUE_SERIAL);
+    
+    dispatch_sync(queue, ^{
+        NSLog(@"3"); // 任务3
+    });
+
+
+}
+
 -(void)test1
 {
     NSLog(@"1");
