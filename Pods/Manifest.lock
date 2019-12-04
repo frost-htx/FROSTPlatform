@@ -61,7 +61,7 @@ DEPENDENCIES:
   - YYKit (~> 1.0.1)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - AFNetworking
     - DZNEmptyDataSet
     - FBAllocationTracker
@@ -99,4 +99,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: b1d67370948042315169b7d8fe0d7f6ef9ad898f
 
-COCOAPODS: 1.6.0
+COCOAPODS: 1.8.4

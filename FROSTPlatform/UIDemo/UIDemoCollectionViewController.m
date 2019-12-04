@@ -8,7 +8,7 @@
 
 #import "UIDemoCollectionViewController.h"
 #import "PhotoSelectSildeTableViewController.h"
-
+#import "DMPhotoPreviewViewController.h"
 
 @interface UIDemoCollectionViewController ()
 <UITableViewDataSource,UITableViewDelegate>
@@ -65,6 +65,11 @@
         PhotoSelectSildeTableViewController *sildeTable = [[PhotoSelectSildeTableViewController alloc] init];
         [self.navigationController pushViewController:sildeTable animated:YES];
     }
+    
+    if ([titleName isEqualToString:@"DMPhotoPreViewController"]) {
+        DMPhotoPreviewViewController *photoPreview = [[DMPhotoPreviewViewController alloc] init];
+        [self presentViewController:photoPreview animated:YES completion:nil];
+    }
 
 }
 
@@ -83,7 +88,7 @@
 
 -(NSMutableArray *)dataArray {
     if (!_dataArray) {
-        _dataArray = [NSMutableArray arrayWithObjects:@"PhotoSelectView",nil];
+        _dataArray = [NSMutableArray arrayWithObjects:@"PhotoSelectView",@"DMPhotoPreViewController",nil];
     }
     return _dataArray;
 }

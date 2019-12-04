@@ -202,6 +202,11 @@
 		27EDD09F239369440079709A /* PhotoSelectSildeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EDD09E239369440079709A /* PhotoSelectSildeView.m */; };
 		27EDD0A22393A3A00079709A /* PhotoAlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EDD0A12393A3A00079709A /* PhotoAlbumCell.m */; };
 		286E63B1137A4979A98CF17D /* Pods_FROSTPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB6F7A8B1931D6E0FE5AB1F /* Pods_FROSTPlatform.framework */; };
+		E530466C23960739009B7048 /* DMPhotoPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E530466B23960739009B7048 /* DMPhotoPreviewViewController.m */; };
+		E530466F23960C4B009B7048 /* DMPhotoPreCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E530466E23960C4B009B7048 /* DMPhotoPreCollectionViewCell.m */; };
+		E5304673239652D8009B7048 /* photoTest3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E5304670239652D8009B7048 /* photoTest3.jpg */; };
+		E5304674239652D8009B7048 /* photoTest1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E5304671239652D8009B7048 /* photoTest1.jpg */; };
+		E5304675239652D8009B7048 /* photoTest2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E5304672239652D8009B7048 /* photoTest2.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -643,6 +648,13 @@
 		52B4438758A0ED35874F2CD5 /* Pods-FROSTPlatform.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FROSTPlatform.release.xcconfig"; path = "Pods/Target Support Files/Pods-FROSTPlatform/Pods-FROSTPlatform.release.xcconfig"; sourceTree = "<group>"; };
 		A1D6098F2B2EE1545375D99E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB6F7A8B1931D6E0FE5AB1F /* Pods_FROSTPlatform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FROSTPlatform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E530466A23960739009B7048 /* DMPhotoPreviewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMPhotoPreviewViewController.h; sourceTree = "<group>"; };
+		E530466B23960739009B7048 /* DMPhotoPreviewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMPhotoPreviewViewController.m; sourceTree = "<group>"; };
+		E530466D23960C4B009B7048 /* DMPhotoPreCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMPhotoPreCollectionViewCell.h; sourceTree = "<group>"; };
+		E530466E23960C4B009B7048 /* DMPhotoPreCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMPhotoPreCollectionViewCell.m; sourceTree = "<group>"; };
+		E5304670239652D8009B7048 /* photoTest3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photoTest3.jpg; sourceTree = "<group>"; };
+		E5304671239652D8009B7048 /* photoTest1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photoTest1.jpg; sourceTree = "<group>"; };
+		E5304672239652D8009B7048 /* photoTest2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photoTest2.jpg; sourceTree = "<group>"; };
 		FB86FCA52A348ACF2224FB81 /* Pods-FROSTPlatform.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FROSTPlatform.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FROSTPlatform/Pods-FROSTPlatform.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -777,6 +789,9 @@
 		2718A0B71F178CFB0038963B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E5304671239652D8009B7048 /* photoTest1.jpg */,
+				E5304672239652D8009B7048 /* photoTest2.jpg */,
+				E5304670239652D8009B7048 /* photoTest3.jpg */,
 				2730D4571F2604C400B4955A /* smile.jpg */,
 				27188FDD1F1F593800F8D1D0 /* wood.jpg */,
 				270E517F1F18A37B0080D33F /* frag.glsl */,
@@ -1569,6 +1584,7 @@
 		27EDD0952393622F0079709A /* UIDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E5304669239606F8009B7048 /* PhotoSlidePreviewController */,
 				27EDD099239364140079709A /* PhotoSelectSildeTable */,
 				27EDD096239362500079709A /* UIDemoCollectionViewController.h */,
 				27EDD097239362500079709A /* UIDemoCollectionViewController.m */,
@@ -1609,6 +1625,17 @@
 				AFB6F7A8B1931D6E0FE5AB1F /* Pods_FROSTPlatform.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E5304669239606F8009B7048 /* PhotoSlidePreviewController */ = {
+			isa = PBXGroup;
+			children = (
+				E530466A23960739009B7048 /* DMPhotoPreviewViewController.h */,
+				E530466B23960739009B7048 /* DMPhotoPreviewViewController.m */,
+				E530466D23960C4B009B7048 /* DMPhotoPreCollectionViewCell.h */,
+				E530466E23960C4B009B7048 /* DMPhotoPreCollectionViewCell.m */,
+			);
+			path = PhotoSlidePreviewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1733,6 +1760,7 @@
 				2730D72C1F26F07A00B4955A /* matrix_transform.inl in Resources */,
 				2730D7571F26F07A00B4955A /* norm.inl in Resources */,
 				2730D7351F26F07A00B4955A /* type_ptr.inl in Resources */,
+				E5304675239652D8009B7048 /* photoTest2.jpg in Resources */,
 				27DF44901D3E0BB2001C5C33 /* Template.geojson in Resources */,
 				2730D73D1F26F07A00B4955A /* common.inl in Resources */,
 				2730D7691F26F07A00B4955A /* std_based_type.inl in Resources */,
@@ -1761,9 +1789,11 @@
 				2730D7701F26F07A00B4955A /* vector_query.inl in Resources */,
 				2730D7481F26F07A00B4955A /* gradient_paint.inl in Resources */,
 				2730D7231F26F07A00B4955A /* bitfield.inl in Resources */,
+				E5304674239652D8009B7048 /* photoTest1.jpg in Resources */,
 				2730D7271F26F07A00B4955A /* epsilon.inl in Resources */,
 				2730D72B1F26F07A00B4955A /* matrix_inverse.inl in Resources */,
 				2730D73F1F26F07A00B4955A /* component_wise.inl in Resources */,
+				E5304673239652D8009B7048 /* photoTest3.jpg in Resources */,
 				2730D7261F26F07A00B4955A /* constants.inl in Resources */,
 				2730D76B1F26F07A00B4955A /* transform.inl in Resources */,
 				2730D7321F26F07A00B4955A /* reciprocal.inl in Resources */,
@@ -1916,6 +1946,7 @@
 				27AC260D1D91278000C4ED32 /* FRTBatchRequestAgent.m in Sources */,
 				2743B4761E1F30E90057B033 /* BaseSearchFactory.m in Sources */,
 				27E2D4771F6E744D005DEFEC /* RealPerson.cpp in Sources */,
+				E530466C23960739009B7048 /* DMPhotoPreviewViewController.m in Sources */,
 				2723AC621E23261500C5764B /* SearchBarViews.m in Sources */,
 				27C893281D4E169100FE4A32 /* TZPhotoPickerController.m in Sources */,
 				2723AC651E233F2700C5764B /* SearchLogic.m in Sources */,
@@ -1980,6 +2011,7 @@
 				27E3F1031D8FE25800B878BB /* FRTChainRequestAgent.m in Sources */,
 				27DF39EB1D3CF4F7001C5C33 /* EditModel.m in Sources */,
 				27ED48D023680BE700FA70EE /* NSArray+CrashHandle.m in Sources */,
+				E530466F23960C4B009B7048 /* DMPhotoPreCollectionViewCell.m in Sources */,
 				278266781E07749E00A894BC /* BaseService.m in Sources */,
 				2723AC5C1E23259E00C5764B /* HomeSearchBar.m in Sources */,
 				27CE94581D3B484A003791FC /* AppDelegate.m in Sources */,
